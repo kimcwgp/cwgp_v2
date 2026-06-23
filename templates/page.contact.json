@@ -210,7 +210,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Ready to grow your team with specialized global talent?</p>",
+            "text": "",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
