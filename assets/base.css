@@ -4656,22 +4656,22 @@ text-component {
 /* === Elegant Button Style === */
 .btn-elegant {
   padding: 15px 30px;
-  /* color: #ffffff; */
-  border: 1px solid #666666; /* main accent */
+  border: 1px solid #666666;
   font-size: 1.2rem;
   font-weight: bold;
+  line-height: 1.2; /* Add this */
+  white-space: nowrap; /* Prevent text wrapping */
   cursor: pointer;
   display: inline-flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 8px; /* If text and icon exist */
   border-radius: 100px;
   position: relative;
   overflow: hidden;
-  background: transparent; /* transparent background */
+  background: transparent;
   transition: all 0.4s ease;
   outline: none;
-
-  /* glow tied to border color */
   box-shadow:
     0 0 8px rgba(102, 102, 102, 0.3),
     inset 0 0 6px rgba(102, 102, 102, 0.15);
@@ -4766,8 +4766,6 @@ text-component {
 /* === Equal Height Adjustment === */
 .btn-elegant,
 .btn-slide {
-  height: 60px; /* ✅ Equal height for both buttons */
-  padding: 0 48px; /* maintain same horizontal padding */
   box-sizing: border-box;
 }
 
@@ -4798,6 +4796,13 @@ text-component {
   .hide-mobile {
     display: none !important;
   }
+  .btn-elegant,
+  .orange-outline-pill-btn {
+    font-size: 14px !important;
+    padding: 12px;
+    line-height: 1.2; /* Add this */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
 }
 
 /* Hide on desktop & tablet */
@@ -4806,17 +4811,3 @@ text-component {
     display: none !important;
   }
 }
-
-
-/* CWGP Kim Pomento - Benenefit Page - start */
-
-@media (max-width: 767px) {
-  div#Hero-template--20313923158095__hero_jJzCH8.hero {
-    background-color: #fff;
-  }
-  #Hero-template--20313923158095__hero_jJzCH8 img.hero__image {
-    display: none;
-  }
-}
-
-/* CWGP Kim Pomento - Benenefit Page - End */

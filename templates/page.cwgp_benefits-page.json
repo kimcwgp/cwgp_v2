@@ -163,7 +163,7 @@
               "name": "t:names.button",
               "settings": {
                 "label": "See Job Openings",
-                "link": "shopify://pages/careers",
+                "link": "",
                 "open_in_new_tab": false,
                 "style_class": "orange-pill-btn",
                 "width": "fit-content",
@@ -746,7 +746,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "See Job Openings",
-            "link": "shopify://pages/careers",
+            "link": "#",
             "open_in_new_tab": false,
             "style_class": "orange-pill-btn",
             "width": "fit-content",
