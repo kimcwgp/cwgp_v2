@@ -290,7 +290,7 @@
             "button_d6aeN3": {
               "type": "button",
               "settings": {
-                "label": "Lorem Ipsum",
+                "label": "Schedule Consultation",
                 "link": "#",
                 "open_in_new_tab": false,
                 "style_class": "uiverse-btn-wht",
@@ -471,7 +471,7 @@
             "button_V6GCHC": {
               "type": "button",
               "settings": {
-                "label": "Lorem Ipsum",
+                "label": "Schedule Consultation",
                 "link": "#",
                 "open_in_new_tab": false,
                 "style_class": "uiverse-btn-wht",
@@ -599,7 +599,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Shopify Admin</p>",
+            "text": "<p><strong>Shopify Admin</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -628,7 +628,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>SQL Developer</p>",
+            "text": "<p><strong>SQL Developer</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -657,7 +657,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Customer Support</p>",
+            "text": "<p><strong>Customer Support</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -686,7 +686,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Salesforce Admin</p>",
+            "text": "<p><strong>Salesforce Admin</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -715,7 +715,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Logistics Support</p>",
+            "text": "<p><strong>Logistics Support</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -744,7 +744,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Sales Analyst</p>",
+            "text": "<p><strong>Sales Analyst</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -2294,31 +2294,6 @@
             "card_link": ""
           }
         },
-        "card_PygHFU": {
-          "type": "card",
-          "settings": {
-            "card_direction": "column",
-            "card_icon": "shopify://shop_images/Rectangle_36_1.png",
-            "card_width": 25,
-            "card_width_mobile": 50,
-            "text_alignment": "center",
-            "card_bg_color": "#090838",
-            "card_border_color": "#c6973d",
-            "card_heading": "",
-            "heading_size": 30,
-            "card_heading_font_weight": "700",
-            "heading_color": "#000000",
-            "card_description": "Direct Employment Model",
-            "description_size": 20,
-            "card_description_font_weight": "600",
-            "description_color": "#ffffff",
-            "card_subdescription": "",
-            "subdescription_size": 16,
-            "card_subdescription_font_weight": "400",
-            "subdescription_color": "#090838",
-            "card_link": ""
-          }
-        },
         "card_VikYPb": {
           "type": "card",
           "settings": {
@@ -2334,6 +2309,31 @@
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
             "card_description": "Scalable Growth Solutions",
+            "description_size": 20,
+            "card_description_font_weight": "600",
+            "description_color": "#ffffff",
+            "card_subdescription": "",
+            "subdescription_size": 16,
+            "card_subdescription_font_weight": "400",
+            "subdescription_color": "#090838",
+            "card_link": ""
+          }
+        },
+        "card_PygHFU": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "card_icon": "shopify://shop_images/Rectangle_36_1.png",
+            "card_width": 25,
+            "card_width_mobile": 50,
+            "text_alignment": "center",
+            "card_bg_color": "#090838",
+            "card_border_color": "#c6973d",
+            "card_heading": "",
+            "heading_size": 30,
+            "card_heading_font_weight": "700",
+            "heading_color": "#000000",
+            "card_description": "Direct Employment Model",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
@@ -2372,8 +2372,8 @@
       },
       "block_order": [
         "card_ih4xVG",
-        "card_PygHFU",
         "card_VikYPb",
+        "card_PygHFU",
         "card_tBHnkW"
       ],
       "name": "CWGP - Image Card",
@@ -2383,8 +2383,8 @@
         "section_max_width": 1440,
         "padding-block-start": 40,
         "padding-block-end": 40,
-        "padding-block-left": 0,
-        "padding-block-right": 0,
+        "padding-block-left": 20,
+        "padding-block-right": 20,
         "show_mobile": true,
         "show_desktop": true
       }
