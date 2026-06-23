@@ -290,7 +290,7 @@
             "button_d6aeN3": {
               "type": "button",
               "settings": {
-                "label": "Lorem Ipsum",
+                "label": "Schedule Consultation",
                 "link": "#",
                 "open_in_new_tab": false,
                 "style_class": "uiverse-btn-wht",
@@ -471,7 +471,7 @@
             "button_V6GCHC": {
               "type": "button",
               "settings": {
-                "label": "Lorem Ipsum",
+                "label": "Schedule Consultation",
                 "link": "#",
                 "open_in_new_tab": false,
                 "style_class": "uiverse-btn-wht",
@@ -599,7 +599,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Shopify Admin</p>",
+            "text": "<p><strong>Shopify Admin</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -628,7 +628,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>SQL Developer</p>",
+            "text": "<p><strong>SQL Developer</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -657,7 +657,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Customer Support</p>",
+            "text": "<p><strong>Customer Support</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -686,7 +686,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Salesforce Admin</p>",
+            "text": "<p><strong>Salesforce Admin</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -715,7 +715,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Logistics Support</p>",
+            "text": "<p><strong>Logistics Support</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -744,7 +744,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Sales Analyst</p>",
+            "text": "<p><strong>Sales Analyst</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -1757,7 +1757,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
+            "gap": 0,
             "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fit-content",
@@ -1837,7 +1837,7 @@
                     "style_class": "btn-elegant",
                     "width": "fit-content",
                     "custom_width": 100,
-                    "width_mobile": "custom",
+                    "width_mobile": "fit-content",
                     "custom_width_mobile": 100
                   },
                   "blocks": {}
@@ -1845,6 +1845,84 @@
               },
               "block_order": [
                 "button_4MCgbg"
+              ]
+            },
+            "group_DKmn3K": {
+              "type": "group",
+              "name": "t:names.group",
+              "disabled": true,
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "row",
+                "enable_overflow": false,
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-1",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_color": "#090838",
+                "border_opacity": 100,
+                "border_radius": 27,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 3,
+                "padding-block-end": 3,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16
+              },
+              "blocks": {
+                "text_edtFdf": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "disabled": true,
+                  "settings": {
+                    "text": "<p>Your Team</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_color": "#000000",
+                    "font_opacity": 100,
+                    "font_weight": "400",
+                    "font_size": "1.5rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#ffffff",
+                    "corner_radius": 27,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_edtFdf"
               ]
             },
             "text_FpATqH": {
@@ -1875,6 +1953,83 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "group_ii3BFL": {
+              "type": "group",
+              "name": "t:names.group",
+              "disabled": true,
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "row",
+                "enable_overflow": false,
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "center",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": false,
+                "color_scheme": "scheme-6",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_color": "#090838",
+                "border_opacity": 100,
+                "border_radius": 27,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 3,
+                "padding-block-end": 3,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16
+              },
+              "blocks": {
+                "text_Kc7rtj": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>CW Global People</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "center",
+                    "type_preset": "custom",
+                    "font": "var(--font-heading--family)",
+                    "font_color": "#000000",
+                    "font_opacity": 100,
+                    "font_weight": "400",
+                    "font_size": "2rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#0f5d7e",
+                    "corner_radius": 29,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_Kc7rtj"
+              ]
             },
             "group_CngJLB": {
               "type": "group",
@@ -1928,7 +2083,7 @@
                     "style_class": "orange-outline-pill-btn",
                     "width": "custom",
                     "custom_width": 100,
-                    "width_mobile": "custom",
+                    "width_mobile": "fit-content",
                     "custom_width_mobile": 100
                   },
                   "blocks": {}
@@ -1941,7 +2096,9 @@
           },
           "block_order": [
             "group_PkHBak",
+            "group_DKmn3K",
             "text_FpATqH",
+            "group_ii3BFL",
             "group_CngJLB"
           ]
         },
@@ -2078,104 +2235,7 @@
         "text_UbYk7D",
         "text_enQQWw"
       ],
-      "name": "Our People, Your Advantage (Desktop)",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 40,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 20,
-        "padding-block-end": 20,
-        "show_mobile": false,
-        "show_desktop": true
-      }
-    },
-    "section_NJaPPf": {
-      "type": "section",
-      "blocks": {
-        "text_hHbhjC": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<h3>Our People, Your Advantage</h3>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_color": "#090838",
-            "font_opacity": 100,
-            "font_weight": "600",
-            "font_size": "1.25rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "text_BQfTwy": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<p>Our commitment to our people translates directly into value for our clients. By fostering engagement, professional growth, and long-term retention, we build high-performing teams that deliver consistent results and support sustainable business success.</p>",
-            "width": "fit-content",
-            "max_width": "none",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_color": "#090838",
-            "font_opacity": 80,
-            "font_weight": "400",
-            "font_size": "0.875rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_hHbhjC",
-        "text_BQfTwy"
-      ],
-      "name": "Our People, Your Advantage (Mobile)",
+      "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -2203,7 +2263,7 @@
         "padding-block-start": 20,
         "padding-block-end": 20,
         "show_mobile": true,
-        "show_desktop": false
+        "show_desktop": true
       }
     },
     "cwgp_image_card_4MNxzH": {
@@ -2234,31 +2294,6 @@
             "card_link": ""
           }
         },
-        "card_PygHFU": {
-          "type": "card",
-          "settings": {
-            "card_direction": "column",
-            "card_icon": "shopify://shop_images/Rectangle_36_1.png",
-            "card_width": 25,
-            "card_width_mobile": 50,
-            "text_alignment": "center",
-            "card_bg_color": "#090838",
-            "card_border_color": "#c6973d",
-            "card_heading": "",
-            "heading_size": 30,
-            "card_heading_font_weight": "700",
-            "heading_color": "#000000",
-            "card_description": "Direct Employment Model",
-            "description_size": 20,
-            "card_description_font_weight": "600",
-            "description_color": "#ffffff",
-            "card_subdescription": "",
-            "subdescription_size": 16,
-            "card_subdescription_font_weight": "400",
-            "subdescription_color": "#090838",
-            "card_link": ""
-          }
-        },
         "card_VikYPb": {
           "type": "card",
           "settings": {
@@ -2274,6 +2309,31 @@
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
             "card_description": "Scalable Growth Solutions",
+            "description_size": 20,
+            "card_description_font_weight": "600",
+            "description_color": "#ffffff",
+            "card_subdescription": "",
+            "subdescription_size": 16,
+            "card_subdescription_font_weight": "400",
+            "subdescription_color": "#090838",
+            "card_link": ""
+          }
+        },
+        "card_PygHFU": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "card_icon": "shopify://shop_images/Rectangle_36_1.png",
+            "card_width": 25,
+            "card_width_mobile": 50,
+            "text_alignment": "center",
+            "card_bg_color": "#090838",
+            "card_border_color": "#c6973d",
+            "card_heading": "",
+            "heading_size": 30,
+            "card_heading_font_weight": "700",
+            "heading_color": "#000000",
+            "card_description": "Direct Employment Model",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
@@ -2312,134 +2372,11 @@
       },
       "block_order": [
         "card_ih4xVG",
-        "card_PygHFU",
         "card_VikYPb",
+        "card_PygHFU",
         "card_tBHnkW"
       ],
-      "name": "CWGP - Image Card (Desktop)",
-      "settings": {
-        "cards_direction": "row",
-        "section_bg_color": "#ffffff",
-        "section_max_width": 1440,
-        "padding-block-start": 40,
-        "padding-block-end": 40,
-        "padding-block-left": 20,
-        "padding-block-right": 20,
-        "show_mobile": false,
-        "show_desktop": true
-      }
-    },
-    "cwgp_image_card_G4zGfy": {
-      "type": "cwgp-image-card",
-      "blocks": {
-        "card_ktjVfP": {
-          "type": "card",
-          "settings": {
-            "card_direction": "column",
-            "card_icon": "shopify://shop_images/Rectangle_34_6.png",
-            "card_width": 25,
-            "card_width_mobile": 50,
-            "text_alignment": "center",
-            "card_bg_color": "#090838",
-            "card_border_color": "#c6973d",
-            "card_heading": "",
-            "heading_size": 30,
-            "card_heading_font_weight": "700",
-            "heading_color": "#000000",
-            "card_description": "Top Talent Acquisition",
-            "description_size": 12,
-            "card_description_font_weight": "600",
-            "description_color": "#ffffff",
-            "card_subdescription": "",
-            "subdescription_size": 16,
-            "card_subdescription_font_weight": "400",
-            "subdescription_color": "#090838",
-            "card_link": ""
-          }
-        },
-        "card_UkNiLT": {
-          "type": "card",
-          "settings": {
-            "card_direction": "column",
-            "card_icon": "shopify://shop_images/Rectangle_36_1.png",
-            "card_width": 25,
-            "card_width_mobile": 50,
-            "text_alignment": "center",
-            "card_bg_color": "#090838",
-            "card_border_color": "#c6973d",
-            "card_heading": "",
-            "heading_size": 30,
-            "card_heading_font_weight": "700",
-            "heading_color": "#000000",
-            "card_description": "Direct Employment Model",
-            "description_size": 12,
-            "card_description_font_weight": "600",
-            "description_color": "#ffffff",
-            "card_subdescription": "",
-            "subdescription_size": 16,
-            "card_subdescription_font_weight": "400",
-            "subdescription_color": "#090838",
-            "card_link": ""
-          }
-        },
-        "card_8zm6wd": {
-          "type": "card",
-          "settings": {
-            "card_direction": "column",
-            "card_icon": "shopify://shop_images/Rectangle_34_7.png",
-            "card_width": 25,
-            "card_width_mobile": 50,
-            "text_alignment": "center",
-            "card_bg_color": "#090838",
-            "card_border_color": "#c6973d",
-            "card_heading": "",
-            "heading_size": 30,
-            "card_heading_font_weight": "700",
-            "heading_color": "#000000",
-            "card_description": "Scalable Growth Solutions",
-            "description_size": 12,
-            "card_description_font_weight": "600",
-            "description_color": "#ffffff",
-            "card_subdescription": "",
-            "subdescription_size": 16,
-            "card_subdescription_font_weight": "400",
-            "subdescription_color": "#090838",
-            "card_link": ""
-          }
-        },
-        "card_qUQerR": {
-          "type": "card",
-          "settings": {
-            "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_13_1.png",
-            "card_width": 25,
-            "card_width_mobile": 50,
-            "text_alignment": "center",
-            "card_bg_color": "#090838",
-            "card_border_color": "#c6973d",
-            "card_heading": "",
-            "heading_size": 30,
-            "card_heading_font_weight": "700",
-            "heading_color": "#000000",
-            "card_description": "Dedicated Workforce Support",
-            "description_size": 12,
-            "card_description_font_weight": "600",
-            "description_color": "#ffffff",
-            "card_subdescription": "",
-            "subdescription_size": 16,
-            "card_subdescription_font_weight": "400",
-            "subdescription_color": "#090838",
-            "card_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "card_ktjVfP",
-        "card_UkNiLT",
-        "card_8zm6wd",
-        "card_qUQerR"
-      ],
-      "name": "CWGP - Image Card (Mobile)",
+      "name": "CWGP - Image Card",
       "settings": {
         "cards_direction": "row",
         "section_bg_color": "#ffffff",
@@ -2449,7 +2386,7 @@
         "padding-block-left": 20,
         "padding-block-right": 20,
         "show_mobile": true,
-        "show_desktop": false
+        "show_desktop": true
       }
     },
     "section_CHNEg6": {
@@ -3157,9 +3094,7 @@
     "section_yUGGBW",
     "section_d99Tt6",
     "section_9HwHLn",
-    "section_NJaPPf",
     "cwgp_image_card_4MNxzH",
-    "cwgp_image_card_G4zGfy",
     "section_CHNEg6",
     "section_zmeU4G",
     "section_MGjFg4"
