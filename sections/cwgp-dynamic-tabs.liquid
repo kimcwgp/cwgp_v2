@@ -35,7 +35,7 @@
         <div class="cwgp-tabs-menus">
             {% for block in section.blocks %}
                 {% if block.settings.tab_menu_title %}
-                    <span class="cwgp-tab cwgp-tab-{{ block.id }}"  
+                    <span class="cwgp-tab cwgp-tab-{{ block.id }} {% if forloop.first %}active{% endif %}"  
                         style="
                             font-size: {{ block.settings.tab_menu_title_size }}px; 
                             --tab-bg: {{ block.settings.tab_menu_bg_color }};
@@ -44,23 +44,27 @@
                             --tab-text-hover: {{ block.settings.tab_menu_text_hover_color }};"
                         data-tab="{{ block.id }}">
 
-                        <img 
-                            class="tab-icon-default"
-                            src="{{ block.settings.image_upload | image_url }}" 
-                            alt="{{ block.settings.tab_menu_title }}"
-                            width="25"
-                            height="25"
-                            style="width: {{ block.settings.width }}px;"
-                        >
+                        {% if block.settings.image_upload %}
+                            <img 
+                                class="tab-icon-default"
+                                src="{{ block.settings.image_upload | image_url }}" 
+                                alt="{{ block.settings.tab_menu_title }}"
+                                width="25"
+                                height="25"
+                                style="width: {{ block.settings.width }}px;"
+                            >
+                        {% endif %}
 
-                        <img 
-                            class="tab-icon-hover"
-                            src="{{ block.settings.hover_image_upload | image_url }}" 
-                            alt="{{ block.settings.tab_menu_title }}"
-                            width="25"
-                            height="25"
-                            style="width: {{ block.settings.width }}px;"
-                        >
+                        {% if block.settings.hover_image_upload %}
+                            <img 
+                                class="tab-icon-hover"
+                                src="{{ block.settings.hover_image_upload | image_url }}" 
+                                alt="{{ block.settings.tab_menu_title }}"
+                                width="25"
+                                height="25"
+                                style="width: {{ block.settings.width }}px;"
+                            >
+                        {% endif %}
 
                         {{ block.settings.tab_menu_title }}
                     </span>
@@ -271,7 +275,7 @@
         }
 
         .cwgp-btn-section{
-            flex-direction: column;
+            flex-direction: row;
             align-items: flex-start;
             gap: 12px;
         }
@@ -316,9 +320,6 @@
             });
         });
 
-        if(tabs.length){
-            tabs[0].click();
-        }
     });
 {% endjavascript %}
 

@@ -6,6 +6,8 @@
     background-color: {{ section.settings.section_bg_color }};
     padding-top: {{ section.settings.padding-block-start }}px;
     padding-bottom: {{ section.settings.padding-block-end }}px;
+    padding-left: {{ section.settings.padding-block-left }}px;
+    padding-right: {{ section.settings.padding-block-right }}px;
   "
 >
 
@@ -376,6 +378,13 @@
     width:100% !important;
   }
 
+  .cwgp-socials-list {
+    justify-content: space-around;
+  }
+
+  .parent-link-list {
+    gap: 10px;
+  }
 }
 
 /* DESKTOP */
@@ -445,6 +454,26 @@
         "type": "range",
         "id": "padding-block-end",
         "label": "Bottom padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "padding-block-left",
+        "label": "Left padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "padding-block-right",
+        "label": "Right padding",
         "min": 0,
         "max": 100,
         "step": 1,
