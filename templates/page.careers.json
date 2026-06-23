@@ -755,7 +755,7 @@
           "settings": {
             "card_direction": "column",
             "card_icon": "shopify://shop_images/people_16.png",
-            "card_width": 25,
+            "card_width": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#c6973d",
@@ -763,7 +763,7 @@
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Direct Employment",
+            "card_description": "Direct Employment Model",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
@@ -779,7 +779,7 @@
           "settings": {
             "card_direction": "column",
             "card_icon": "shopify://shop_images/people_17.png",
-            "card_width": 25,
+            "card_width": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#c6973d",
@@ -803,7 +803,7 @@
           "settings": {
             "card_direction": "column",
             "card_icon": "shopify://shop_images/people_14.png",
-            "card_width": 25,
+            "card_width": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#c6973d",
@@ -827,7 +827,7 @@
           "settings": {
             "card_direction": "column",
             "card_icon": "shopify://shop_images/people_13.png",
-            "card_width": 25,
+            "card_width": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#c6973d",
@@ -860,8 +860,6 @@
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 20,
-        "padding-block-left": 20,
-        "padding-block-right": 20,
         "show_mobile": true,
         "show_desktop": true
       }
