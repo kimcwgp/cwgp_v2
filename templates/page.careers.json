@@ -23,6 +23,7 @@
             "type_preset": "h2",
             "font": "var(--font-primary--family)",
             "font_color": "#000000",
+            "font_opacity": 100,
             "font_weight": "400",
             "font_size": "",
             "line_height": "normal",
@@ -83,6 +84,7 @@
             "type_preset": "h1",
             "font": "var(--font-heading--family)",
             "font_color": "#000000",
+            "font_opacity": 100,
             "font_weight": "400",
             "font_size": "4.5rem",
             "line_height": "normal",
@@ -110,6 +112,7 @@
             "type_preset": "custom",
             "font": "var(--font-body--family)",
             "font_color": "#000000",
+            "font_opacity": 100,
             "font_weight": "400",
             "font_size": "1.25rem",
             "line_height": "normal",
@@ -192,6 +195,7 @@
             "link": "",
             "open_in_new_tab": false,
             "content_direction": "column",
+            "enable_overflow": false,
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
@@ -212,6 +216,7 @@
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
+            "border_color": "#090838",
             "border_opacity": 100,
             "border_radius": 0,
             "placeholder": "",
@@ -236,6 +241,7 @@
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
                 "font_color": "#090838",
+                "font_opacity": 100,
                 "font_weight": "900",
                 "font_size": "3rem",
                 "line_height": "tight",
@@ -263,6 +269,7 @@
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
                 "font_color": "#090838",
+                "font_opacity": 100,
                 "font_weight": "600",
                 "font_size": "1.25rem",
                 "line_height": "normal",
@@ -309,6 +316,7 @@
             "image_ratio": "square",
             "width": "custom",
             "custom_width": 75,
+            "custom_width_px": 500,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
             "height": "fit",
@@ -372,6 +380,7 @@
             "type_preset": "custom",
             "font": "var(--font-heading--family)",
             "font_color": "#ffffff",
+            "font_opacity": 100,
             "font_weight": "600",
             "font_size": "2rem",
             "line_height": "normal",
@@ -416,6 +425,7 @@
             "type_preset": "custom",
             "font": "var(--font-body--family)",
             "font_color": "#090838",
+            "font_opacity": 100,
             "font_weight": "600",
             "font_size": "2rem",
             "line_height": "normal",
@@ -444,6 +454,7 @@
             "type_preset": "custom",
             "font": "var(--font-body--family)",
             "font_color": "#090838",
+            "font_opacity": 100,
             "font_weight": "400",
             "font_size": "1.125rem",
             "line_height": "normal",
@@ -504,6 +515,7 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "Team Lead",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -524,6 +536,7 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "Accounts Payable Specialist",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -544,6 +557,7 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "AI Developer/ Automation Engineer",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -564,6 +578,7 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "Logistic Support Specialist",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -584,6 +599,7 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "Marketing Manager",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -604,6 +620,7 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "Airtable Specialist - Sales Operations",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -625,6 +642,7 @@
           "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "Technical Designer - Dresser",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -645,6 +663,7 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "Shopify E-Commerce Manager",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -665,6 +684,7 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "Accounting Associate",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -685,6 +705,7 @@
           "type": "card",
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "Pattern Engineer",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -706,6 +727,7 @@
           "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/career-icon2.png",
+            "text-alignment": "center",
             "title": "E-Commerce Operations Specialist",
             "card-title-font-size": 20,
             "card-title-font-weight": "600",
@@ -743,6 +765,7 @@
         "heading-font-size": 20,
         "heading-font-weight": "600",
         "heading-color": "#000000",
+        "section_bg_color": "#ffffff",
         "padding-block-start": 60,
         "padding-block-end": 60
       }
@@ -756,6 +779,7 @@
             "card_direction": "column",
             "card_icon": "shopify://shop_images/people_16.png",
             "card_width": 25,
+            "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#c6973d",
@@ -763,7 +787,7 @@
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Direct Employment",
+            "card_description": "Direct Employment Model",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
@@ -780,6 +804,7 @@
             "card_direction": "column",
             "card_icon": "shopify://shop_images/people_17.png",
             "card_width": 25,
+            "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#c6973d",
@@ -804,6 +829,7 @@
             "card_direction": "column",
             "card_icon": "shopify://shop_images/people_14.png",
             "card_width": 25,
+            "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#c6973d",
@@ -828,6 +854,7 @@
             "card_direction": "column",
             "card_icon": "shopify://shop_images/people_13.png",
             "card_width": 25,
+            "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#c6973d",
@@ -925,6 +952,7 @@
         "card_RqR8ij": {
           "type": "card",
           "settings": {
+            "text-alignment": "center",
             "title": "Job Title",
             "card-title-font-size": 24,
             "card-title-font-weight": "600",
@@ -944,6 +972,7 @@
         "card_ftWNyQ": {
           "type": "card",
           "settings": {
+            "text-alignment": "center",
             "title": "Job Title",
             "card-title-font-size": 24,
             "card-title-font-weight": "600",
@@ -963,6 +992,7 @@
         "card_nJMxcb": {
           "type": "card",
           "settings": {
+            "text-alignment": "center",
             "title": "Job Title",
             "card-title-font-size": 24,
             "card-title-font-weight": "600",
@@ -982,6 +1012,7 @@
         "card_ccMG6e": {
           "type": "card",
           "settings": {
+            "text-alignment": "center",
             "title": "Job Title",
             "card-title-font-size": 24,
             "card-title-font-weight": "600",
@@ -1001,6 +1032,7 @@
         "card_mnWVi4": {
           "type": "card",
           "settings": {
+            "text-alignment": "center",
             "title": "Job Title",
             "card-title-font-size": 24,
             "card-title-font-weight": "600",
@@ -1020,6 +1052,7 @@
         "card_tt9ntP": {
           "type": "card",
           "settings": {
+            "text-alignment": "center",
             "title": "Job Title",
             "card-title-font-size": 24,
             "card-title-font-weight": "600",
@@ -1039,6 +1072,7 @@
         "card_64tbtc": {
           "type": "card",
           "settings": {
+            "text-alignment": "center",
             "title": "Job Title",
             "card-title-font-size": 24,
             "card-title-font-weight": "600",
@@ -1058,6 +1092,7 @@
         "card_XtfHKC": {
           "type": "card",
           "settings": {
+            "text-alignment": "center",
             "title": "Job Title",
             "card-title-font-size": 24,
             "card-title-font-weight": "600",
@@ -1091,6 +1126,7 @@
         "heading-font-size": 36,
         "heading-font-weight": "700",
         "heading-color": "#0a2647",
+        "section_bg_color": "#ffffff",
         "padding-block-start": 60,
         "padding-block-end": 80
       }
