@@ -1,0 +1,120 @@
+
+{% capture cwgp_styles %}
+  <link rel="stylesheet" href="{{ 'cwgp-styles.css' | asset_url }}" media="all">
+{% endcapture %}
+{{ cwgp_styles | strip }}
+
+
+<section class="hero-hp" role="banner">
+  <div class="container hero-content-hp">
+    <h1>{{ section.settings.hero_banner_text }}</h1>
+    <p>{{ section.settings.hero_banner_body }}</p>
+  </div>
+  <div class="hero-image-hp" aria-hidden="true">
+    <img src="{{ section.settings.hero_img | image_url: width: 1600 }}" class="cwgp-hero-desktop" style="display: none;">
+
+    <img
+      src="{{ section.settings.hero_img_mobile | image_url: width: 1600 }}"
+      alt="Hero banner"
+      loading="lazy"
+      onerror="this.style.display='none'"
+      class="cwgp-hero-mobile"
+      style="display: none;"
+    />
+
+  </div>
+</section>
+
+<style>
+ 
+@media screen and (max-width: 768px) {
+  .cwgp-hero-mobile {
+    display: block!important;
+  }
+
+  .cwgp-hero-desktop {
+    display:none!important;
+  }
+  div#shopify-section-template--17617272045647__cwgp_hero_mmNR6n {
+    background-image: url("{{ section.settings.hero_img_background_mobile | image_url: width: 400 }}");
+  }
+  .hero-hp::before {
+    background: linear-gradient(90deg, {{ section.settings.hero_background_color }} -22%, rgba(0, 0, 0, 0.75) 100%)!important;
+  }
+}
+
+.hero-hp::before {
+    background: linear-gradient(90deg, {{ section.settings.hero_background_color }} 90%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+@media screen and (min-width: 769px) {
+div#shopify-section-template--17617272045647__cwgp_hero_mmNR6n {
+    background-image: url("{{ section.settings.hero_img_background_desktop | image_url: width: 1600 }}");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: auto;
+    background-position: bottom;
+  }
+}
+
+
+
+</style>
+
+{% schema %}
+{
+  "name": "CWGP Hero Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_img_background_desktop",
+      "label": "Background Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_img_background_mobile",
+      "label": "Background Mobile"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_img",
+      "label": "Desktop image here"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_img_mobile",
+      "label": "Mobile image here"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_banner_text",
+      "label": "Header",
+      "default": "Let us help you transform your business "
+    },
+    {
+      "type": "richtext",
+      "id": "hero_banner_body",
+      "label": "Description",
+      "default": "<p>At CWGlobalPeople, we find and staff skilled workers to support your business. Whether it's finance, data, customer support, technical or something totally random, we can find the right fit.</p>"
+    },
+    {
+      "type": "color",
+      "id": "hero_background_color",
+      "label": "Background Color"
+    },
+  ],
+  "presets": [
+    {
+      "name": "CWGP Hero Section",
+    }
+  ]
+}
+{% endschema %}

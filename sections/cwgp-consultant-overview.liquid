@@ -1,0 +1,126 @@
+<section class="cwgp-consultant-overview">
+  <div class="cwgp-container">
+
+    <div class="cwgp-inner">
+
+      {% if section.settings.heading != blank %}
+        <h2 class="cwgp-heading">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      <div class="cwgp-content">
+        {% if section.settings.description_1 != blank %}
+          <p class="cwgp-text">
+            {{ section.settings.description_1 }}
+          </p>
+        {% endif %}
+
+        {% if section.settings.description_2 != blank %}
+          <p class="cwgp-text">
+            {{ section.settings.description_2 }}
+          </p>
+        {% endif %}
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% style %}
+.cwgp-consultant-overview {
+  background: #ffffff;
+  padding: 100px 20px;
+}
+
+.cwgp-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* INNER WRAP (adds structure without color) */
+.cwgp-inner {
+  max-width: 1200px;
+}
+
+/* HEADING */
+.cwgp-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+/* CONTENT WRAP WITH ACCENT LINE */
+.cwgp-content {
+  border-left: 3px solid #000;
+  padding-left: 25px;
+}
+
+/* TEXT */
+.cwgp-text {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #000;
+  margin-bottom: 22px;
+}
+
+/* spacing between paragraphs */
+.cwgp-text:last-child {
+  margin-bottom: 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .cwgp-consultant-overview {
+    padding: 70px 20px;
+  }
+
+  .cwgp-heading {
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  .cwgp-content {
+    padding-left: 18px;
+  }
+
+  .cwgp-text {
+    font-size: 16px;
+  }
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "CWGP Consultant Overview",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Consultant Overview"
+    },
+    {
+      "type": "textarea",
+      "id": "description_1",
+      "label": "First Paragraph",
+      "default": "This MuleSoft consultant provides end-to-end integration expertise — from API-led design and architecture planning to implementation, deployment, and performance optimization."
+    },
+    {
+      "type": "textarea",
+      "id": "description_2",
+      "label": "Second Paragraph",
+      "default": "Available for embedded team integration or hourly strategic advisory support, depending on project scope and business requirements."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Consultant Overview"
+    }
+  ]
+}
+{% endschema %}

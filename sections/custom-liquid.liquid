@@ -1,0 +1,41 @@
+
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="section section--{{ section.settings.section_width }} spacing-style {% if section.settings.color_scheme != blank %}color-{{ section.settings.color_scheme }}{% endif %}"
+  style="{% render 'spacing-padding', settings: section.settings %}"
+>
+  {{ section.settings.custom_liquid }}
+</div>
+
+{% schema %}
+{
+  "name": "Background Beams",
+  "settings": [
+    { "type": "color", "id": "color_1", "label": "Beam color 1", "default": "#3b82f6" },
+    { "type": "color", "id": "color_2", "label": "Beam color 2", "default": "#22d3ee" },
+    { "type": "range", "id": "intensity", "label": "Intensity (blur)", "min": 10, "max": 80, "step": 1, "default": 40 },
+    { "type": "range", "id": "speed", "label": "Movement speed", "min": 10, "max": 120, "step": 5, "default": 45 },
+    { "type": "range", "id": "height_vh", "label": "Section height (vh)", "min": 20, "max": 100, "step": 5, "default": 60 },
+    { "type": "checkbox", "id": "full_width", "label": "Edge-to-edge width", "default": true },
+    { "type": "richtext", "id": "content", "label": "Foreground content", "default": "<p>Add heading or text here</p>" }
+  ],
+  "presets": [{ "name": "Background Beams" }]
+}
+{% endschema %}
+
+{%- assign h = section.settings.height_vh -%}
+<section
+  id="beams-{{ section.id }}"
+  class="beams-section{% if section.settings.full_width %} beams--full{% endif %}"
+  style="--beams-h: {{ h }}vh;
+         --beam-a: {{ section.settings.color_1 }};
+         --beam-b: {{ section.settings.color_2 }};
+         --beam-blur: {{ section.settings.intensity }}px;
+         --beam-speed: {{ section.settings.speed }}s;">
+  <div class="beams-bg" aria-hidden="true"></div>
+  <div class="beams-inner">
+    {{ section.settings.content }}
+    {%- comment -%} You can add blocks here if you want {%- endcomment -%}
+  </div>
+</section>

@@ -1,0 +1,671 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "hero_yDnGTh": {
+      "type": "hero",
+      "blocks": {
+        "text_LzgyMA": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Partners</h1>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#ffffff",
+            "font_weight": "900",
+            "font_size": "3rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_HLVMAH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our partner network allows us to connect clients with trusted technologies, specialized expertise, and innovative solutions. By working together, we help organizations unlock new opportunities and achieve sustainable growth.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#ffffff",
+            "font_weight": "500",
+            "font_size": "1.25rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 32,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_LzgyMA",
+        "text_HLVMAH"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/Group_13_2.png",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "small",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "cwgp_resizable_card_iArrEz": {
+      "type": "cwgp-resizable-card",
+      "blocks": {
+        "text_column_CXVVPj": {
+          "type": "text_column",
+          "settings": {
+            "column_width": 50,
+            "heading": "<p>Creating strong, lasting and profitable partnerships to strengthen our clients’ businesses</p>",
+            "text_column_heading_font_weight": "700",
+            "heading_size": 28,
+            "heading_color": "#090838",
+            "description": "<p>We collaborate with an ecosystem of partners to provide our clients with cutting-edge products and services in many of the largest industries in the world.</p>",
+            "text_column_description_font_weight": "500",
+            "description_size": 16,
+            "description_color": "#090838"
+          }
+        },
+        "link_list_NaWHh7": {
+          "type": "link_list",
+          "settings": {
+            "column_width": 25,
+            "bg_color": "#c6973d",
+            "title": "Connect with us",
+            "title_size": 22,
+            "title_color": "#ffffff",
+            "link_size": 16,
+            "link_color": "#ffffff",
+            "link_text_1": "Alliance and Channel Partners",
+            "link_1": "#",
+            "link_text_2": "",
+            "link_2": "",
+            "link_text_3": "",
+            "link_3": "",
+            "link_text_4": "",
+            "link_4": "",
+            "link_text_5": "",
+            "link_5": "",
+            "social_bg_color": "#090838",
+            "social_text": "Share this",
+            "social_text_font_weight": "600",
+            "text_size": 16,
+            "text_color": "#ffffff",
+            "linkedIn_url": "#",
+            "twitter_url": "#",
+            "facebook_url": "#",
+            "email_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "text_column_CXVVPj",
+        "link_list_NaWHh7"
+      ],
+      "custom_css": [
+        ".cwgp-resizable-cards-grid {justify-content: space-between;}"
+      ],
+      "name": "CWGP - Resizable Card",
+      "settings": {
+        "cards_direction": "row",
+        "section_bg_color": "#f7f7f7",
+        "section_max_width": 1440,
+        "padding-block-start": 60,
+        "padding-block-end": 60,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "section_8hi7E4": {
+      "type": "section",
+      "blocks": {
+        "text_FUEBCz": {
+          "type": "text",
+          "name": "t:names.text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Supporting enterprise integration initiatives across ERP, SaaS, eCommerce, and multi-system ecosystems.</p>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_color": "#000000",
+            "font_weight": "400",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "group_LPyCGY": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_yK8jeE": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<h3>Strategic Partners</h3>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-heading--family)",
+                "font_color": "#090838",
+                "font_weight": "700",
+                "font_size": "2rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "balance",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_Qq6mpk": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Our alliance partners help us deliver exceptional workforce solutions, operational support, and business services to organizations across multiple industries. By working closely with trusted technology, service, and business partners, we expand our capabilities and provide clients with access to skilled talent, efficient processes, and scalable solutions that support long-term growth.<br/><br/>Through these strategic relationships, we strengthen our ability to meet evolving business needs while maintaining the quality, flexibility, and reliability our clients expect. Together, we create opportunities that help organizations build high-performing teams, improve operational efficiency, and achieve sustainable success.</p>",
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_color": "#090838",
+                "font_weight": "400",
+                "font_size": "1.125rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_yK8jeE",
+            "text_Qq6mpk"
+          ]
+        }
+      },
+      "block_order": [
+        "text_FUEBCz",
+        "group_LPyCGY"
+      ],
+      "name": "Text Section (Desktop)",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-start",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 60,
+        "show_mobile": false,
+        "show_desktop": true
+      }
+    },
+    "section_Pmi3YH": {
+      "type": "section",
+      "blocks": {
+        "text_JkRwqw": {
+          "type": "text",
+          "name": "t:names.text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Supporting enterprise integration initiatives across ERP, SaaS, eCommerce, and multi-system ecosystems.</p>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#000000",
+            "font_weight": "400",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "group_86Rw97": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_amFpUt": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-heading--family)",
+                "font_color": "#000000",
+                "font_weight": "400",
+                "font_size": "1.25rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "balance",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_3A8Yjk": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_color": "#000000",
+                "font_weight": "400",
+                "font_size": "0.875rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_amFpUt",
+            "text_3A8Yjk"
+          ]
+        }
+      },
+      "block_order": [
+        "text_JkRwqw",
+        "group_86Rw97"
+      ],
+      "name": "Text Section (Mobile)",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-start",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 60,
+        "show_mobile": true,
+        "show_desktop": false
+      }
+    },
+    "cwgp_card_partners_eLeYiQ": {
+      "type": "cwgp-card-partners",
+      "blocks": {
+        "card_W4XnAB": {
+          "type": "card",
+          "settings": {
+            "image_upload": "shopify://shop_images/trusted_partner.png",
+            "cwgp_expertise_card_title": "Lorem ipsum dolor sit",
+            "cwgp_card_title_alignment": "left",
+            "cwgp_card_title_color": "#ffffff",
+            "partner_link": "#",
+            "cwgp_expertise_card_text": "<p>Lorem ipsum dolor sit amet consectetur. Ac dignissim ultricies aenean orci vel amet.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#ffffff",
+            "cwgp_card_bg_color": "#090838",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0,
+            "card_content_padding": 24
+          }
+        },
+        "card_3QkTaB": {
+          "type": "card",
+          "settings": {
+            "image_upload": "shopify://shop_images/trusted_partner.png",
+            "cwgp_expertise_card_title": "Lorem ipsum dolor sit",
+            "cwgp_card_title_alignment": "left",
+            "cwgp_card_title_color": "#ffffff",
+            "partner_link": "#",
+            "cwgp_expertise_card_text": "<p>Lorem ipsum dolor sit amet consectetur. Ac dignissim ultricies aenean orci vel amet.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#ffffff",
+            "cwgp_card_bg_color": "#090838",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0,
+            "card_content_padding": 24
+          }
+        },
+        "card_UV3MHT": {
+          "type": "card",
+          "settings": {
+            "image_upload": "shopify://shop_images/trusted_partner.png",
+            "cwgp_expertise_card_title": "Lorem ipsum dolor sit",
+            "cwgp_card_title_alignment": "left",
+            "cwgp_card_title_color": "#ffffff",
+            "partner_link": "#",
+            "cwgp_expertise_card_text": "<p>Lorem ipsum dolor sit amet consectetur. Ac dignissim ultricies aenean orci vel amet.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#ffffff",
+            "cwgp_card_bg_color": "#090838",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0,
+            "card_content_padding": 24
+          }
+        },
+        "card_VXBjTB": {
+          "type": "card",
+          "settings": {
+            "image_upload": "shopify://shop_images/trusted_partner.png",
+            "cwgp_expertise_card_title": "Lorem ipsum dolor sit",
+            "cwgp_card_title_alignment": "left",
+            "cwgp_card_title_color": "#ffffff",
+            "partner_link": "#",
+            "cwgp_expertise_card_text": "<p>Lorem ipsum dolor sit amet consectetur. Ac dignissim ultricies aenean orci vel amet.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#ffffff",
+            "cwgp_card_bg_color": "#090838",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0,
+            "card_content_padding": 24
+          }
+        }
+      },
+      "block_order": [
+        "card_W4XnAB",
+        "card_3QkTaB",
+        "card_UV3MHT",
+        "card_VXBjTB"
+      ],
+      "name": "CWGP - Partners Card",
+      "settings": {
+        "cwgp_expertise_topheading": "",
+        "cwgp_topheading_alignment": "center",
+        "cwgp_topheading_color": "#000000",
+        "cwgp_topheading_font_size": 16,
+        "cwgp_topheading_font_weight": "400",
+        "cwgp_topheading_margin_bottom": 10,
+        "cwgp_expertise_heading": "",
+        "cwgp_heading_alignment": "center",
+        "cwgp_heading_color": "#000000",
+        "cwgp_heading_font_size": 36,
+        "cwgp_heading_font_weight": "600",
+        "cwgp_heading_margin_bottom": 40,
+        "cwgp_expertise_subheading": "",
+        "cwgp_subheading_alignment": "center",
+        "cwgp_subheading_color": "#000000",
+        "cwgp_subheading_font_size": 16,
+        "cwgp_subheading_font_weight": "400",
+        "cwgp_subheading_margin_bottom": 20,
+        "cards_per_row": 2,
+        "section_bg_color": "#f5f5f5",
+        "section_max_width": 1440,
+        "padding-block-start": 60,
+        "padding-block-end": 100,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_yDnGTh",
+    "cwgp_resizable_card_iArrEz",
+    "section_8hi7E4",
+    "section_Pmi3YH",
+    "cwgp_card_partners_eLeYiQ"
+  ]
+}

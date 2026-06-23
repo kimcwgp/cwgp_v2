@@ -1,0 +1,267 @@
+{% case block.type %}
+
+{% when 'logo' %}
+  {% if block.settings.logo != blank %}
+    <a href="{{ routes.root_url }}" class="cw-header-logo">
+      <img src="{{ block.settings.logo | image_url }}" alt="logo" style="width: {{ block.settings.logo_width }}px;">
+    </a>
+  {% endif %}
+
+{% when 'menu_item' %}
+  <a href="{{ block.settings.link }}" 
+    class="cw-header-menu-item {% if block.settings.enable_mega_menu %}has-mega-menu{% endif %}" 
+    {% if block.settings.enable_mega_menu %}data-menu-id="menu-{{ block.id }}"{% endif %}>
+    {{ block.settings.text }}
+    {% if block.settings.enable_mega_menu %}
+      <span class="caret">
+        <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0 L5 6 L10 0" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </span>
+    {% endif %}
+  </a>
+
+  {% if block.settings.enable_mega_menu %}
+    <!-- Mega menu is OUTSIDE wrapper, full width -->
+    <div class="cw-mega-menu" id="menu-{{ block.id }}">
+      <ul class="submenu_link_lists">
+
+        {% for i in (1..5) %}
+
+          {% assign text_key = "submenu" | append: i | append: "_text" %}
+          {% assign link_key = "submenu" | append: i | append: "_link" %}
+
+          {% assign submenu_text = block.settings[text_key] %}
+          {% assign submenu_link = block.settings[link_key] %}
+
+          {% if submenu_text != blank %}
+
+          {% assign has_submenu_content = false %}
+
+          {%- comment -%} CHECK FIRST COLUMN {%- endcomment -%}
+
+          {% assign image_key = "grandchild_menu_image_submenu" | append: i %}
+          {% assign title_key = "grandchild_menu_title_submenu" | append: i %}
+          {% assign desc_key = "grandchild_menu_description_submenu" | append: i %}
+
+          {% if block.settings[image_key] != blank or block.settings[title_key] != blank or block.settings[desc_key] != blank %}
+            {% assign has_submenu_content = true %}
+          {% endif %}
+
+          {%- comment -%} CHECK SECOND COLUMN {%- endcomment -%}
+
+          {% assign layout_key = "second_column_layout_submenu" | append: i %}
+          {% assign column_layout = block.settings[layout_key] %}
+
+          {% assign column_count = 1 %}
+          {% if column_layout == 'two' %}
+            {% assign column_count = 2 %}
+          {% endif %}
+
+          {% for j in (1..column_count) %}
+            {% assign image_key = "submenu" | append: i | append: "_second_column_grandchild_menu_image_" | append: j %}
+            {% assign title_key = "submenu" | append: i | append: "_second_column_grandchild_menu_title_" | append: j %}
+
+            {% if block.settings[title_key] != blank or block.settings[image_key] != blank %}
+              {% assign has_submenu_content = true %}
+            {% endif %}
+          {% endfor %}
+
+          <li 
+            data-submenu="{{ i }}"
+            data-has-content="{{ has_submenu_content }}"
+            class="{% if forloop.first %}active{% endif %}">
+
+            <a href="{{ submenu_link }}">
+              {{ submenu_text }}
+
+              {% if has_submenu_content %}
+              <svg width="10" height="10" viewBox="0 0 10 10">
+                <path d="M0 0 L5 6 L10 0"
+                stroke="currentColor"
+                stroke-width="1.5"
+                fill="none"/>
+              </svg>
+              {% endif %}
+
+            </a>
+
+          </li>
+
+          {% endif %}
+
+        {% endfor %}
+
+      </ul>
+
+      <div class="submenu_contents_wrapper">
+
+        {% for i in (1..5) %}
+
+          {% assign has_submenu_content = false %}
+
+          {% assign image_key = "grandchild_menu_image_submenu" | append: i %}
+          {% assign title_key = "grandchild_menu_title_submenu" | append: i %}
+          {% assign desc_key = "grandchild_menu_description_submenu" | append: i %}
+
+          {% if block.settings[image_key] != blank or block.settings[title_key] != blank or block.settings[desc_key] != blank %}
+            {% assign has_submenu_content = true %}
+          {% endif %}
+
+          {% assign layout_key = "second_column_layout_submenu" | append: i %}
+          {% assign column_layout = block.settings[layout_key] %}
+
+          {% assign column_count = 1 %}
+          {% if column_layout == 'two' %}
+            {% assign column_count = 2 %}
+          {% endif %}
+
+          {% for j in (1..column_count) %}
+            {% assign image_key = "submenu" | append: i | append: "_second_column_grandchild_menu_image_" | append: j %}
+            {% assign title_key = "submenu" | append: i | append: "_second_column_grandchild_menu_title_" | append: j %}
+
+            {% if block.settings[title_key] != blank or block.settings[image_key] != blank %}
+              {% assign has_submenu_content = true %}
+            {% endif %}
+          {% endfor %}
+
+          {% if has_submenu_content %}
+
+                  {% assign style_key = "content_style_submenu" | append: i %}
+                  {% assign style = block.settings[style_key] %}
+
+                  <div class="submenu_contents {% if forloop.first %}active{% endif %}" data-content="{{ i }}">
+
+                    <!-- FIRST COLUMN -->
+                    <div class="cwgp-first-column">
+
+                      {% if style == 'image_with_text' %}
+
+                        {% assign image_key = "grandchild_menu_image_submenu" | append: i %}
+                        {% assign image_width_key = "grandchild_menu_image_width_submenu" | append: i %}
+                        {% assign title_key = "grandchild_menu_title_submenu" | append: i %}
+                        {% assign desc_key = "grandchild_menu_description_submenu" | append: i %}
+                        {% assign url_key = "grandchild_menu_url_submenu" | append: i %}
+                        {% assign url_text_key = "grandchild_menu_url_text_submenu" | append: i %}
+
+                        {% if block.settings[image_key] != blank %}
+                          <img src="{{ block.settings[image_key] | image_url }}"
+                          alt="{{ block.settings[title_key] | escape }}"
+                          style="width: {{ block.settings[image_width_key] }}px;">
+                        {% endif %}
+
+                        <h3>{{ block.settings[title_key] }}</h3>
+                        <p>{{ block.settings[desc_key] }}</p>
+
+                        {% if block.settings[url_key] != blank %}
+                        <a href="{{ block.settings[url_key] }}">
+                          {{ block.settings[url_text_key] }} <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 404.39"><path fill-rule="nonzero" d="M438.95 219.45 0 219.99v-34.98l443.3-.55L269.8 25.79 293.39 0 512 199.92 288.88 404.39l-23.59-25.8z"/> </svg>
+                        </a>
+                        {% endif %}
+
+                      {% elsif style == 'link_lists' %}
+
+                        <ul class="link_lists">
+
+                        {% for j in (1..5) %}
+
+                          {% assign text_key = "submenu" | append: i | append: "_link_list_text_" | append: j %}
+                          {% assign url_key = "submenu" | append: i | append: "_link_list_url_" | append: j %}
+
+                          {% if block.settings[text_key] != blank %}
+                          <li>
+                          <a href="{{ block.settings[url_key] }}">
+                          {{ block.settings[text_key] }} 
+                          </a>
+                          </li>
+                          {% endif %}
+
+                        {% endfor %}
+
+                        </ul>
+
+                      {% endif %}
+
+                    </div>
+
+
+                    <!-- SECOND COLUMN -->
+                    {% assign layout_key = "second_column_layout_submenu" | append: i %}
+                    {% assign column_layout = block.settings[layout_key] %}
+
+                    {% assign column_count = 1 %}
+                    {% if column_layout == 'two' %}
+                      {% assign column_count = 2 %}
+                    {% endif %}
+
+                    {% assign has_second_column_content = false %}
+
+                    {% for j in (1..column_count) %}
+                      {% assign image_key = "submenu" | append: i | append: "_second_column_grandchild_menu_image_" | append: j %}
+                      {% assign title_key = "submenu" | append: i | append: "_second_column_grandchild_menu_title_" | append: j %}
+
+                      {% if block.settings[title_key] != blank or block.settings[image_key] != blank %}
+                        {% assign has_second_column_content = true %}
+                      {% endif %}
+                    {% endfor %}
+
+                    {% if has_second_column_content %}
+
+                    <div class="cwgp-second-column"
+                      style="grid-template-columns:
+                      {% if column_layout == 'two' %}
+                      1fr 1fr
+                      {% else %}
+                      1fr
+                      {% endif %};">
+
+                      {% for j in (1..column_count) %}
+
+                        {% assign image_key = "submenu" | append: i | append: "_second_column_grandchild_menu_image_" | append: j %}
+                        {% assign title_key = "submenu" | append: i | append: "_second_column_grandchild_menu_title_" | append: j %}
+                        {% assign desc_key = "submenu" | append: i | append: "_second_column_grandchild_menu_description_" | append: j %}
+                        {% assign url_key = "submenu" | append: i | append: "_second_column_grandchild_menu_url_" | append: j %}
+                        {% assign url_text_key = "submenu" | append: i | append: "_second_column_grandchild_menu_url_text_" | append: j %}
+
+                        {% if block.settings[title_key] != blank or block.settings[image_key] != blank %}
+
+                        <div class="cwgp-second-column-card">
+
+                          <div class="cwgp-card-image">
+                            {% if block.settings[image_key] != blank %}
+                            <img src="{{ block.settings[image_key] | image_url }}"
+                            alt="{{ block.settings[title_key] | escape }}">
+                            {% endif %}
+                          </div>
+
+                          <h3>{{ block.settings[title_key] }}</h3>
+                          <p>{{ block.settings[desc_key] }}</p>
+
+                          {% if block.settings[url_key] != blank %}
+                          <a href="{{ block.settings[url_key] }}">
+                            {{ block.settings[url_text_key] }}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 404.39">
+                              <path fill-rule="nonzero" d="M438.95 219.45 0 219.99v-34.98l443.3-.55L269.8 25.79 293.39 0 512 199.92 288.88 404.39l-23.59-25.8z"/>
+                            </svg>
+                          </a>
+                          {% endif %}
+
+                        </div>
+
+                        {% endif %}
+
+                      {% endfor %}
+
+                    </div>
+
+                    {% endif %}
+
+                  </div>
+          {% endif %}
+        {% endfor %}
+
+        </div>
+
+    </div>
+  {% endif %}
+{% endcase %}

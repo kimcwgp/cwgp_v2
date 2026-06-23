@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="{{ 'cwgp-styles.css' | asset_url }}" media="all">
+
+<section id="about" aria-label="About CWGlobalPeople">
+  <div class="container container-flex">
+    <div class="left">
+      <h3>{{ section.settings.heading }} </h3>
+      <p>{{ section.settings.description }}</p>
+    </div>
+    <div class="right">
+      <img class="profile" src="{{ section.settings.image | image_url: width: 1600 }}" alt="Professional portrait of a smiling female leader from CWGlobalPeople standing confidently" />
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "CWGP Image & Text",
+  "settings": [
+    {
+    "type": "text",
+    "label": "Heading",
+    "id": "heading",
+    "default": "The key to success?"
+    },
+    {
+      "type": "richtext",
+      "label": "Description",
+      "id": "description",
+      "default": "<p>At CWGlobal People, we don’t just place talent — we become part of your people.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP Image & Text"
+    }
+  ]
+}
+{% endschema %}

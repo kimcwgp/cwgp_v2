@@ -1,0 +1,1109 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_color": "#000000",
+            "font_weight": "400",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "cwgp_hero_7TwRrH": {
+      "type": "cwgp-hero",
+      "disabled": true,
+      "name": "CWGP Hero Section",
+      "settings": {
+        "hero_img_background_desktop": "shopify://shop_images/Untitled_design_1.png",
+        "hero_banner_text": "Let us help you transform your business",
+        "hero_banner_body": "<p>At CWGlobalPeople, we find and staff skilled workers to support your business. Whether it's finance, data, customer support, technical or something totally random, we can find the right fit.</p>",
+        "hero_background_color": ""
+      }
+    },
+    "hero_FDaewY": {
+      "type": "hero",
+      "blocks": {
+        "text_e9HGK9": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Our People</h1>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-heading--family)",
+            "font_color": "#000000",
+            "font_weight": "400",
+            "font_size": "4.5rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_JzeQKg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Covering a full spectrum of roles and expertise — customized to fit your specific needs.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#000000",
+            "font_weight": "400",
+            "font_size": "1.25rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 25,
+            "padding-block-end": 32,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_3DgeNq": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Find Match",
+            "link": "#shopify-section-template--18155293769807__cwgp_animated_card_i6RDQj",
+            "open_in_new_tab": false,
+            "style_class": "uiverse-btn-wht",
+            "width": "fit-content",
+            "custom_width": 27,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_e9HGK9",
+        "text_JzeQKg",
+        "button_3DgeNq"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "a.size-style.button.button--ATExHaGhKWUQrTmhKU__button_3DgeNq {font-weight: 800; font-size: 1.3rem;}"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/HERO-NEW_2.png",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "section_height": "custom",
+        "section_height_custom": 65,
+        "color_scheme": "scheme-bca1b833-f1b6-4294-9bd7-d6242fd1b849",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "section_ABqLHT": {
+      "type": "section",
+      "blocks": {
+        "group_DQcRVX": {
+          "type": "group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 30,
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_qiPfpJ": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>Our People</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_color": "#090838",
+                "font_weight": "900",
+                "font_size": "3rem",
+                "line_height": "tight",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_MtFUyq": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Access skilled professionals across customer support, operations, technology, creative services, and business functions—tailored to your organization's unique needs.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_color": "#090838",
+                "font_weight": "600",
+                "font_size": "1.25rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button_KVLrq4": {
+              "type": "button",
+              "settings": {
+                "label": "Book a Schedule",
+                "link": "#",
+                "open_in_new_tab": false,
+                "style_class": "uiverse-btn-wht",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_qiPfpJ",
+            "text_MtFUyq",
+            "button_KVLrq4"
+          ]
+        },
+        "image_4t8JFz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hero_home_page.png",
+            "link": "",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 75,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "group_DQcRVX",
+        "image_4t8JFz"
+      ],
+      "name": "t:names.image_with_text",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "marquee_NqciGm": {
+      "type": "marquee",
+      "blocks": {
+        "text_W9tA7L": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Role</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_color": "#ffffff",
+            "font_weight": "600",
+            "font_size": "2rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "uppercase",
+            "wrap": "pretty",
+            "color": "var(--color-foreground-heading)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_W9tA7L"
+      ],
+      "name": "MARQUEE (Benefits)",
+      "settings": {
+        "movement_direction": "reverse",
+        "color_scheme": "scheme-bca1b833-f1b6-4294-9bd7-d6242fd1b849",
+        "padding-block-start": 24,
+        "padding-block-end": 24,
+        "gap_between_elements": 58
+      }
+    },
+    "section_BpnA4V": {
+      "type": "section",
+      "blocks": {
+        "text_t4z49T": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>Our People, Our Strength</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#090838",
+            "font_weight": "600",
+            "font_size": "2rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_PWWTMJ": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Our commitment begins with our people. Through meaningful careers, competitive rewards, and a culture of support, we empower our employees to grow, succeed, and make a lasting impact.</p>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#090838",
+            "font_weight": "400",
+            "font_size": "1.125rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 20,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_t4z49T",
+        "text_PWWTMJ"
+      ],
+      "name": "Our People, Our Strength",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-start",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "cwgp_animated_card_E6mewL": {
+      "type": "cwgp-animated-card",
+      "blocks": {
+        "card_gAymXg": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "Team Lead",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "CW Global People | Makati • Hybrid",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/application-team-lead"
+          }
+        },
+        "card_LbQjmc": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "Accounts Payable Specialist",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "CW Global People | Makati",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/accounts-payable-specialist"
+          }
+        },
+        "card_w3W87V": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "AI Developer/ Automation Engineer",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "CW Global People | Work from Home",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/ai-developer-automation-engineer"
+          }
+        },
+        "card_yM73J7": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "Logistic Support Specialist",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "CW Global People | Makati • Remote",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/logistics-support-specialist"
+          }
+        },
+        "card_4hHwFr": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "Marketing Manager",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "CW Global People | Makati • Hybrid work",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply Now",
+            "button_url": "shopify://pages/marketing-manager"
+          }
+        },
+        "card_HWP67w": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "Airtable Specialist - Sales Operations",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "CW Global People | Makati",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply Now",
+            "button_url": "shopify://pages/airtable-specialist-sales-operations"
+          }
+        },
+        "card_tLKdAV": {
+          "type": "card",
+          "disabled": true,
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "Technical Designer - Dresser",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "CW Global Partners | Work from Home | Php45,000.00 - Php60,000.00 per month",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply Now",
+            "button_url": "#"
+          }
+        },
+        "card_yYmwgU": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "Shopify E-Commerce Manager",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "CW Global Partners | Makati",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply Now",
+            "button_url": "shopify://pages/shopify-e-commerce-manager"
+          }
+        },
+        "card_fWwa3i": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "Accounting Associate",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "CW Global Partners | Makati",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply Now",
+            "button_url": "shopify://pages/accounting-associate"
+          }
+        },
+        "card_YD7knr": {
+          "type": "card",
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "Pattern Engineer",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "CW Global Partners | Makati",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply Now",
+            "button_url": "shopify://pages/pattern-engineer-marker-maker"
+          }
+        },
+        "card_Pmdd6z": {
+          "type": "card",
+          "disabled": true,
+          "settings": {
+            "icon": "shopify://shop_images/career-icon2.png",
+            "title": "E-Commerce Operations Specialist",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Keep your storefronts optimized with a full-time Ecommerce Operations Specialist",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply Now",
+            "button_url": "shopify://pages/pattern-engineer-marker-maker"
+          }
+        }
+      },
+      "block_order": [
+        "card_gAymXg",
+        "card_LbQjmc",
+        "card_w3W87V",
+        "card_yM73J7",
+        "card_4hHwFr",
+        "card_HWP67w",
+        "card_tLKdAV",
+        "card_yYmwgU",
+        "card_fWwa3i",
+        "card_YD7knr",
+        "card_Pmdd6z"
+      ],
+      "disabled": true,
+      "name": "CWGP Career Cards",
+      "settings": {
+        "section_heading": "",
+        "heading-font-size": 20,
+        "heading-font-weight": "600",
+        "heading-color": "#000000",
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "cwgp_image_card_rPtrrB": {
+      "type": "cwgp-image-card",
+      "blocks": {
+        "card_qrnrFm": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "card_icon": "shopify://shop_images/people_16.png",
+            "card_width": 50,
+            "text_alignment": "center",
+            "card_bg_color": "#090838",
+            "card_border_color": "#c6973d",
+            "card_heading": "",
+            "heading_size": 30,
+            "card_heading_font_weight": "700",
+            "heading_color": "#000000",
+            "card_description": "Direct Employment Model",
+            "description_size": 20,
+            "card_description_font_weight": "600",
+            "description_color": "#ffffff",
+            "card_subdescription": "",
+            "subdescription_size": 16,
+            "card_subdescription_font_weight": "400",
+            "subdescription_color": "#090838",
+            "card_link": ""
+          }
+        },
+        "card_Rgke6m": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "card_icon": "shopify://shop_images/people_17.png",
+            "card_width": 50,
+            "text_alignment": "center",
+            "card_bg_color": "#090838",
+            "card_border_color": "#c6973d",
+            "card_heading": "",
+            "heading_size": 30,
+            "card_heading_font_weight": "700",
+            "heading_color": "#000000",
+            "card_description": "Competitive Compensation",
+            "description_size": 20,
+            "card_description_font_weight": "600",
+            "description_color": "#ffffff",
+            "card_subdescription": "",
+            "subdescription_size": 16,
+            "card_subdescription_font_weight": "400",
+            "subdescription_color": "#090838",
+            "card_link": ""
+          }
+        },
+        "card_LmYQAh": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "card_icon": "shopify://shop_images/people_14.png",
+            "card_width": 50,
+            "text_alignment": "center",
+            "card_bg_color": "#090838",
+            "card_border_color": "#c6973d",
+            "card_heading": "",
+            "heading_size": 30,
+            "card_heading_font_weight": "700",
+            "heading_color": "#000000",
+            "card_description": "Employee Wellbeing",
+            "description_size": 20,
+            "card_description_font_weight": "600",
+            "description_color": "#ffffff",
+            "card_subdescription": "",
+            "subdescription_size": 16,
+            "card_subdescription_font_weight": "400",
+            "subdescription_color": "#090838",
+            "card_link": ""
+          }
+        },
+        "card_JLDKK3": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "card_icon": "shopify://shop_images/people_13.png",
+            "card_width": 50,
+            "text_alignment": "center",
+            "card_bg_color": "#090838",
+            "card_border_color": "#c6973d",
+            "card_heading": "",
+            "heading_size": 30,
+            "card_heading_font_weight": "700",
+            "heading_color": "#000000",
+            "card_description": "Connected Workplace",
+            "description_size": 20,
+            "card_description_font_weight": "600",
+            "description_color": "#ffffff",
+            "card_subdescription": "",
+            "subdescription_size": 16,
+            "card_subdescription_font_weight": "400",
+            "subdescription_color": "#090838",
+            "card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_qrnrFm",
+        "card_Rgke6m",
+        "card_LmYQAh",
+        "card_JLDKK3"
+      ],
+      "name": "CWGP - Image Card",
+      "settings": {
+        "cards_direction": "row",
+        "section_bg_color": "#ffffff",
+        "section_max_width": 1440,
+        "padding-block-start": 0,
+        "padding-block-end": 20,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "section_qXhcG3": {
+      "type": "section",
+      "blocks": {
+        "button_ekKMPr": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "See more benefits",
+            "link": "shopify://pages/benefits",
+            "open_in_new_tab": false,
+            "style_class": "orange-pill-arrow-btn",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "button_ekKMPr"
+      ],
+      "name": "Button",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "cwgp_animated_card_WxqWPg": {
+      "type": "cwgp-animated-card",
+      "blocks": {
+        "card_RqR8ij": {
+          "type": "card",
+          "settings": {
+            "title": "Job Title",
+            "card-title-font-size": 24,
+            "card-title-font-weight": "600",
+            "card-title-color": "#0a2647",
+            "text": "CW Global People | Onsite - Makati",
+            "card-text-font-size": 16,
+            "card-text-font-weight": "400",
+            "card-text-color": "#0a2647",
+            "border_color": "#0a2647",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/application-team-lead"
+          }
+        },
+        "card_ftWNyQ": {
+          "type": "card",
+          "settings": {
+            "title": "Job Title",
+            "card-title-font-size": 24,
+            "card-title-font-weight": "600",
+            "card-title-color": "#0a2647",
+            "text": "CW Global People | Onsite - Makati",
+            "card-text-font-size": 16,
+            "card-text-font-weight": "400",
+            "card-text-color": "#0a2647",
+            "border_color": "#0a2647",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/application-team-lead"
+          }
+        },
+        "card_nJMxcb": {
+          "type": "card",
+          "settings": {
+            "title": "Job Title",
+            "card-title-font-size": 24,
+            "card-title-font-weight": "600",
+            "card-title-color": "#0a2647",
+            "text": "CW Global People | Onsite - Makati",
+            "card-text-font-size": 16,
+            "card-text-font-weight": "400",
+            "card-text-color": "#0a2647",
+            "border_color": "#0a2647",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/application-team-lead"
+          }
+        },
+        "card_ccMG6e": {
+          "type": "card",
+          "settings": {
+            "title": "Job Title",
+            "card-title-font-size": 24,
+            "card-title-font-weight": "600",
+            "card-title-color": "#0a2647",
+            "text": "CW Global People | Onsite - Makati",
+            "card-text-font-size": 16,
+            "card-text-font-weight": "400",
+            "card-text-color": "#0a2647",
+            "border_color": "#0a2647",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/application-team-lead"
+          }
+        },
+        "card_mnWVi4": {
+          "type": "card",
+          "settings": {
+            "title": "Job Title",
+            "card-title-font-size": 24,
+            "card-title-font-weight": "600",
+            "card-title-color": "#0a2647",
+            "text": "CW Global People | Onsite - Makati",
+            "card-text-font-size": 16,
+            "card-text-font-weight": "400",
+            "card-text-color": "#0a2647",
+            "border_color": "#0a2647",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/application-team-lead"
+          }
+        },
+        "card_tt9ntP": {
+          "type": "card",
+          "settings": {
+            "title": "Job Title",
+            "card-title-font-size": 24,
+            "card-title-font-weight": "600",
+            "card-title-color": "#0a2647",
+            "text": "CW Global People | Onsite - Makati",
+            "card-text-font-size": 16,
+            "card-text-font-weight": "400",
+            "card-text-color": "#0a2647",
+            "border_color": "#0a2647",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/application-team-lead"
+          }
+        },
+        "card_64tbtc": {
+          "type": "card",
+          "settings": {
+            "title": "Job Title",
+            "card-title-font-size": 24,
+            "card-title-font-weight": "600",
+            "card-title-color": "#0a2647",
+            "text": "CW Global People | Onsite - Makati",
+            "card-text-font-size": 16,
+            "card-text-font-weight": "400",
+            "card-text-color": "#0a2647",
+            "border_color": "#0a2647",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/application-team-lead"
+          }
+        },
+        "card_XtfHKC": {
+          "type": "card",
+          "settings": {
+            "title": "Job Title",
+            "card-title-font-size": 24,
+            "card-title-font-weight": "600",
+            "card-title-color": "#0a2647",
+            "text": "CW Global People | Onsite - Makati",
+            "card-text-font-size": 16,
+            "card-text-font-weight": "400",
+            "card-text-color": "#0a2647",
+            "border_color": "#0a2647",
+            "blob_color": "#0a2647",
+            "link_text": "",
+            "link_url": "",
+            "button_text": "Apply now",
+            "button_url": "shopify://pages/application-team-lead"
+          }
+        }
+      },
+      "block_order": [
+        "card_RqR8ij",
+        "card_ftWNyQ",
+        "card_nJMxcb",
+        "card_ccMG6e",
+        "card_mnWVi4",
+        "card_tt9ntP",
+        "card_64tbtc",
+        "card_XtfHKC"
+      ],
+      "name": "CWGP Career Cards",
+      "settings": {
+        "section_heading": "Available Job Positions",
+        "heading-font-size": 36,
+        "heading-font-weight": "700",
+        "heading-color": "#0a2647",
+        "padding-block-start": 60,
+        "padding-block-end": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cwgp_hero_7TwRrH",
+    "hero_FDaewY",
+    "section_ABqLHT",
+    "marquee_NqciGm",
+    "section_BpnA4V",
+    "cwgp_animated_card_E6mewL",
+    "cwgp_image_card_rPtrrB",
+    "section_qXhcG3",
+    "cwgp_animated_card_WxqWPg"
+  ]
+}

@@ -1,0 +1,155 @@
+<section class="cwgp-engagement-models">
+  <div class="cwgp-container">
+
+    {% if section.settings.heading != blank %}
+      <h2 class="cwgp-heading">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <div class="cwgp-grid">
+      {% for block in section.blocks %}
+        <div class="cwgp-card">
+
+          {% if block.settings.title != blank %}
+            <h3 class="cwgp-card-title">
+              {{ block.settings.title }}
+            </h3>
+          {% endif %}
+
+          {% if block.settings.text != blank %}
+            <p class="cwgp-card-text">
+              {{ block.settings.text }}
+            </p>
+          {% endif %}
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+{% style %}
+.cwgp-engagement-models {
+  background: #ffffff;
+  padding: 70px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* CONTAINER */
+.cwgp-engagement-models .cwgp-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* HEADING */
+.cwgp-engagement-models .cwgp-heading {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: #040F2B;
+  margin-bottom: 70px;
+}
+
+/* GRID */
+.cwgp-engagement-models .cwgp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.cwgp-engagement-models .cwgp-card {
+  border: 1px solid #e5e7eb;
+  padding: 40px;
+  background: #fff;
+  transition: all 0.25s ease;
+}
+
+.cwgp-engagement-models .cwgp-card:hover {
+  transform: translateY(-6px);
+  border-color: #000;
+}
+
+/* TITLE */
+.cwgp-engagement-models .cwgp-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #c7963d;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.cwgp-engagement-models .cwgp-card-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #040F2B;
+}
+
+.cwgp-engagement-models .cwgp-card-text p {
+  font-weight: 400 !important;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .cwgp-engagement-models .cwgp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cwgp-engagement-models .cwgp-heading {
+    font-size: 25px;
+  }
+}
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "CWGP Engagement Models",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Engagement Models"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "model",
+      "name": "Engagement Model",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Dedicated Embedded Consultant"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Full-time integration into your internal technology or operations team with KPI alignment and structured reporting."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP Engagement Models",
+      "blocks": [
+        {
+          "type": "model"
+        },
+        {
+          "type": "model",
+          "settings": {
+            "title": "Hourly Strategic Consulting",
+            "text": "Flexible advisory, architecture design, or troubleshooting support based on project needs."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

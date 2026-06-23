@@ -1,0 +1,804 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "hero_ddCYBa": {
+      "type": "hero",
+      "blocks": {
+        "text_nWKEEt": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Consulting and Advisory Services</h1>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#ffffff",
+            "font_weight": "900",
+            "font_size": "3rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_3qKVmU": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The nature of work is changing. Let’s evolve your business together. Future-proof your organization with consulting services from Unisys and advance as a digital-first entity.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#ffffff",
+            "font_weight": "500",
+            "font_size": "1.25rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 32,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_74JmFg": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Let's Talk",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "orange-outline-pill-btn",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_nWKEEt",
+        "text_3qKVmU",
+        "button_74JmFg"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/Group_14.png",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "custom",
+        "section_height_custom": 75,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "cwgp_resizable_card_e3WNzq": {
+      "type": "cwgp-resizable-card",
+      "blocks": {
+        "card_fT3jET": {
+          "type": "card",
+          "settings": {
+            "card_direction": "row",
+            "card_icon": "shopify://shop_images/tdesign_rocket.png",
+            "icon_width": 60,
+            "card_width": 60,
+            "text_alignment": "left",
+            "card_bg_color": "#ffffff",
+            "card_heading": "",
+            "heading_size": 24,
+            "card_heading_font_weight": "400",
+            "heading_color": "#000000",
+            "card_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.",
+            "description_size": 18,
+            "card_description_font_weight": "500",
+            "description_color": "#090838",
+            "card_link": "#"
+          }
+        },
+        "card_tDfLfg": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "icon_width": 60,
+            "card_width": 20,
+            "text_alignment": "center",
+            "card_bg_color": "#ffffff",
+            "card_heading": "00",
+            "heading_size": 40,
+            "card_heading_font_weight": "500",
+            "heading_color": "#c6973d",
+            "card_description": "Lorem ipsum dolor sit amet",
+            "description_size": 18,
+            "card_description_font_weight": "400",
+            "description_color": "#333333",
+            "card_link": ""
+          }
+        },
+        "card_wY3Da7": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "icon_width": 60,
+            "card_width": 20,
+            "text_alignment": "center",
+            "card_bg_color": "#ffffff",
+            "card_heading": "00",
+            "heading_size": 40,
+            "card_heading_font_weight": "500",
+            "heading_color": "#c6973d",
+            "card_description": "Lorem ipsum dolor sit amet",
+            "description_size": 18,
+            "card_description_font_weight": "400",
+            "description_color": "#333333",
+            "card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_fT3jET",
+        "card_tDfLfg",
+        "card_wY3Da7"
+      ],
+      "name": "CWGP - Resizable Card",
+      "settings": {
+        "cards_direction": "row",
+        "section_bg_color": "#f5f5f5",
+        "section_max_width": 1440,
+        "padding-block-start": 60,
+        "padding-block-end": 60,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "cwgp_dynamic_tabs_WwC9MW": {
+      "type": "cwgp-dynamic-tabs",
+      "blocks": {
+        "tab_dif3i6": {
+          "type": "tab",
+          "settings": {
+            "image_upload": "shopify://shop_images/icons8-right-arrow-100.png",
+            "hover_image_upload": "shopify://shop_images/icons8-right-arrow-100_1.png",
+            "width": 26,
+            "tab_menu_title": "MuleSoft",
+            "tab_menu_title_size": 18,
+            "tab_menu_bg_color": "#ffffff",
+            "tab_menu_hover_bg_color": "#090838",
+            "tab_menu_text_color": "#090838",
+            "tab_menu_text_hover_color": "#ffffff",
+            "tab_content_title": "Deliver extraordinary employee experiences",
+            "content_heading_text_color": "#090838",
+            "content_heading_font_weight": "600",
+            "content_heading_font_size": 30,
+            "tab_content_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.  </p>",
+            "content_description_text_color": "#090838",
+            "content_description_font_weight": "500",
+            "content_description_font_size": 18,
+            "tab_content_gap": 20,
+            "tab_btn_text_1": "Solution Review",
+            "tab_btn_link_1": "#",
+            "tab_btn_style_1": "secondary",
+            "tab_btn_text_2": "Watch Demo",
+            "tab_btn_link_2": "",
+            "tab_btn_style_2": "primary_style"
+          }
+        },
+        "tab_hiFLy9": {
+          "type": "tab",
+          "settings": {
+            "image_upload": "shopify://shop_images/icons8-right-arrow-100.png",
+            "hover_image_upload": "shopify://shop_images/icons8-right-arrow-100_1.png",
+            "width": 26,
+            "tab_menu_title": "Shopify",
+            "tab_menu_title_size": 18,
+            "tab_menu_bg_color": "#ffffff",
+            "tab_menu_hover_bg_color": "#090838",
+            "tab_menu_text_color": "#090838",
+            "tab_menu_text_hover_color": "#ffffff",
+            "tab_content_title": "Deliver extraordinary employee experiences",
+            "content_heading_text_color": "#090838",
+            "content_heading_font_weight": "600",
+            "content_heading_font_size": 30,
+            "tab_content_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.  </p>",
+            "content_description_text_color": "#090838",
+            "content_description_font_weight": "500",
+            "content_description_font_size": 18,
+            "tab_content_gap": 20,
+            "tab_btn_text_1": "Solution Review",
+            "tab_btn_link_1": "#",
+            "tab_btn_style_1": "secondary",
+            "tab_btn_text_2": "Watch Demo",
+            "tab_btn_link_2": "",
+            "tab_btn_style_2": "primary_style"
+          }
+        },
+        "tab_KYYite": {
+          "type": "tab",
+          "settings": {
+            "image_upload": "shopify://shop_images/icons8-right-arrow-100.png",
+            "hover_image_upload": "shopify://shop_images/icons8-right-arrow-100_1.png",
+            "width": 26,
+            "tab_menu_title": "Adaptive Planning",
+            "tab_menu_title_size": 18,
+            "tab_menu_bg_color": "#ffffff",
+            "tab_menu_hover_bg_color": "#090838",
+            "tab_menu_text_color": "#090838",
+            "tab_menu_text_hover_color": "#ffffff",
+            "tab_content_title": "Deliver extraordinary employee experiences",
+            "content_heading_text_color": "#090838",
+            "content_heading_font_weight": "600",
+            "content_heading_font_size": 30,
+            "tab_content_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.  </p>",
+            "content_description_text_color": "#090838",
+            "content_description_font_weight": "500",
+            "content_description_font_size": 18,
+            "tab_content_gap": 20,
+            "tab_btn_text_1": "Solution Review",
+            "tab_btn_link_1": "#",
+            "tab_btn_style_1": "secondary",
+            "tab_btn_text_2": "Watch Demo",
+            "tab_btn_link_2": "",
+            "tab_btn_style_2": "primary_style"
+          }
+        },
+        "tab_7RiyLX": {
+          "type": "tab",
+          "settings": {
+            "image_upload": "shopify://shop_images/icons8-right-arrow-100.png",
+            "hover_image_upload": "shopify://shop_images/icons8-right-arrow-100_1.png",
+            "width": 26,
+            "tab_menu_title": "AI Engineering & Automation",
+            "tab_menu_title_size": 18,
+            "tab_menu_bg_color": "#ffffff",
+            "tab_menu_hover_bg_color": "#090838",
+            "tab_menu_text_color": "#090838",
+            "tab_menu_text_hover_color": "#ffffff",
+            "tab_content_title": "Deliver extraordinary employee experiences",
+            "content_heading_text_color": "#090838",
+            "content_heading_font_weight": "600",
+            "content_heading_font_size": 30,
+            "tab_content_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.  </p>",
+            "content_description_text_color": "#090838",
+            "content_description_font_weight": "500",
+            "content_description_font_size": 18,
+            "tab_content_gap": 20,
+            "tab_btn_text_1": "Solution Review",
+            "tab_btn_link_1": "#",
+            "tab_btn_style_1": "secondary",
+            "tab_btn_text_2": "Watch Demo",
+            "tab_btn_link_2": "",
+            "tab_btn_style_2": "primary_style"
+          }
+        }
+      },
+      "block_order": [
+        "tab_dif3i6",
+        "tab_hiFLy9",
+        "tab_KYYite",
+        "tab_7RiyLX"
+      ],
+      "name": "CWGP - Dynamic Tabs",
+      "settings": {
+        "cwgp_dynamic_tabs_heading": "Digital Workplace Offerings",
+        "cwgp_dynamic_tabs_subheading": "",
+        "cwgp_heading_alignment": "left",
+        "cwgp_heading_color": "#c6973d",
+        "cwgp_heading_font_size": 36,
+        "cwgp_heading_font_weight": "600",
+        "cwgp_heading_margin_bottom": 40,
+        "cwgp_subheading_margin_bottom": 15,
+        "section_bg_color": "#f5f5f5",
+        "section_max_width": 1440,
+        "padding-block-start": 60,
+        "padding-block-end": 60,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "cwgp_image_with_text_GzfJwt": {
+      "type": "cwgp-image-with-text",
+      "custom_css": [
+        ".cwgp-container {padding: 0 !important; margin: 0 !important; max-width: 100% !important;}"
+      ],
+      "name": "CWGP - Image with Text",
+      "settings": {
+        "cwgp_heading": "",
+        "cwgp_heading_alignment": "center",
+        "cwgp_heading_color": "#000000",
+        "cwgp_heading_font_size": 36,
+        "cwgp_heading_font_weight": "600",
+        "cwgp_heading_margin_bottom": 40,
+        "image_upload": "shopify://shop_images/trusted_partner.png",
+        "cwgp_image_position": "left",
+        "tab_content_title": "Deliver extraordinary employee experiences",
+        "cwgp_title_color": "#ffffff",
+        "tab_content_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+        "cwgp_description_color": "#ffffff",
+        "content_bg_color": "#090838",
+        "tab_content_gap": 30,
+        "cwgp_position_x": "flex-start",
+        "cwgp_position_y": "center",
+        "tab_content_padding": 40,
+        "tab_btn_text_1": "Learn More",
+        "tab_btn_link_1": "shopify://pages/partners",
+        "tab_btn_style_1": "orange_outline",
+        "tab_btn_text_2": "",
+        "tab_btn_link_2": "",
+        "tab_btn_style_2": "hyperlink",
+        "section_bg_color": "#090838",
+        "section_max_width": 1440,
+        "padding-block-start": 0,
+        "padding-block-end": 0,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "hero_MkATBy": {
+      "type": "hero",
+      "blocks": {
+        "group_aYc8jf": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 20,
+            "width": "fit-content",
+            "custom_width": 60,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-18df4c0d-0644-41a2-b94a-47facc8bf711",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 20,
+            "placeholder": "",
+            "toggle_overlay": true,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_f7cnmx": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.</h3>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-heading--family)",
+                "font_color": "#090838",
+                "font_weight": "700",
+                "font_size": "2rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 10,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_xBVFRF": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.  </p>",
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_color": "#090838",
+                "font_weight": "400",
+                "font_size": "1.125rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-primary)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 40,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_GDfTGk": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "button_LNmy8R": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "About Us",
+                    "link": "shopify://pages/about-us",
+                    "open_in_new_tab": false,
+                    "style_class": "black_outline_arrow",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_LNmy8R"
+              ]
+            }
+          },
+          "block_order": [
+            "text_f7cnmx",
+            "text_xBVFRF",
+            "group_GDfTGk"
+          ]
+        }
+      },
+      "block_order": [
+        "group_aYc8jf"
+      ],
+      "name": "Info Section (Desktop)",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/sean-pollock-PhYq704ffdA-unsplash.jpg",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "section_height": "auto",
+        "section_height_custom": 80,
+        "color_scheme": "scheme-5c9984e0-30c1-4791-b2ff-e825c3b654da",
+        "toggle_overlay": true,
+        "overlay_color": "#F9F9F9",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": false,
+        "show_desktop": true
+      }
+    },
+    "hero_RgYRKQ": {
+      "type": "hero",
+      "blocks": {
+        "group_pC9mbR": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 20,
+            "width": "fill",
+            "custom_width": 60,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "custom_height": 100,
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-18df4c0d-0644-41a2-b94a-47facc8bf711",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 20,
+            "placeholder": "",
+            "toggle_overlay": true,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 15,
+            "padding-inline-end": 15
+          },
+          "blocks": {
+            "text_z63GnH": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-heading--family)",
+                "font_color": "#000000",
+                "font_weight": "400",
+                "font_size": "2.375rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 10,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_fpyBgn": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_color": "#000000",
+                "font_weight": "400",
+                "font_size": "0.875rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-primary)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 40,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "group_xiUpnW": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "center",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "button_ykdMMi": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Button",
+                    "link": "#",
+                    "open_in_new_tab": false,
+                    "style_class": "white_outline",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "custom",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_ykdMMi"
+              ]
+            }
+          },
+          "block_order": [
+            "text_z63GnH",
+            "text_fpyBgn",
+            "group_xiUpnW"
+          ]
+        }
+      },
+      "block_order": [
+        "group_pC9mbR"
+      ],
+      "name": "Info Section (Mobile)",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/sean-pollock-PhYq704ffdA-unsplash.jpg",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "custom",
+        "section_height_custom": 60,
+        "color_scheme": "scheme-5c9984e0-30c1-4791-b2ff-e825c3b654da",
+        "toggle_overlay": true,
+        "overlay_color": "#0a2647e3",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": true,
+        "show_desktop": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_ddCYBa",
+    "cwgp_resizable_card_e3WNzq",
+    "cwgp_dynamic_tabs_WwC9MW",
+    "cwgp_image_with_text_GzfJwt",
+    "hero_MkATBy",
+    "hero_RgYRKQ"
+  ]
+}

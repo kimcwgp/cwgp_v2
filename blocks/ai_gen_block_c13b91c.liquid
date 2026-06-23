@@ -1,0 +1,1047 @@
+{% doc %}
+  @prompt
+    A icons with text but a slider, Instead of icons it should be Image, and I wanted to add more Item not just 6 max only
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-image-slider-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding }}px 0;
+  }
+
+  .ai-image-slider-container-{{ ai_gen_id }} {
+    max-width: 1980px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-image-slider-header-{{ ai_gen_id }} {
+    text-align: center;
+    margin-bottom: {{ block.settings.content_spacing }}px;
+  }
+
+  .ai-image-slider-title-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.title_size }}px;
+    margin: 0 0 10px;
+    font-weight: 700;
+  }
+
+  .ai-image-slider-subtitle-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.subtitle_size }}px;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  .ai-image-slider-wrapper-{{ ai_gen_id }} {
+    position: relative;
+  }
+
+  .ai-image-slider-track-{{ ai_gen_id }} {
+    display: flex;
+    transition: transform 0.3s ease;
+    gap: {{ block.settings.item_spacing }}px;
+  }
+
+  .ai-image-slider-item-{{ ai_gen_id }} {
+    flex: 0 0 auto;
+    width: {{ block.settings.item_width }}px;
+    text-align: center;
+    padding: {{ block.settings.item_padding }}px;
+    background-color: {{ block.settings.item_background_color }};
+    border-radius: {{ block.settings.item_border_radius }}px;
+    border: {{ block.settings.item_border_width }}px solid {{ block.settings.item_border_color }};
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .ai-image-slider-item-{{ ai_gen_id }}:hover {
+    transform: translateY(-{{ block.settings.hover_lift }}px);
+    box-shadow: 0 {{ block.settings.hover_lift | times: 2 }}px {{ block.settings.hover_lift | times: 4 }}px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-image-slider-image-wrapper-{{ ai_gen_id }} {
+    width: {{ block.settings.image_size }}px;
+    height: {{ block.settings.image_size }}px;
+    margin: 0 auto {{ block.settings.image_spacing }}px;
+    background-color: {{ block.settings.image_background_color }};
+    border-radius: {{ block.settings.image_border_radius }}px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-image-slider-image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-image-slider-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-image-slider-image-placeholder-{{ ai_gen_id }} svg {
+    width: 50%;
+    height: 50%;
+    opacity: 0.3;
+  }
+
+  .ai-image-slider-item-title-{{ ai_gen_id }} {
+    color: {{ block.settings.item_title_color }};
+    font-size: {{ block.settings.item_title_size }}px;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+
+  .ai-image-slider-item-text-{{ ai_gen_id }} {
+    color: {{ block.settings.item_text_color }};
+    font-size: {{ block.settings.item_text_size }}px;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .ai-image-slider-nav-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: {{ block.settings.nav_background_color }};
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: {{ block.settings.nav_color }};
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+
+  .ai-image-slider-nav-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.nav_hover_background_color }};
+    color: {{ block.settings.nav_hover_color }};
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .ai-image-slider-nav-{{ ai_gen_id }}:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: translateY(-50%) scale(1);
+  }
+
+  .ai-image-slider-nav-prev-{{ ai_gen_id }} {
+    left: -22px;
+  }
+
+  .ai-image-slider-nav-next-{{ ai_gen_id }} {
+    right: -22px;
+  }
+
+  .ai-image-slider-dots-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: {{ block.settings.content_spacing }}px;
+  }
+
+  .ai-image-slider-dot-{{ ai_gen_id }} {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: {{ block.settings.dot_color }};
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.3;
+  }
+
+  .ai-image-slider-dot-{{ ai_gen_id }}.active {
+    opacity: 1;
+    background-color: {{ block.settings.dot_active_color }};
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-image-slider-item-{{ ai_gen_id }} {
+      width: {{ block.settings.item_width | times: 0.8 }}px;
+    }
+
+    .ai-image-slider-nav-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-image-slider-container-{{ ai_gen_id }} {
+      padding: 0 10px;
+    }
+  }
+{% endstyle %}
+
+<image-slider-{{ ai_gen_id }}
+  class="ai-image-slider-{{ ai_gen_id }}"
+  data-items-per-view="{{ block.settings.items_per_view }}"
+  data-auto-play="{{ block.settings.auto_play }}"
+  data-auto-play-speed="{{ block.settings.auto_play_speed }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-image-slider-container-{{ ai_gen_id }}">
+    {% if block.settings.title != blank or block.settings.subtitle != blank %}
+      <div class="ai-image-slider-header-{{ ai_gen_id }}">
+        {% if block.settings.title != blank %}
+          <h2 class="ai-image-slider-title-{{ ai_gen_id }}">{{ block.settings.title }}</h2>
+        {% endif %}
+        {% if block.settings.subtitle != blank %}
+          <p class="ai-image-slider-subtitle-{{ ai_gen_id }}">{{ block.settings.subtitle }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="ai-image-slider-wrapper-{{ ai_gen_id }}">
+      <button class="ai-image-slider-nav-{{ ai_gen_id }} ai-image-slider-nav-prev-{{ ai_gen_id }}" aria-label="Previous slide">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+      </button>
+
+      <div class="ai-image-slider-track-{{ ai_gen_id }}">
+        {% for i in (1..12) %}
+          {% liquid
+            assign image_key = 'image_' | append: i
+            assign title_key = 'title_' | append: i
+            assign text_key = 'text_' | append: i
+            assign enabled_key = 'item_' | append: i | append: '_enabled'
+
+            assign image_setting = block.settings[image_key]
+            assign title_setting = block.settings[title_key]
+            assign text_setting = block.settings[text_key]
+            assign enabled_setting = block.settings[enabled_key]
+          %}
+
+          {% if enabled_setting %}
+            <div class="ai-image-slider-item-{{ ai_gen_id }}">
+              <div class="ai-image-slider-image-wrapper-{{ ai_gen_id }}">
+                {% if image_setting %}
+                  <img
+                    src="{{ image_setting | image_url: width: 200 }}"
+                    alt="{{ image_setting.alt | escape }}"
+                    class="ai-image-slider-image-{{ ai_gen_id }}"
+                    loading="lazy"
+                    width="200"
+                    height="200"
+                  >
+                {% else %}
+                  <div class="ai-image-slider-image-placeholder-{{ ai_gen_id }}">
+                    {{ 'image' | placeholder_svg_tag }}
+                  </div>
+                {% endif %}
+              </div>
+              {% if title_setting != blank %}
+                <h3 class="ai-image-slider-item-title-{{ ai_gen_id }}">{{ title_setting }}</h3>
+              {% endif %}
+              {% if text_setting != blank %}
+                <p class="ai-image-slider-item-text-{{ ai_gen_id }}">{{ text_setting }}</p>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <button class="ai-image-slider-nav-{{ ai_gen_id }} ai-image-slider-nav-next-{{ ai_gen_id }}" aria-label="Next slide">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    {% if block.settings.show_dots %}
+      <div class="ai-image-slider-dots-{{ ai_gen_id }}"></div>
+    {% endif %}
+  </div>
+</image-slider-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ImageSlider{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.currentSlide = 0;
+        this.itemsPerView = parseInt(this.dataset.itemsPerView) || 3;
+        this.autoPlay = this.dataset.autoPlay === 'true';
+        this.autoPlaySpeed = parseInt(this.dataset.autoPlaySpeed) || 3000;
+        this.autoPlayInterval = null;
+      }
+
+      connectedCallback() {
+        this.track = this.querySelector('.ai-image-slider-track-{{ ai_gen_id }}');
+        this.items = this.querySelectorAll('.ai-image-slider-item-{{ ai_gen_id }}');
+        this.prevBtn = this.querySelector('.ai-image-slider-nav-prev-{{ ai_gen_id }}');
+        this.nextBtn = this.querySelector('.ai-image-slider-nav-next-{{ ai_gen_id }}');
+        this.dotsContainer = this.querySelector('.ai-image-slider-dots-{{ ai_gen_id }}');
+
+        if (this.items.length === 0) return;
+
+        this.totalSlides = Math.max(0, this.items.length - this.itemsPerView + 1);
+        
+        this.setupEventListeners();
+        this.createDots();
+        this.updateSlider();
+        
+        if (this.autoPlay && this.totalSlides > 1) {
+          this.startAutoPlay();
+        }
+
+        this.setupResponsive();
+      }
+
+      setupEventListeners() {
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+        this.addEventListener('mouseenter', () => this.stopAutoPlay());
+        this.addEventListener('mouseleave', () => {
+          if (this.autoPlay) this.startAutoPlay();
+        });
+      }
+
+      setupResponsive() {
+        const updateItemsPerView = () => {
+          if (window.innerWidth <= 768) {
+            this.itemsPerView = Math.min(2, this.items.length);
+          } else if (window.innerWidth <= 1024) {
+            this.itemsPerView = Math.min(3, this.items.length);
+          } else {
+            this.itemsPerView = Math.min(parseInt(this.dataset.itemsPerView) || 3, this.items.length);
+          }
+          
+          this.totalSlides = Math.max(0, this.items.length - this.itemsPerView + 1);
+          this.currentSlide = Math.min(this.currentSlide, this.totalSlides - 1);
+          this.updateSlider();
+          this.createDots();
+        };
+
+        window.addEventListener('resize', updateItemsPerView);
+        updateItemsPerView();
+      }
+
+      createDots() {
+        if (!this.dotsContainer) return;
+        
+        this.dotsContainer.innerHTML = '';
+        
+        for (let i = 0; i < this.totalSlides; i++) {
+          const dot = document.createElement('button');
+          dot.className = `ai-image-slider-dot-{{ ai_gen_id }} ${i === this.currentSlide ? 'active' : ''}`;
+          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+          dot.addEventListener('click', () => this.goToSlide(i));
+          this.dotsContainer.appendChild(dot);
+        }
+      }
+
+      updateSlider() {
+        if (!this.track || this.items.length === 0) return;
+
+        const itemWidth = this.items[0].offsetWidth;
+        const gap = parseInt(getComputedStyle(this.track).gap) || 0;
+        const translateX = -(this.currentSlide * (itemWidth + gap));
+        
+        this.track.style.transform = `translateX(${translateX}px)`;
+
+        this.prevBtn.disabled = this.currentSlide === 0;
+        this.nextBtn.disabled = this.currentSlide >= this.totalSlides - 1;
+
+        this.updateDots();
+      }
+
+      updateDots() {
+        const dots = this.querySelectorAll('.ai-image-slider-dot-{{ ai_gen_id }}');
+        dots.forEach((dot, index) => {
+          dot.classList.toggle('active', index === this.currentSlide);
+        });
+      }
+
+      prevSlide() {
+        if (this.currentSlide > 0) {
+          this.currentSlide--;
+          this.updateSlider();
+        }
+      }
+
+      nextSlide() {
+        if (this.currentSlide < this.totalSlides - 1) {
+          this.currentSlide++;
+          this.updateSlider();
+        } else if (this.autoPlay) {
+          this.currentSlide = 0;
+          this.updateSlider();
+        }
+      }
+
+      goToSlide(index) {
+        this.currentSlide = Math.max(0, Math.min(index, this.totalSlides - 1));
+        this.updateSlider();
+      }
+
+      startAutoPlay() {
+        this.stopAutoPlay();
+        if (this.totalSlides > 1) {
+          this.autoPlayInterval = setInterval(() => {
+            this.nextSlide();
+          }, this.autoPlaySpeed);
+        }
+      }
+
+      stopAutoPlay() {
+        if (this.autoPlayInterval) {
+          clearInterval(this.autoPlayInterval);
+          this.autoPlayInterval = null;
+        }
+      }
+
+      disconnectedCallback() {
+        this.stopAutoPlay();
+      }
+    }
+
+    customElements.define('image-slider-{{ ai_gen_id }}', ImageSlider{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Images with text slider",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Our features"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Discover what makes us different"
+    },
+    {
+      "type": "header",
+      "content": "Slider settings"
+    },
+    {
+      "type": "range",
+      "id": "items_per_view",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": "Items per view",
+      "default": 3
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_play",
+      "label": "Auto play",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "auto_play_speed",
+      "min": 1000,
+      "max": 8000,
+      "step": 500,
+      "unit": "ms",
+      "label": "Auto play speed",
+      "default": 3000
+    },
+    {
+      "type": "checkbox",
+      "id": "show_dots",
+      "label": "Show dots",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Item 1"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_1_enabled",
+      "label": "Enable item 1",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title",
+      "default": "Premium Quality"
+    },
+    {
+      "type": "textarea",
+      "id": "text_1",
+      "label": "Text",
+      "default": "We use only the finest materials and craftsmanship"
+    },
+    {
+      "type": "header",
+      "content": "Item 2"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_2_enabled",
+      "label": "Enable item 2",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title",
+      "default": "Fast Shipping"
+    },
+    {
+      "type": "textarea",
+      "id": "text_2",
+      "label": "Text",
+      "default": "Quick and reliable delivery to your doorstep"
+    },
+    {
+      "type": "header",
+      "content": "Item 3"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_3_enabled",
+      "label": "Enable item 3",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Title",
+      "default": "Secure Payment"
+    },
+    {
+      "type": "textarea",
+      "id": "text_3",
+      "label": "Text",
+      "default": "Your transactions are safe and protected"
+    },
+    {
+      "type": "header",
+      "content": "Item 4"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_4_enabled",
+      "label": "Enable item 4",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_4",
+      "label": "Title",
+      "default": "Customer Love"
+    },
+    {
+      "type": "textarea",
+      "id": "text_4",
+      "label": "Text",
+      "default": "Thousands of satisfied customers worldwide"
+    },
+    {
+      "type": "header",
+      "content": "Item 5"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_5_enabled",
+      "label": "Enable item 5",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_5",
+      "label": "Title",
+      "default": "Special Offers"
+    },
+    {
+      "type": "textarea",
+      "id": "text_5",
+      "label": "Text",
+      "default": "Exclusive deals and promotions for our customers"
+    },
+    {
+      "type": "header",
+      "content": "Item 6"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_6_enabled",
+      "label": "Enable item 6",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image_6",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_6",
+      "label": "Title",
+      "default": "Expert Support"
+    },
+    {
+      "type": "textarea",
+      "id": "text_6",
+      "label": "Text",
+      "default": "Professional assistance whenever you need it"
+    },
+    {
+      "type": "header",
+      "content": "Item 7"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_7_enabled",
+      "label": "Enable item 7",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image_7",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_7",
+      "label": "Title",
+      "default": "Global Reach"
+    },
+    {
+      "type": "textarea",
+      "id": "text_7",
+      "label": "Text",
+      "default": "Serving customers worldwide with excellence"
+    },
+    {
+      "type": "header",
+      "content": "Item 8"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_8_enabled",
+      "label": "Enable item 8",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image_8",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_8",
+      "label": "Title",
+      "default": "Innovation"
+    },
+    {
+      "type": "textarea",
+      "id": "text_8",
+      "label": "Text",
+      "default": "Cutting-edge technology and forward-thinking solutions"
+    },
+    {
+      "type": "header",
+      "content": "Item 9"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_9_enabled",
+      "label": "Enable item 9",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image_9",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_9",
+      "label": "Title",
+      "default": "Sustainability"
+    },
+    {
+      "type": "textarea",
+      "id": "text_9",
+      "label": "Text",
+      "default": "Committed to environmental responsibility"
+    },
+    {
+      "type": "header",
+      "content": "Item 10"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_10_enabled",
+      "label": "Enable item 10",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image_10",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_10",
+      "label": "Title",
+      "default": "Community"
+    },
+    {
+      "type": "textarea",
+      "id": "text_10",
+      "label": "Text",
+      "default": "Building strong relationships with our community"
+    },
+    {
+      "type": "header",
+      "content": "Item 11"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_11_enabled",
+      "label": "Enable item 11",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image_11",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_11",
+      "label": "Title",
+      "default": "Excellence"
+    },
+    {
+      "type": "textarea",
+      "id": "text_11",
+      "label": "Text",
+      "default": "Striving for perfection in everything we do"
+    },
+    {
+      "type": "header",
+      "content": "Item 12"
+    },
+    {
+      "type": "checkbox",
+      "id": "item_12_enabled",
+      "label": "Enable item 12",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "image_12",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title_12",
+      "label": "Title",
+      "default": "Trust"
+    },
+    {
+      "type": "textarea",
+      "id": "text_12",
+      "label": "Text",
+      "default": "Building lasting relationships through reliability"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "item_background_color",
+      "label": "Item background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "item_border_color",
+      "label": "Item border color",
+      "default": "#e6e6e6"
+    },
+    {
+      "type": "color",
+      "id": "item_title_color",
+      "label": "Item title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "item_text_color",
+      "label": "Item text color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "image_background_color",
+      "label": "Image background color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "nav_background_color",
+      "label": "Navigation background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "nav_color",
+      "label": "Navigation color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "nav_hover_background_color",
+      "label": "Navigation hover background color",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "nav_hover_color",
+      "label": "Navigation hover color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "dot_color",
+      "label": "Dot color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_color",
+      "label": "Active dot color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Subtitle size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Item title size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "item_text_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Item text size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "content_spacing",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "label": "Content spacing",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "item_width",
+      "min": 200,
+      "max": 400,
+      "step": 10,
+      "unit": "px",
+      "label": "Item width",
+      "default": 280
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Item spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "label": "Item padding",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "item_border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Item border width",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "item_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Item border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "image_size",
+      "min": 60,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "Image size",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "image_spacing",
+      "min": 10,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Image spacing",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Image border radius",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "hover_lift",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Hover lift effect",
+      "default": 4
+    }
+  ],
+  "presets": [
+    {
+      "name": "Images with text slider"
+    }
+  ]
+}
+{% endschema %}

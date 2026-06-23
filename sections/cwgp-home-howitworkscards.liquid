@@ -1,0 +1,394 @@
+{% comment %}
+  Section: Card Section
+  Description: Displays a customizable heading and a set of cards with image, number, title, and text.
+{% endcomment %}
+
+<section class="card-section" style="
+    {% if section.settings['padding-block-start'] != blank %}
+      padding-block-start: {{ section.settings['padding-block-start'] }}px;
+    {% endif %}
+    {% if section.settings['padding-block-end'] != blank %}
+      padding-block-end: {{ section.settings['padding-block-end'] }}px;
+    {% endif %}
+  ">
+  <div class="page-width">
+    {% if section.settings.section_heading != blank %}
+      <h2 class="card-section__heading">{{ section.settings.section_heading }}</h2>
+    {% endif %}
+
+    <div class="card-grid">
+      {% for block in section.blocks %}
+        <div class="card" {{ block.shopify_attributes }}>
+          
+          {% if block.settings.card_heading != blank %}
+            <div class="card-heading"
+                 style="padding: {{ block.settings.card_heading_padding_top }}px {{ block.settings.card_heading_padding_right }}px {{ block.settings.card_heading_padding_bottom }}px {{ block.settings.card_heading_padding_left }}px;">
+              {{ block.settings.card_heading }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.image != blank %}
+            <img class="image" src="{{ block.settings.image | img_url: '600x600' }}" alt="{{ block.settings.card_heading | escape }}">
+          {% endif %}
+
+          {% if block.settings.number != blank %}
+            <div class="number-h1">{{ block.settings.number }}</div>
+          {% endif %}
+
+          {% if block.settings.title != blank %}
+            <div class="h1"
+                 style="font-size: {{ block.settings.title_font_size }}px;
+                        padding: {{ block.settings.title_padding_top }}px {{ block.settings.title_padding_right }}px {{ block.settings.title_padding_bottom }}px {{ block.settings.title_padding_left }}px;">
+              {{ block.settings.title }}
+            </div>
+          {% endif %}
+
+          {% if block.settings.text != blank %}
+            <div class="p"
+                 style="font-size: {{ block.settings.text_font_size }}px;
+                        padding: {{ block.settings.text_padding_top }}px {{ block.settings.text_padding_right }}px {{ block.settings.text_padding_bottom }}px {{ block.settings.text_padding_left }}px;">
+              {{ block.settings.text }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.card-section {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: var(--color-background);
+}
+
+.card-section__heading {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+  color: #0A2647;
+  margin-bottom: 40px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: stretch;
+}
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  gap: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #0A2647;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.card-heading {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #0A2647;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.card > .image {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+}
+
+.card > .number-h1 {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 7px;
+  border-radius: 10px;
+  color: white;
+  background-color: #e57e25;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card > .h1 {
+  font-weight: bold;
+  text-align: center;
+  color: #0A2647;
+  transition: color 0.3s ease-in-out;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card > .p {
+  color: #0A2647;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+  min-height: 80px;
+}
+
+/* Hover color changes for text elements */
+.card:hover .card-heading,
+.card:hover .h1,
+.card:hover .p {
+  color: #ffffff;
+}
+
+.card:hover .number-h1 {
+  background-color: #C7963D;
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Card Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section heading",
+      "default": "Our Services"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "card_heading",
+          "label": "Card Heading",
+          "default": "Card Heading"
+        },
+        {
+          "type": "header",
+          "content": "Card Heading Padding"
+        },
+        {
+          "type": "range",
+          "id": "card_heading_padding_top",
+          "label": "Top",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "card_heading_padding_right",
+          "label": "Right",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "card_heading_padding_bottom",
+          "label": "Bottom",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "card_heading_padding_left",
+          "label": "Left",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Fast Delivery"
+        },
+        {
+          "type": "header",
+          "content": "Title Padding"
+        },
+        {
+          "type": "range",
+          "id": "title_font_size",
+          "label": "Title Font Size (px)",
+          "min": 10,
+          "max": 80,
+          "step": 1,
+          "default": 40
+        },
+        {
+          "type": "range",
+          "id": "title_padding_top",
+          "label": "Top",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "title_padding_right",
+          "label": "Right",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "title_padding_bottom",
+          "label": "Bottom",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "title_padding_left",
+          "label": "Left",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "We ensure your order arrives quickly and safely."
+        },
+        {
+          "type": "header",
+          "content": "Description Padding"
+        },
+        {
+          "type": "range",
+          "id": "text_font_size",
+          "label": "Description Font Size (px)",
+          "min": 10,
+          "max": 40,
+          "step": 1,
+          "default": 24
+        },
+        {
+          "type": "range",
+          "id": "text_padding_top",
+          "label": "Top",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "text_padding_right",
+          "label": "Right",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "text_padding_bottom",
+          "label": "Bottom",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 10
+        },
+        {
+          "type": "range",
+          "id": "text_padding_left",
+          "label": "Left",
+          "min": 0,
+          "max": 60,
+          "step": 1,
+          "unit": "px",
+          "default": 0
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP - How It Works Cards",
+      "blocks": [
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

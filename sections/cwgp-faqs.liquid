@@ -1,0 +1,248 @@
+<style>
+  :root {
+    --text: #333333;
+    --muted: #64748b;
+    --accent: #040F2B;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --radius: 14px;
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    --speed: 250ms;
+  }
+
+  .faq-wrap {
+    max-width: 880px;
+    margin: 72px auto;
+    padding: 0 20px 80px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+  }
+
+  .faq-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: clamp(26px, 4vw, 40px);
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+    color: var(--text);
+    position: relative;
+  }
+
+  {% comment %} .faq-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 14px auto 0;
+    background: linear-gradient(90deg, var(--accent), #040F2B);
+    border-radius: 4px;
+  } {% endcomment %}
+
+  .faq {
+    display: grid;
+    gap: 16px;
+  }
+
+  .faq-item {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: box-shadow var(--speed) ease, transform var(--speed) ease;
+  }
+
+  .faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .faq-btn {
+    width: 100%;
+    padding: 22px 24px;
+    text-align: left;
+    background: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text);
+    transition: color var(--speed) ease;
+  }
+
+  .faq-btn:hover {
+    color: var(--accent);
+  }
+
+  .faq-btn:focus-visible {
+    outline: 3px solid #0A2647;
+    outline-offset: 3px;
+    border-radius: 10px;
+  }
+
+  .chev {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    color: var(--accent);
+    opacity: 0.9;
+    transition: transform var(--speed) ease, opacity var(--speed) ease;
+  }
+
+  .faq-item[aria-expanded="true"] .chev {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+
+  .faq-panel {
+    padding: 0 24px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition:
+      max-height var(--speed) ease,
+      visibility 0s linear var(--speed),
+      padding-bottom var(--speed) ease;
+  }
+
+  .faq-item[aria-expanded="true"] .faq-panel {
+    visibility: visible;
+    padding-bottom: 22px;
+    transition:
+      max-height var(--speed) ease,
+      visibility 0s linear 0s,
+      padding-bottom var(--speed) ease;
+  }
+
+  .faq-panel p {
+  margin: 0;
+  padding-bottom: 16px;
+  }
+
+  .faq-panel a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .faq-panel a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<main class="faq-wrap">
+  <h1 class="faq-title">Frequently Asked Questions</h1>
+
+  <section class="faq" data-accordion="single" aria-label="FAQ list">
+    <article class="faq-item" aria-expanded="false">
+      <button class="faq-btn" aria-controls="p1" aria-expanded="false">
+        <span>What services do you offer?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="faq-panel" id="p1" role="region">
+        <p>We provide end-to-end recruitment and staffing solutions — from sourcing and screening to onboarding and payroll management.</p>
+      </div>
+    </article>
+
+    <article class="faq-item" aria-expanded="false">
+      <button class="faq-btn" aria-controls="p2" aria-expanded="false">
+        <span>What industries do you specialize in?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="faq-panel" id="p2" role="region">
+        <p>We specialize in professional, technical, and administrative roles across multiple industries such as IT, Finance, Marketing, Sales, Engineering, and Operations. We tailor our approach based on your sector and requirements.</p>
+      </div>
+    </article>
+
+    <article class="faq-item" aria-expanded="false">
+      <button class="faq-btn" aria-controls="p3" aria-expanded="false">
+        <span>How do you source candidates?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="faq-panel" id="p3" role="region">
+        <p>We use a combination of targeted job postings, referral networks, talent databases, and proactive headhunting. Our recruitment specialists also leverage professional platforms and industry connections to find the best candidates.</p>
+      </div>
+    </article>
+
+    <article class="faq-item" aria-expanded="false">
+      <button class="faq-btn" aria-controls="p4" aria-expanded="false">
+        <span>How long does the hiring process take?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="faq-panel" id="p4" role="region">
+        <p>Timelines depend on the role and level of specialization. For most positions, shortlisting begins within a few days. We provide regular updates and aim to deliver qualified candidates as quickly as possible.</p>
+      </div>
+    </article>
+
+    <article class="faq-item" aria-expanded="false">
+      <button class="faq-btn" aria-controls="p5" aria-expanded="false">
+        <span>Can you handle onboarding and HR administration?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div class="faq-panel" id="p5" role="region">
+        <p>Yes. We offer managed services that include onboarding, compliance, payroll, and employee relations support — ensuring a smooth and hassle-free experience for both clients and hired talent.</p>
+      </div>
+    </article>
+  </section>
+</main>
+
+<script>
+  (() => {
+    const root = document.querySelector('.faq');
+    const single = root?.dataset.accordion === 'single';
+
+    const toggle = (item, force) => {
+      const btn = item.querySelector('.faq-btn');
+      const panel = item.querySelector('.faq-panel');
+      const open = typeof force === 'boolean' ? force : item.getAttribute('aria-expanded') !== 'true';
+      item.setAttribute('aria-expanded', open);
+      btn.setAttribute('aria-expanded', open);
+      panel.style.maxHeight = open ? panel.scrollHeight + 'px' : '0px';
+    };
+
+    const closeAll = (except) => {
+      if (!single) return;
+      root.querySelectorAll('.faq-item[aria-expanded="true"]').forEach(it => {
+        if (it !== except) toggle(it, false);
+      });
+    };
+
+    root.querySelectorAll('.faq-item').forEach(it => {
+      const btn = it.querySelector('.faq-btn');
+      const panel = it.querySelector('.faq-panel');
+      it.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-expanded', 'false');
+      panel.style.maxHeight = '0px';
+    });
+
+    root.addEventListener('click', e => {
+      const btn = e.target.closest('.faq-btn');
+      if (!btn) return;
+      const item = btn.closest('.faq-item');
+      closeAll(item);
+      toggle(item);
+    });
+
+    window.addEventListener('resize', () => {
+      document.querySelectorAll('.faq-item[aria-expanded="true"] .faq-panel')
+        .forEach(p => p.style.maxHeight = p.scrollHeight + 'px');
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "CWGP - FAQ (Modern)",
+  "settings": [],
+  "presets": [
+    { "name": "CWGP FAQ - Modern" }
+  ]
+}
+{% endschema %}

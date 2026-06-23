@@ -1,0 +1,172 @@
+{% comment %}
+  Block: Stylish Form Block
+  Description: A dark form block with orange accent (#ff7a01)
+{% endcomment %}
+
+<div class="custom-form-block" id="custom-form-block-{{ block.id }}">
+  <div class="form-container">
+    <span class="heading">
+      {{ block.settings.heading }}
+    </span>
+
+    <form class="form" method="post" action="{{ block.settings.form_action }}">
+      <input type="text" class="input" name="name" placeholder="Your Name" required>
+      <input type="email" class="input" name="email" placeholder="Your Email" required>
+      <textarea class="textarea" name="message" placeholder="Your Message"></textarea>
+
+      <div class="button-container">
+        <button type="submit" class="send-button">
+          {{ block.settings.send_button_label }}
+        </button>
+        <div class="reset-button-container">
+          <button type="reset" class="reset-button">
+            {{ block.settings.reset_button_label }}
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <style>
+    #custom-form-block-{{ block.id }} .orange {
+      color: #ff7a01;
+    }
+
+    #custom-form-block-{{ block.id }} .form-container {
+      max-width: 700px;
+      margin: 30px auto;
+      background-color: #001925;
+      padding: 30px;
+      border-left: 5px solid #ff7a01;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+      border-radius: 8px;
+    }
+
+    #custom-form-block-{{ block.id }} .heading {
+      display: block;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    #custom-form-block-{{ block.id }} .form .input {
+      color: #87a4b6;
+      width: 100%;
+      background-color: #002733;
+      border: none;
+      outline: none;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      transition: all 0.2s ease-in-out;
+      border-left: 1px solid transparent;
+      border-radius: 4px;
+    }
+
+    #custom-form-block-{{ block.id }} .form .input:focus {
+      border-left: 5px solid #ff7a01;
+    }
+
+    #custom-form-block-{{ block.id }} .form .textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      outline: none;
+      background-color: #013747;
+      color: #ff7a01;
+      font-weight: bold;
+      resize: none;
+      max-height: 150px;
+      margin-bottom: 20px;
+      border-left: 1px solid transparent;
+      transition: all 0.2s ease-in-out;
+      border-radius: 4px;
+    }
+
+    #custom-form-block-{{ block.id }} .form .textarea:focus {
+      border-left: 5px solid #ff7a01;
+    }
+
+    #custom-form-block-{{ block.id }} .form .button-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    #custom-form-block-{{ block.id }} .form .send-button {
+      flex-basis: 70%;
+      background: #ff7a01;
+      padding: 10px;
+      color: #001925;
+      text-align: center;
+      font-weight: bold;
+      border: 1px solid transparent;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #custom-form-block-{{ block.id }} .form .send-button:hover {
+      background: transparent;
+      border: 1px solid #ff7a01;
+      color: #ff7a01;
+    }
+
+    #custom-form-block-{{ block.id }} .form .reset-button-container {
+      filter: drop-shadow(1px 1px 0px #ff7a01);
+      flex-basis: 30%;
+    }
+
+    #custom-form-block-{{ block.id }} .form .reset-button {
+      position: relative;
+      text-align: center;
+      padding: 10px;
+      color: #ff7a01;
+      font-weight: bold;
+      background: #001925;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    #custom-form-block-{{ block.id }} .form .reset-button:hover {
+      background: #ff7a01;
+      color: #001925;
+    }
+  </style>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Form Block",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Form Heading",
+      "default": "Get in touch with us"
+    },
+    {
+      "type": "text",
+      "id": "send_button_label",
+      "label": "Send Button Label",
+      "default": "Send Message"
+    },
+    {
+      "type": "text",
+      "id": "reset_button_label",
+      "label": "Reset Button Label",
+      "default": "Reset"
+    },
+    {
+      "type": "url",
+      "id": "form_action",
+      "label": "Form Action URL"
+    }
+  ]
+}
+{% endschema %}
+

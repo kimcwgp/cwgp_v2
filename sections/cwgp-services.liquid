@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="{{ 'cwgp-styles.css' | asset_url }}" media="all">
+
+<section id="services" aria-label="Our Services">
+  <div class="container">
+    <div class="section-header">
+      <span> {{ section.settings.services_subheading }}</span>
+      <h2>{{ section.settings.services_heading }}<span style="font-style: italic; font-size: 46px; font-weight: 800;"> {{ section.settings.services_highlight }}</span></h2>
+    </div>
+    <div class="service-items">
+    {% for block in section.blocks %}
+      <article class="service-card" aria-labelledby="service1-title" id="service-card-{{ block.id }}">
+        <img src="{{ block.settings.services_image | image_url: width: 1600 }}" alt="Business woman consulting with clients using financial charts on laptop" onerror="this.style.display='none'" />
+        <div class="service-content">
+          <h5 id="article-date"> {{ block.settings.blog_date }} </h5>
+          <h4 id="service1-title">{{ block.settings.services_title }}</h4>
+          <p>{{ block.settings.services_descriptions }}</p>
+            <a href="{{ block.settings.services_cta_link }}">
+              <button class="btn-primary">{{ block.settings.services_cta }}</button>
+            </a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    <a href="{{ section.settings.services_cta_link_main }}" id="cta_main_services"><button class="btn-primary"style="padding: 0.90rem 3.5rem; width: auto; margin-top: 1rem;">{{ section.settings.services_cta_main }}</button></a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "CWGP 3-Column",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "text",
+      "id": "services_subheading",
+      "label": "Subheading",
+      "default": "THE PEOPLE"
+    },
+    {
+      "type": "textarea",
+      "id": "services_heading",
+      "label": "Heading",
+      "default": "Your company needs to unlock"
+    },
+    {
+      "type": "text",
+      "id": "services_highlight",
+      "label": "Word Highlight",
+      "default": "Growth"
+    },
+    {
+      "type": "url",
+      "id": "services_cta_link_main",
+      "label": "Section Button"
+    },
+    {
+      "type": "text",
+      "id": "services_cta_main",
+      "label": "Button Text",
+      "default": "View All"
+    }
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "name": "Services",
+      "type": "image",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "services_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "blog_date",
+          "label": "Date",
+          "default": "Janaury 25, 2025"
+        },
+        {
+          "type": "text",
+          "id": "services_title",
+          "label": "Title",
+          "default": "TOP PEOPLE"
+        },
+        {
+          "type": "richtext",
+          "id": "services_descriptions",
+          "label": "Short Description",
+          "default": "<p>Efficient management of your NetSuite platform to ensure smooth operations and best practices in financial software administration.</p>"
+        },
+        {
+          "type": "text",
+          "id": "services_cta",
+          "label": "Button Text",
+          "default": "GET STARTED" 
+        },
+        {
+          "type": "url",
+          "id": "services_cta_link",
+          "label": "Button Link",
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP 3-Column",
+    }
+  ]
+}
+{% endschema %}
+

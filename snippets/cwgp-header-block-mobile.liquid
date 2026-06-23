@@ -1,0 +1,59 @@
+{% for block in section.blocks %}
+
+  {% case block.type %}
+
+  {% when 'menu_item' %}
+
+    {% assign menu = linklists[block.settings.menu] %}
+
+    {% if menu != blank %}
+
+    <nav class="cw-mobile-nav">
+
+      <ul class="cw-mobile-menu">
+
+        {% for link in menu.links %}
+
+        <li class="cw-mobile-menu-item">
+
+          {% if link.links != blank %}
+
+            <button class="cw-mobile-submenu-toggle">
+              {{ link.title }}
+            </button>
+
+            <ul class="cw-mobile-submenu">
+
+              {% for child in link.links %}
+
+              <li>
+                <a href="{{ child.url }}">
+                  {{ child.title }}
+                </a>
+              </li>
+
+              {% endfor %}
+
+            </ul>
+
+          {% else %}
+
+            <a href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+
+          {% endif %}
+
+        </li>
+
+        {% endfor %}
+
+      </ul>
+
+    </nav>
+
+    {% endif %}
+
+  {% endcase %}
+
+{% endfor %}

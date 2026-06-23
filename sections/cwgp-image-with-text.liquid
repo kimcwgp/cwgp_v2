@@ -1,0 +1,518 @@
+<section 
+  class="cwgp-dynamic-tabs
+  {% unless section.settings.show_mobile %} hide-mobile{% endunless %}
+  {% unless section.settings.show_desktop %} hide-desktop{% endunless %}"
+  style="
+    background-color: {{ section.settings.section_bg_color }};
+    padding-top: {{ section.settings.padding-block-start }}px;
+    padding-bottom: {{ section.settings.padding-block-end }}px;
+  "
+>
+
+  <div class="cwgp-container" style="max-width: {{ section.settings.section_max_width }}px; margin: 0 auto; padding: 0 20px;">
+
+    {% if section.settings.cwgp_heading != blank %}
+        <h2
+            style="
+                text-align: {{ section.settings.cwgp_heading_alignment }};
+                color: {{ section.settings.cwgp_heading_color }};
+                font-size: {{ section.settings.cwgp_heading_font_size }}px;
+                font-weight: {{ section.settings.cwgp_heading_font_weight }} !important;
+                margin-bottom: {{ section.settings.cwgp_heading_margin_bottom }}px !important;
+            "
+            >
+            {{ section.settings.cwgp_heading }}
+        </h2>
+    {% endif %}
+
+    <div class="cwgp-image-with-text-section {{ section.settings.cwgp_image_position }}">
+        <div 
+            class="cwgp-image"
+            style="background-image: url('{{ section.settings.image_upload | image_url }}');"
+        >
+        </div>
+
+        <div class="cwgp-content" style="
+            gap: {{ section.settings.tab_content_gap }}px; 
+            background-color: {{ section.settings.content_bg_color }}; 
+            padding: {{ section.settings.tab_content_padding }}px;
+            align-items: {{ section.settings.cwgp_position_x }};
+            justify-content: {{ section.settings.cwgp_position_y }};">
+
+            {% if section.settings.tab_content_title != blank %}
+                <h3 style="color: {{ section.settings.cwgp_title_color }};">{{ section.settings.tab_content_title }}</h3>
+            {% endif %}
+
+            {% if section.settings.tab_content_description %}
+                <div style="
+                    color: {{ section.settings.cwgp_description_color }};
+                    {% if section.settings.cwgp_position_x == 'center' %}text-align: center; 
+                    {% elsif section.settings.cwgp_position_x == 'flex-end' %}text-align: right; {% endif %}">{{ section.settings.tab_content_description }}</div>
+            {% endif %}
+
+            <div class="cwgp-btn-section">
+                {% if section.settings.tab_btn_text_1 != blank %}
+                <a href="{{ section.settings.tab_btn_link_1 }}" class="{{ section.settings.tab_btn_style_1 }}" style="display: flex; gap: 4px; align-items: center;">
+                    {{ section.settings.tab_btn_text_1 }}
+                    {% if section.settings.tab_btn_style_1 == 'hyperlink'%}
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    {% endif %}
+                </a>
+                {% endif %}
+                {% if section.settings.tab_btn_text_2 != blank %}
+                <a href="{{ section.settings.tab_btn_link_2 }}" class="{{ section.settings.tab_btn_style_2 }}" style="display: flex; gap: 4px; align-items: center;">
+                    {{ section.settings.tab_btn_text_2 }} 
+                    {% if section.settings.tab_btn_style_2 == 'hyperlink'%}
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    {% endif %}
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+  </div>
+
+</section>
+
+{% style %}
+    .cwgp-image-with-text-section {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .cwgp-image-with-text-section.left{
+        flex-direction: row;
+    }
+
+    .cwgp-image-with-text-section.right{
+        flex-direction: row-reverse;
+    }
+
+    .cwgp-image {
+        width: 30%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 400px;
+    }
+
+    .cwgp-content {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .cwgp-content h3{
+        margin: 0;
+    }
+
+    .cwgp-btn-section {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    /* Button Stylings */
+   .black_outline {
+        border: 2px solid #0A2647;
+        padding: 8px 16px;
+        color: #0A2647;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 12px;
+        transition: all 0.25s ease;
+    }
+
+    .black_outline:hover {
+        background: #0A2647;
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+    .white_outline {
+        border: 2px solid #fff;
+        padding: 8px 16px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 12px;
+        transition: all 0.25s ease;
+    }
+
+    .white_outline:hover {
+        background: #fff;
+        color: #0A2647;
+        transform: scale(1.05);
+    }
+
+    .orange_outline {
+        border: 2px solid #C6973D;
+        padding: 8px 16px;
+        color: #C6973D;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 100px;
+        transition: all 0.25s ease;
+    }
+
+    .orange_outline:hover {
+        background: #C6973D;
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+    .hyperlink {
+        text-decoration: underline;
+        color: #0000EE;
+        font-weight: 500;
+        font-size: 16px;
+        transition: all 0.25s ease;
+    }
+
+    .hyperlink:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 767px){
+        .cwgp-image-with-text-section{
+            flex-direction: column !important;
+        }
+        .cwgp-image{
+            width: 100%;
+            min-height: 250px;
+        }
+        .cwgp-content{
+            width: 100%;
+            padding: 24px !important;
+        }
+        .cwgp-container{
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        .cwgp-btn-section{
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+
+    /* DEVICE VISIBILITY */
+    @media (max-width: 767px) {
+        .hide-mobile {
+            display: none;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .hide-desktop {
+            display: none;
+        }
+    }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "CWGP - Image with Text",
+  "settings": [
+        {
+        "type": "header",
+        "content": "Heading"
+        },
+        {
+        "type": "text",
+        "id": "cwgp_heading",
+        "label": "Heading",
+        "default": "Heading Title"
+        },
+        {
+        "type": "select",
+        "id": "cwgp_heading_alignment",
+        "label": "Heading alignment",
+        "default": "center",
+        "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+        ]
+        },
+        {
+        "type": "color",
+        "id": "cwgp_heading_color",
+        "label": "Heading color",
+        "default": "#000"
+        },
+        {
+        "type": "range",
+        "id": "cwgp_heading_font_size",
+        "label": "Font size",
+        "min": 12,
+        "max": 80,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+        },
+        {
+        "type": "select",
+        "id": "cwgp_heading_font_weight",
+        "label": "Font weight",
+        "default": "600",
+        "options": [
+            { "value": "400", "label": "Normal (400)" },
+            { "value": "500", "label": "Medium (500)" },
+            { "value": "600", "label": "Semi Bold (600)" },
+            { "value": "700", "label": "Bold (700)" },
+            { "value": "800", "label": "Extra Bold (800)" }
+        ]
+        },
+        {
+        "type": "range",
+        "id": "cwgp_heading_margin_bottom",
+        "label": "Heading margin bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 15
+        },
+        {
+            "type": "header",
+            "content": "Image & Content"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_upload",
+            "label": "t:settings.image_icon"
+        },
+        {
+        "type": "select",
+        "id": "cwgp_image_position",
+        "label": "Image Position",
+        "default": "left",
+        "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "right" }
+        ]
+        },
+        {
+          "type": "text",
+          "id": "tab_content_title",
+          "label": "Content Title",
+          "default": "Lorem ipsum dolor sit amet"
+        },
+        {
+        "type": "color",
+        "id": "cwgp_title_color",
+        "label": "Title color",
+        "default": "#B8E986"
+        },
+        {
+          "type": "richtext",
+          "id": "tab_content_description",
+          "label": "Content Description",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+        },
+         {
+        "type": "color",
+        "id": "cwgp_description_color",
+        "label": "Description color",
+        "default": "#fff"
+        },
+        {
+            "type": "color",
+            "id": "content_bg_color",
+            "label": "Content BG color",
+            "default": "#23897E"
+        },
+        {
+            "type": "range",
+            "id": "tab_content_gap",
+            "label": "Gap Spacing",
+            "min": 12,
+            "max": 80,
+            "step": 1,
+            "unit": "px",
+            "default": 20
+        },
+        {
+        "type": "select",
+        "id": "cwgp_position_x",
+        "label": "Position X",
+        "default": "flex-start",
+        "options": [
+            { "value": "flex-start", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "flex-end", "label": "Right" },
+        ]
+        },
+        {
+        "type": "select",
+        "id": "cwgp_position_y",
+        "label": "Position Y",
+        "default": "flex-start",
+        "options": [
+            { "value": "flex-start", "label": "Top" },
+            { "value": "center", "label": "Center" },
+            { "value": "flex-end", "label": "Bottom" },
+        ]
+        },
+        {
+            "type": "range",
+            "id": "tab_content_padding",
+            "label": "Padding",
+            "min": 12,
+            "max": 80,
+            "step": 1,
+            "unit": "px",
+            "default": 40
+        },
+         {
+          "type": "text",
+          "id": "tab_btn_text_1",
+          "label": "Button 1 Text"
+        },
+        {
+          "type": "url",
+          "id": "tab_btn_link_1",
+          "label": "Button 1 Link",
+          "visible_if": "{{ section.settings.tab_btn_text_1 }}"
+        },
+        {
+          "type": "select",
+          "id": "tab_btn_style_1",
+          "label": "Button 1 Style",
+          "options": [
+            {
+              "value": "black_outline",
+              "label": "Black Outline"
+            },
+            {
+              "value": "white_outline",
+              "label": "White Outline"
+            },
+            {
+              "value": "orange_outline",
+              "label": "Orange Outline"
+            },
+            {
+              "value": "hyperlink",
+              "label": "Hyperlink"
+            },
+
+          ],
+          "default": "white_outline",
+          "visible_if": "{{ section.settings.tab_btn_text_1 }}"
+        },
+        {
+          "type": "text",
+          "id": "tab_btn_text_2",
+          "label": "Button 2 Text"
+        },
+        {
+          "type": "url",
+          "id": "tab_btn_link_2",
+          "label": "Button 2 Link",
+          "visible_if": "{{ section.settings.tab_btn_text_2 }}"
+        },
+        {
+          "type": "select",
+          "id": "tab_btn_style_2",
+          "label": "Button 2 Style",
+          "options": [
+            {
+              "value": "black_outline",
+              "label": "Black Outline"
+            },
+            {
+              "value": "white_outline",
+              "label": "White Outline"
+            },
+            {
+              "value": "orange_outline",
+              "label": "orange Outline"
+            },
+            {
+              "value": "hyperlink",
+              "label": "Hyperlink"
+            },
+
+          ],
+          "default": "hyperlink",
+          "visible_if": "{{ section.settings.tab_btn_text_2 }}"
+        },
+    {
+        "type": "header",
+        "content": "Section Layout"
+    },
+    {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Section BG color",
+        "default": "#f7f7f7"
+    },
+    {
+        "type": "range",
+        "id": "section_max_width",
+        "label": "Section Max Width (px)",
+        "min": 400,
+        "max": 1600,
+        "step": 20,
+        "unit": "px",
+        "default": 1440
+    },
+    {
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type": "range",
+        "id": "padding-block-start",
+        "label": "Top padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "padding-block-end",
+        "label": "Bottom padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "header",
+        "content": "Device Visibility"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_mobile",
+        "label": "Show Mobile",
+        "default": true
+    },
+    {
+        "type": "checkbox",
+        "id": "show_desktop",
+        "label": "Show Desktop",
+        "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP - Image with Text",
+      "blocks": [
+
+      ]
+    }
+  ]
+}
+{% endschema %}
+

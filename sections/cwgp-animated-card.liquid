@@ -1,0 +1,545 @@
+{% comment %}
+  Section: CWGP-Animated Cards with Button
+  Description: Cards with blurred glass background and animated blob effect, now with optional button.
+{% endcomment %}
+
+<section class="animated-cards" id="cwgp_career_cards" style="background: {{ section.settings.section_bg_color }};">
+  <h3
+    style="
+      font-size: {{ section.settings.heading-font-size }}px; 
+      color: {{ section.settings.heading-color }};
+      font-weight: {{ section.settings.heading-font-weight }}; 
+      margin-bottom: 60px;
+    ">{{ section.settings.section_heading }}</h3>
+  <div class="cards-grid">
+    {% for block in section.blocks %}
+      <div class="card" {{ block.shopify_attributes }} style="border: 2px solid {{ block.settings.border_color }};">
+        <div class="blob" style="background-color: {{ block.settings.blob_color }};"></div>
+        <div class="bg">
+
+          <div 
+            style="
+            display: flex; 
+            flex-direction: column; 
+            align-items: {% if block.settings.text-alignment == 'left' %}flex-start 
+            {% elsif block.settings.text-alignment == 'right' %}flex-end 
+            {% else %}
+             center
+            {% endif %};
+
+            {% if block.settings.text-alignment == 'right' %} 
+              padding-right: 6px;
+            {% endif %}
+            ">
+          {% if block.settings.icon != blank %}
+            <img src="{{ block.settings.icon | img_url: '100x100' }}" alt="" class="card-icon">
+          {% endif %}
+          {% if block.settings.title != blank %}
+            <h3 
+              style="
+              font-size: {{ block.settings.card-title-font-size }}px; 
+              color: {{ block.settings.card-title-color }};
+              font-weight: {{ block.settings.card-title-font-weight }}; 
+              text-align: {{ block.settings.text-alignment }};
+              line-height: normal;
+              "
+            >{{ block.settings.title }}</h3>
+          {% endif %}
+          {% if block.settings.text != blank %}
+            <p
+              style="
+              font-size: {{ block.settings.card-text-font-size }}px; 
+              color: {{ block.settings.card-text-color }};
+              font-weight: {{ block.settings.card-text-font-weight }}; 
+              text-align: {{ block.settings.text-alignment }};
+              line-height: normal;
+              "
+            >{{ block.settings.text }}</p>
+          {% endif %}
+          {% if block.settings.link_text != blank and block.settings.link_url != blank %}
+            <a href="{{ block.settings.link_url }}" class="card-link">{{ block.settings.link_text }}</a>
+          {% endif %}
+          </div>
+
+          {% if block.settings.button_text != blank and block.settings.button_url != blank %}
+            <a href="{{ block.settings.button_url }}" class="card-button">{{ block.settings.button_text }}</a>
+          {% endif %}
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <style>
+    .animated-cards {
+      padding: 40px 0px;
+      text-align: center;
+      padding: 20px 40px;
+      padding-top: {{ section.settings.padding-block-start }}px;
+      padding-bottom: {{ section.settings.padding-block-end }}px;
+      scroll-margin-top: 80px;
+    }
+
+    .cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 34px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+    .card {
+      flex: 0 0 270px;   /* fixed width */
+      width: 270px;
+      height: 300px;
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      {% comment %} box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff; {% endcomment %}
+    }
+
+    .bg {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 100%;
+      height: 290px;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(24px);
+      border-radius: 10px;
+      overflow: hidden;
+      outline: 2px solid white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 10px 20px 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .blob {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      opacity: 0; /* Start invisible */
+      filter: blur(12px);
+      transform: translate(-50%, -50%);
+      transition: opacity 0.3s ease; /* Smooth fade */
+    }
+
+    /* Only animate when the card is hovered */
+    .card:hover .blob {
+      opacity: 1; /* Fade in */
+      animation: blob-bounce 5s infinite ease;
+    }
+
+    @keyframes blob-bounce {
+      0% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
+      25% { transform: translate(-100%, -100%) translate3d(100%, 0, 0); }
+      50% { transform: translate(-100%, -100%) translate3d(100%, 100%, 0); }
+      75% { transform: translate(-100%, -100%) translate3d(0, 100%, 0); }
+      100% { transform: translate(-100%, -100%) translate3d(0, 0, 0); }
+    }
+
+    .card-icon {
+      width: 60px;
+      height: auto;
+      margin-bottom: 10px;
+      z-index: 3;
+    }
+
+    .card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+  z-index: 3;
+  position: relative;
+
+  min-height: 48px; /* force 2 lines height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 10px;
+      z-index: 3;
+      position: relative;
+    }
+
+    .card-link {
+      color: #007ace;
+      text-decoration: none;
+      font-weight: 600;
+      z-index: 3;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .card-link:hover {
+      text-decoration: underline;
+    }
+
+    .card-button {
+      background-color: #0A2647;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      z-index: 3;
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .card-button:hover {
+      background-color: #C7963D;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 1024px) {
+      .card {
+        width: calc((100% - 34px) / 2);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</section>
+
+{% schema %}
+{
+  "name": "CWGP Career Cards",
+  "max_blocks": 20,
+  "settings": [  
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Heading",
+    },
+    {
+          "type": "range",
+          "id": "heading-font-size",
+          "label": "Heading Font Size",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 20
+        },
+        {
+        "type": "select",
+        "id": "heading-font-weight",
+        "label": "Heading Weight",
+        "default": "600",
+        "options": [
+            {
+            "value": "100",
+            "label": "100"
+            },
+            {
+            "value": "200",
+            "label": "200"
+            },
+            {
+            "value": "300",
+            "label": "300"
+            },
+            {
+            "value": "400",
+            "label": "400"
+            },
+            {
+            "value": "500",
+            "label": "500"
+            },
+            {
+            "value": "600",
+            "label": "600"
+            },
+            {
+            "value": "700",
+            "label": "700"
+            },
+            {
+            "value": "800",
+            "label": "800"
+            },
+            {
+            "value": "900",
+            "label": "900"
+            },
+        ]
+        },
+        {
+            "type": "color",
+            "id": "heading-color",
+            "label": "Heading Color",
+            "default": "#000000"
+        },
+        {
+            "type": "color",
+            "id": "section_bg_color",
+            "label": "Background Color",
+            "default": "#FFFFFF"
+        },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon or image"
+        },
+        {
+        "type": "select",
+        "id": "text-alignment",
+        "label": "Alignment",
+        "default": "center",
+        "options": [
+            {
+            "value": "left",
+            "label": "Left"
+            },
+            {
+            "value": "center",
+            "label": "Center"
+            },
+            {
+            "value": "right",
+            "label": "Right"
+            }
+        ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card title",
+          "default": "A team with a goal"
+        },
+        {
+          "type": "range",
+          "id": "card-title-font-size",
+          "label": "Card Title Font Size",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 20
+        },
+        {
+        "type": "select",
+        "id": "card-title-font-weight",
+        "label": "Card Title Weight",
+        "default": "600",
+        "options": [
+            {
+            "value": "100",
+            "label": "100"
+            },
+            {
+            "value": "200",
+            "label": "200"
+            },
+            {
+            "value": "300",
+            "label": "300"
+            },
+            {
+            "value": "400",
+            "label": "400"
+            },
+            {
+            "value": "500",
+            "label": "500"
+            },
+            {
+            "value": "600",
+            "label": "600"
+            },
+            {
+            "value": "700",
+            "label": "700"
+            },
+            {
+            "value": "800",
+            "label": "800"
+            },
+            {
+            "value": "900",
+            "label": "900"
+            },
+        ]
+        },
+        {
+            "type": "color",
+            "id": "card-title-color",
+            "label": "Card Title Color",
+            "default": "#000000"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Card text",
+          "default": "Real people making great products"
+        },
+        {
+          "type": "range",
+          "id": "card-text-font-size",
+          "label": "Card Text Font Size",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 20
+        },
+        {
+        "type": "select",
+        "id": "card-text-font-weight",
+        "label": "Card Text Weight",
+        "default": "400",
+        "options": [
+            {
+            "value": "100",
+            "label": "100"
+            },
+            {
+            "value": "200",
+            "label": "200"
+            },
+            {
+            "value": "300",
+            "label": "300"
+            },
+            {
+            "value": "400",
+            "label": "400"
+            },
+            {
+            "value": "500",
+            "label": "500"
+            },
+            {
+            "value": "600",
+            "label": "600"
+            },
+            {
+            "value": "700",
+            "label": "700"
+            },
+            {
+            "value": "800",
+            "label": "800"
+            },
+            {
+            "value": "900",
+            "label": "900"
+            },
+        ]
+        },
+        {
+            "type": "color",
+            "id": "card-text-color",
+            "label": "Card Text Color",
+            "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "border_color",
+          "label": "Border color",
+          "default": "#090838"
+        },
+        {
+          "type": "color",
+          "id": "blob_color",
+          "label": "Blob color",
+          "default": "#090838"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "Link text",
+          "default": "Find out more"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP Career Cards",
+      "blocks": [
+        { "type": "card" },
+        { "type": "card" },
+        { "type": "card" }
+      ]
+    }
+  ]
+}
+{% endschema %}

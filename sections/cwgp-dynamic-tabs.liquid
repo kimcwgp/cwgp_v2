@@ -1,0 +1,689 @@
+<section 
+  class="cwgp-dynamic-tabs
+  {% unless section.settings.show_mobile %} hide-mobile{% endunless %}
+  {% unless section.settings.show_desktop %} hide-desktop{% endunless %}"
+  style="
+    background-color: {{ section.settings.section_bg_color }};
+    padding-top: {{ section.settings.padding-block-start }}px;
+    padding-bottom: {{ section.settings.padding-block-end }}px;
+  "
+>
+
+  <div class="cwgp-container" style="max-width: {{ section.settings.section_max_width }}px; margin: 0 auto; padding: 0 20px;">
+
+    {% if section.settings.cwgp_dynamic_tabs_heading != blank %}
+        <h2
+            style="
+                text-align: {{ section.settings.cwgp_heading_alignment }};
+                color: {{ section.settings.cwgp_heading_color }};
+                font-size: {{ section.settings.cwgp_heading_font_size }}px;
+                font-weight: {{ section.settings.cwgp_heading_font_weight }} !important;
+                margin-bottom: {{ section.settings.cwgp_heading_margin_bottom }}px !important;
+            "
+            >
+            {{ section.settings.cwgp_dynamic_tabs_heading }}
+        </h2>
+    {% endif %}
+
+    {% if section.settings.cwgp_dynamic_tabs_subheading != blank %}
+        <p style="margin: 0; margin-bottom: {{ section.settings.cwgp_subheading_margin_bottom }}px !important;">
+            {{ section.settings.cwgp_dynamic_tabs_subheading }}
+        </p>
+    {% endif %}
+
+    <div class="cwgp-tabs-section">
+        <div class="cwgp-tabs-menus">
+            {% for block in section.blocks %}
+                {% if block.settings.tab_menu_title %}
+                    <span class="cwgp-tab cwgp-tab-{{ block.id }}"  
+                        style="
+                            font-size: {{ block.settings.tab_menu_title_size }}px; 
+                            --tab-bg: {{ block.settings.tab_menu_bg_color }};
+                            --tab-hover-bg: {{ block.settings.tab_menu_hover_bg_color }};
+                            --tab-text: {{ block.settings.tab_menu_text_color }};
+                            --tab-text-hover: {{ block.settings.tab_menu_text_hover_color }};"
+                        data-tab="{{ block.id }}">
+
+                        <img 
+                            class="tab-icon-default"
+                            src="{{ block.settings.image_upload | image_url }}" 
+                            alt="{{ block.settings.tab_menu_title }}"
+                            width="25"
+                            height="25"
+                            style="width: {{ block.settings.width }}px;"
+                        >
+
+                        <img 
+                            class="tab-icon-hover"
+                            src="{{ block.settings.hover_image_upload | image_url }}" 
+                            alt="{{ block.settings.tab_menu_title }}"
+                            width="25"
+                            height="25"
+                            style="width: {{ block.settings.width }}px;"
+                        >
+
+                        {{ block.settings.tab_menu_title }}
+                    </span>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="cwgp-tabs-content">
+        {% for block in section.blocks %}
+            <div class="cwgp-single-content {% if forloop.first %}active{% endif %}" data-content="{{ block.id }}"
+            style="gap: {{ block.settings.tab_content_gap }}px;">
+            <h3 
+                style="
+                font-weight: {{ block.settings.content_heading_font_weight }};
+                font-size: {{ block.settings.content_heading_font_size }}px;
+                color: {{ block.settings.content_heading_text_color }};
+                "
+            >{{ block.settings.tab_content_title }}</h3>
+            <div
+                style="
+                font-weight: {{ block.settings.content_description_font_weight }};
+                font-size: {{ block.settings.content_description_font_size }}px;
+                color: {{ block.settings.content_description_text_color }};
+                "
+            >{{ block.settings.tab_content_description }}</div>
+            <div class="cwgp-btn-section">
+                {% if block.settings.tab_btn_text_1 != blank %}
+                <a href="{{ block.settings.tab_btn_link_1 }}" class="{{ block.settings.tab_btn_style_1 }}" style="display: flex; gap: 4px; align-items: center;">
+                    {{ block.settings.tab_btn_text_1 }}
+                    {% if block.settings.tab_btn_style_1 == 'primary_style'%}
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    {% endif %}
+                </a>
+                {% endif %}
+                {% if block.settings.tab_btn_text_2 != blank %}
+                <a href="{{ block.settings.tab_btn_link_2 }}" class="{{ block.settings.tab_btn_style_2 }}" style="display: flex; gap: 4px; align-items: center;">
+                    {{ block.settings.tab_btn_text_2 }} 
+                    {% if block.settings.tab_btn_style_2 == 'primary_style'%}
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    {% endif %}
+                </a>
+                {% endif %}
+            </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+  </div>
+
+</section>
+
+{% style %}
+    .cwgp-dynamic-tabs {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .cwgp-tabs-section {
+        display: flex;
+        gap: 40px;
+    }
+
+    .cwgp-tabs-menus {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .cwgp-tabs-content {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .cwgp-tab {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 16px;
+        border: 1px solid rgba(0,0,0,0.1);
+        transition: all 0.2s ease;
+        background: var(--tab-bg);
+        color: var(--tab-text);
+    }
+
+    .cwgp-tab:hover {
+        cursor: pointer;
+        background: var(--tab-hover-bg);
+        color: var(--tab-text-hover);
+    }
+
+    .cwgp-tab.active {
+        background: var(--tab-hover-bg);
+        color: var(--tab-text-hover);
+    }
+
+    .cwgp-tab .tab-icon-hover {
+        display: none;
+    }
+
+    .cwgp-tab:hover .tab-icon-default,
+    .cwgp-tab.active .tab-icon-default {
+        display: none;
+    }
+
+    .cwgp-tab:hover .tab-icon-hover,
+    .cwgp-tab.active .tab-icon-hover {
+        display: inline-block;
+    }
+
+    .cwgp-single-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: opacity 0.35s ease, transform 0.35s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cwgp-single-content h3{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .cwgp-single-content.active{
+        font-size: 1.2rem;
+        font-weight: 400 !important;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        position: relative;
+    }
+
+    .cwgp-tab.active{
+        background: var(--tab-hover-bg);
+    }
+
+    .cwgp-btn-section {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+
+    /* Button Stylings */
+   .primary_style {
+        border: 2px solid #C6973D;
+        background: #C6973D;
+        padding: 8px 16px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 100px;
+        transition: all 0.25s ease;
+    }
+
+    .primary_style:hover {
+        color: #fff;
+        transform: scale(1.05);
+    }
+
+    .secondary {
+        border: 2px solid #090838;
+        padding: 8px 16px;
+        color: #090838;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 100px;
+        transition: all 0.25s ease;
+    }
+
+    .secondary:hover {
+        transform: scale(1.05);
+    }
+
+    @media screen and (max-width: 767px){
+        .cwgp-tabs-section{
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cwgp-tabs-menus{
+            width: 100%;
+            flex-direction: row;
+            overflow-x: auto;
+            gap: 8px;
+            padding-bottom: 5px;
+        }
+
+        .cwgp-tab{
+            flex: 0 0 auto;
+            white-space: nowrap;
+            padding: 12px 14px;
+            font-size: 14px;
+        }
+
+        .cwgp-tabs-content{
+            width: 100%;
+        }
+
+        .cwgp-btn-section{
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+    }
+
+    /* DEVICE VISIBILITY */
+    @media (max-width: 767px) {
+        .hide-mobile {
+            display: none;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .hide-desktop {
+            display: none;
+        }
+    }
+{% endstyle %}
+
+{% javascript %}
+    document.addEventListener("DOMContentLoaded", function(){
+
+        const tabs = document.querySelectorAll(".cwgp-tab");
+        const contents = document.querySelectorAll(".cwgp-single-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", function(){
+
+                const tabId = this.dataset.tab;
+
+                tabs.forEach(t => t.classList.remove("active"));
+                contents.forEach(c => c.classList.remove("active"));
+
+                this.classList.add("active");
+
+                const activeContent = document.querySelector(`.cwgp-single-content[data-content="${tabId}"]`);
+
+                if(activeContent){
+                    activeContent.classList.add("active");
+                }
+
+            });
+        });
+
+        if(tabs.length){
+            tabs[0].click();
+        }
+    });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "CWGP - Dynamic Tabs",
+  "settings": [
+        {
+        "type": "header",
+        "content": "Heading"
+        },
+        {
+        "type": "text",
+        "id": "cwgp_dynamic_tabs_heading",
+        "label": "Heading",
+        "default": "Lorem ipsum dolor sit amet"
+        },
+        {
+        "type": "text",
+        "id": "cwgp_dynamic_tabs_subheading",
+        "label": "Subheading"
+        },
+        {
+        "type": "select",
+        "id": "cwgp_heading_alignment",
+        "label": "Heading alignment",
+        "default": "center",
+        "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+        ]
+        },
+        {
+        "type": "color",
+        "id": "cwgp_heading_color",
+        "label": "Heading color",
+        "default": "#000000"
+        },
+        {
+        "type": "range",
+        "id": "cwgp_heading_font_size",
+        "label": "Font size",
+        "min": 12,
+        "max": 80,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+        },
+        {
+        "type": "select",
+        "id": "cwgp_heading_font_weight",
+        "label": "Font weight",
+        "default": "400",
+        "options": [
+            { "value": "400", "label": "Normal (400)" },
+            { "value": "500", "label": "Medium (500)" },
+            { "value": "600", "label": "Semi Bold (600)" },
+            { "value": "700", "label": "Bold (700)" },
+            { "value": "800", "label": "Extra Bold (800)" }
+        ]
+        },
+        {
+        "type": "range",
+        "id": "cwgp_heading_margin_bottom",
+        "label": "Heading margin bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 15
+        },
+        {
+        "type": "range",
+        "id": "cwgp_subheading_margin_bottom",
+        "label": "Subheading margin bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 15
+        },
+    {
+        "type": "header",
+        "content": "Section Layout"
+    },
+    {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Background color",
+        "default": "#f7f7f7"
+    },
+    {
+        "type": "range",
+        "id": "section_max_width",
+        "label": "Section Max Width (px)",
+        "min": 400,
+        "max": 1600,
+        "step": 20,
+        "unit": "px",
+        "default": 1440
+    },
+    {
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type": "range",
+        "id": "padding-block-start",
+        "label": "Top padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "padding-block-end",
+        "label": "Bottom padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "header",
+        "content": "Device Visibility"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_mobile",
+        "label": "Show Mobile",
+        "default": true
+    },
+    {
+        "type": "checkbox",
+        "id": "show_desktop",
+        "label": "Show Desktop",
+        "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Tab",
+      "type": "tab",
+      "settings": [
+         {
+            "type": "header",
+            "content": "Tab Menu Settings"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_upload",
+            "label": "t:settings.image_icon"
+        },
+        {
+            "type": "image_picker",
+            "id": "hover_image_upload",
+            "label": "Hover Image Icon"
+        },
+        {
+        "type": "range",
+        "id": "width",
+        "label": "t:settings.width",
+        "min": 12,
+        "max": 200,
+        "step": 2,
+        "unit": "px",
+        "default": 24
+        },
+        {
+          "type": "text",
+          "id": "tab_menu_title",
+          "label": "Tab Menu Title",
+          "default": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "type": "range",
+            "id": "tab_menu_title_size",
+            "label": "Font size",
+            "min": 12,
+            "max": 80,
+            "step": 1,
+            "unit": "px",
+            "default": 16
+        },
+        {
+            "type": "color",
+            "id": "tab_menu_bg_color",
+            "label": "Background Color",
+            "default": "#fff"
+        },
+        {
+            "type": "color",
+            "id": "tab_menu_hover_bg_color",
+            "label": "Background Hover Color",
+            "default": "#C7963D"
+        },
+        {
+            "type": "color",
+            "id": "tab_menu_text_color",
+            "label": "Text Color",
+            "default": "#0A2647"
+        },
+        {
+            "type": "color",
+            "id": "tab_menu_text_hover_color",
+            "label": "Text Hover Color",
+            "default": "#000000"
+        },
+        {
+            "type": "header",
+            "content": "Tab Content Settings"
+        },
+        {
+          "type": "text",
+          "id": "tab_content_title",
+          "label": "Content Title",
+          "default": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "type": "color",
+            "id": "content_heading_text_color",
+            "label": "Heading Color",
+            "default": "#000"
+        },
+        {
+        "type": "select",
+        "id": "content_heading_font_weight",
+        "label": "Heading Font weight",
+        "default": "400",
+        "options": [
+            { "value": "400", "label": "Normal (400)" },
+            { "value": "500", "label": "Medium (500)" },
+            { "value": "600", "label": "Semi Bold (600)" },
+            { "value": "700", "label": "Bold (700)" },
+            { "value": "800", "label": "Extra Bold (800)" }
+        ]
+        },
+        {
+            "type": "range",
+            "id": "content_heading_font_size",
+            "label": "Content Heading font size",
+            "min": 12,
+            "max": 80,
+            "step": 1,
+            "unit": "px",
+            "default": 20
+        },
+        {
+          "type": "richtext",
+          "id": "tab_content_description",
+          "label": "Content Description",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+        },
+        {
+            "type": "color",
+            "id": "content_description_text_color",
+            "label": "Description Color",
+            "default": "#000"
+        },
+        {
+        "type": "select",
+        "id": "content_description_font_weight",
+        "label": "Description Font weight",
+        "default": "400",
+        "options": [
+            { "value": "400", "label": "Normal (400)" },
+            { "value": "500", "label": "Medium (500)" },
+            { "value": "600", "label": "Semi Bold (600)" },
+            { "value": "700", "label": "Bold (700)" },
+            { "value": "800", "label": "Extra Bold (800)" }
+        ]
+        },
+        {
+            "type": "range",
+            "id": "content_description_font_size",
+            "label": "Content Description font size",
+            "min": 12,
+            "max": 80,
+            "step": 1,
+            "unit": "px",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "tab_content_gap",
+            "label": "Content spacing",
+            "min": 12,
+            "max": 80,
+            "step": 1,
+            "unit": "px",
+            "default": 20
+        },
+        {
+          "type": "text",
+          "id": "tab_btn_text_1",
+          "label": "Button 1 Text"
+        },
+        {
+          "type": "url",
+          "id": "tab_btn_link_1",
+          "label": "Button 1 Link",
+          "visible_if": "{{ block.settings.tab_btn_text_1 }}"
+        },
+        {
+          "type": "select",
+          "id": "tab_btn_style_1",
+          "label": "Button 1 Style",
+          "options": [
+            {
+              "value": "primary_style",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "secondary"
+            },
+
+          ],
+          "default": "primary_style",
+          "visible_if": "{{ block.settings.tab_btn_text_1 }}"
+        },
+        {
+          "type": "text",
+          "id": "tab_btn_text_2",
+          "label": "Button 2 Text"
+        },
+        {
+          "type": "url",
+          "id": "tab_btn_link_2",
+          "label": "Button 2 Link",
+          "visible_if": "{{ block.settings.tab_btn_text_2 }}"
+        },
+        {
+          "type": "select",
+          "id": "tab_btn_style_2",
+          "label": "Button 2 Style",
+          "options": [
+            {
+              "value": "primary_style",
+              "label": "Primary"
+            },
+            {
+              "value": "secondary",
+              "label": "secondary"
+            },
+
+          ],
+          "default": "secondary",
+          "visible_if": "{{ block.settings.tab_btn_text_2 }}"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP - Dynamic Tabs",
+      "blocks": [
+
+      ]
+    }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,114 @@
+{%- doc -%}
+  Intended for use in a block similar to the button block.
+  @param {string} link - link to render
+  @param {object} [block] - The block
+  @example
+  {% render 'button', link: '/collections/all' %}
+{%- enddoc -%}
+
+{% assign block_settings = block.settings %}
+
+<a
+  {% if link == blank %}
+    role="link"
+    aria-disabled="true"
+  {% else %}
+    href="{{ link }}"
+  {% endif %}
+  class="
+    {% if block_settings.style_class == 'uiverse-btn' %}
+      btn btn-center
+    {% elsif block_settings.style_class == 'uiverse-btn-wht' %}
+      btn
+    {% elsif block_settings.style_class == 'btn-elegant' %}
+      btn-center
+    {% elsif block_settings.style_class == 'btn-slide' %}
+      btn-center
+    {% endif %}
+    size-style
+    {{ block_settings.style_class }}
+    {{ block_settings.style_class }}--{{ block.id }}
+  "
+  style="{% render 'size-style', settings: block_settings %}"
+  {% if block_settings.open_in_new_tab %}
+    target="_blank" rel="noopener noreferrer"
+  {% endif %}
+  {{ block.shopify_attributes }}
+>
+  {% if block_settings.style_class == 'btn-slide' %}
+    <span>
+      <p>{{ block_settings.label }}</p>
+      <p>{{ block_settings.label }}</p>
+    </span>
+  {% elsif block.settings.style_class == 'black_outline_arrow' %}
+    <span class="black-outline-arrow">
+      {{ block.settings.label }}
+
+      <span class="arrow-wrapper">
+        <img
+          class="arrow-default"
+          src="{{ 'icon-top-right-arrow.svg' | asset_url }}"
+          alt=""
+          width="20"
+          height="20"
+        >
+
+        <img
+          class="arrow-hover"
+          src="{{ 'icon-top-right-arrow-hover.svg' | asset_url }}"
+          alt=""
+          width="20"
+          height="20"
+        >
+      </span>
+    </span>
+  {% elsif block.settings.style_class == 'orange-outline-pill-arrow-btn' %}
+    <span class="orange_outline_pill_arrow">
+      {{ block.settings.label }}
+
+      <span class="arrow-wrapper">
+        <img
+          class="arrow-default"
+          src="{{ 'icon-right-arrow.svg' | asset_url }}"
+          alt=""
+          width="20"
+          height="20"
+        >
+
+        <img
+          class="arrow-hover"
+          src="{{ 'icon-right-arrow-hover.svg' | asset_url }}"
+          alt=""
+          width="20"
+          height="20"
+        >
+      </span>
+    </span>
+  {% elsif block.settings.style_class == 'arrow-link-btn' %}
+    <span class="arrow-icon" style="display: flex; align-items: center; gap: 6px;"> 
+      {{ block.settings.label }} 
+      {{ 'icon-right-arrow.svg' | asset_url | img_tag }} 
+    </span>
+  {% elsif block.settings.style_class == 'orange-pill-arrow-btn' %}
+    <span class="arrow-icon" style="display: flex; align-items: center; gap: 6px;"> 
+      {{ block.settings.label }} 
+      {{ 'icon-top-right-arrow-hover.svg' | asset_url | img_tag }} 
+    </span>
+  {% else %}
+    {{ block_settings.label }}
+  {% endif %}
+</a>
+
+
+{% stylesheet %}
+  .link {
+    text-decoration: none;
+    text-decoration-color: currentcolor;
+
+    &:hover {
+      color: var(--color-primary-hover);
+      text-decoration-color: transparent;
+    }
+  }
+{% endstylesheet %}
+

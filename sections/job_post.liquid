@@ -1,0 +1,113 @@
+<style>
+  /* Full CSS styles */
+  .container-job {
+    max-width: 85%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #007bff;
+    text-align: center;
+  }
+  .job-details {
+    margin-bottom: 30px;
+  }
+  .job-details h2 {
+    color: #555;
+    margin: auto;
+    font-size: 3rem;
+  }
+  .job-details p {
+    line-height: 1.6;
+  }
+</style>
+
+<section class="container-job">
+  <div class="job-details">
+    <h2>{{ section.settings.job_name }}</h2>
+    <span> <a href="https://www.cwglobalpeople.com/" style="text-decoration: underline;">{{ page.metafields.custom.job_company }}</a> 
+    
+    {% if page.metafields.custom.job_location %}| {{ page.metafields.custom.job_location }} {% endif %}
+ 
+    {% if page.metafields.custom.job_salary %}| {{ page.metafields.custom.job_salary }} {% endif %}
+</span>
+    <p>
+      <strong>{{ section.settings.job_heading }}:</strong> {{ section.settings.job_description }}
+    </p>
+     <p>
+      <strong>{{ section.settings.job_heading_2 }}:</strong> {{ section.settings.job_requirements }}
+    </p>
+    
+    {% for block in section.blocks %}
+      <p>
+        <strong>{{ block.settings.job_other_heading }}:</strong> {{ block.settings.job_other }}
+      </p>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Job Post",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "job_name",
+      "label": "Job Title",
+      "default": "<h1>Human Resources</h1>"
+    },
+    {
+      "type": "text",
+      "id": "job_heading",
+      "label": "Heading",
+      "default": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "job_description",
+      "label": "Job Description",
+      "default": "<p>Lorem impsum...</p>"
+    },
+    {
+      "type": "text",
+      "id": "job_heading_2",
+      "label": "Heading",
+      "default": "Description"
+    },
+    {
+      "type": "richtext",
+      "id": "job_requirements",
+      "label": "Job Description",
+      "default": "<p>Lorem impsum...</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "other",
+      "type": "other",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "job_other",
+          "label": "Other Details",
+          "default": "<p>Php 10,000.00</p>"
+        },
+        {
+          "type": "text",
+          "id": "job_other_heading",
+          "label": "Other Heading",
+          "default": "Salary Range"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Job Post"
+    }
+  ]
+}
+{% endschema %}

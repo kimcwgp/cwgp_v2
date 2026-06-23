@@ -1,0 +1,155 @@
+
+<div class="announcement-bar" style="display: none;">
+    <div class="contact-info">
+        <a href="mailto:takealook@cwglobalpeople.com"><span class="email"><i class="fa-regular fa-envelope" style="color: #fff; margin: 0 10px;"></i>  takealook@cwglobalpeople.com</span></a>
+    </div>
+</div>
+<header>
+    <div class="container">
+    <nav aria-label="Primary Navigation">
+        <a class="logo" href="/cwgpeople-prototype/"><img src="https://cwglobal-people.myshopify.com/cdn/shop/files/cwgplogo.png" width="40px" height="40px" id="logo"></a>
+        
+        <button class="hamburger" aria-label="Toggle Navigation">
+        &#9776; <!-- Hamburger icon -->
+        </button>
+
+        <div class="nav-links">
+
+        <div class="nav-link">
+            <a href="#">Services
+            <span class="arrow">▼</span>
+            </a>
+            <div class="dropdown">
+            <a href="http://cwglobalpeople.com/pages/accounting">Accounting</a>
+            <a href="http://cwglobalpeople.com/pages/marketing-and-sales">Marketing and Sales</a>
+            <a href="http://cwglobalpeople.com/pages/customer-support">Customer Support</a>
+            <a href="http://cwglobalpeople.com/pages/it">IT</a>
+            <a href="http://cwglobalpeople.com/pages/back-office-support">Back-Office Support</a>
+            </div>
+        </div>
+
+        <div class="nav-link">
+            <a href="#">Solutions
+            <span class="arrow">▼</span>
+            </a>
+            <div class="dropdown">
+            <a href="http://cwglobalpeople.com/pages/accounting">Accounting</a>
+            <a href="http://cwglobalpeople.com/pages/marketing-and-sales">Marketing and Sales</a>
+            <a href="http://cwglobalpeople.com/pages/customer-support">Customer Support</a>
+            <a href="http://cwglobalpeople.com/pages/it">IT</a>
+            <a href="http://cwglobalpeople.com/pages/back-office-support">Back-Office Support</a>
+            </div>
+        </div>
+
+        <div class="nav-link">
+            <a href="#">Learn
+            <span class="arrow">▼</span>
+            </a>
+            <div class="dropdown">
+            <a href="http://cwglobalpeople.com/pages/faqs">FAQs</a>
+            <a href="http://cwglobalpeople.com/pages/insights">Insights</a>
+            <a href="#">Blog</a>
+            </div>
+        </div>
+
+        <div class="nav-link">
+            <a href="#">Company
+            <span class="arrow">▼</span>
+            </a>
+            <div class="dropdown">
+            <a href="http://cwglobalpeople.com/pages/about-us">About us</a>
+            </div>
+        </div>
+
+        <a href="http://cwglobalpeople.com/pages/careers">Careers</a>
+
+        </div>
+        <a href="/cwgpeople-prototype/pages/contact-us/"><button class="btn-primary" aria-label="Contact Us Button">Contact Us</button></a>
+    </nav>
+    </div>
+</header>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <button class="sidebar-close" aria-label="Close Menu">×</button>
+    <div class="sidebar-links">
+        <a href="/cwgpeople-prototype/">Home</a>
+
+        <div class="has-dropdown">
+        <a href="/cwgpeople-prototype/pages/our-services/">Our Services 
+            <span class="arrow">▼</span>
+        </a>
+        <div class="sidebar-dropdown">
+            <a href="#">Financial</a>
+            <a href="#">Software</a>
+            <a href="#">Customer Service</a>
+        </div>
+        </div>
+
+        <a href="/cwgpeople-prototype/pages/about-cwgp/">About CWGP </a>
+
+        <div class="sidebar-btn">
+        <button class="btn-primary">Contact Us</button>
+        </div>
+    </div>
+</div>
+<!-- End of Sidebar -->
+
+<!-- Overlay -->
+<div class="overlay"></div>
+<!-- End of Overlay -->
+
+
+<script>
+    // Header and Mobile Header Script - Start 
+
+    const hamburger = document.querySelector('.hamburger');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.overlay');
+    const body = document.body;
+    hamburger.addEventListener('click', function() {
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+      body.classList.toggle('no-scroll');
+    });
+    overlay.addEventListener('click', function() {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      body.classList.remove('no-scroll');
+    });
+
+    document.querySelector('.sidebar-close').addEventListener('click', function() {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      body.classList.remove('no-scroll');
+    });
+    // Desktop dropdown - show on hover
+    document.querySelectorAll('.nav-link').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        const dropdown = item.querySelector('.dropdown');
+        if (dropdown) {
+          dropdown.style.opacity = '1';
+          dropdown.style.visibility = 'visible';
+        }
+      });
+
+      item.addEventListener('mouseleave', () => {
+        const dropdown = item.querySelector('.dropdown');
+        if (dropdown) {
+          dropdown.style.opacity = '0';
+          dropdown.style.visibility = 'hidden';
+        }
+      });
+    });
+    // Mobile dropdown toggle
+    document.querySelectorAll('.sidebar-links .has-dropdown > a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const dropdown = this.nextElementSibling;
+        dropdown.classList.toggle('active');
+        this.querySelector('.arrow').textContent = 
+          dropdown.classList.contains('active') ? '▲' : '▼';
+      });
+    });
+// Header and Mobile Header Script - End 
+</script>

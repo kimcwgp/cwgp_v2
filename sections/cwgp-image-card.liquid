@@ -1,0 +1,707 @@
+<section 
+  class="cwgp-resizable-cards
+  {% unless section.settings.show_mobile %} hide-mobile{% endunless %}
+  {% unless section.settings.show_desktop %} hide-desktop{% endunless %}"
+  style="
+    background-color: {{ section.settings.section_bg_color }};
+    padding-top: {{ section.settings.padding-block-start }}px;
+    padding-bottom: {{ section.settings.padding-block-end }}px;
+    padding-left: {{ section.settings.padding-block-left }}px;
+    padding-right: {{ section.settings.padding-block-right }}px;
+  "
+>
+
+  <div class="cwgp-container" style="max-width: {{ section.settings.section_max_width }}px; margin: 0 auto;">
+
+    <div 
+    class="cwgp-resizable-cards-grid"
+    style="
+        flex-direction: {{ section.settings.cards_direction }};
+        flex-wrap: {% if section.settings.cards_direction == 'row' %}nowrap{% else %}wrap{% endif %};
+    ">
+
+    {% for block in section.blocks %}
+        {% case block.type %}
+
+        {% when 'card' %}
+            <div
+              class="cwgp-card-wrapper"
+              style="
+                --card-width-mobile: {{ block.settings.card_width_mobile }};
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                flex: 0 0 calc({{ block.settings.card_width }}% - 20px);
+              "
+            >
+            {% if block.settings.card_heading != blank %}
+                <h3 
+                    class="cwgp-card-heading"
+                    style="
+                    color: {{ block.settings.heading_color }};
+                    font-size: {{ block.settings.heading_size }}px;
+                    font-weight: {{ block.settings.card_heading_font_weight }};
+                    margin-bottom: 30px;
+                    "
+                >
+                    {{ block.settings.card_heading }}
+                </h3>
+                {% endif %}
+
+            <div 
+            class="cwgp-card"
+            {{ block.shopify_attributes }}
+            style="
+            "
+            >
+
+       
+                {% if block.settings.card_icon != blank %}
+                <div class="cwgp-card-icon" 
+                  style="
+                  border: 3px solid {{ block.settings.card_border_color }};
+                  border-top-left-radius: 8px;
+                  border-top-right-radius: 8px;
+                  border-bottom: 0;
+                  "
+                >
+                    <img 
+                    src="{{ block.settings.card_icon | image_url }}"
+                    style="width: {{ block.settings.icon_width }}px;"
+                    alt="icon"
+                    >
+                </div>
+                {% endif %}
+
+                <div class="cwgp-card-content" 
+                  style="
+                    background-color: {{ block.settings.card_bg_color }};
+                    text-align: {{ block.settings.text_alignment }};
+                    border: 3px solid {{ block.settings.card_border_color }};
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    border-top: 0;
+                ">
+
+
+
+                {% if block.settings.card_description != blank %}
+                <p 
+                    class="cwgp-card-description"
+                    style="
+                    color: {{ block.settings.description_color }};
+                    font-size: {{ block.settings.description_size }}px;
+                    font-weight: {{ block.settings.card_description_font_weight }};
+                    padding: 16px 0;
+                    "
+                >
+                  
+                    {{ block.settings.card_description }}
+                </p>
+                {% endif %}
+
+                </div>
+
+
+            {% if block.settings.card_link != blank %}
+                    <a href="{{ block.settings.card_link }}" class="{{ block.settings.card_link }}" style="display: flex; gap: 4px; align-items: center; justify-content: flex-end;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#C6973D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                    </a>
+                {% endif %}
+
+            </div>
+
+            {% if block.settings.card_subdescription != blank %}
+                <p 
+                    class="cwgp-card-subdescription"
+                    style="
+                    color: {{ block.settings.subdescription_color }};
+                    font-size: {{ block.settings.subdescription_size }}px;
+                    font-weight: {{ block.settings.card_subdescription_font_weight }};
+                    margin: 6px 0;
+                    text-align: center;
+                    padding: 10px 10px 0 10px;
+                    "
+                >
+                  
+                    {{ block.settings.card_subdescription }}
+                </p>
+                {% endif %}
+            </div>
+
+        {% endcase %}
+
+
+    {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+{% style %}
+
+.cwgp-resizable-cards-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.cwgp-card{
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+}
+
+.cwgp-card:hover{
+  transform: translateY(-4px);
+}
+
+.cwgp-card-heading{
+  margin-bottom:10px;
+}
+
+.cwgp-card-description{
+  margin:0;
+}
+
+.cwgp-card-description p,
+.cwgp-card-description span,
+.cwgp-card-description h1,
+.cwgp-card-description h2,
+.cwgp-card-description h3,
+.cwgp-card-description h4,
+.cwgp-card-description h5,
+.cwgp-card-description h6,
+.cwgp-card-description strong,
+.cwgp-text-description p,
+.cwgp-text-description span,
+.cwgp-text-description h1,
+.cwgp-text-description h2,
+.cwgp-text-description h3,
+.cwgp-text-description h4,
+.cwgp-text-description h5,
+.cwgp-text-description h6,
+.cwgp-text-description strong,
+{
+  font-size: inherit;
+}
+
+.cwgp-card-inner{
+  display:flex;
+  align-items:center;
+}
+
+.cwgp-card-icon img{
+  display:block;
+  height: 300px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.cwgp-card-content{
+  flex:1;
+}
+
+.cwgp-text-column{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.cwgp-text-heading{
+  margin-bottom:12px;
+  line-height: normal;
+}
+
+.cwgp-text-description p{
+  margin:0;
+}
+
+.parent-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cwgp-socials-list {
+  display: flex;
+  padding:20px;
+  border-radius:24px;
+  align-items: center;
+  gap: 20px;
+}
+
+.cwgp-link-list{
+  padding:20px;
+  border-radius:24px;
+}
+
+.cwgp-link-list-title{
+  margin-bottom:0;
+}
+
+.cwgp-links{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.cwgp-links li{
+  margin-bottom:8px;
+}
+
+.cwgp-links a{
+  text-decoration:none;
+  transition: opacity .2s;
+}
+
+.cwgp-links a:hover{
+  opacity:.7;
+}
+
+.icons-list {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+
+  .hide-mobile{
+    display:none;
+  }
+
+  .cwgp-resizable-cards-grid{
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center;
+  }
+
+  .cwgp-card-wrapper{
+    flex: 0 0 calc(var(--card-width-mobile) * 1% - 10px) !important;
+    max-width: calc(var(--card-width-mobile) * 1% - 10px) !important;
+    box-sizing: border-box;
+  }
+
+  .cwgp-card-icon img{
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+}
+
+/* DESKTOP */
+@media (min-width:768px){
+  .hide-desktop{
+    display:none;
+  }
+}
+
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "CWGP - Image Card",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Section Layout"
+    },
+    {
+    "type": "select",
+    "id": "cards_direction",
+    "label": "Cards Direction",
+    "default": "row",
+    "options": [
+        {
+        "value": "row",
+        "label": "Horizontal"
+        },
+        {
+        "value": "column",
+        "label": "Vertical"
+        }
+    ]
+    },
+    {
+        "type": "color",
+        "id": "section_bg_color",
+        "label": "Section BG color",
+        "default": "#f7f7f7"
+    },
+    {
+        "type": "range",
+        "id": "section_max_width",
+        "label": "Section Max Width (px)",
+        "min": 400,
+        "max": 1600,
+        "step": 20,
+        "unit": "px",
+        "default": 1440
+    },
+    {
+        "type": "header",
+        "content": "Section Padding"
+    },
+    {
+        "type": "range",
+        "id": "padding-block-start",
+        "label": "Top padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "padding-block-end",
+        "label": "Bottom padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "padding-block-left",
+        "label": "Left padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "range",
+        "id": "padding-block-right",
+        "label": "Right padding",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 0
+    },
+    {
+        "type": "header",
+        "content": "Device Visibility"
+    },
+    {
+        "type": "checkbox",
+        "id": "show_mobile",
+        "label": "Show Mobile",
+        "default": true
+    },
+    {
+        "type": "checkbox",
+        "id": "show_desktop",
+        "label": "Show Desktop",
+        "default": true
+    }
+  ],
+  "blocks": [
+        {
+        "type": "card",
+        "name": "Card",
+        "settings": [
+        {
+            "type": "header",
+            "content": "Card Layout"
+        },
+        {
+            "type": "select",
+            "id": "card_direction",
+            "label": "Card Layout Direction",
+            "default": "column",
+            "options": [
+                {
+                "value": "row",
+                "label": "Horizontal (Icon Left)"
+                },
+                {
+                "value": "column",
+                "label": "Vertical (Icon Top)"
+                }
+            ]
+        },
+        {
+        "type": "image_picker",
+        "id": "card_icon",
+        "label": "Card Image"
+        },
+        {
+            "type": "range",
+            "id": "card_width",
+            "label": "Card Width (%)",
+            "min": 10,
+            "max": 100,
+            "step": 5,
+            "default": 50
+        },
+        {
+            "type": "range",
+            "id": "card_width_mobile",
+            "label": "Card Width Mobile(%)",
+            "min": 10,
+            "max": 100,
+            "step": 5,
+            "default": 50
+        },
+        {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text Alignment",
+        "default": "left",
+        "options": [
+            {
+            "value": "left",
+            "label": "Left"
+            },
+            {
+            "value": "center",
+            "label": "Center"
+            },
+            {
+            "value": "right",
+            "label": "Right"
+            }
+        ]
+        },
+        {
+            "type": "color",
+            "id": "card_bg_color",
+            "label": "Card Background",
+            "default": "#ffffff"
+        },
+        {
+            "type": "color",
+            "id": "card_border_color",
+            "label": "Card Border Color",
+            "default": "#000"
+        },
+        {
+            "type": "text",
+            "id": "card_heading",
+            "label": "Card Heading",
+            "default": "Card Heading"
+        },
+        {
+            "type": "range",
+            "id": "heading_size",
+            "label": "Heading Font Size",
+            "min": 12,
+            "max": 60,
+            "step": 1,
+            "unit": "px",
+            "default": 24
+        },
+        {
+        "type": "select",
+        "id": "card_heading_font_weight",
+        "label": "Card Heading Weight",
+        "default": "400",
+        "options": [
+            {
+            "value": "100",
+            "label": "100"
+            },
+            {
+            "value": "200",
+            "label": "200"
+            },
+            {
+            "value": "300",
+            "label": "300"
+            },
+            {
+            "value": "400",
+            "label": "400"
+            },
+            {
+            "value": "500",
+            "label": "500"
+            },
+            {
+            "value": "600",
+            "label": "600"
+            },
+            {
+            "value": "700",
+            "label": "700"
+            },
+            {
+            "value": "800",
+            "label": "800"
+            },
+            {
+            "value": "900",
+            "label": "900"
+            },
+        ]
+        },
+        {
+            "type": "color",
+            "id": "heading_color",
+            "label": "Heading Color",
+            "default": "#000000"
+        },
+        {
+            "type": "text",
+            "id": "card_description",
+            "label": "Card Title",
+            "default": "Title"
+        },
+        {
+            "type": "range",
+            "id": "description_size",
+            "label": "Title Font Size",
+            "min": 10,
+            "max": 40,
+            "step": 1,
+            "unit": "px",
+            "default": 16
+        },
+        {
+        "type": "select",
+        "id": "card_description_font_weight",
+        "label": "Card Title Weight",
+        "default": "400",
+        "options": [
+            {
+            "value": "100",
+            "label": "100"
+            },
+            {
+            "value": "200",
+            "label": "200"
+            },
+            {
+            "value": "300",
+            "label": "300"
+            },
+            {
+            "value": "400",
+            "label": "400"
+            },
+            {
+            "value": "500",
+            "label": "500"
+            },
+            {
+            "value": "600",
+            "label": "600"
+            },
+            {
+            "value": "700",
+            "label": "700"
+            },
+            {
+            "value": "800",
+            "label": "800"
+            },
+            {
+            "value": "900",
+            "label": "900"
+            },
+        ]
+        },
+        {
+            "type": "color",
+            "id": "description_color",
+            "label": "Title Color",
+            "default": "#333333"
+        },
+        {
+            "type": "textarea",
+            "id": "card_subdescription",
+            "label": "Card Description",
+            "default": "Description"
+        },
+        {
+            "type": "range",
+            "id": "subdescription_size",
+            "label": "Description Font Size",
+            "min": 10,
+            "max": 40,
+            "step": 1,
+            "unit": "px",
+            "default": 16
+        },
+        {
+        "type": "select",
+        "id": "card_subdescription_font_weight",
+        "label": "Card Description Weight",
+        "default": "400",
+        "options": [
+            {
+            "value": "100",
+            "label": "100"
+            },
+            {
+            "value": "200",
+            "label": "200"
+            },
+            {
+            "value": "300",
+            "label": "300"
+            },
+            {
+            "value": "400",
+            "label": "400"
+            },
+            {
+            "value": "500",
+            "label": "500"
+            },
+            {
+            "value": "600",
+            "label": "600"
+            },
+            {
+            "value": "700",
+            "label": "700"
+            },
+            {
+            "value": "800",
+            "label": "800"
+            },
+            {
+            "value": "900",
+            "label": "900"
+            },
+        ]
+        },
+        {
+            "type": "color",
+            "id": "subdescription_color",
+            "label": "Description Color",
+            "default": "#333333"
+        },
+        {
+        "type": "url",
+        "id": "card_link",
+        "label": "Card Link"
+        }
+        ]
+    },
+    ],
+  "presets": [
+    {
+      "name": "CWGP - Image Card",
+      "blocks": [
+
+      ]
+    }
+  ]
+}
+{% endschema %}
+

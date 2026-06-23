@@ -1,0 +1,510 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_size": "",
+            "line_height_custom": 24,
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "hero_9LGKWV": {
+      "type": "hero",
+      "blocks": {
+        "group_kHaYUM": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 10,
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "custom_height": 100,
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-18df4c0d-0644-41a2-b94a-47facc8bf711",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 20,
+            "placeholder": "",
+            "toggle_overlay": true,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 60,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_YArLxf": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>Enterprise MuleSoft Integration</h2><h2>Consultant for Complex API & </h2><h2>System Architecture</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-heading--family)",
+                "font_size": "3.5rem",
+                "line_height_custom": 30,
+                "letter_spacing": "tight",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_K4t9Ne": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Support your digital transformation initiatives with a certified MuleSoft consultant experienced </p><p>in enterprise ERP, eCommerce, CRM, and cloud platform integrations.</p>",
+                "width": "fit-content",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height_custom": 10,
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-primary)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 20,
+                "padding-block-end": 40,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button_JGy3Qm": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Request Consultation",
+                "link": "http://cwglobalpeople.com/pages/contact",
+                "open_in_new_tab": false,
+                "style_class": "uiverse-btn-wht",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_YArLxf",
+            "text_K4t9Ne",
+            "button_JGy3Qm"
+          ]
+        }
+      },
+      "block_order": [
+        "group_kHaYUM"
+      ],
+      "custom_css": [
+        ".group-block.group-block--height-fit.group-block--width-fit-content.border-style.spacing-style.size-style {margin-left: 1rem;}"
+      ],
+      "name": "Hero (Desktop)",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/HERO-NEW_2.png",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "custom",
+        "section_height_custom": 80,
+        "color_scheme": "scheme-5c9984e0-30c1-4791-b2ff-e825c3b654da",
+        "toggle_overlay": false,
+        "overlay_color": "#333333",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 100,
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": false,
+        "show_desktop": true
+      }
+    },
+    "cwgp_consultant_overview_ppHrCf": {
+      "type": "cwgp-consultant-overview",
+      "name": "Consultant Overview",
+      "settings": {
+        "heading": "Consultant Overview",
+        "description_1": "This MuleSoft consultant provides end-to-end integration expertise — from API-led design and architecture planning to implementation, deployment, and performance optimization.",
+        "description_2": "Available for embedded team integration or hourly strategic advisory support, depending on project scope and business requirements."
+      }
+    },
+    "cwgp_technical_expertise_cards2_TGUdDz": {
+      "type": "cwgp-technical-expertise-cards2",
+      "blocks": {
+        "card_GqhBL4": {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "API-Led Connectivity Architecture",
+            "cwgp_card_title_alignment": "left",
+            "cwgp_card_title_color": "#000000",
+            "cwgp_expertise_card_text": "<p>Design scalable, reusable integration layers following best-practice API frameworks.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#000000",
+            "cwgp_show_highlight_border": false,
+            "cwgp_border_position": "top",
+            "cwgp_border_color": "#c7963d",
+            "cwgp_border_thickness": 3,
+            "cwgp_card_bg_color": "#ffffff",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0
+          }
+        },
+        "card_xGL8G8": {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "ERP & Commerce Integration",
+            "cwgp_card_title_alignment": "left",
+            "cwgp_card_title_color": "#000000",
+            "cwgp_expertise_card_text": "<p>NetSuite, Shopify, CRM platforms, payment gateways, and third-party systems.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#000000",
+            "cwgp_show_highlight_border": false,
+            "cwgp_border_position": "top",
+            "cwgp_border_color": "#c7963d",
+            "cwgp_border_thickness": 3,
+            "cwgp_card_bg_color": "#ffffff",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0
+          }
+        },
+        "card_6kWQk6": {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "System Modernization",
+            "cwgp_card_title_alignment": "left",
+            "cwgp_card_title_color": "#000000",
+            "cwgp_expertise_card_text": "<p>Legacy system migration, data transformation, and architecture redesign.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#000000",
+            "cwgp_show_highlight_border": false,
+            "cwgp_border_position": "top",
+            "cwgp_border_color": "#c7963d",
+            "cwgp_border_thickness": 3,
+            "cwgp_card_bg_color": "#ffffff",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0
+          }
+        },
+        "card_q7xfVt": {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "Ongoing Support & Optimization",
+            "cwgp_card_title_alignment": "left",
+            "cwgp_card_title_color": "#000000",
+            "cwgp_expertise_card_text": "<p>Performance tuning, troubleshooting, and continuous improvement initiatives.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#000000",
+            "cwgp_show_highlight_border": false,
+            "cwgp_border_position": "top",
+            "cwgp_border_color": "#c7963d",
+            "cwgp_border_thickness": 3,
+            "cwgp_card_bg_color": "#ffffff",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0
+          }
+        }
+      },
+      "block_order": [
+        "card_GqhBL4",
+        "card_xGL8G8",
+        "card_6kWQk6",
+        "card_q7xfVt"
+      ],
+      "name": "CWGP - Expertise Cards 2",
+      "settings": {
+        "cwgp_expertise_topheading": "Technical Expertise",
+        "cwgp_topheading_alignment": "center",
+        "cwgp_topheading_color": "#ffffff",
+        "cwgp_topheading_font_size": 24,
+        "cwgp_topheading_font_weight": "700",
+        "cwgp_section_font": "poppins_n4",
+        "cwgp_topheading_margin_bottom": 25,
+        "cwgp_expertise_heading": "",
+        "cwgp_heading_alignment": "center",
+        "cwgp_heading_color": "#000000",
+        "cwgp_heading_font_size": 36,
+        "cwgp_heading_font_weight": "600",
+        "cwgp_heading_margin_bottom": 15,
+        "cwgp_expertise_subheading": "",
+        "cwgp_subheading_alignment": "center",
+        "cwgp_subheading_color": "#000000",
+        "cwgp_subheading_font_size": 16,
+        "cwgp_subheading_font_weight": "400",
+        "cwgp_subheading_margin_bottom": 20,
+        "cards_per_row": 3,
+        "section_bg_color": "#040f2b",
+        "section_max_width": 1200,
+        "padding-block-start": 50,
+        "padding-block-end": 50,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "cwgp_engagement_models_aRB3nB": {
+      "type": "cwgp-engagement-models",
+      "blocks": {
+        "model_UgmWei": {
+          "type": "model",
+          "settings": {
+            "title": "Dedicated Embedded Consultant",
+            "text": "Full-time integration into your internal technology or operations team with KPI alignment and structured reporting."
+          }
+        },
+        "model_NpDnfz": {
+          "type": "model",
+          "settings": {
+            "title": "Hourly Strategic Consulting",
+            "text": "Flexible advisory, architecture design, or troubleshooting support based on project needs."
+          }
+        }
+      },
+      "block_order": [
+        "model_UgmWei",
+        "model_NpDnfz"
+      ],
+      "disabled": true,
+      "name": "CWGP Engagement Models",
+      "settings": {
+        "heading": "Engagement Models"
+      }
+    },
+    "cwgp_technical_expertise_cards_JXxyL8": {
+      "type": "cwgp-technical-expertise-cards",
+      "blocks": {
+        "card_iezGaK": {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "Lorem Ipsum",
+            "cwgp_card_title_alignment": "left",
+            "cwgp_card_title_color": "#000000",
+            "cwgp_expertise_card_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#000000",
+            "cwgp_show_highlight_border": false,
+            "cwgp_border_position": "top",
+            "cwgp_border_color": "#c7963d",
+            "cwgp_border_thickness": 3,
+            "cwgp_card_bg_color": "#ffffff",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0
+          }
+        },
+        "card_XmDJre": {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "Lorem Ipsum",
+            "cwgp_card_title_alignment": "left",
+            "cwgp_card_title_color": "#000000",
+            "cwgp_expertise_card_text": "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#000000",
+            "cwgp_show_highlight_border": false,
+            "cwgp_border_position": "top",
+            "cwgp_border_color": "#c7963d",
+            "cwgp_border_thickness": 3,
+            "cwgp_card_bg_color": "#ffffff",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0
+          }
+        }
+      },
+      "block_order": [
+        "card_iezGaK",
+        "card_XmDJre"
+      ],
+      "disabled": true,
+      "name": "CWGP - Expertise Cards",
+      "settings": {
+        "cwgp_expertise_topheading": "Engagement Models",
+        "cwgp_topheading_alignment": "center",
+        "cwgp_topheading_color": "#040f2b",
+        "cwgp_topheading_font_size": 25,
+        "cwgp_topheading_font_weight": "700",
+        "cwgp_section_font": "poppins_n4",
+        "cwgp_topheading_margin_bottom": 10,
+        "cwgp_expertise_heading": "",
+        "cwgp_heading_alignment": "center",
+        "cwgp_heading_color": "#000000",
+        "cwgp_heading_font_size": 36,
+        "cwgp_heading_font_weight": "600",
+        "cwgp_heading_margin_bottom": 15,
+        "cwgp_expertise_subheading": "",
+        "cwgp_subheading_alignment": "center",
+        "cwgp_subheading_color": "#000000",
+        "cwgp_subheading_font_size": 16,
+        "cwgp_subheading_font_weight": "400",
+        "cwgp_subheading_margin_bottom": 20,
+        "cards_per_row": 4,
+        "section_bg_color": "#ffffff",
+        "section_max_width": 1200,
+        "padding-block-start": 50,
+        "padding-block-end": 50,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "cwgp_submit_inquiry_kgDVcm": {
+      "type": "cwgp-submit-inquiry",
+      "name": "CWGP Custom Contact Form",
+      "settings": {
+        "title": "Discuss Your Integration Initiative",
+        "subtitle": "Provide an overview of your requirements and our consulting team will respond within 24 hours.",
+        "button_label": "Submit Inquiry",
+        "success_message": "Thank you! Your inquiry has been submitted successfully.",
+        "alignment": "center",
+        "max_width": 720,
+        "padding_top": 0,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_9LGKWV",
+    "cwgp_consultant_overview_ppHrCf",
+    "cwgp_technical_expertise_cards2_TGUdDz",
+    "cwgp_engagement_models_aRB3nB",
+    "cwgp_technical_expertise_cards_JXxyL8",
+    "cwgp_submit_inquiry_kgDVcm"
+  ]
+}

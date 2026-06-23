@@ -1,0 +1,805 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "Title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-primary--family)",
+            "font_color": "#000000",
+            "font_weight": "400",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "color_scheme": "",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "hero_jJzCH8": {
+      "type": "hero",
+      "blocks": {
+        "group_78fmqd": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 40,
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 60,
+            "padding-block-end": 60,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_LGfVTB": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h1>Build Your Career with a High-Performing Consulting Organization</h1>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_color": "#090838",
+                "font_weight": "700",
+                "font_size": "2.5rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_EneXGQ": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Join a collaborative, innovative, and fast-growing team where your skills are valued , your growth is supported and your impact is recognized.</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_color": "#090838",
+                "font_weight": "500",
+                "font_size": "1.125rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button_rkybLh": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "See Job Openings",
+                "link": "",
+                "open_in_new_tab": false,
+                "style_class": "orange-pill-btn",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_LGfVTB",
+            "text_EneXGQ",
+            "button_rkybLh"
+          ]
+        }
+      },
+      "block_order": [
+        "group_78fmqd"
+      ],
+      "name": "Hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/benefits_hero_bg.png",
+        "media_type_2": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "space-between",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "auto",
+        "section_height_custom": 70,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 60,
+        "padding-block-end": 60,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "section_egXpbL": {
+      "type": "section",
+      "blocks": {
+        "text_beBjK7": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<h3>Why Join Our Team?</h3>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_color": "#090838",
+            "font_weight": "700",
+            "font_size": "2rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "balance",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_Tq3m9F": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>We believed our people are the our greatest asset. That’s why we provide an environment that supports professional, growth, rewards performance, and encourages leadership, development within a collaborative and forward-thinking organization</p>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#090838",
+            "font_weight": "400",
+            "font_size": "1.125rem",
+            "line_height": "loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 40,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_beBjK7",
+        "text_Tq3m9F"
+      ],
+      "name": "Why Join Our Team? (Desktop)",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-start",
+        "gap": 40,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 80,
+        "padding-block-end": 80,
+        "show_mobile": false,
+        "show_desktop": true
+      }
+    },
+    "cwgp_animated_card_grPfwT": {
+      "type": "cwgp-animated-card",
+      "blocks": {
+        "card_xnhpwy": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Competitive Salary Package",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "We offer a competitive salary and benefits package aligned with your expertise and performance.",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_9h6krc": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Additional Leave Credits",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Enjoy additional leave benefits to support work-life balance and personal priorities.",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_hN784j": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Health Coverage",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Comprehensive health insurance coverage for your peace of mind.",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_HxnyDB": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Learning & Development",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "We invest in your skills through sponsored training programs and certifications.",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_adfqVX": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Performance-Based Pay Raise",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Your contributions are recognized with structured performance-based increases.",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_TRyaQn": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Promotion Opportunities",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Clear pathways for career progression and leadership roles.",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_pPNHVz": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Promotion to Permanent Employment",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Opportunities to transition into permanent positions based on performance and business needs.",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_m8g8CE": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Company Events & Christmas Gifts",
+            "card-title-font-size": 20,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "We celebrate milestones, achievements, and holidays together as a team.",
+            "card-text-font-size": 20,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_xnhpwy",
+        "card_9h6krc",
+        "card_hN784j",
+        "card_HxnyDB",
+        "card_adfqVX",
+        "card_TRyaQn",
+        "card_pPNHVz",
+        "card_m8g8CE"
+      ],
+      "name": "CWGP Career Cards",
+      "settings": {
+        "section_heading": "Employee Benefits",
+        "heading-font-size": 32,
+        "heading-font-weight": "600",
+        "heading-color": "#090838",
+        "section_bg_color": "#F5F5F5",
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
+    },
+    "cwgp_technical_expertise_cards_XAdj9w": {
+      "type": "cwgp-technical-expertise-cards",
+      "blocks": {
+        "card_tDHnWb": {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "Work From Home",
+            "cwgp_card_title_alignment": "center",
+            "cwgp_card_title_color": "#090838",
+            "cwgp_expertise_card_text": "<p>Fully remote opportunities available for qualified roles.</p>",
+            "cwgp_card_description_alignment": "center",
+            "cwgp_card_description_color": "#090838",
+            "cwgp_card_description_size": 18,
+            "cwgp_show_highlight_border": false,
+            "cwgp_border_position": "top",
+            "cwgp_border_color": "#c7963d",
+            "cwgp_border_thickness": 3,
+            "cwgp_card_bg_color": "#F5F5F5",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0
+          }
+        },
+        "card_eaVmdK": {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "Hybrid Setup",
+            "cwgp_card_title_alignment": "center",
+            "cwgp_card_title_color": "#090838",
+            "cwgp_expertise_card_text": "<p>Flexible combination of remote and on-site collaboration.</p>",
+            "cwgp_card_description_alignment": "center",
+            "cwgp_card_description_color": "#090838",
+            "cwgp_card_description_size": 18,
+            "cwgp_show_highlight_border": false,
+            "cwgp_border_position": "top",
+            "cwgp_border_color": "#c7963d",
+            "cwgp_border_thickness": 3,
+            "cwgp_card_bg_color": "#F5F5F5",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0
+          }
+        },
+        "card_G4BYRz": {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "Relocation Options",
+            "cwgp_card_title_alignment": "center",
+            "cwgp_card_title_color": "#090838",
+            "cwgp_expertise_card_text": "<p>Open to candidates planning to relocate before starting work (preferred for certain roles)</p>",
+            "cwgp_card_description_alignment": "center",
+            "cwgp_card_description_color": "#090838",
+            "cwgp_card_description_size": 18,
+            "cwgp_show_highlight_border": false,
+            "cwgp_border_position": "top",
+            "cwgp_border_color": "#c7963d",
+            "cwgp_border_thickness": 3,
+            "cwgp_card_bg_color": "#F5F5F5",
+            "label": "",
+            "link": "",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "margin-top-btn": 0,
+            "margin-bottom-btn": 0
+          }
+        }
+      },
+      "block_order": [
+        "card_tDHnWb",
+        "card_eaVmdK",
+        "card_G4BYRz"
+      ],
+      "name": "CWGP - Expertise Cards",
+      "settings": {
+        "cwgp_expertise_topheading": "",
+        "cwgp_topheading_alignment": "center",
+        "cwgp_topheading_color": "#000000",
+        "cwgp_topheading_font_size": 16,
+        "cwgp_topheading_font_weight": "400",
+        "cwgp_section_font": "poppins_n4",
+        "cwgp_topheading_margin_bottom": 10,
+        "cwgp_expertise_heading": "Flexible Work Setup",
+        "cwgp_heading_alignment": "center",
+        "cwgp_heading_color": "#090838",
+        "cwgp_heading_font_size": 32,
+        "cwgp_heading_font_weight": "600",
+        "cwgp_heading_margin_bottom": 20,
+        "cwgp_expertise_subheading": "<p>We support modern work arrangements designed for productivity and balance.</p>",
+        "cwgp_subheading_alignment": "center",
+        "cwgp_subheading_color": "#000000",
+        "cwgp_subheading_font_size": 18,
+        "cwgp_subheading_font_weight": "400",
+        "cwgp_subheading_margin_bottom": 40,
+        "cards_per_row": 3,
+        "section_bg_color": "#FFFFFF",
+        "section_max_width": 1200,
+        "padding-block-start": 100,
+        "padding-block-end": 100,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "section_U7Qddk": {
+      "type": "section",
+      "blocks": {
+        "text_WbD9Af": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>Professional Growth & Leadership Development</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#090838",
+            "font_weight": "700",
+            "font_size": "2rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 20,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_mqBQat": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>We cultivate a collaborative, and fast-paced work environment where professionals can develop leadership skills, expand technical expertise, and grow within a dynamic organization</p>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#090838",
+            "font_weight": "400",
+            "font_size": "1.125rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_WbD9Af",
+        "text_mqBQat"
+      ],
+      "name": "Professional Growth & Leadership Developer",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": true,
+        "overlay_color": "#F5F5F5",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 60,
+        "padding-block-end": 60,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
+    "section_dBpBGx": {
+      "type": "section",
+      "blocks": {
+        "text_GxUgG9": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h2>Ready to take the next step in your career?</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#090838",
+            "font_weight": "700",
+            "font_size": "2rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 20,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_i4kUjw": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "See Job Openings",
+            "link": "#",
+            "open_in_new_tab": false,
+            "style_class": "orange-pill-btn",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_GxUgG9",
+        "button_i4kUjw"
+      ],
+      "name": "Ready to take the next step in your career?",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": true,
+        "overlay_color": "#FFFFFF",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 80,
+        "padding-block-end": 80,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero_jJzCH8",
+    "section_egXpbL",
+    "cwgp_animated_card_grPfwT",
+    "cwgp_technical_expertise_cards_XAdj9w",
+    "section_U7Qddk",
+    "section_dBpBGx"
+  ]
+}

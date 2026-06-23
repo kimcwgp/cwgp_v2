@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="{{ 'cwgp-styles.css' | asset_url }}" media="all">
+
+<section class="hero" aria-label="Hero section: Our Services overview" style="background-image: url('{{ section.settings.image }}');">
+    <div class="hero-content">
+      <div class="line-accent"></div>
+      <h1> {{ section.settings.heading}}</h1>
+      <p> {{ section.settings.description}}</p>
+    </div>
+  </section>
+
+  {% schema %}
+{
+  "name": "CWGP Separator Message",
+  "settings": [
+    {
+      "type": "url",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Let us help you take the first step with our recruitment expertise."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Short Description",
+      "default": "We do everything NetSuite."
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP  Separator Message"
+    }
+  ]
+}
+{% endschema %}
+

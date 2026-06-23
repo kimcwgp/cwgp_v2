@@ -1,0 +1,427 @@
+<style>
+      /* Announcement Bar */
+
+  .announcement-bar {
+    background-color: #0f5d7e;
+    /* Gold-like color */
+    color: white;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact-info {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .email,
+  .phone,
+  .locations {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    /* Centers the icons vertically with text */
+  }
+
+  .separator {
+    color: black;
+    /* Adjust color for separator */
+  }
+
+  /* Header & Nav */
+  header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #b8860b;
+    letter-spacing: 1.1px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-links a {
+    font-weight: 600;
+    font-size: 15px;
+    color: #0c324d;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-links a:hover {
+    color: #0C324D;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 300px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 100;
+    padding: 1.5rem 0 0 0;
+  }
+
+  .nav-link:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown a {
+    padding: 0.75rem 1rem;
+  }
+
+  .dropdown a:hover {
+    background: #f9f9f9;
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    /* Hidden by default */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .btn-primary {
+    background-color: #0f5d7e;
+    border: none;
+    padding: 0.90rem 1.5rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 2px 7px #0c324d;
+  }
+
+  .btn-primary:hover {
+    background-color: #0f5d7e;
+    box-shadow: 0 3px 10px #0c324d;
+  }
+
+  /* Sidebar Styles */
+
+  .sidebar-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    z-index: 1001;
+    padding: 5px 10px;
+  }
+
+  .sidebar-close:hover {
+    color: #b8860b;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    /* Start off-screen */
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding-top: 70px;
+    overflow-y: auto;
+  }
+
+  .sidebar.active {
+    right: 0;
+  }
+
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .sidebar-link {
+    position: relative;
+  }
+
+
+  .sidebar-links a {
+    padding: 15px 10px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+  }
+
+  .sidebar-links a {
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebar-links .has-dropdown {
+    position: relative;
+  }
+
+  .sidebar-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 1rem;
+  }
+
+  .sidebar-dropdown.active {
+    max-height: 500px;
+  }
+
+  .sidebar-dropdown a {
+    padding: 10px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+  }
+
+  .sidebar-links a:hover {
+    color: #b8860b;
+    background-color: #f9f9f9;
+  }
+
+  .sidebar-btn {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+
+    .btn-primary {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+
+</style>
+
+<div class="announcement-bar">
+    <div class="contact-info">
+        <span class="email"><i class="fa-regular fa-envelope" style="color: #fff; margin: 0 10px;"></i>  info@cwglobalpartners.com</span>
+        <span class="separator">|</span>
+        <span class="phone"><i class="fa-solid fa-phone-volume" style="color: #fff; margin: 0 10px;"></i> 571-249-6186</span>
+        <span class="separator">|</span>
+        <span class="locations"><i class="fa-regular fa-envelope" style="color: #fff; margin: 0 10px;"></i> North America | Asia</span>
+    </div>
+</div>
+<header>
+    <div class="container">
+    <nav aria-label="Primary Navigation">
+
+        <button class="hamburger" aria-label="Toggle Navigation">
+        &#9776; <!-- Hamburger icon -->
+        </button>
+
+        <a class="logo" href="/cwgpeople-prototype/"><img src="assets/cwgplogo.png" width="40px" height="40px"></a>
+
+        <div class="nav-links">
+        <div class="nav-link">
+            <a href="/cwgpeople-prototype/">Home</a>
+        </div>
+
+
+        <div class="nav-link">
+            <a href="/cwgpeople-prototype/pages/our-services/">Our Services
+            <span class="arrow">▼</span>
+            </a>
+            <div class="dropdown">
+            <a href="#">Financial</a>
+            <a href="#">Software</a>
+            <a href="#">Customer Service</a>
+            </div>
+        </div>
+
+        <a href="/cwgpeople-prototype/pages/products/">About us</a>
+
+        </div>
+        <a href="/cwgpeople-prototype/pages/contact-us/"><button class="btn-primary" aria-label="Contact Us Button">Contact Us</button></a>
+    </nav>
+    </div>
+</header>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <button class="sidebar-close" aria-label="Close Menu">×</button>
+    <div class="sidebar-links">
+        <a href="/cwgpeople-prototype/">Home</a>
+        <a href="/cwgpeople-prototype/pages/netsuite/">Netsuite</a>
+
+        <div class="has-dropdown">
+        <a href="/cwgpeople-prototype/pages/our-services/">Our Services 
+            <span class="arrow">▼</span>
+        </a>
+        <div class="sidebar-dropdown">
+            <a href="#">NetSuite Administration</a>
+            <a href="#">NetSuite Implementation</a>
+            <a href="#">NetSuite Advisory</a>
+            <a href="#">NetSuite Things We've Done</a>
+            <a href="#">Shared Services</a>
+            <a href="#">Salesforce</a>
+        </div>
+        </div>
+
+        <a href="/cwgpeople-prototype/pages/products/">Products</a>
+
+        <div class="has-dropdown">
+        <a href="/cwgpeople-prototype/pages/industry-expertise/">Industry Expertise 
+            <span class="arrow">▼</span>
+        </a>
+        <div class="sidebar-dropdown">
+            <a href="#">Manufacturing</a>
+            <a href="#">Non-Profit</a>
+            <a href="#">Retail</a>
+            <a href="#">Distribution</a>
+            <a href="#">Services</a>
+            <a href="#">Software</a>
+        </div>
+        </div>
+
+        <a href="/cwgpeople-prototype/pages/partners/">Partners</a>
+        <a href="/cwgpeople-prototype/pages/careers/">Careers</a>
+
+        <div class="has-dropdown">
+        <a href="/cwgpeople-prototype/pages/about-cwgp/">About CWGP 
+            <span class="arrow">▼</span>
+        </a>
+        <div class="sidebar-dropdown">
+            <a href="#">Gallery</a>
+        </div>
+        </div>
+
+        <div class="sidebar-btn">
+        <button class="btn-primary">Contact Us</button>
+        </div>
+    </div>
+</div>
+<!-- End of Sidebar -->
+
+<!-- Overlay -->
+<div class="overlay"></div>
+<!-- End of Overlay -->
+
+
+<script>
+    // Header and Mobile Header Script - Start 
+
+    const hamburger = document.querySelector('.hamburger');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.overlay');
+    const body = document.body;
+    hamburger.addEventListener('click', function() {
+      sidebar.classList.toggle('active');
+      overlay.classList.toggle('active');
+      body.classList.toggle('no-scroll');
+    });
+    overlay.addEventListener('click', function() {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      body.classList.remove('no-scroll');
+    });
+
+    document.querySelector('.sidebar-close').addEventListener('click', function() {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      body.classList.remove('no-scroll');
+    });
+    // Desktop dropdown - show on hover
+    document.querySelectorAll('.nav-link').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        const dropdown = item.querySelector('.dropdown');
+        if (dropdown) {
+          dropdown.style.opacity = '1';
+          dropdown.style.visibility = 'visible';
+        }
+      });
+
+      item.addEventListener('mouseleave', () => {
+        const dropdown = item.querySelector('.dropdown');
+        if (dropdown) {
+          dropdown.style.opacity = '0';
+          dropdown.style.visibility = 'hidden';
+        }
+      });
+    });
+    // Mobile dropdown toggle
+    document.querySelectorAll('.sidebar-links .has-dropdown > a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const dropdown = this.nextElementSibling;
+        dropdown.classList.toggle('active');
+        this.querySelector('.arrow').textContent = 
+          dropdown.classList.contains('active') ? '▲' : '▼';
+      });
+    });
+// Header and Mobile Header Script - End 
+</script>

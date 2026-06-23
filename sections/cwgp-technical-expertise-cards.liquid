@@ -1,0 +1,836 @@
+<section 
+  class="cwgp-expertise-cards
+  {% unless section.settings.show_mobile %} hide-mobile{% endunless %}
+  {% unless section.settings.show_desktop %} hide-desktop{% endunless %}"
+  style="
+    background-color: {{ section.settings.section_bg_color }};
+    padding-top: {{ section.settings.padding-block-start }}px;
+    padding-bottom: {{ section.settings.padding-block-end }}px;
+  "
+>
+
+  <div class="cwgp-container" style="max-width: {{ section.settings.section_max_width }}px;">
+    
+     {% if section.settings.cwgp_expertise_topheading != blank %}
+        <p style="
+          color: {{ section.settings.cwgp_topheading_color }}; 
+          text-align: {{ section.settings.cwgp_topheading_alignment }};
+          font-size: {{ section.settings.cwgp_topheading_font_size }}px;
+          font-weight: {{ section.settings.cwgp_topheading_font_weight }} !important;
+          margin-bottom: {{ section.settings.cwgp_topheading_margin_bottom }}px !important;">
+            {{ section.settings.cwgp_expertise_topheading }}
+        </p>
+    {% endif %}
+
+    {% if section.settings.cwgp_expertise_heading != blank %}
+        <h2
+          style="
+            text-align: {{ section.settings.cwgp_heading_alignment }};
+            color: {{ section.settings.cwgp_heading_color }};
+            font-size: {{ section.settings.cwgp_heading_font_size }}px;
+            font-weight: {{ section.settings.cwgp_heading_font_weight }} !important;
+            margin-bottom: {{ section.settings.cwgp_heading_margin_bottom }}px !important;
+          "
+        >
+            {{ section.settings.cwgp_expertise_heading }}
+        </h2>
+    {% endif %}
+
+    {% if section.settings.cwgp_expertise_subheading != blank %}
+        <div style="
+          color: {{ section.settings.cwgp_subheading_color }}; 
+          text-align: {{ section.settings.cwgp_subheading_alignment }};
+          font-size: {{ section.settings.cwgp_subheading_font_size }}px;
+          font-weight: {{ section.settings.cwgp_subheading_font_weight }} !important;
+          margin-bottom: {{ section.settings.cwgp_subheading_margin_bottom }}px !important;
+          ">
+            {{ section.settings.cwgp_expertise_subheading }}
+        </div>
+    {% endif %}
+    
+    <div 
+      class="cwgp-grid"
+      style="grid-template-columns: repeat({{ section.settings.cards_per_row }}, 1fr);"
+    >
+      {% for block in section.blocks %}
+        {%- assign desc_opacity = block.settings.description_opacity | default: 100 | divided_by: 100.0 -%}
+        {%- assign title_opacity = block.settings.title_opacity | default: 100 | divided_by: 100.0 -%}
+
+        <div class="cwgp-card"
+          style="
+            background-color: {{ block.settings.cwgp_card_bg_color }};
+            
+            {% if block.settings.cwgp_show_highlight_border %}
+              {% case block.settings.cwgp_border_position %}
+                {% when 'top' %}
+                  border-top: {{ block.settings.cwgp_border_thickness }}px solid {{ block.settings.cwgp_border_color }};
+                {% when 'left' %}
+                  border-left: {{ block.settings.cwgp_border_thickness }}px solid {{ block.settings.cwgp_border_color }};
+                {% when 'right' %}
+                  border-right: {{ block.settings.cwgp_border_thickness }}px solid {{ block.settings.cwgp_border_color }};
+                {% when 'bottom' %}
+                  border-bottom: {{ block.settings.cwgp_border_thickness }}px solid {{ block.settings.cwgp_border_color }};
+              {% endcase %}
+            {% endif %}
+          "
+          {{ block.shopify_attributes }}>
+          <div>
+            {% if block.settings.cwgp_expertise_card_title != blank %}
+              <h3 
+                style="
+                  color: {{ block.settings.cwgp_card_title_color | color_modify: 'alpha', title_opacity }} !important;
+                  text-align: {{ block.settings.cwgp_card_title_alignment }};
+                  font-size: {{ block.settings.title_size }}px;
+                  line-height: normal;
+                ">
+                {{ block.settings.cwgp_expertise_card_title }}
+              </h3>
+            {% endif %}
+
+            {% if block.settings.cwgp_expertise_card_text != blank %}
+              <div 
+                class="cwgp-card-description"
+                style="
+                  color: {{ block.settings.cwgp_card_description_color | color_modify: 'alpha', desc_opacity }} !important;
+                  text-align: {{ block.settings.cwgp_card_description_alignment }} !important;
+                  font-size: {{ block.settings.cwgp_card_description_size }}px !important;
+                ">
+                {{ block.settings.cwgp_expertise_card_text }}
+              </div>
+            {% endif %}
+          </div>
+          {% if block.settings.label != blank %}
+            <a
+              {% if block.settings.link == blank %}
+                role="link"
+                aria-disabled="true"
+              {% else %}
+                href="{{ block.settings.link }}"
+              {% endif %}
+              class="
+                {% if block.settings.style_class == 'uiverse-btn' %}
+                  btn btn-center
+                {% elsif block.settings.style_class == 'uiverse-btn-wht' %}
+                  btn
+                {% elsif block.settings.style_class == 'uiverse-btn-mblue' %}
+                  btn
+                {% elsif block.settings.style_class == 'btn-elegant' %}
+                  btn-center
+                {% elsif block.settings.style_class == 'btn-slide' %}
+                  btn-center
+                {% endif %}
+                size-style
+                {{ block.settings.style_class }}
+                {{ block.settings.style_class }}--{{ block.id }}
+              "
+              style="{% render 'size-style', settings: block.settings %}
+              margin-top: {{ block.settings.margin-top-btn }}px;
+              margin-bottom: {{ block.settings.margin-bottom-btn }}px;"
+              {% if block.settings.open_in_new_tab %}
+                target="_blank" rel="noopener noreferrer"
+              {% endif %}
+              {{ block.shopify_attributes }}
+            >
+              {% if block.settings.style_class == 'btn-slide' %}
+                <span>
+                  <p>{{ block.settings.label }}</p>
+                  <p>{{ block.settings.label }}</p>
+                </span>
+              {% elsif block.settings.style_class == 'black_outline_arrow' %}
+                <span class="black-outline-arrow">
+                  {{ block.settings.label }}
+
+                  <span class="arrow-wrapper">
+                    <img
+                      class="arrow-default"
+                      src="{{ 'icon-top-right-arrow.svg' | asset_url }}"
+                      alt=""
+                      width="20"
+                      height="20"
+                    >
+
+                    <img
+                      class="arrow-hover"
+                      src="{{ 'icon-top-right-arrow-hover.svg' | asset_url }}"
+                      alt=""
+                      width="20"
+                      height="20"
+                    >
+                  </span>
+                </span>
+              {% elsif block.settings.style_class == 'arrow-link-btn' %}
+                <span class="arrow-icon" style="display: flex; align-items: center; gap: 6px;"> 
+                  {{ block.settings.label }} 
+                  {{ 'icon-right-arrow.svg' | asset_url | img_tag }} 
+                </span>
+              {% else %}
+                {{ block.settings.label }}
+              {% endif %}
+            </a>
+          {% endif %}
+
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+
+</section>
+
+{% style %}
+    .cwgp-expertise-cards {
+        background: #f7f7f7;
+        }
+
+        .cwgp-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        }
+
+        /* GRID */
+        .cwgp-grid {
+          display: grid;
+          gap: 30px;
+        }
+
+        /* CARD */
+        .cwgp-card {
+        background: #ffffff;
+        padding: 30px 14px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        text-align: left;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        }
+
+        .cwgp-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .cwgp-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+            line-height: 1.4rem;
+            min-height: 2.8rem; /* 2 lines × 1.8rem */
+        }
+
+        .cwgp-card p {
+          font-size: 1.2rem;
+          line-height: 1.2;
+          font-weight: 400;
+        }
+
+        .cwgp-card-description p,
+        .cwgp-card-description span,
+        .cwgp-card-description h1,
+        .cwgp-card-description h2,
+        .cwgp-card-description h3,
+        .cwgp-card-description h4,
+        .cwgp-card-description h5,
+        .cwgp-card-description h6,
+        .cwgp-card-description h1,
+        .cwgp-card-description strong {
+          font-size: inherit !important;
+        }
+
+
+        /* MOBILE */
+        @media (max-width: 767px) {
+          .cwgp-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+
+        /* DEVICE VISIBILITY */
+        @media (max-width: 767px) {
+        .hide-mobile {
+            display: none;
+        }
+        }
+
+        @media (min-width: 768px) {
+        .hide-desktop {
+            display: none;
+        }
+    }
+{% endstyle %}
+
+
+{% schema %}
+{
+  "name": "CWGP - Expertise Cards",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Top Heading"
+    },
+    {
+      "type": "text",
+      "id": "cwgp_expertise_topheading",
+      "label": "Top Heading"
+    },
+    {
+      "type": "select",
+      "id": "cwgp_topheading_alignment",
+      "label": "Top Heading alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "cwgp_topheading_color",
+      "label": "Top Heading color",
+      "default": "#000000"
+    },
+    {
+        "type": "range",
+        "id": "cwgp_topheading_font_size",
+        "label": "Font size",
+        "min": 12,
+        "max": 80,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+    },
+    {
+        "type": "select",
+        "id": "cwgp_topheading_font_weight",
+        "label": "Font weight",
+        "default": "400",
+        "options": [
+            { "value": "400", "label": "Normal (400)" },
+            { "value": "500", "label": "Medium (500)" },
+            { "value": "600", "label": "Semi Bold (600)" },
+            { "value": "700", "label": "Bold (700)" },
+            { "value": "800", "label": "Extra Bold (800)" }
+        ]
+    },
+    {
+      "type": "font_picker",
+      "id": "cwgp_section_font",
+      "label": "Section font",
+      "default": "poppins_n4"
+    },
+    {
+      "type": "range",
+      "id": "cwgp_topheading_margin_bottom",
+      "label": "Top Heading margin bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "cwgp_expertise_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "cwgp_heading_alignment",
+      "label": "Heading alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "cwgp_heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+        "type": "range",
+        "id": "cwgp_heading_font_size",
+        "label": "Font size",
+        "min": 12,
+        "max": 80,
+        "step": 1,
+        "unit": "px",
+        "default": 36
+    },
+    {
+        "type": "select",
+        "id": "cwgp_heading_font_weight",
+        "label": "Font weight",
+        "default": "600",
+        "options": [
+            { "value": "400", "label": "Normal (400)" },
+            { "value": "500", "label": "Medium (500)" },
+            { "value": "600", "label": "Semi Bold (600)" },
+            { "value": "700", "label": "Bold (700)" },
+            { "value": "800", "label": "Extra Bold (800)" }
+        ]
+    },
+    {
+      "type": "range",
+      "id": "cwgp_heading_margin_bottom",
+      "label": "Heading margin bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+
+    {
+      "type": "header",
+      "content": "Subheading"
+    },
+    {
+      "type": "richtext",
+      "id": "cwgp_expertise_subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "select",
+      "id": "cwgp_subheading_alignment",
+      "label": "Subheading alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "cwgp_subheading_color",
+      "label": "Subheading color",
+      "default": "#000000"
+    },
+    {
+        "type": "range",
+        "id": "cwgp_subheading_font_size",
+        "label": "Font size",
+        "min": 12,
+        "max": 80,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+    },
+    {
+        "type": "select",
+        "id": "cwgp_subheading_font_weight",
+        "label": "Font weight",
+        "default": "400",
+        "options": [
+            { "value": "400", "label": "Normal (400)" },
+            { "value": "500", "label": "Medium (500)" },
+            { "value": "600", "label": "Semi Bold (600)" },
+            { "value": "700", "label": "Bold (700)" },
+            { "value": "800", "label": "Extra Bold (800)" }
+        ]
+    },
+    {
+      "type": "range",
+      "id": "cwgp_subheading_margin_bottom",
+      "label": "Subheading margin bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+
+  {
+    "type": "header",
+    "content": "Section Layout"
+  },
+  {
+    "type": "range",
+    "id": "cards_per_row",
+    "label": "Cards per row (Desktop)",
+    "min": 1,
+    "max": 6,
+    "step": 1,
+    "default": 4
+  },
+  {
+    "type": "color",
+    "id": "section_bg_color",
+    "label": "Background color",
+    "default": "#f7f7f7"
+  },
+  {
+    "type": "range",
+    "id": "section_max_width",
+    "label": "Section Max Width (px)",
+    "min": 400,
+    "max": 1600,
+    "step": 20,
+    "unit": "px",
+    "default": 1200
+  },
+
+  {
+    "type": "header",
+    "content": "Section Padding"
+  },
+  {
+    "type": "range",
+    "id": "padding-block-start",
+    "label": "Top padding",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 0
+  },
+  {
+    "type": "range",
+    "id": "padding-block-end",
+    "label": "Bottom padding",
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "unit": "px",
+    "default": 0
+  },
+
+  {
+    "type": "header",
+    "content": "Device Visibility"
+  },
+  {
+    "type": "checkbox",
+    "id": "show_mobile",
+    "label": "Show Mobile",
+    "default": true
+  },
+  {
+    "type": "checkbox",
+    "id": "show_desktop",
+    "label": "Show Desktop",
+    "default": true
+  }
+  ],
+  "blocks": [
+    {
+      "name": "Card",
+      "type": "card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "cwgp_expertise_card_title",
+          "label": "Title",
+          "default": "Title here"
+        },
+        {
+          "type": "select",
+          "id": "cwgp_card_title_alignment",
+          "label": "Title alignment",
+          "default": "left",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ]
+        },
+        {
+          "type": "range",
+          "id": "title_size",
+          "label": "Title Size",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 24,
+        },
+        {
+          "type": "color",
+          "id": "cwgp_card_title_color",
+          "label": "Title color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "title_opacity",
+          "label": "Title Font Opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "default": 100
+        },
+        {
+          "type": "richtext",
+          "id": "cwgp_expertise_card_text",
+          "label": "Description",
+          "default": "<p>Description here</p>"
+        },
+        {
+          "type": "select",
+          "id": "cwgp_card_description_alignment",
+          "label": "Description alignment",
+          "default": "left",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "cwgp_card_description_color",
+          "label": "Description color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "description_opacity",
+          "label": "Description Font Opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "default": 100
+        },
+        {
+          "type": "range",
+          "id": "cwgp_card_description_size",
+          "label": "Description Size",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 16,
+        },
+        {
+          "type": "checkbox",
+          "id": "cwgp_show_highlight_border",
+          "label": "Show highlight border",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "cwgp_border_position",
+          "label": "Border position",
+          "default": "top",
+          "options": [
+            { "value": "top", "label": "Top" },
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" },
+            { "value": "bottom", "label": "Bottom" }
+          ],
+          "visible_if": "{{ block.settings.cwgp_show_highlight_border }}"
+        },
+        {
+          "type": "color",
+          "id": "cwgp_border_color",
+          "label": "Border color",
+          "default": "#c7963d",
+          "visible_if": "{{ block.settings.cwgp_show_highlight_border }}"
+        },
+        {
+          "type": "range",
+          "id": "cwgp_border_thickness",
+          "label": "Border thickness",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "default": 3,
+          "visible_if": "{{ block.settings.cwgp_show_highlight_border }}"
+        },
+        {
+          "type": "color",
+          "id": "cwgp_card_bg_color",
+          "label": "Card background color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "header",
+          "content": "Button Settings"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "t:settings.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:settings.link",
+          "visible_if": "{{ block.settings.label }}"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_in_new_tab",
+          "label": "t:settings.open_new_tab",
+          "default": false,
+          "visible_if": "{{ block.settings.label }}"
+        },
+        {
+          "type": "select",
+          "id": "style_class",
+          "label": "t:settings.style",
+          "options": [
+            {
+              "value": "button",
+              "label": "t:options.primary"
+            },
+            {
+              "value": "button-secondary",
+              "label": "t:options.secondary"
+            },
+            {
+              "value": "link",
+              "label": "t:options.link"
+            },
+            { "value": "primary-square-btn", "label": "Primary Square Button" },
+            { "value": "uiverse-btn", "label": "Uiverse Button" },
+            { "value": "uiverse-btn-wht", "label": "Uiverse Button White" },
+            { "value": "uiverse-btn-mblue", "label": "Uiverse Button MidBlue" },
+            { "value": "btn-elegant", "label": "Elegant Button" },
+            { "value": "btn-slide", "label": "Slide Button" },
+            { "value": "orange-btn", "label": "Orange Button" },
+            { "value": "orange-outline-btn", "label": "Orange Outline Button" },
+            { "value": "black_outline", "label": "Black Outline"},
+            { "value": "black_outline_arrow", "label": "Black Outline with Arrow"},
+            { "value": "white_outline", "label": "White Outline"},
+            { "value": "hyperlink", "label": "Hyperlink"},
+            { "value": "arrow-link-btn", "label": "Arrow Link Button" },
+
+          ],
+          "default": "button",
+          "visible_if": "{{ block.settings.label }}"
+        },
+        {
+          "type": "header",
+          "content": "t:content.size",
+          "visible_if": "{{ block.settings.label }}"
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "t:settings.width_desktop",
+          "options": [
+            {
+              "value": "fit-content",
+              "label": "t:options.fit_content"
+            },
+            {
+              "value": "custom",
+              "label": "t:options.custom"
+            }
+          ],
+          "default": "fit-content",
+          "visible_if": "{{ block.settings.label }}"
+        },
+        {
+          "type": "range",
+          "id": "custom_width",
+          "label": "t:settings.custom_width",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 100,
+          "visible_if": "{{ block.settings.width == \"custom\" }}",
+        },
+        {
+          "type": "select",
+          "id": "width_mobile",
+          "label": "t:settings.width_mobile",
+          "options": [
+            {
+              "value": "fit-content",
+              "label": "t:options.fit_content"
+            },
+            {
+              "value": "custom",
+              "label": "t:options.custom"
+            }
+          ],
+          "default": "fit-content",
+          "visible_if": "{{ block.settings.label }}"
+        },
+        {
+          "type": "range",
+          "id": "custom_width_mobile",
+          "label": "t:settings.custom_width",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 100,
+          "visible_if": "{{ block.settings.width_mobile == \"custom\" }}"
+        },
+        {
+          "type": "range",
+          "id": "margin-top-btn",
+          "label": "Margin Top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 0,
+          "visible_if": "{{ block.settings.label }}"
+        },
+        {
+          "type": "range",
+          "id": "margin-bottom-btn",
+          "label": "Margin Bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 0,
+          "visible_if": "{{ block.settings.label }}"
+        },
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP - Expertise Cards",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "Lorem Ipsum",
+            "cwgp_expertise_card_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+            "cwgp_show_highlight_border": false
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "Lorem Ipsum",
+            "cwgp_expertise_card_text": "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+            "cwgp_show_highlight_border": false
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "cwgp_expertise_card_title": "Lorem Ipsum",
+            "cwgp_expertise_card_text": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>",
+            "cwgp_show_highlight_border": false
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

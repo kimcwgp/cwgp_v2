@@ -1,0 +1,337 @@
+<style>
+  :root {
+    --bg: #eaf3e5;
+    --background: #386986;
+    --text: #0f172a;
+    --muted: #475569;
+    --card: #ffffff;
+    --accent: #386986;
+    --border: #d1d5db;
+    --radius: 14px;
+    --speed: 300ms;
+    --dots: #1D3E5B;
+  }
+
+  div#shopify-section-template--17617272045647__cwgp_slider_Q4Wn4W {
+        background: var(--background);
+    }
+
+  .team-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .team-text {
+    flex: 1 1 300px;
+    min-width: 260px;
+  }
+  .team-text h2 {
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 800;
+    margin: 0 0 14px;
+  }
+  .team-text p {
+    font-size: 16px;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* Slider wrapper */
+  .slider {
+    position: relative;
+    flex: 1 1 420px;
+    max-width: 480px;
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform var(--speed) ease;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 40%;
+    object-fit: cover;
+    border-bottom: none;
+  }
+
+  .card-content {
+    padding: 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .card p.role {
+    margin: 4px 0 12px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+  .tags span {
+    background: var(--accent);
+    color: #fff;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+
+  .logos {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: auto;
+    opacity: 0.7;
+  }
+  .logos img {
+    height: 20px;
+    object-fit: contain;
+    border-bottom: none;
+  }
+
+  /* Navigation arrows */
+  .arrow-slider {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: transparent;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--speed);
+  }
+  .arrow-slider:hover { background: transparent; }
+  .arrow-slider.left { left: -15px; }
+  .arrow-slider.right { right: -15px; }
+
+  .arrow-slider svg {
+    width: 18px; height: 18px;
+  }
+
+  /* Dots */
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 14px;
+    gap: 6px;
+  }
+  .dot {
+    width: 10px; height: 10px;
+    background: #cbd5e1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background var(--speed);
+  }
+  .dot.active { background: var(--dots); }
+
+  @media (max-width: 768px) {
+    .team-section { flex-direction: column; }
+    .card img { display: none; }
+  }
+</style>
+
+<section class="team-section">
+  <div class="team-text">
+    <h2> {{ section.settings.heading }}</h2>
+    <p> {{ section.settings.description }}</p>
+  </div>
+
+  <div class="slider">
+    <div class="slides">
+      <!-- Slide 1 -->
+      {% for block in section.blocks %}
+        <div class="slide">
+          <div class="card">
+            <img src="{{ block.settings.profile_img | image_url }}" alt="{{block.settings.name}}">
+            <div class="card-content">
+              <div>
+                <h3> {{ block.settings.name }}</h3>
+                <p class="role"> {{ block.settings.position }} </p>
+                <div class="tags">
+                  <span> {{ block.settings.skill1 }}</span>
+                  <span> {{ block.settings.skill2 }}</span>
+                  <span> {{ block.settings.skill3 }}</span>
+                  <span> {{ block.settings.skill4 }}</span>
+                </div>
+              </div>
+              <div class="logos">
+                <img src="{{ block.settings.software1 | image_url }}" alt="{{ block.settings.skill1 }}">
+                <img src="{{ block.settings.software2 | image_url }}" alt="{{ block.settings.skill2}}">
+                <img src=" {{ block.settings.software3 | image_url }}" alt="{{ block.settings.skill3}}">
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}  
+    </div>
+
+    <!-- Arrows -->
+    <div class="arrow-slider left" id="prev">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
+    
+    <div class="arrow-slider right" id="next">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots" id="dots"></div>
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelector('.slides');
+  const slideCount = document.querySelectorAll('.slide').length;
+  const dotsContainer = document.getElementById('dots');
+  let current = 0;
+
+  // Create dots
+  for(let i=0;i<slideCount;i++){
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if(i===0) dot.classList.add('active');
+    dot.dataset.index = i;
+    dotsContainer.appendChild(dot);
+  }
+  const dots = document.querySelectorAll('.dot');
+
+  function updateSlide(index){
+    current = (index+slideCount)%slideCount;
+    slides.style.transform = `translateX(-${current*100}%)`;
+    dots.forEach((d,i)=>d.classList.toggle('active', i===current));
+  }
+
+  document.getElementById('next').addEventListener('click', ()=> updateSlide(current+1));
+  document.getElementById('prev').addEventListener('click', ()=> updateSlide(current-1));
+  dots.forEach(dot=>dot.addEventListener('click', e=> updateSlide(+e.target.dataset.index)));
+</script>
+
+{% schema %}
+
+{
+  "name": "CWGP Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Meet your newest team member"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Scroll through some sample profiles to see just how amazing our people talent is.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Profile",
+      "type": "profile",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "profile_img",
+          "label": "Profile Image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Alex P."
+        },
+        {
+          "type": "text",
+          "id": "position",
+          "label": "Position",
+          "default": "Business Operations"
+        },
+        {
+          "type": "text",
+          "id": "skill1",
+          "label": "Skill 1",
+          "default": "Shopify"
+        },
+        {
+          "type": "text",
+          "id": "skill2",
+          "label": "Skill 2",
+          "default": "Inventory Management"
+        },
+        {
+          "type": "text",
+          "id": "skill3",
+          "label": "Skill 3",
+          "default": "NetSuite"
+        },
+        {
+          "type": "text",
+          "id": "skill4",
+          "label": "Skill 4",
+          "default": "Celigo"
+        },
+        {
+          "type": "image_picker",
+          "id": "software1",
+          "label": "Software 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "software2",
+          "label": "Softawe 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "software3",
+          "label": "Software 3"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP Slider"
+    }
+  ]
+}
+
+{% endschema %}

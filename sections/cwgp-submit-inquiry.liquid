@@ -1,0 +1,234 @@
+<section class="custom-contact-section">
+  <div class="contact-container">
+    
+    <h2 class="contact-title">Discuss Your Integration Initiative</h2>
+    
+    <p class="contact-subtitle">
+      Provide an overview of your requirements and our consulting team will respond within 24 hours.
+    </p>
+
+    {% form 'contact', id: 'ContactForm' %}
+      
+      {% if form.posted_successfully? %}
+        <div class="form-success">
+          Thank you! Your inquiry has been submitted successfully.
+        </div>
+      {% endif %}
+
+      {% if form.errors %}
+        <div class="form-errors">
+          {{ form.errors | default_errors }}
+        </div>
+      {% endif %}
+
+      <div class="form-group">
+        <input
+          type="text"
+          id="ContactForm-name"
+          name="contact[name]"
+          placeholder="Full Name"
+          required>
+      </div>
+
+      <div class="form-group">
+        <input
+          type="email"
+          id="ContactForm-email"
+          name="contact[email]"
+          placeholder="Corporate Email"
+          required>
+      </div>
+
+      <div class="form-group">
+        <textarea
+          id="ContactForm-body"
+          name="contact[body]"
+          placeholder="Describe your integration project"
+          rows="6"
+          required></textarea>
+      </div>
+
+      <button type="submit" class="contact-btn">
+        Submit Inquiry
+      </button>
+
+    {% endform %}
+
+  </div>
+</section>
+
+<style>
+.custom-contact-section {
+  padding: 80px 20px;
+}
+
+.contact-container {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #040F2B;
+  margin-bottom: 10px;
+}
+
+.contact-subtitle {
+  font-size: 16px;
+  color: #5f6b7a;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px;
+  font-size: 15px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #061a3a;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #040F2B;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: #0a2a5e;
+}
+
+.form-success {
+  margin-bottom: 20px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.form-errors {
+  margin-bottom: 20px;
+  color: #d32f2f;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-title {
+    font-size: 26px;
+  }
+
+  .contact-subtitle {
+    font-size: 14px;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "CWGP Submit Inquiry Form",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Discuss Your Integration Initiative"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Provide an overview of your requirements and our consulting team will respond within 24 hours."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Submit Inquiry"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success Message",
+      "default": "Thank you! Your inquiry has been submitted successfully."
+    },
+
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Text Alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Form Max Width",
+      "min": 400,
+      "max": 1000,
+      "step": 20,
+      "unit": "px",
+      "default": 720
+    },
+
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top Padding",
+      "min": 0,
+      "max": 150,
+      "step": 10,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom Padding",
+      "min": 0,
+      "max": 150,
+      "step": 10,
+      "unit": "px",
+      "default": 80
+    }
+  ],
+  "presets": [
+    {
+      "name": "CWGP Submit Inquiry Form"
+    }
+  ]
+}
+{% endschema %}

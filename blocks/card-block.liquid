@@ -1,0 +1,26 @@
+<div class="text-block text-{{ block.settings.alignment }}">
+    {{ block.setting.text }}
+</div>
+
+{% schema %}
+{
+    "name": "Text",
+    "settings": [
+        {
+            "type": "text",
+            "id": "text",
+            "label": "id-text"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Text"},
+        {
+            "name": "Content",
+            "settings": {
+                "text": "Hello World!"
+            }
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,184 @@
+<div class="scrollable-wrapper" id="scrollable-{{ block.id }}">
+  <div class="scrollable-track">
+
+    {% for i in (1..7) %}
+      {% assign img = "image_" | append: i %}
+      {% assign txt = "text_" | append: i %}
+
+      <div class="scroll-item">
+
+        {% if block.settings[img] != blank %}
+          <img 
+            src="{{ block.settings[img] | image_url: width: 600 }}"
+            loading="lazy"
+          >
+        {% endif %}
+
+        {% if block.settings[txt] != blank %}
+          <p>{{ block.settings[txt] }}</p>
+        {% endif %}
+
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
+<style>
+.scrollable-wrapper {
+  width: 100%;
+  overflow: hidden; /* hides scrollbar completely */
+}
+
+.scrollable-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+
+  overflow-x: auto;  /* still scrollable */
+  overflow-y: hidden;
+
+  cursor: grab;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge legacy */
+
+  scroll-behavior: auto;
+}
+
+.scrollable-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.scroll-item {
+  flex: 0 0 auto;
+  width: 250px;
+}
+
+/* dragging state */
+.scrollable-track.dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+</style>
+
+<script>
+(function () {
+  const wrapper = document.getElementById("scrollable-{{ block.id }}");
+  const track = wrapper.querySelector(".scrollable-track");
+
+  let isDown = false;
+  let startX;
+  let scrollStart;
+
+  track.addEventListener("mousedown", (e) => {
+    isDown = true;
+    track.classList.add("dragging");
+
+    startX = e.clientX;
+    scrollStart = track.scrollLeft;
+  });
+
+  track.addEventListener("mouseup", () => {
+    isDown = false;
+    track.classList.remove("dragging");
+  });
+
+  track.addEventListener("mouseleave", () => {
+    isDown = false;
+    track.classList.remove("dragging");
+  });
+
+  track.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+
+    const x = e.clientX;
+    const walk = (x - startX) * 1.5;
+
+    track.scrollLeft = scrollStart - walk;
+  });
+
+  // touch
+  track.addEventListener("touchstart", (e) => {
+    isDown = true;
+    startX = e.touches[0].clientX;
+    scrollStart = track.scrollLeft;
+  });
+
+  track.addEventListener("touchmove", (e) => {
+    if (!isDown) return;
+
+    const x = e.touches[0].clientX;
+    const walk = (x - startX) * 1.5;
+
+    track.scrollLeft = scrollStart - walk;
+  }, { passive: true });
+
+  track.addEventListener("touchend", () => {
+    isDown = false;
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Scrollable Image Text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Item 1"
+    },
+    { "type": "image_picker", "id": "image_1", "label": "Image 1" },
+    { "type": "text", "id": "text_1", "label": "Text 1" },
+
+    {
+      "type": "header",
+      "content": "Item 2"
+    },
+    { "type": "image_picker", "id": "image_2", "label": "Image 2" },
+    { "type": "text", "id": "text_2", "label": "Text 2" },
+
+    {
+      "type": "header",
+      "content": "Item 3"
+    },
+    { "type": "image_picker", "id": "image_3", "label": "Image 3" },
+    { "type": "text", "id": "text_3", "label": "Text 3" },
+
+    {
+      "type": "header",
+      "content": "Item 4"
+    },
+    { "type": "image_picker", "id": "image_4", "label": "Image 4" },
+    { "type": "text", "id": "text_4", "label": "Text 4" },
+
+    {
+      "type": "header",
+      "content": "Item 5"
+    },
+    { "type": "image_picker", "id": "image_5", "label": "Image 5" },
+    { "type": "text", "id": "text_5", "label": "Text 5" },
+
+    {
+      "type": "header",
+      "content": "Item 6"
+    },
+    { "type": "image_picker", "id": "image_6", "label": "Image 6" },
+    { "type": "text", "id": "text_6", "label": "Text 6" },
+
+    {
+      "type": "header",
+      "content": "Item 7"
+    },
+    { "type": "image_picker", "id": "image_7", "label": "Image 7" },
+    { "type": "text", "id": "text_7", "label": "Text 7" }
+  ],
+  "presets": [
+    {
+      "name": "Scrollable Image Text",
+      "category": "t:categories.basic",
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,264 @@
+<style>
+  :root{
+    --bg:#0b0730;               /* deep indigo background */
+    --panel:#2f6feb;            /* card blue */
+    --panel-2:#2d6aea;          /* slight variant for subtle depth */
+    --text:#ffffff;             /* main text */
+    --muted:#b6c3ff;            /* subtitle + dotted line color */
+    --kicker:#ffd266;           /* small header highlight */
+    --radius:18px;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+    --speed:220ms;
+  }
+
+  *{box-sizing:border-box}
+
+  header {
+    background: transparent;
+    z-index: 0;
+ }
+
+  .benefits{
+    position:relative;
+    overflow:hidden;
+    padding: clamp(40px, 6vw, 96px) 20px;
+  }
+
+  .inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    position:relative;
+  }
+
+  /* Header */
+  .hdr{
+    text-align:center;
+    margin-bottom: clamp(28px, 4vw, 48px);
+  }
+  .kicker{
+    display:inline-block;
+    color: var(--kicker);
+    font-weight: 800;
+    letter-spacing:.14em;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .title{
+    font-size: clamp(28px, 4.6vw, 48px);
+    font-weight: 800;
+    letter-spacing:-.02em;
+    margin:0 0 8px 0;
+  }
+  .subtitle{
+    color: var(--muted);
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  /* Decorative dashed connector (an SVG behind cards) */
+  .connector{
+    position:absolute;
+    inset: 40px 0 0 0;
+    pointer-events:none;
+    opacity:.9;
+  }
+  .connector svg{
+    width:100%;
+    height:auto;
+    display:block;
+    filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+  }
+
+  /* Grid */
+  .grid{
+    position:relative;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 1fr;
+    gap: clamp(14px, 2vw, 22px);
+    margin-top: clamp(12px, 2vw, 18px);
+  }
+
+  /* Card */
+  .card{
+    background: linear-gradient(180deg, var(--panel), var(--panel-2));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: clamp(18px, 2vw, 24px);
+    display:flex;
+    gap: 14px;
+    align-items: flex-start;
+    min-height: 150px;
+    transition: transform var(--speed), box-shadow var(--speed);
+  }
+  .card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,.45);
+  }
+
+  .icon{
+    flex:0 0 44px;
+    width:44px; height:44px;
+    border-radius: 12px;
+    background: rgba(255,255,255,.14);
+    display:grid; place-items:center;
+  }
+  .icon svg{ width:24px; height:24px; color:#fff }
+
+  .card h3{
+    margin: 2px 0 0 0;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 700;
+  }
+
+  /* Top row (4 cards) and bottom row (3 cards offset) */
+  .c1{ grid-column: 1 / span 3; }
+  .c2{ grid-column: 4 / span 3; }
+  .c3{ grid-column: 7 / span 3; }
+  .c4{ grid-column: 10 / span 3; }
+
+  .c5{ grid-column: 3 / span 3; }
+  .c6{ grid-column: 6 / span 3; }
+  .c7{ grid-column: 9 / span 3; }
+
+  /* Responsiveness */
+  @media (max-width: 1024px){
+    .c1,.c2,.c3,.c4,.c5,.c6,.c7{ grid-column: span 6; }
+    .c5{ grid-column: 2 / span 6; } /* nice offset */
+    .c6{ grid-column: 4 / span 6; }
+    .c7{ grid-column: 6 / span 6; }
+  }
+  @media (max-width: 640px){
+    .connector{ display:none; } /* hide the line on small screens */
+    .grid{ grid-template-columns: repeat(1, 1fr); }
+    .c1,.c2,.c3,.c4,.c5,.c6,.c7{ grid-column: auto / span 1; }
+  }
+
+  /* Subtle “draw-in” animation on reveal */
+  .reveal{ opacity:0; transform: translateY(10px); }
+  .reveal.in{ opacity:1; transform:none; transition: opacity 420ms ease, transform 420ms ease; }
+</style>
+
+<section class="benefits" style="background: var(--bg);">
+  <div class="inner">
+    <!-- Decorative dashed connector line (adjust stroke-dasharray to taste) -->
+    <div class="connector" aria-hidden="true">
+      <svg viewBox="0 0 1200 440" fill="none">
+        <!-- Top rectangle-ish path -->
+        <path d="M120 40 H1080 V40 M1080 40 V160 M120 40 V160"
+              stroke="url(#g1)" stroke-width="2" stroke-dasharray="4 6" opacity=".8"/>
+        <!-- Slanted down left -->
+        <path d="M160 200 C 160 260, 180 300, 260 330"
+              stroke="url(#g1)" stroke-width="2" stroke-dasharray="4 6" opacity=".8"/>
+        <!-- Slanted down right -->
+        <path d="M1040 200 C 1040 260, 1020 300, 940 330"
+              stroke="url(#g1)" stroke-width="2" stroke-dasharray="4 6" opacity=".8"/>
+        <!-- Bottom curve -->
+        <path d="M360 400 C 560 470, 760 470, 960 400"
+              stroke="url(#g1)" stroke-width="2" stroke-dasharray="4 6" opacity=".8"/>
+
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#9fb2ff"/>
+            <stop offset="1" stop-color="#9fb2ff"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="hdr reveal">
+      <div class="kicker">What sets us apart</div>
+      <h2 class="title">Amazing benefits</h2>
+      <p class="subtitle">From day one, we’re here for you — supporting, advocating and helping you succeed.</p>
+    </header>
+
+    <!-- Cards -->
+    <div class="grid">
+      <article class="card c1 reveal">
+        <span class="icon" aria-hidden="true">
+          <!-- Globe/marker -->
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21a9 9 0 1 0-9-9 9 9 0 0 0 9 9Zm0-6.5 3-3.5-3 1-2-2-1.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>World-class sites and facilities</h3>
+      </article>
+
+      <article class="card c2 reveal">
+        <span class="icon" aria-hidden="true">
+          <!-- People -->
+          <svg viewBox="0 0 24 24" fill="none"><path d="M16 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm-8 0a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm8 2c-2.2 0-6 1.1-6 3.3V19h12v-2.7C22 14.1 18.2 13 16 13Zm-8 0C5.8 13 2 14.1 2 16.3V19h8v-2.7C10 14.1 6.2 13 4 13Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Life insurance</h3>
+      </article>
+
+      <article class="card c3 reveal">
+        <span class="icon" aria-hidden="true">
+          <!-- Medical kit -->
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2M4 9h16a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Zm8 3v6m-3-3h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Healthcare coverage</h3>
+      </article>
+
+      <article class="card c4 reveal">
+        <span class="icon" aria-hidden="true">
+          <!-- Party -->
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 20l-6-2 8-8 6 2-8 8Zm4-12l1-3m4 4 3-1M3 9l-1-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Birthday leave and paid time off</h3>
+      </article>
+
+      <article class="card c5 reveal">
+        <span class="icon" aria-hidden="true">
+          <!-- Award -->
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 14a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 0v7l-3-2-3 2v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Engagement and experience rewards</h3>
+      </article>
+
+      <article class="card c6 reveal">
+        <span class="icon" aria-hidden="true">
+          <!-- Briefcase -->
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2m-9 0h10a4 4 0 0 1 4 4v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6a4 4 0 0 1 4-4Zm4 6h2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Career development programs</h3>
+      </article>
+
+      <article class="card c7 reveal">
+        <span class="icon" aria-hidden="true">
+          <!-- Wellness / yoga -->
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm0 6v4m0 0l-5 6m5-6l5 6M5 17h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Wellness programs</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Reveal-on-scroll for header + cards
+  (function(){
+    const els = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:.16});
+    els.forEach(el=> io.observe(el));
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "CWGP Benefits",
+  "settings": [],
+  "presets": [
+    {
+      "name": "CWGP Benefits"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,2018 @@
+{% comment %}
+  CWGP - Custom Flexible Header
+{% endcomment %}
+
+{% liquid
+  assign header_height_class = ''
+  if section.settings.section_height == 'compact'
+    assign header_height_class = 'header--compact'
+  endif
+%}
+
+{% comment %} Desktop Header {% endcomment %}
+<header
+  class="cw-header {{ header_height_class }} {% if section.settings.header_sticky %}cw-header-sticky{% endif %} desktop-div"
+  style="
+    padding-left: {{ section.settings.section_padding }}px;
+    padding-right: {{ section.settings.section_padding }}px;
+  ">
+
+    <!-- TOP ROW -->
+    <div class="cw-header-row">
+      <div class="cw-header-left">
+        {% for block in section.blocks %}
+          {% if block.settings.row == 'top' and block.settings.position == 'left' %}
+            {% render 'cwgp-header-block', block: block %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="cw-header-center">
+        {% for block in section.blocks %}
+          {% if block.settings.row == 'top' and block.settings.position == 'center' %}
+            {% render 'cwgp-header-block', block: block %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="cw-header-right">
+        {% for block in section.blocks %}
+          {% if block.settings.row == 'top' and block.settings.position == 'right' %}
+            {% render 'cwgp-header-block', block: block %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- BOTTOM ROW -->
+    <div class="cw-header-row">
+      <div class="cw-header-left">
+        {% for block in section.blocks %}
+          {% if block.settings.row == 'bottom' and block.settings.position == 'left' %}
+            {% render 'cwgp-header-block', block: block %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="cw-header-center">
+        {% for block in section.blocks %}
+          {% if block.settings.row == 'bottom' and block.settings.position == 'center' %}
+            {% render 'cwgp-header-block', block: block %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="cw-header-right">
+        {% for block in section.blocks %}
+          {% if block.settings.row == 'bottom' and block.settings.position == 'right' %}
+            {% render 'cwgp-header-block', block: block %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+</header>
+
+{% comment %} Mobile Header {% endcomment %}
+<header class="cw-header-mobile mobile-div">
+
+  <div class="cw-header-mobile-row">
+
+    <!-- LOGO -->
+    <div class="cw-header-mobile-logo">
+      {% for block in section.blocks %}
+        {% if block.type == 'logo' %}
+          {% render 'cwgp-header-block', block: block %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- HAMBURGER -->
+    <button class="cw-mobile-menu-toggle" aria-label="Open Menu">
+      ☰
+    </button>
+
+  </div>
+
+</header>
+
+<div class="cw-mobile-drawer">
+  <div class="cw-mobile-drawer-inner">
+    <div class="cw-mobile-drawer-header">
+      <div class="cw-mobile-logo">
+        {% for block in section.blocks %}
+          {% if block.type == 'logo' %}
+            {% render 'cwgp-header-block', block: block %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <button class="cw-mobile-close">✕</button>
+    </div>
+
+    <nav class="cw-mobile-menu">
+
+      {% for block in section.blocks %}
+        {% if block.type == 'menu_item' %}
+
+        <div class="cw-mobile-menu-item">
+
+          {% if block.settings.enable_mega_menu %}
+
+            <button class="cw-mobile-submenu-toggle">
+              {{ block.settings.text }}
+              <span class="caret">
+                <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0 L5 6 L10 0" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </button>
+
+            <div class="cw-mobile-submenu">
+
+              {% for i in (1..5) %}
+                {% assign text_key = "submenu" | append: i | append: "_text" %}
+                {% assign link_key = "submenu" | append: i | append: "_link" %}
+                {% assign style_key = "content_style_submenu" | append: i %}
+
+                {% if block.settings[text_key] != blank %}
+
+                  {% if block.settings[style_key] == "link_lists" %}
+                    <!-- Render nested link list -->
+                    <a class="cw-mobile-submenu-toggle nested">
+                      {{ block.settings[text_key] }}
+                      <span class="caret">
+                        <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0 0 L5 6 L10 0" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        </svg>
+                      </span>
+                    </a>
+
+                    <div class="cw-mobile-submenu nested-submenu">
+                      {% for j in (1..5) %}
+                        {% assign nested_text_key = "submenu" | append: i | append: "_link_list_text_" | append: j %}
+                        {% assign nested_link_key = "submenu" | append: i | append: "_link_list_url_" | append: j %}
+
+                        {% if block.settings[nested_text_key] != blank %}
+                          <a href="{{ block.settings[nested_link_key] }}">
+                            {{ block.settings[nested_text_key] }}
+                          </a>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+
+                  {% else %}
+                    <!-- Normal submenu item -->
+                    <a href="{{ block.settings[link_key] }}">
+                      {{ block.settings[text_key] }}
+                    </a>
+                  {% endif %}
+
+                {% endif %}
+              {% endfor %}
+
+            </div>
+
+          {% else %}
+            <a href="{{ block.settings.link }}">
+              {{ block.settings.text }}
+            </a>
+          {% endif %}
+
+        </div>
+
+        {% endif %}
+      {% endfor %}
+
+    </nav>
+  </div>
+</div>
+
+{% stylesheet %}
+
+/* Header grid */
+.cw-header{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: white;
+  width: 100%;
+}
+
+.cw-header-sticky {
+  top: 0;
+  z-index: 999;
+  background: white;
+}
+
+.shopify-section-group-header-group + .shopify-section {
+  margin-top: 66.66px; /* adjust this to your header height */
+}
+
+.cw-header-row{
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items:center;
+  width:100%;
+}
+
+.cw-header-left { justify-self:start; display:flex; align-items:center; gap:20px; }
+.cw-header-center { justify-self:center; display:flex; align-items:center; gap:20px; }
+.cw-header-right { justify-self:end; display:flex; align-items:center; gap:20px; }
+
+.cw-header-menu-item{
+  text-decoration:none;
+  font-weight:600;
+  font-size:20px;
+  cursor:pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0A2647;
+}
+
+/* Full width mega menu */
+
+.cw-mega-menu {
+  position: fixed; /* FIXED to viewport */
+  top: 60px; /* adjust based on header height */
+  left: 0;
+  width: 100%; /* full width of screen */
+  background: #fff;
+  border-top: 1px solid #ddd;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  /* transition effect */
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none; /* prevents clicks when hidden */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.submenu_link_lists {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 20%;
+  padding: 20px;
+}
+
+.submenu_contents {
+  /* display: flex; */
+  display:none;
+  /* flex: 0 0 80%; */
+}
+
+.submenu_contents.active{
+  display:flex;
+  }
+
+/* When mega menu is visible */
+.cw-mega-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.cw-header-menu-item .caret {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.cw-header-menu-item.has-mega-menu.active .caret {
+  transform: rotate(180deg); /* rotates caret smoothly upwards */
+}
+
+.cw-mega-menu ul {
+  display:flex;
+  flex-wrap:wrap;
+  list-style:none;
+  margin:0;
+}
+
+.submenu_link_lists li a {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:10px;
+  text-decoration:none;
+  color: #0A2647;
+  border-bottom: 1px solid #0A2647;
+  font-weight: 500;
+}
+
+.submenu_link_lists li.active,
+.submenu_link_lists li.active a {
+  background: #0A2647;
+  color: #fff !important;
+}
+
+.submenu_link_lists li a:hover {
+  background: #0A2647;
+  color: #fff;
+}
+
+.submenu_link_lists li a svg {
+  transform: rotate(270deg);
+  transition: transform 0.3s ease;
+}
+
+.cwgp-first-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+
+.cwgp-first-column p,
+.cwgp-second-column p{
+  margin-top: 0;
+}
+
+
+.cwgp-first-column h3,
+.cwgp-second-column h3{
+ padding-top: 0.5em;
+}
+
+.cwgp-first-column a,
+.cwgp-second-column a{
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  color: #0A2647;
+}
+
+.cwgp-first-column svg,
+.cwgp-second-column svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+  transition: transform 0.25s ease;
+  color: #0A2647;
+}
+
+.cwgp-first-column a:hover svg,
+.cwgp-second-column a:hover svg {
+  transform: translateX(3px);
+}
+
+.link_lists {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 30%;
+}
+
+.link_lists li {
+  border-bottom: 1px solid #f2f5f5;
+  padding: 10px;
+}
+
+.link_lists li a{
+  text-decoration: none;
+  color: #0A2647;
+  font-weight: 500;
+}
+
+.link_lists li:hover {
+  background: #F2F5F5;
+}
+.cwgp-second-column {
+  width: 100%;
+  background: #F2F5F5;
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.cwgp-second-column-card .cwgp-card-image{
+  width:100%;
+  height:200px; /* fixed height */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.cwgp-second-column-card .cwgp-card-image img{
+  width:100%;
+  height:100%;
+}
+
+.cwgp-second-column-card h3 {
+  font-size: 18px;
+}
+
+.cwgp-second-column-card p {
+  font-size: 14px;
+}
+
+.cwgp-second-column a svg {
+  color:#0A2647;
+}
+
+.cw-mobile-drawer{
+  position:fixed;
+  top:0;
+  right:0;
+  height:100vh;
+  background:#fff;
+  width:320px;
+  transform:translateX(100%);
+  transition:transform .35s ease;
+
+  z-index:9999;
+  box-shadow:-5px 0 20px rgba(0,0,0,0.15);
+}
+
+/* open drawer */
+.cw-mobile-drawer.active{
+  transform:translateX(0);
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .mobile-div{
+    display: block;
+  }
+  .desktop-div{
+    display: none;
+  }
+
+  .cw-mobile-drawer-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 20px;
+  }
+
+  .cw-header-mobile{
+    padding:12px 16px;
+    border-bottom:1px solid #eee;
+    background:white;
+  }
+
+  .cw-header-mobile-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .cw-mobile-menu-toggle{
+    font-size:24px;
+    background:none;
+    border:none;
+    cursor:pointer;
+  }
+
+  .cw-mobile-close{
+    font-size:24px;
+    background:none;
+    border:none;
+    cursor:pointer;
+  }
+
+  .cw-mobile-drawer-inner {
+    position: relative;
+    height: 100vh; 
+    overflow-y: auto; 
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cw-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cw-mobile-menu-item{
+    border-bottom:1px solid #0A2647;
+    padding: 0 20px;
+  }
+
+  .cw-mobile-menu-item a{
+    display:block;
+    width:100%;
+    padding:14px 0;
+    text-align:left;
+    background:none;
+    border:none;
+    font-size:16px;
+    cursor:pointer;
+    text-decoration:none;
+  }
+
+  .cw-mobile-submenu-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 14px 0;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .cw-mobile-submenu-toggle .caret svg {
+      transition: transform 0.3s ease;
+  }
+
+  .cw-mobile-submenu-toggle.active .caret svg {
+      transform: rotate(180deg);
+  }
+
+  .cw-mobile-submenu {
+    max-height: 0;     
+    overflow: hidden;    
+    padding-left: 15px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+
+  /* when open */
+  .cw-mobile-submenu.open {
+      max-height: 500px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+
+  .cw-mobile-submenu a {
+      display: flex;
+      padding: 10px 0;
+      font-size: 15px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width:768px){
+  .desktop-div{
+    display: block;
+  }
+  .mobile-div{
+    display: none;
+  }
+}
+{% endstylesheet %}
+
+{% javascript %}
+  document.addEventListener("DOMContentLoaded", function(){
+
+    const header = document.querySelector('.cw-header-sticky');
+    if (!header) return;
+
+    // Store original offset from top
+    const headerOffsetTop = header.offsetTop;
+
+    // Optional: store header height to add spacing
+    const headerHeight = header.offsetHeight;
+
+    // Add a placeholder div to avoid content jump
+    const placeholder = document.createElement('div');
+    placeholder.style.width = '100%';
+    placeholder.style.height = headerHeight + 'px';
+    placeholder.style.display = 'none';
+    header.parentNode.insertBefore(placeholder, header.nextSibling);
+
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > headerOffsetTop) {
+        header.classList.add('fixed-header');
+        placeholder.style.display = 'block';
+      } else {
+        header.classList.remove('fixed-header');
+        placeholder.style.display = 'none';
+      }
+    });
+    
+    const menuItems = document.querySelectorAll(".cw-header-menu-item.has-mega-menu");
+
+    menuItems.forEach(item => {
+      item.addEventListener("click", function(e){
+        e.preventDefault();
+
+        const menuId = this.getAttribute("data-menu-id");
+        const megaMenu = document.getElementById(menuId);
+
+        // Close other mega menus
+        document.querySelectorAll(".cw-mega-menu").forEach(menu => {
+          if(menu.id !== menuId) menu.classList.remove("active");
+        });
+
+        document.querySelectorAll(".cw-header-menu-item.has-mega-menu").forEach(mi => {
+          if(mi !== this) mi.classList.remove("active");
+        });
+
+        megaMenu.classList.toggle("active");
+        this.classList.toggle("active");
+      });
+    });
+
+    // Submenu LI active state + content switching
+    document.querySelectorAll(".submenu_link_lists li").forEach(li => {
+
+      li.addEventListener("click", function(e){
+
+        const hasContent = this.dataset.hasContent === "true";
+
+        if(!hasContent){
+          return; // go directly to page
+        }
+
+        e.preventDefault();
+
+        const parentMenu = this.closest(".cw-mega-menu");
+
+        parentMenu.querySelectorAll("li").forEach(item=>{
+          item.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        const submenuIndex = this.dataset.submenu;
+
+        if(submenuIndex){
+
+          const contents = parentMenu.querySelectorAll(".submenu_contents");
+
+          contents.forEach(content=>{
+            content.classList.remove("active");
+          });
+
+          const activeContent = parentMenu.querySelector(
+            '.submenu_contents[data-content="'+submenuIndex+'"]'
+          );
+
+          if(activeContent){
+            activeContent.classList.add("active");
+          }
+
+        }
+
+      });
+
+    });
+
+    // Close menu if click outside
+    document.addEventListener("click", function(e){
+      if(!e.target.closest(".cw-header")) {
+
+        document.querySelectorAll(".cw-mega-menu").forEach(menu => menu.classList.remove("active"));
+
+        document.querySelectorAll(".cw-header-menu-item.has-mega-menu").forEach(mi => mi.classList.remove("active"));
+
+      }
+    });
+
+  });
+
+  const mobileToggle = document.querySelector(".cw-mobile-menu-toggle");
+  const mobileDrawer = document.querySelector(".cw-mobile-drawer");
+  const mobileClose = document.querySelector(".cw-mobile-close");
+
+  if(mobileToggle){
+    mobileToggle.addEventListener("click", function(){
+      mobileDrawer.classList.add("active");
+    });
+  }
+
+  if(mobileClose){
+    mobileClose.addEventListener("click", function(){
+      mobileDrawer.classList.remove("active");
+    });
+  }
+
+  document.querySelectorAll(".cw-mobile-submenu-toggle").forEach(btn => {
+    btn.addEventListener("click", function() {
+      const submenu = this.nextElementSibling;
+
+      submenu.classList.toggle("open");     // toggle class for smooth animation
+      this.classList.toggle("active");      // rotate caret
+    });
+  });
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "CWGP - Custom Header",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section Padding",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Header Height",
+      "options": [
+        { "value": "compact", "label": "Compact" },
+        { "value": "standard", "label": "Standard" }
+      ],
+      "default": "standard"
+    },
+    {
+      "type": "checkbox",
+      "id": "header_sticky",
+      "label": "Enable sticky header",
+      "default": true
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "range",
+          "id": "logo_width",
+          "label": "Logo Width",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "default": 120
+        },
+        {
+          "type": "select",
+          "id": "row",
+          "label": "Row",
+          "options": [
+            { "value": "top", "label": "Top" },
+            { "value": "bottom", "label": "Bottom" }
+          ],
+          "default": "top"
+        },
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        }
+      ]
+    },
+
+    {
+      "type": "menu_item",
+      "name": "Menu Item",
+      "settings": [
+        {
+        "type": "header",
+        "content": "Settings"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Menu Text",
+          "default": "Menu Item"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "select",
+          "id": "row",
+          "label": "Row",
+          "options": [
+            { "value": "top", "label": "Top" },
+            { "value": "bottom", "label": "Bottom" }
+          ],
+          "default": "bottom"
+        },
+        {
+          "type": "select",
+          "id": "position",
+          "label": "Position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "center"
+        },
+        {
+        "type": "checkbox",
+        "id": "enable_mega_menu",
+        "label": "Enable Mega Menu",
+        "default": false
+        },
+
+
+        {
+        "type": "header",
+        "content": "Submenu #1 settings",
+        "visible_if": "{{ block.settings.enable_mega_menu }}"
+        },
+        {
+          "type": "url",
+          "id": "submenu1_link",
+          "label": "Link",
+          "visible_if": "{{ block.settings.enable_mega_menu }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu1_text",
+          "label": "Text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu1_link }}"
+        },
+        {
+          "type": "select",
+          "id": "content_style_submenu1",
+          "label": "Content Style",
+          "options": [
+            { "value": "image_with_text", "label": "Image with Text" },
+            { "value": "link_lists", "label": "Link Lists" }
+          ],
+          "default": "image_with_text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu1_text }}"
+        },
+        {
+        "type": "header",
+        "content": "1st Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.enable_mega_menu }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "grandchild_menu_image_submenu1",
+          "label": "Grandchild Menu Image",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'image_with_text'}}"
+        },
+        {
+          "type": "range",
+          "id": "grandchild_menu_image_width_submenu1",
+          "label": "Image Width",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "default": 200,
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'image_with_text'}}"
+        },
+        {
+          "type": "text",
+          "id": "grandchild_menu_title_submenu1",
+          "label": "Grandchild Menu Title",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'image_with_text'}}"
+        },
+        {
+          "type": "richtext",
+          "id": "grandchild_menu_description_submenu1",
+          "label": "Grandchild Menu Description",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'image_with_text'}}"
+        },
+        {
+          "type": "url",
+          "id": "grandchild_menu_url_submenu1",
+          "label": "Grandchild Menu Url",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'image_with_text'}}"
+        },
+        {
+          "type": "text",
+          "id": "grandchild_menu_url_text_submenu1",
+          "label": "Grandchild Menu Url Text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'image_with_text'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu1_link_list_url_1",
+          "label": "URL Link #1",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu1_link_list_text_1",
+          "label": "Text Link #1",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu1_link_list_url_2",
+          "label": "URL Link #2",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu1_link_list_text_2",
+          "label": "Text Link #2",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu1_link_list_url_3",
+          "label": "URL Link #3",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu1_link_list_text_3",
+          "label": "Text Link #3",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu1_link_list_url_4",
+          "label": "URL Link #4",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu1_link_list_text_4",
+          "label": "Text Link #4",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu1_link_list_url_5",
+          "label": "URL Link #5",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "link_list_text_5",
+          "label": "Text Link #5",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu1 == 'link_lists'}}"
+        },
+        {
+        "type": "header",
+        "content": "2nd Column",
+        "visible_if": "{{ block.settings.enable_mega_menu }}"
+        },
+        {
+          "type": "select",
+          "id": "second_column_layout_submenu1",
+          "label": "Columns layout",
+          "options": [
+            {
+              "value": "one",
+              "label": "1 Column"
+            },
+            {
+              "value": "two",
+              "label": "2 Columns"
+            }
+          ],
+          "default": "one",
+          "visible_if": "{{ block.settings.enable_mega_menu }}"
+        },
+        {
+        "type": "header",
+        "content": "1st Grandchild Column",
+        "visible_if": "{{ block.settings.enable_mega_menu }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "submenu1_second_column_grandchild_menu_image_1",
+          "label": "1st Grandchild Menu Image (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu1_second_column_grandchild_menu_title_1",
+          "label": "1st Grandchild Menu Title (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu }}"
+        },
+        {
+          "type": "richtext",
+          "id": "submenu1_second_column_grandchild_menu_description_1",
+          "label": "1st Grandchild Menu Description (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu }}"
+        },
+        {
+          "type": "url",
+          "id": "submenu1_second_column_grandchild_menu_url_1",
+          "label": "1st Grandchild Menu Url (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu1_second_column_grandchild_menu_url_text_1",
+          "label": "1st Grandchild Menu Url Text (2nd col)",
+         "visible_if": "{{ block.settings.enable_mega_menu }}"
+        },
+        {
+        "type": "header",
+        "content": "2nd Grandchild Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu1 == 'two'}}"
+        },
+        {
+          "type": "image_picker",
+          "id": "submenu1_second_column_grandchild_menu_image_2",
+          "label": "2nd Grandchild Menu Image (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu1 == 'two'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu1_second_column_grandchild_menu_title_2",
+          "label": "2nd Grandchild Menu Title (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu1 == 'two'}}"
+        },
+        {
+          "type": "richtext",
+          "id": "submenu1_second_column_grandchild_menu_description_2",
+          "label": "2nd Grandchild Menu Description (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu1 == 'two'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu1_second_column_grandchild_menu_url_2",
+          "label": "2nd Grandchild Menu Url (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu1 == 'two'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu1_second_column_grandchild_menu_url_text_2",
+          "label": "2nd Grandchild Menu Url Text (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu1 == 'two'}}"
+        },
+
+
+
+        {
+        "type": "header",
+        "content": "Submenu #2 settings",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu1_text != blank }}"
+        },
+        {
+          "type": "url",
+          "id": "submenu2_link",
+          "label": "Link",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu1_text != blank }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu2_text",
+          "label": "Text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu2_link != blank }}"
+        },
+        {
+          "type": "select",
+          "id": "content_style_submenu2",
+          "label": "Content Style",
+          "options": [
+            { "value": "image_with_text", "label": "Image with Text" },
+            { "value": "link_lists", "label": "Link Lists" }
+          ],
+          "default": "image_with_text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu2_text != blank }}"
+        },
+        {
+        "type": "header",
+        "content": "1st Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu2_text != blank }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "grandchild_menu_image_submenu2",
+          "label": "Grandchild Menu Image",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'image_with_text'}}"
+        },
+        {
+          "type": "range",
+          "id": "grandchild_menu_image_width_submenu2",
+          "label": "Image Width",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "default": 200,
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'image_with_text'}}"
+        },
+        {
+          "type": "text",
+          "id": "grandchild_menu_title_submenu2",
+          "label": "Grandchild Menu Title",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'image_with_text'}}"
+        },
+        {
+          "type": "richtext",
+          "id": "grandchild_menu_description_submenu2",
+          "label": "Grandchild Menu Description",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'image_with_text'}}"
+        },
+        {
+          "type": "url",
+          "id": "grandchild_menu_url_submenu2",
+          "label": "Grandchild Menu Url",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'image_with_text'}}"
+        },
+        {
+          "type": "text",
+          "id": "grandchild_menu_url_text_submenu2",
+          "label": "Grandchild Menu Url Text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'image_with_text'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu2_link_list_url_1",
+          "label": "URL Link #1",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu2_link_list_text_1",
+          "label": "Text Link #1",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu2_link_list_url_2",
+          "label": "URL Link #2",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu2_link_list_text_2",
+          "label": "Text Link #2",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu2_link_list_url_3",
+          "label": "URL Link #3",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu2_link_list_text_3",
+          "label": "Text Link #3",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu2_link_list_url_4",
+          "label": "URL Link #4",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu2_link_list_text_4",
+          "label": "Text Link #4",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu2_link_list_url_5",
+          "label": "URL Link #5",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu2_link_list_text_5",
+          "label": "Text Link #5",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu2 == 'link_lists'}}"
+        },
+        {
+        "type": "header",
+        "content": "2nd Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu2_text != blank }}"
+        },
+        {
+          "type": "select",
+          "id": "second_column_layout_submenu2",
+          "label": "Columns layout",
+          "options": [
+            {
+              "value": "one",
+              "label": "1 Column"
+            },
+            {
+              "value": "two",
+              "label": "2 Columns"
+            }
+          ],
+          "default": "one",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu2_text != blank }}"
+        },
+        {
+        "type": "header",
+        "content": "1st Grandchild Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "submenu2_second_column_grandchild_menu_image_1",
+          "label": "1st Grandchild Menu Image (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu2_second_column_grandchild_menu_title_1",
+          "label": "1st Grandchild Menu Title (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 }}"
+        },
+        {
+          "type": "richtext",
+          "id": "submenu2_second_column_grandchild_menu_description_1",
+          "label": "1st Grandchild Menu Description (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 }}"
+        },
+        {
+          "type": "url",
+          "id": "submenu2_second_column_grandchild_menu_url_1",
+          "label": "1st Grandchild Menu Url (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu2_second_column_grandchild_menu_url_text_1",
+          "label": "1st Grandchild Menu Url Text (2nd col)",
+         "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 }}"
+        },
+        {
+        "type": "header",
+        "content": "2nd Grandchild Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 == 'two'}}"
+        },
+        {
+          "type": "image_picker",
+          "id": "submenu2_second_column_grandchild_menu_image_2",
+          "label": "2nd Grandchild Menu Image (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 == 'two'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu2_second_column_grandchild_menu_title_2",
+          "label": "2nd Grandchild Menu Title (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 == 'two'}}"
+        },
+        {
+          "type": "richtext",
+          "id": "submenu2_second_column_grandchild_menu_description_2",
+          "label": "2nd Grandchild Menu Description (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 == 'two'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu2_second_column_grandchild_menu_url_2",
+          "label": "2nd Grandchild Menu Url (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 == 'two'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu2_second_column_grandchild_menu_url_text_2",
+          "label": "2nd Grandchild Menu Url Text (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu2 == 'two'}}"
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+        "type": "header",
+        "content": "Submenu #3 settings",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu2_text != blank }}"
+        },
+        {
+          "type": "url",
+          "id": "submenu3_link",
+          "label": "Link",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu2_text != blank }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu3_text",
+          "label": "Text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu3_link != blank }}"
+        },
+        {
+          "type": "select",
+          "id": "content_style_submenu3",
+          "label": "Content Style",
+          "options": [
+            { "value": "image_with_text", "label": "Image with Text" },
+            { "value": "link_lists", "label": "Link Lists" }
+          ],
+          "default": "image_with_text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu3_text != blank }}"
+        },
+        {
+        "type": "header",
+        "content": "1st Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu3_text != blank }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "grandchild_menu_image_submenu3",
+          "label": "Grandchild Menu Image",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'image_with_text'}}"
+        },
+        {
+          "type": "range",
+          "id": "grandchild_menu_image_width_submenu3",
+          "label": "Image Width",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "default": 200,
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'image_with_text'}}"
+        },
+        {
+          "type": "text",
+          "id": "grandchild_menu_title_submenu3",
+          "label": "Grandchild Menu Title",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'image_with_text'}}"
+        },
+        {
+          "type": "richtext",
+          "id": "grandchild_menu_description_submenu3",
+          "label": "Grandchild Menu Description",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'image_with_text'}}"
+        },
+        {
+          "type": "url",
+          "id": "grandchild_menu_url_submenu3",
+          "label": "Grandchild Menu Url",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'image_with_text'}}"
+        },
+        {
+          "type": "text",
+          "id": "grandchild_menu_url_text_submenu3",
+          "label": "Grandchild Menu Url Text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'image_with_text'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu3_link_list_url_1",
+          "label": "URL Link #1",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu3_link_list_text_1",
+          "label": "Text Link #1",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu3_link_list_url_2",
+          "label": "URL Link #2",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu3_link_list_text_2",
+          "label": "Text Link #2",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu3_link_list_url_3",
+          "label": "URL Link #3",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu3_link_list_text_3",
+          "label": "Text Link #3",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu3_link_list_url_4",
+          "label": "URL Link #4",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu3_link_list_text_4",
+          "label": "Text Link #4",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu3_link_list_url_5",
+          "label": "URL Link #5",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu3_link_list_text_5",
+          "label": "Text Link #5",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu3 == 'link_lists'}}"
+        },
+        {
+        "type": "header",
+        "content": "2nd Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu3_text != blank }}"
+        },
+        {
+          "type": "select",
+          "id": "second_column_layout_submenu3",
+          "label": "Columns layout",
+          "options": [
+            {
+              "value": "one",
+              "label": "1 Column"
+            },
+            {
+              "value": "two",
+              "label": "2 Columns"
+            }
+          ],
+          "default": "one",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu3_text != blank }}"
+        },
+        {
+        "type": "header",
+        "content": "1st Grandchild Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "submenu3_second_column_grandchild_menu_image_1",
+          "label": "1st Grandchild Menu Image (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu3_second_column_grandchild_menu_title_1",
+          "label": "1st Grandchild Menu Title (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 }}"
+        },
+        {
+          "type": "richtext",
+          "id": "submenu3_second_column_grandchild_menu_description_1",
+          "label": "1st Grandchild Menu Description (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 }}"
+        },
+        {
+          "type": "url",
+          "id": "submenu3_second_column_grandchild_menu_url_1",
+          "label": "1st Grandchild Menu Url (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu3_second_column_grandchild_menu_url_text_1",
+          "label": "1st Grandchild Menu Url Text (2nd col)",
+         "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 }}"
+        },
+        {
+        "type": "header",
+        "content": "2nd Grandchild Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 == 'two'}}"
+        },
+        {
+          "type": "image_picker",
+          "id": "submenu3_second_column_grandchild_menu_image_2",
+          "label": "2nd Grandchild Menu Image (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 == 'two'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu3_second_column_grandchild_menu_title_2",
+          "label": "2nd Grandchild Menu Title (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 == 'two'}}"
+        },
+        {
+          "type": "richtext",
+          "id": "submenu3_second_column_grandchild_menu_description_2",
+          "label": "2nd Grandchild Menu Description (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 == 'two'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu3_second_column_grandchild_menu_url_2",
+          "label": "2nd Grandchild Menu Url (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 == 'two'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu3_second_column_grandchild_menu_url_text_2",
+          "label": "2nd Grandchild Menu Url Text (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu3 == 'two'}}"
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        {
+        "type": "header",
+        "content": "Submenu #4 settings",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu3_text != blank }}"
+        },
+        {
+          "type": "url",
+          "id": "submenu4_link",
+          "label": "Link",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu3_text != blank }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu4_text",
+          "label": "Text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu4_link != blank }}"
+        },
+        {
+          "type": "select",
+          "id": "content_style_submenu4",
+          "label": "Content Style",
+          "options": [
+            { "value": "image_with_text", "label": "Image with Text" },
+            { "value": "link_lists", "label": "Link Lists" }
+          ],
+          "default": "image_with_text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu4_text != blank }}"
+        },
+        {
+        "type": "header",
+        "content": "1st Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu4_text != blank }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "grandchild_menu_image_submenu4",
+          "label": "Grandchild Menu Image",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'image_with_text'}}"
+        },
+        {
+          "type": "range",
+          "id": "grandchild_menu_image_width_submenu4",
+          "label": "Image Width",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "default": 200,
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'image_with_text'}}"
+        },
+        {
+          "type": "text",
+          "id": "grandchild_menu_title_submenu4",
+          "label": "Grandchild Menu Title",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'image_with_text'}}"
+        },
+        {
+          "type": "richtext",
+          "id": "grandchild_menu_description_submenu4",
+          "label": "Grandchild Menu Description",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'image_with_text'}}"
+        },
+        {
+          "type": "url",
+          "id": "grandchild_menu_url_submenu4",
+          "label": "Grandchild Menu Url",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'image_with_text'}}"
+        },
+        {
+          "type": "text",
+          "id": "grandchild_menu_url_text_submenu4",
+          "label": "Grandchild Menu Url Text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'image_with_text'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu4_link_list_url_1",
+          "label": "URL Link #1",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu4_link_list_text_1",
+          "label": "Text Link #1",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu4_link_list_url_2",
+          "label": "URL Link #2",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu4_link_list_text_2",
+          "label": "Text Link #2",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu4_link_list_url_3",
+          "label": "URL Link #3",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu4_link_list_text_3",
+          "label": "Text Link #3",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu4_link_list_url_4",
+          "label": "URL Link #4",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu4_link_list_text_4",
+          "label": "Text Link #4",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu4_link_list_url_5",
+          "label": "URL Link #5",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu4_link_list_text_5",
+          "label": "Text Link #5",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu4 == 'link_lists'}}"
+        },
+        {
+        "type": "header",
+        "content": "2nd Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu4_text != blank }}"
+        },
+        {
+          "type": "select",
+          "id": "second_column_layout_submenu4",
+          "label": "Columns layout",
+          "options": [
+            {
+              "value": "one",
+              "label": "1 Column"
+            },
+            {
+              "value": "two",
+              "label": "2 Columns"
+            }
+          ],
+          "default": "one",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu4_text != blank }}"
+        },
+        {
+        "type": "header",
+        "content": "1st Grandchild Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "submenu4_second_column_grandchild_menu_image_1",
+          "label": "1st Grandchild Menu Image (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu4_second_column_grandchild_menu_title_1",
+          "label": "1st Grandchild Menu Title (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 }}"
+        },
+        {
+          "type": "richtext",
+          "id": "submenu4_second_column_grandchild_menu_description_1",
+          "label": "1st Grandchild Menu Description (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 }}"
+        },
+        {
+          "type": "url",
+          "id": "submenu4_second_column_grandchild_menu_url_1",
+          "label": "1st Grandchild Menu Url (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu4_second_column_grandchild_menu_url_text_1",
+          "label": "1st Grandchild Menu Url Text (2nd col)",
+         "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 }}"
+        },
+        {
+        "type": "header",
+        "content": "2nd Grandchild Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 == 'two'}}"
+        },
+        {
+          "type": "image_picker",
+          "id": "submenu4_second_column_grandchild_menu_image_2",
+          "label": "2nd Grandchild Menu Image (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 == 'two'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu4_second_column_grandchild_menu_title_2",
+          "label": "2nd Grandchild Menu Title (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 == 'two'}}"
+        },
+        {
+          "type": "richtext",
+          "id": "submenu4_second_column_grandchild_menu_description_2",
+          "label": "2nd Grandchild Menu Description (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 == 'two'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu4_second_column_grandchild_menu_url_2",
+          "label": "2nd Grandchild Menu Url (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 == 'two'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu4_second_column_grandchild_menu_url_text_2",
+          "label": "2nd Grandchild Menu Url Text (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu4 == 'two'}}"
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+        "type": "header",
+        "content": "Submenu #5 settings",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu4_text != blank }}"
+        },
+        {
+          "type": "url",
+          "id": "submenu5_link",
+          "label": "Link",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu4_text != blank }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu5_text",
+          "label": "Text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu5_link != blank }}"
+        },
+         {
+          "type": "select",
+          "id": "content_style_submenu5",
+          "label": "Content Style",
+          "options": [
+            { "value": "image_with_text", "label": "Image with Text" },
+            { "value": "link_lists", "label": "Link Lists" }
+          ],
+          "default": "image_with_text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu5_text != blank }}"
+        },
+        {
+        "type": "header",
+        "content": "1st Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu5_text != blank }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "grandchild_menu_image_submenu5",
+          "label": "Grandchild Menu Image",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'image_with_text'}}"
+        },
+        {
+          "type": "range",
+          "id": "grandchild_menu_image_width_submenu5",
+          "label": "Image Width",
+          "min": 50,
+          "max": 400,
+          "step": 10,
+          "unit": "px",
+          "default": 200,
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'image_with_text'}}"
+        },
+        {
+          "type": "text",
+          "id": "grandchild_menu_title_submenu5",
+          "label": "Grandchild Menu Title",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'image_with_text'}}"
+        },
+        {
+          "type": "richtext",
+          "id": "grandchild_menu_description_submenu5",
+          "label": "Grandchild Menu Description",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'image_with_text'}}"
+        },
+        {
+          "type": "url",
+          "id": "grandchild_menu_url_submenu5",
+          "label": "Grandchild Menu Url",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'image_with_text'}}"
+        },
+        {
+          "type": "text",
+          "id": "grandchild_menu_url_text_submenu5",
+          "label": "Grandchild Menu Url Text",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'image_with_text'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu5_link_list_url_1",
+          "label": "URL Link #1",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu5_link_list_text_1",
+          "label": "Text Link #1",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu5_link_list_url_2",
+          "label": "URL Link #2",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu5_link_list_text_2",
+          "label": "Text Link #2",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu5_link_list_url_3",
+          "label": "URL Link #3",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu5_link_list_text_3",
+          "label": "Text Link #3",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu5_link_list_url_4",
+          "label": "URL Link #4",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu5_link_list_text_4",
+          "label": "Text Link #4",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'link_lists'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu5_link_list_url_5",
+          "label": "URL Link #5",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'link_lists'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu5_link_list_text_5",
+          "label": "Text Link #5",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.content_style_submenu5 == 'link_lists'}}"
+        },
+        {
+        "type": "header",
+        "content": "2nd Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu5_text != blank }}"
+        },
+        {
+          "type": "select",
+          "id": "second_column_layout_submenu5",
+          "label": "Columns layout",
+          "options": [
+            {
+              "value": "one",
+              "label": "1 Column"
+            },
+            {
+              "value": "two",
+              "label": "2 Columns"
+            }
+          ],
+          "default": "one",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.submenu5_text != blank }}"
+        },
+        {
+        "type": "header",
+        "content": "1st Grandchild Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 }}"
+        },
+        {
+          "type": "image_picker",
+          "id": "submenu5_second_column_grandchild_menu_image_1",
+          "label": "1st Grandchild Menu Image (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu5_second_column_grandchild_menu_title_1",
+          "label": "1st Grandchild Menu Title (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 }}"
+        },
+        {
+          "type": "richtext",
+          "id": "submenu5_second_column_grandchild_menu_description_1",
+          "label": "1st Grandchild Menu Description (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 }}"
+        },
+        {
+          "type": "url",
+          "id": "submenu5_second_column_grandchild_menu_url_1",
+          "label": "1st Grandchild Menu Url (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 }}"
+        },
+        {
+          "type": "text",
+          "id": "submenu5_second_column_grandchild_menu_url_text_1",
+          "label": "1st Grandchild Menu Url Text (2nd col)",
+         "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 }}"
+        },
+        {
+        "type": "header",
+        "content": "2nd Grandchild Column",
+        "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 == 'two'}}"
+        },
+        {
+          "type": "image_picker",
+          "id": "submenu5_second_column_grandchild_menu_image_2",
+          "label": "2nd Grandchild Menu Image (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 == 'two'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu5_second_column_grandchild_menu_title_2",
+          "label": "2nd Grandchild Menu Title (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 == 'two'}}"
+        },
+        {
+          "type": "richtext",
+          "id": "submenu5_second_column_grandchild_menu_description_2",
+          "label": "2nd Grandchild Menu Description (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 == 'two'}}"
+        },
+        {
+          "type": "url",
+          "id": "submenu5_second_column_grandchild_menu_url_2",
+          "label": "2nd Grandchild Menu Url (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 == 'two'}}"
+        },
+        {
+          "type": "text",
+          "id": "submenu5_second_column_grandchild_menu_url_text_2",
+          "label": "2nd Grandchild Menu Url Text (2nd col)",
+          "visible_if": "{{ block.settings.enable_mega_menu and block.settings.second_column_layout_submenu5 == 'two'}}"
+        },
+
+
+
+
+
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "CWGP - Custom Header"
+    }
+  ]
+}
+{% endschema %}
