@@ -2817,9 +2817,9 @@
                     "width": "fill",
                     "custom_width": 100,
                     "width_mobile": "fill",
-                    "custom_width_mobile": 21,
-                    "height": "fill",
-                    "custom_height": 7,
+                    "custom_width_mobile": 100,
+                    "height": "custom",
+                    "custom_height": 100,
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "background_media": "none",
@@ -3293,7 +3293,8 @@
         "group_dcRgCi"
       ],
       "custom_css": [
-        ".image-block img {width: 20px;}"
+        ".image-block img {width: 50px;}",
+        ".image-block {flex: 0.1 1;}"
       ],
       "name": "Custom section (Mobile)",
       "settings": {
