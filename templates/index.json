@@ -3684,7 +3684,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Shopify Development</p>",
+                            "text": "<p>Shopify</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -4245,7 +4245,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Your Brand. Our Creative Support.</p>",
+                        "text": "<p>Your Brand. Our Expert Support.</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -4303,7 +4303,7 @@
                       "type": "button",
                       "name": "t:names.button",
                       "settings": {
-                        "label": "Lorem Ipsum",
+                        "label": "Consult Our Experts",
                         "link": "shopify://pages/consulting-page",
                         "open_in_new_tab": false,
                         "style_class": "black_outline_arrow",
@@ -4353,7 +4353,7 @@
         "group_nfJGef"
       ],
       "custom_css": [],
-      "name": "Your Brand, Our Creative Support (Desktop)",
+      "name": "Your Brand, Our Expert Support (Desktop)",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -4571,7 +4571,7 @@
                           "type": "text",
                           "name": "t:names.text",
                           "settings": {
-                            "text": "<p>Shopify Development</p>",
+                            "text": "<p>Shopify</p>",
                             "width": "fit-content",
                             "max_width": "normal",
                             "alignment": "left",
@@ -5132,7 +5132,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Your Brand. Our Creative Support.</p>",
+                        "text": "<p>Your Brand. Our Your Brand Support.</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -5190,7 +5190,7 @@
                       "type": "button",
                       "name": "t:names.button",
                       "settings": {
-                        "label": "Lorem Ipsum",
+                        "label": "Consult Our Experts",
                         "link": "shopify://pages/consulting-page",
                         "open_in_new_tab": false,
                         "style_class": "black_outline_arrow",
@@ -5240,7 +5240,7 @@
         "group_88q6gE"
       ],
       "custom_css": [],
-      "name": "Your Brand, Our Creative Support (Mobile)",
+      "name": "Your Brand, Our Expert Support (Mobile)",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
