@@ -2169,12 +2169,12 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "rte",
+            "type_preset": "custom",
             "font": "var(--font-body--family)",
-            "font_color": "#000000",
+            "font_color": "#090838",
             "font_opacity": 100,
-            "font_weight": "400",
-            "font_size": "1rem",
+            "font_weight": "700",
+            "font_size": "2rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -2183,7 +2183,7 @@
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
-            "padding-block-start": 0,
+            "padding-block-start": 80,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
@@ -2226,7 +2226,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 60,
-        "padding-block-end": 60,
+        "padding-block-end": 40,
         "show_mobile": true,
         "show_desktop": true
       }
@@ -2239,95 +2239,95 @@
           "settings": {
             "card_direction": "column",
             "card_icon": "shopify://shop_images/people_16.png",
-            "card_width": 50,
+            "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 1",
+            "card_heading": "",
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Lorem Ipsum",
+            "card_description": "Assessment",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Tortor aliquet congue.",
+            "card_subdescription": "We evaluate your current challenges, workflows, and business objectives to identify opportunities for improvement.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_3rwhjF": {
+        "card_Hma6YA": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_17.png",
-            "card_width": 50,
+            "card_icon": "shopify://shop_images/people_16.png",
+            "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 2",
+            "card_heading": "",
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Lorem Ipsum",
+            "card_description": "Strategy",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Tortor aliquet congue.",
+            "card_subdescription": "Our specialists recommend the most effective solution and implementation approach based on your requirements.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_9xVeQX": {
+        "card_mXD9X4": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_14.png",
-            "card_width": 50,
+            "card_icon": "shopify://shop_images/people_16.png",
+            "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 3",
+            "card_heading": "",
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Lorem Ipsum",
+            "card_description": "Implementation",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Tortor aliquet congue.",
+            "card_subdescription": "We configure, deploy, and integrate solutions while minimizing disruption to your operations.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_wBj4bB": {
+        "card_HqDxnE": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_13.png",
-            "card_width": 50,
+            "card_icon": "shopify://shop_images/people_16.png",
+            "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 4",
+            "card_heading": "",
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Lorem Ipsum",
+            "card_description": "Optimization",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Tortor aliquet congue.",
+            "card_subdescription": "We provide ongoing guidance, support, and continuous improvements to maximize long-term value.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
@@ -2337,9 +2337,9 @@
       },
       "block_order": [
         "card_HYyydL",
-        "card_3rwhjF",
-        "card_9xVeQX",
-        "card_wBj4bB"
+        "card_Hma6YA",
+        "card_mXD9X4",
+        "card_HqDxnE"
       ],
       "name": "CWGP - Image Card",
       "settings": {
@@ -2348,243 +2348,10 @@
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 20,
-        "padding-block-left": 0,
-        "padding-block-right": 0,
+        "padding-block-left": 40,
+        "padding-block-right": 40,
         "show_mobile": true,
         "show_desktop": true
-      }
-    },
-    "section_JGUkcc": {
-      "type": "section",
-      "blocks": {
-        "button_7JCzrm": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Schedule Consultation",
-            "link": "#",
-            "open_in_new_tab": false,
-            "style_class": "orange-pill-btn",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "button_7JCzrm"
-      ],
-      "name": "Button",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 40,
-        "show_mobile": true,
-        "show_desktop": true
-      }
-    },
-    "marquee_3GMWGU": {
-      "type": "marquee",
-      "blocks": {
-        "image_Cw9dca": {
-          "type": "image",
-          "name": "t:names.image",
-          "settings": {
-            "image": "shopify://shop_images/people_13.png",
-            "link": "",
-            "image_ratio": "adapt",
-            "width": "custom_px",
-            "custom_width": 100,
-            "custom_width_px": 500,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fill",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "image_y7y4PV": {
-          "type": "image",
-          "name": "t:names.image",
-          "settings": {
-            "image": "shopify://shop_images/people_14.png",
-            "link": "",
-            "image_ratio": "adapt",
-            "width": "custom_px",
-            "custom_width": 100,
-            "custom_width_px": 500,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fill",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "image_RM3yMp": {
-          "type": "image",
-          "name": "t:names.image",
-          "settings": {
-            "image": "shopify://shop_images/people_17.png",
-            "link": "",
-            "image_ratio": "adapt",
-            "width": "custom_px",
-            "custom_width": 100,
-            "custom_width_px": 500,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fill",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "image_Cw9dca",
-        "image_y7y4PV",
-        "image_RM3yMp"
-      ],
-      "name": "t:names.marquee_section",
-      "settings": {
-        "movement_direction": "reverse",
-        "color_scheme": "scheme-b39e1e0b-9529-484c-8f27-4fcede4ff3a8",
-        "padding-block-start": 60,
-        "padding-block-end": 60,
-        "gap_between_elements": 60
-      }
-    },
-    "marquee_DX4yyU": {
-      "type": "marquee",
-      "blocks": {
-        "image_FhrGTm": {
-          "type": "image",
-          "name": "t:names.image",
-          "settings": {
-            "image": "shopify://shop_images/people_13.png",
-            "link": "",
-            "image_ratio": "adapt",
-            "width": "custom_px",
-            "custom_width": 100,
-            "custom_width_px": 500,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fill",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "image_tw4BmB": {
-          "type": "image",
-          "name": "t:names.image",
-          "settings": {
-            "image": "shopify://shop_images/people_14.png",
-            "link": "",
-            "image_ratio": "adapt",
-            "width": "custom_px",
-            "custom_width": 100,
-            "custom_width_px": 500,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fill",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "image_aQNcKR": {
-          "type": "image",
-          "name": "t:names.image",
-          "settings": {
-            "image": "shopify://shop_images/people_17.png",
-            "link": "",
-            "image_ratio": "adapt",
-            "width": "custom_px",
-            "custom_width": 100,
-            "custom_width_px": 500,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fill",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "image_FhrGTm",
-        "image_tw4BmB",
-        "image_aQNcKR"
-      ],
-      "name": "t:names.marquee_section",
-      "settings": {
-        "movement_direction": "normal",
-        "color_scheme": "scheme-b39e1e0b-9529-484c-8f27-4fcede4ff3a8",
-        "padding-block-start": 0,
-        "padding-block-end": 60,
-        "gap_between_elements": 60
       }
     },
     "section_7XJ7NK": {
@@ -2704,26 +2471,10 @@
                 "custom_width_mobile": 100
               },
               "blocks": {}
-            },
-            "button_TTfrtH": {
-              "type": "button",
-              "name": "t:names.button",
-              "settings": {
-                "label": "View Planning Expertise",
-                "link": "#",
-                "open_in_new_tab": false,
-                "style_class": "orange-outline-pill-arrow-btn",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "button_8BURj8",
-            "button_TTfrtH"
+            "button_8BURj8"
           ]
         }
       },
@@ -3228,9 +2979,6 @@
     "section_w7JzPA",
     "section_7TXB7F",
     "cwgp_image_card_QD6PmR",
-    "section_JGUkcc",
-    "marquee_3GMWGU",
-    "marquee_DX4yyU",
     "section_7XJ7NK",
     "section_cJBkDn",
     "cwgp_card_partners_BLwLCN"
