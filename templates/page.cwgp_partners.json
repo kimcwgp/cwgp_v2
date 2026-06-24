@@ -704,7 +704,7 @@
         "card_W4XnAB": {
           "type": "card",
           "settings": {
-            "image_upload": "shopify://shop_images/shopify_whitelogo.png",
+            "image_upload": "shopify://shop_images/shopify_whitelogo_1.png",
             "cwgp_expertise_card_title": "Shopify",
             "cwgp_card_title_alignment": "left",
             "cwgp_card_title_color": "#ffffff",
@@ -729,7 +729,7 @@
         "card_3QkTaB": {
           "type": "card",
           "settings": {
-            "image_upload": "shopify://shop_images/trusted_partner.png",
+            "image_upload": "shopify://shop_images/mulesoftlogo_whitebg.png",
             "cwgp_expertise_card_title": "MuleSoft",
             "cwgp_card_title_alignment": "left",
             "cwgp_card_title_color": "#ffffff",
@@ -754,7 +754,7 @@
         "card_UV3MHT": {
           "type": "card",
           "settings": {
-            "image_upload": "shopify://shop_images/trusted_partner.png",
+            "image_upload": "shopify://shop_images/adaptive_planning_logo_whitebg.png",
             "cwgp_expertise_card_title": "Adaptive Planning",
             "cwgp_card_title_alignment": "left",
             "cwgp_card_title_color": "#ffffff",
@@ -779,7 +779,7 @@
         "card_VXBjTB": {
           "type": "card",
           "settings": {
-            "image_upload": "shopify://shop_images/trusted_partner.png",
+            "image_upload": "shopify://shop_images/n8n_logo_whitebg.png",
             "cwgp_expertise_card_title": "AI  (n8n Workflow Automation)",
             "cwgp_card_title_alignment": "left",
             "cwgp_card_title_color": "#ffffff",
