@@ -1358,7 +1358,7 @@
                     "border_radius": 8,
                     "placeholder": "",
                     "toggle_overlay": true,
-                    "overlay_color": "#FFFFFF",
+                    "overlay_color": "#ffffff",
                     "overlay_style": "solid",
                     "gradient_direction": "to top",
                     "padding-block-start": 24,
@@ -1459,7 +1459,7 @@
                     "border_radius": 8,
                     "placeholder": "",
                     "toggle_overlay": true,
-                    "overlay_color": "#FFFFFF",
+                    "overlay_color": "#ffffff",
                     "overlay_style": "solid",
                     "gradient_direction": "to top",
                     "padding-block-start": 24,
@@ -1608,7 +1608,7 @@
                     "border_radius": 8,
                     "placeholder": "",
                     "toggle_overlay": true,
-                    "overlay_color": "#FFFFFF",
+                    "overlay_color": "#ffffff",
                     "overlay_style": "solid",
                     "gradient_direction": "to top",
                     "padding-block-start": 24,
@@ -1709,7 +1709,7 @@
                     "border_radius": 8,
                     "placeholder": "",
                     "toggle_overlay": true,
-                    "overlay_color": "#FFFFFF",
+                    "overlay_color": "#ffffff",
                     "overlay_style": "solid",
                     "gradient_direction": "to top",
                     "padding-block-start": 24,
@@ -2832,7 +2832,7 @@
                     "border_radius": 8,
                     "placeholder": "",
                     "toggle_overlay": true,
-                    "overlay_color": "#FFFFFF",
+                    "overlay_color": "#ffffff",
                     "overlay_style": "solid",
                     "gradient_direction": "to top",
                     "padding-block-start": 24,
@@ -2933,7 +2933,7 @@
                     "border_radius": 8,
                     "placeholder": "",
                     "toggle_overlay": true,
-                    "overlay_color": "#FFFFFF",
+                    "overlay_color": "#ffffff",
                     "overlay_style": "solid",
                     "gradient_direction": "to top",
                     "padding-block-start": 24,
@@ -3082,7 +3082,7 @@
                     "border_radius": 8,
                     "placeholder": "",
                     "toggle_overlay": true,
-                    "overlay_color": "#FFFFFF",
+                    "overlay_color": "#ffffff",
                     "overlay_style": "solid",
                     "gradient_direction": "to top",
                     "padding-block-start": 24,
@@ -3183,7 +3183,7 @@
                     "border_radius": 8,
                     "placeholder": "",
                     "toggle_overlay": true,
-                    "overlay_color": "#FFFFFF",
+                    "overlay_color": "#ffffff",
                     "overlay_style": "solid",
                     "gradient_direction": "to top",
                     "padding-block-start": 24,
@@ -3436,7 +3436,7 @@
             "alignment": "left",
             "type_preset": "custom",
             "font": "var(--font-body--family)",
-            "font_color": "#C6973D",
+            "font_color": "#c6973d",
             "font_opacity": 100,
             "font_weight": "600",
             "font_size": "2rem",
@@ -3819,7 +3819,7 @@
             "alignment": "left",
             "type_preset": "custom",
             "font": "var(--font-body--family)",
-            "font_color": "#C6973D",
+            "font_color": "#c6973d",
             "font_opacity": 100,
             "font_weight": "600",
             "font_size": "1.25rem",
@@ -4206,7 +4206,7 @@
       "name": "CWGP - Image Card (Desktop)",
       "settings": {
         "cards_direction": "row",
-        "section_bg_color": "#F5F5F5",
+        "section_bg_color": "#f5f5f5",
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 60,
@@ -4329,7 +4329,7 @@
       "name": "CWGP - Image Card (Mobile)",
       "settings": {
         "cards_direction": "row",
-        "section_bg_color": "#F5F5F5",
+        "section_bg_color": "#f5f5f5",
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 60,
@@ -4946,7 +4946,325 @@
         "text_XP6RfY",
         "accordion_aFcFBe"
       ],
-      "name": "t:names.faq_section",
+      "name": "FAQ (Desktop)",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": true,
+        "overlay_color": "#f5f5f5",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 48,
+        "padding-block-end": 48,
+        "show_mobile": false,
+        "show_desktop": true
+      }
+    },
+    "section_HfB9tP": {
+      "type": "section",
+      "blocks": {
+        "text_QTxbth": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<h3>Frequently asked questions</h3>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#090838",
+            "font_opacity": 100,
+            "font_weight": "700",
+            "font_size": "1.25rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "accordion_XizHVV": {
+          "type": "accordion",
+          "name": "t:names.accordion",
+          "settings": {
+            "icon": "caret",
+            "dividers": true,
+            "type_preset": "h5",
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "cwgp_gap": 12,
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "section_max_width": 1000,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "accordion_row_AbVexz": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What services do you offer?",
+                "font_size": "1rem",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20,
+                "section_bg_color": "#ffffff"
+              },
+              "blocks": {
+                "text_CrhkrK": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We provide end-to-end recruitment and staffing solutions — from sourcing and screening to onboarding and payroll management.</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_color": "#000000",
+                    "font_opacity": 100,
+                    "font_weight": "400",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_CrhkrK"
+              ]
+            },
+            "accordion_row_Nfk3yq": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "What industries do you specialize in?",
+                "font_size": "1rem",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20,
+                "section_bg_color": "#ffffff"
+              },
+              "blocks": {
+                "text_eECPLt": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We specialize in professional, technical, and administrative roles across multiple industries such as IT, Finance, Marketing, Sales, Engineering, and Operations. We tailor our approach based on your sector and requirements.</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_color": "#000000",
+                    "font_opacity": 100,
+                    "font_weight": "400",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_eECPLt"
+              ]
+            },
+            "accordion_row_mtAkU9": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How do you source candidates?",
+                "font_size": "1rem",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20,
+                "section_bg_color": "#ffffff"
+              },
+              "blocks": {
+                "text_3L37Ax": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We use a combination of targeted job postings, referral networks, talent databases, and proactive headhunting. Our recruitment specialists also leverage professional platforms and industry connections to find the best candidates.</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_color": "#000000",
+                    "font_opacity": 100,
+                    "font_weight": "400",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_3L37Ax"
+              ]
+            },
+            "accordion_row_jiQhW9": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "How long does the hiring process take?",
+                "font_size": "1rem",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20,
+                "section_bg_color": "#ffffff"
+              },
+              "blocks": {
+                "text_dFYdnN": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Timelines depend on the role and level of specialization. For most positions, shortlisting begins within a few days. We provide regular updates and aim to deliver qualified candidates as quickly as possible.</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_color": "#000000",
+                    "font_opacity": 100,
+                    "font_weight": "400",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_dFYdnN"
+              ]
+            },
+            "accordion_row_wHVALF": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "Can you handle onboarding and HR administration?",
+                "font_size": "1rem",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20,
+                "section_bg_color": "#ffffff"
+              },
+              "blocks": {
+                "text_3jTJ8i": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Yes. We offer managed services that include onboarding, compliance, payroll, and employee relations support — ensuring a smooth and hassle-free experience for both clients and hired talent.</p>",
+                    "width": "100%",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_color": "#000000",
+                    "font_opacity": 100,
+                    "font_weight": "400",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_3jTJ8i"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_AbVexz",
+            "accordion_row_Nfk3yq",
+            "accordion_row_mtAkU9",
+            "accordion_row_jiQhW9",
+            "accordion_row_wHVALF"
+          ]
+        }
+      },
+      "block_order": [
+        "text_QTxbth",
+        "accordion_XizHVV"
+      ],
+      "name": "FAQ (Mobile)",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -4974,7 +5292,7 @@
         "padding-block-start": 48,
         "padding-block-end": 48,
         "show_mobile": true,
-        "show_desktop": true
+        "show_desktop": false
       }
     },
     "cwgp_card_partners_7PEztk": {
@@ -5130,6 +5448,7 @@
     "section_7XJ7NK",
     "section_L6mK8F",
     "section_cJBkDn",
+    "section_HfB9tP",
     "cwgp_card_partners_7PEztk"
   ]
 }
