@@ -26,7 +26,7 @@
         "text_LzgyMA": {
           "type": "text",
           "settings": {
-            "text": "<h1>Partners</h1>",
+            "text": "<h1>Our Partners</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -61,7 +61,7 @@
             "type_preset": "custom",
             "font": "var(--font-body--family)",
             "font_color": "#ffffff",
-            "font_opacity": 100,
+            "font_opacity": 80,
             "font_weight": "500",
             "font_size": "1.25rem",
             "line_height": "normal",
@@ -121,7 +121,7 @@
         "text_hTqEhw": {
           "type": "text",
           "settings": {
-            "text": "<h1>Partners</h1>",
+            "text": "<h1>Our Partners</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
