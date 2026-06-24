@@ -951,7 +951,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.</h3>",
+                "text": "<h3>A Trusted Advisor for Every Stage of Growth</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -980,7 +980,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.  </p>",
+                "text": "<p>The right guidance can help businesses avoid costly mistakes and move forward effeciently. We combine industry expertise, technical knowledge, and business understanding to help clients identify opportunities, solve challenges, and achieve their goals.</p>",
                 "width": "fit-content",
                 "max_width": "none",
                 "alignment": "left",
@@ -1158,7 +1158,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.</h3>",
+                "text": "<h3>A Trusted Advisor for Every Stage of Growth</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -1187,7 +1187,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis tellus auctor, iaculis tortor quis, iaculis massa.  </p>",
+                "text": "<p>The right guidance can help businesses avoid costly mistakes and move forward effeciently. We combine industry expertise, technical knowledge, and business understanding to help clients identify opportunities, solve challenges, and achieve their goals.</p>",
                 "width": "fit-content",
                 "max_width": "none",
                 "alignment": "left",
