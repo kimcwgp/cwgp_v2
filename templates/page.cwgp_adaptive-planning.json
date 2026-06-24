@@ -2848,7 +2848,7 @@
                         "image": "shopify://shop_images/icon-check-circle_c31fb7cc-39fb-4a1a-aa46-18885445864c.png",
                         "link": "",
                         "image_ratio": "adapt",
-                        "width": "custom",
+                        "width": "custom_px",
                         "custom_width": 5,
                         "custom_width_px": 50,
                         "width_mobile": "custom",
@@ -3292,7 +3292,9 @@
       "block_order": [
         "group_dcRgCi"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".image-block img {width: 20px;}"
+      ],
       "name": "Custom section (Mobile)",
       "settings": {
         "content_direction": "column",
