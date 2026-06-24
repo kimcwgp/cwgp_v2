@@ -2160,15 +2160,45 @@
             "text_RC3UCe",
             "group_URC3Q9"
           ]
+        },
+        "text_xPdRRp": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>How we Support Your Business?</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_color": "#000000",
+            "font_opacity": 100,
+            "font_weight": "400",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "group_44AFcU",
         "text_YVihaQ",
-        "group_jcXzA7"
+        "group_jcXzA7",
+        "text_xPdRRp"
       ],
       "custom_css": [
-        ".btn-elegant{margin: 0;}"
+        ".btn-elegant {margin: 0;}"
       ],
       "name": "Services Section",
       "settings": {
@@ -2196,73 +2226,6 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 60,
-        "padding-block-end": 60,
-        "show_mobile": true,
-        "show_desktop": true
-      }
-    },
-    "section_DG4YLi": {
-      "type": "section",
-      "blocks": {
-        "text_3JV8W9": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<h2>How it Works</h2>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_color": "#090838",
-            "font_opacity": 100,
-            "font_weight": "600",
-            "font_size": "2rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_3JV8W9"
-      ],
-      "name": "How it Works",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-start",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 20,
         "padding-block-end": 60,
         "show_mobile": true,
         "show_desktop": true
@@ -2381,7 +2344,7 @@
       "name": "CWGP - Image Card",
       "settings": {
         "cards_direction": "row",
-        "section_bg_color": "#ffffff",
+        "section_bg_color": "#F5F5F5",
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 20,
@@ -3264,7 +3227,6 @@
     "hero_JPGMUY",
     "section_w7JzPA",
     "section_7TXB7F",
-    "section_DG4YLi",
     "cwgp_image_card_QD6PmR",
     "section_JGUkcc",
     "marquee_3GMWGU",
