@@ -411,9 +411,9 @@
                     "link": "#",
                     "open_in_new_tab": false,
                     "style_class": "orange-outline-pill-arrow-btn",
-                    "width": "custom",
+                    "width": "fit-content",
                     "custom_width": 100,
-                    "width_mobile": "custom",
+                    "width_mobile": "fit-content",
                     "custom_width_mobile": 100
                   },
                   "blocks": {}
