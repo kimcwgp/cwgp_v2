@@ -2698,7 +2698,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Manual planning processes can create reporting delays, data inconsistencies, and forecasting challenges that impact business performance. We help organizations modernize budgeting, forecasting, and workforce planning through scalable Adaptive Planning solutions.</p>",
+                    "text": "<p>Many organizations rely on multiple platforms for sales, finance, operations, customer service, and reporting. When these systems operate independently, businesses face data silos, manual processes, integration challenges, and limited visibility that slow growth and reduce efficiency.</p>",
                     "width": "fit-content",
                     "max_width": "none",
                     "alignment": "left",
@@ -2869,7 +2869,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Workday Adaptive Planning Experts</p>",
+                        "text": "<p>MuleSoft Integration Specialists</p>",
                         "width": "fit-content",
                         "max_width": "none",
                         "alignment": "left",
@@ -2970,7 +2970,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Financial Modeling & Forecasting</p>",
+                        "text": "<p>Workflow Automation</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -3119,7 +3119,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Data Accuracy & Governance</p>",
+                        "text": "<p>Enterprise System Integration</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -3220,7 +3220,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Strategic Scenario Planning</p>",
+                        "text": "<p>Integration Governance & Monitoring</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
