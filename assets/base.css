@@ -4797,7 +4797,8 @@ text-component {
     display: none !important;
   }
   .btn-elegant,
-  .orange-outline-pill-btn {
+  .orange-outline-pill-btn,
+  .orange-pill-arrow-btn {
     font-size: 14px !important;
     padding: 12px;
     line-height: 1.2; /* Add this */
