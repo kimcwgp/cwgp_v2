@@ -260,7 +260,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p><a href=\"#\" title=\"#\">Workforce Solutions</a></p>",
+                    "text": "<p><a href=\"/pages/people-pages\" title=\"People Pages\">Workforce Solutions</a></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -289,7 +289,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Consulting</p>",
+                    "text": "<p><a href=\"/pages/consulting-page\" title=\"Consulting Page\">Consulting</a></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -426,7 +426,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>About us</p>",
+                    "text": "<p><a href=\"/pages/about-us\" title=\"About us\">About us</a></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -455,7 +455,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Careers</p>",
+                    "text": "<p><a href=\"/pages/careers\" title=\"Careers\">Careers</a></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -484,7 +484,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Contact us</p>",
+                    "text": "<p><a href=\"https://www.cwglobalpeople.com/pages/contact\" title=\"https://www.cwglobalpeople.com/pages/contact\">Contact us</a></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -634,7 +634,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p><a href=\"#\" title=\"#\">LinkedIn</a></p>",
+                        "text": "<p><a href=\"https://www.linkedin.com/company/cw-global-people\" title=\"https://www.linkedin.com/company/cw-global-people\">LinkedIn</a></p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
