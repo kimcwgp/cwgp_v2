@@ -4348,7 +4348,7 @@
             "description_size": 16,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Morbi nec lectus nibh tristique et pellentesque. Posuere.",
+            "card_subdescription": "Lorem ipsum dolor sit amet consectetur.",
             "subdescription_size": 14,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
