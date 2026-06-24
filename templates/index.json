@@ -518,7 +518,7 @@
               "type": "button",
               "settings": {
                 "label": "Build Your Team",
-                "link": "shopify://collections/all",
+                "link": "shopify://pages/people-pages",
                 "open_in_new_tab": false,
                 "style_class": "uiverse-btn-wht",
                 "width": "fit-content",
