@@ -3293,7 +3293,6 @@
         "group_dcRgCi"
       ],
       "custom_css": [
-        ".image-block img {width: 50px;}",
         ".image-block {flex: 0.15 1;}"
       ],
       "name": "Custom section (Mobile)",
