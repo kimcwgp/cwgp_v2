@@ -88,7 +88,6 @@
           "blocks": {}
         }
       },
-      "disabled": true,
       "custom_css": [
         "cart-icon.header-actions__cart-icon {display: none;}"
       ],
@@ -738,6 +737,7 @@
         "menu_item_DjBDNa",
         "menu_item_qbTJKT"
       ],
+      "disabled": true,
       "name": "CWGP - Custom Header",
       "settings": {
         "section_padding": 40,
