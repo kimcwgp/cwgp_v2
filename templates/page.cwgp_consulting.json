@@ -696,7 +696,7 @@
       ],
       "name": "CWGP - Dynamic Tabs (Desktop)",
       "settings": {
-        "cwgp_dynamic_tabs_heading": "Digital Workplace Offerings",
+        "cwgp_dynamic_tabs_heading": "Digital Transformation & Technology Solutions",
         "cwgp_dynamic_tabs_subheading": "",
         "cwgp_heading_alignment": "left",
         "cwgp_heading_color": "#c6973d",
@@ -888,7 +888,7 @@
       ],
       "name": "CWGP - Dynamic Tabs (Mobile)",
       "settings": {
-        "cwgp_dynamic_tabs_heading": "Digital Workplace Offerings",
+        "cwgp_dynamic_tabs_heading": "Digital Transformation & Technology Solutions",
         "cwgp_dynamic_tabs_subheading": "",
         "cwgp_heading_alignment": "left",
         "cwgp_heading_color": "#c6973d",
