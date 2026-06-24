@@ -992,7 +992,7 @@
             "custom_width": 60,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
-            "height": "fit",
+            "height": "custom",
             "custom_height": 100,
             "inherit_color_scheme": false,
             "color_scheme": "scheme-18df4c0d-0644-41a2-b94a-47facc8bf711",
@@ -1073,9 +1073,18 @@
               },
               "blocks": {}
             },
+            "custom_liquid_R9ckWc": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<!-- Calendly link widget begin -->\n<link href=\"https://assets.calendly.com/assets/external/widget.css\" rel=\"stylesheet\">\n<script src=\"https://assets.calendly.com/assets/external/widget.js\" type=\"text/javascript\" async></script>\n<a href=\"\" onclick=\"Calendly.initPopupWidget({url: 'https://calendly.com/kimson-pomento-cwglobalpeople/30min?hide_gdpr_banner=1'});return false;\" id=\"booking-cta-3\">Need a Trusted Advisor?</a>\n<!-- Calendly link widget end -->\n\n<style>\n#booking-cta-3 {\n\tborder: 2px solid black;\n    padding: 1rem 1.6rem;\n    font-size: 1.1rem;\n    text-decoration: none!important;\n    border-radius: 5rem;\n    color: black;\n    background-color: Transparent;\n    font-weight: 800;\n}\n</style>"
+              },
+              "blocks": {}
+            },
             "group_GDfTGk": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
@@ -1139,6 +1148,7 @@
           "block_order": [
             "text_f7cnmx",
             "text_xBVFRF",
+            "custom_liquid_R9ckWc",
             "group_GDfTGk"
           ]
         }
