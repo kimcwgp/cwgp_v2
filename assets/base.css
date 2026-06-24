@@ -4853,4 +4853,34 @@ li:nth-child(4) .menu-list__link-title::after {
   font-weight:800;
 }
 
+@media (min-width: 768px) {
+    .menu-list__item:nth-child(4) .menu-list__link-title::after,
+  li:nth-child(4) .menu-list__link-title::after {
+    content: "Comming Soon";
+    font-size: 0.45em;          /* Matches a small TM style */
+    vertical-align: super;      /* Lifts text up */
+    position: relative;         
+    top: -0.6em;                /* Keeps baseline aligned high */
+    font-weight: 400;           /* Matches your current theme font weight */
+    margin-left: 4px;           /* Spacing from the word Technologies */
+    display: inline-block;
+    font-weight:800;
+  }
+
+  #HeaderDrawer-technologies .menu-drawer__menu-item-text::after {
+    content: "Comming Soon";
+    font-size: 0.45em;          /* Matches a small TM style */
+    vertical-align: super;      /* Lifts text up */
+    position: relative;         
+    top: -0.6em;                /* Keeps baseline aligned high */
+    font-weight: 400;           /* Matches your current theme font weight */
+    margin-left: 4px;           /* Spacing from the word Technologies */
+    display: inline-block;
+    font-weight:800;
+  }
+}
+
+
+
+
 /* CWGP Kim Pomento - End */
