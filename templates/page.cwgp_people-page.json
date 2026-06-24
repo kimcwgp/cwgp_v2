@@ -207,7 +207,7 @@
             "custom_width": 100,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
-            "height": "fit",
+            "height": "fill",
             "custom_height": 100,
             "inherit_color_scheme": true,
             "color_scheme": "",
@@ -287,8 +287,17 @@
               },
               "blocks": {}
             },
+            "custom_liquid_89Dk9P": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<!-- Calendly link widget begin -->\n<link href=\"https://assets.calendly.com/assets/external/widget.css\" rel=\"stylesheet\">\n<script src=\"https://assets.calendly.com/assets/external/widget.js\" type=\"text/javascript\" async></script>\n<a href=\"\" onclick=\"Calendly.initPopupWidget({url: 'https://calendly.com/kimson-pomento-cwglobalpeople/30min?hide_gdpr_banner=1'});return false;\" id=\"booking-cta\">Schedule Consultation</a>\n<!-- Calendly link widget end -->\n\n<style>\n#booking-cta {\n\tborder: 2px solid #c7963d;\n    padding: 1rem 1.4rem;\n    text-decoration: none!important;\n    border-radius: 5rem;\n    color: white;\n    background-color: #c7963d;\n    font-weight: 800;\n}\n</style>"
+              },
+              "blocks": {}
+            },
             "button_d6aeN3": {
               "type": "button",
+              "disabled": true,
               "settings": {
                 "label": "Schedule Consultation",
                 "link": "#",
@@ -305,6 +314,7 @@
           "block_order": [
             "text_AcWKYU",
             "text_RJnwMQ",
+            "custom_liquid_89Dk9P",
             "button_d6aeN3"
           ]
         },
