@@ -1209,7 +1209,7 @@
             "custom_width": 60,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
-            "height": "fit",
+            "height": "fill",
             "custom_height": 100,
             "inherit_color_scheme": false,
             "color_scheme": "scheme-18df4c0d-0644-41a2-b94a-47facc8bf711",
@@ -1290,9 +1290,18 @@
               },
               "blocks": {}
             },
+            "custom_liquid_wf6HXH": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<!-- Calendly link widget begin -->\n<link href=\"https://assets.calendly.com/assets/external/widget.css\" rel=\"stylesheet\">\n<script src=\"https://assets.calendly.com/assets/external/widget.js\" type=\"text/javascript\" async></script>\n<a href=\"\" onclick=\"Calendly.initPopupWidget({url: 'https://calendly.com/kimson-pomento-cwglobalpeople/30min?hide_gdpr_banner=1'});return false;\" id=\"booking-cta-3\">Need a Trusted Advisor?</a>\n<!-- Calendly link widget end -->\n\n<style>\n#booking-cta-3 {\n\tborder: 2px solid black;\n    padding: 1rem 1.6rem;\n    font-size: 1.1rem;\n    text-decoration: none!important;\n    border-radius: 5rem;\n    color: black;\n    background-color: Transparent;\n    font-weight: 800;\n}\n</style>"
+              },
+              "blocks": {}
+            },
             "group_yBcyQF": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "link": "",
                 "open_in_new_tab": false,
@@ -1356,6 +1365,7 @@
           "block_order": [
             "text_b9mLCq",
             "text_67C8qX",
+            "custom_liquid_wf6HXH",
             "group_yBcyQF"
           ]
         }
@@ -1379,8 +1389,8 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 0,
         "section_width": "page-width",
-        "section_height": "auto",
-        "section_height_custom": 80,
+        "section_height": "custom",
+        "section_height_custom": 45,
         "color_scheme": "scheme-5c9984e0-30c1-4791-b2ff-e825c3b654da",
         "toggle_overlay": true,
         "overlay_color": "#f9f9f9",
