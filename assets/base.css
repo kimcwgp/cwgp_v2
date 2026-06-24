@@ -4826,13 +4826,6 @@ text-component {
   }
 }
 
-/* -  Footer - */
 
-@media (max-width: 767px) {
-    #shopify-section-sections--20315065647183__footer .group-block-content.layout-panel-flex.layout-panel-flex--row.mobile-column {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 /* CWGP Kim Pomento - End */
