@@ -321,7 +321,7 @@
               "type": "button",
               "settings": {
                 "label": "Build Your Team",
-                "link": "shopify://collections/all",
+                "link": "shopify://pages/people-pages",
                 "open_in_new_tab": false,
                 "style_class": "uiverse-btn-wht",
                 "width": "fit-content",
@@ -3514,7 +3514,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
+            "gap": 20,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -3556,7 +3556,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 20,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -4186,7 +4186,7 @@
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 28,
                     "width": "fill",
-                    "custom_width": 100,
+                    "custom_width": 40,
                     "width_mobile": "fill",
                     "custom_width_mobile": 100,
                     "height": "fit",
@@ -4299,7 +4299,7 @@
                       },
                       "blocks": {}
                     },
-                    "button_x4cAqN": {
+                    "button_NTmrQF": {
                       "type": "button",
                       "name": "t:names.button",
                       "settings": {
@@ -4333,7 +4333,7 @@
                     "text_4XafjV",
                     "text_yCE9r8",
                     "text_g6rXjP",
-                    "button_x4cAqN",
+                    "button_NTmrQF",
                     "spacer_9JR7Yq"
                   ]
                 }
@@ -4362,7 +4362,7 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "flex-start",
-        "gap": 12,
+        "gap": 20,
         "section_width": "page-width",
         "section_height": "small",
         "section_height_custom": 50,
