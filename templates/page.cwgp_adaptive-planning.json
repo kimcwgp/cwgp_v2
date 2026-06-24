@@ -3128,7 +3128,7 @@
                         "font_color": "#090838",
                         "font_opacity": 100,
                         "font_weight": "600",
-                        "font_size": "1.25rem",
+                        "font_size": "0.875rem",
                         "line_height": "normal",
                         "letter_spacing": "normal",
                         "case": "none",
@@ -3229,7 +3229,7 @@
                         "font_color": "#090838",
                         "font_opacity": 100,
                         "font_weight": "600",
-                        "font_size": "1.25rem",
+                        "font_size": "0.875rem",
                         "line_height": "normal",
                         "letter_spacing": "normal",
                         "case": "none",
@@ -3294,7 +3294,7 @@
       ],
       "custom_css": [
         ".image-block img {width: 50px;}",
-        ".image-block {flex: 0.2 1;}"
+        ".image-block {flex: 0.15 1;}"
       ],
       "name": "Custom section (Mobile)",
       "settings": {
