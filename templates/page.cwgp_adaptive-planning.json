@@ -1178,20 +1178,96 @@
               },
               "blocks": {}
             },
-            "text_mtxBMW": {
+            "group_JNWxUH": {
+              "type": "group",
+              "name": "Description",
+              "settings": {
+                "link": "",
+                "open_in_new_tab": false,
+                "content_direction": "column",
+                "enable_overflow": false,
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_color": "#090838",
+                "border_opacity": 100,
+                "border_radius": 0,
+                "placeholder": "",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_hgFPyE": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Manual planning processes can create reporting delays, data inconsistencies, and forecasting challenges that impact business performance. We help organizations modernize budgeting, forecasting, and workforce planning through scalable Adaptive Planning solutions.</p>",
+                    "width": "fit-content",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "custom",
+                    "font": "var(--font-body--family)",
+                    "font_color": "#090838",
+                    "font_opacity": 100,
+                    "font_weight": "600",
+                    "font_size": "1.25rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 20,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 80,
+                    "padding-inline-end": 80
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_hgFPyE"
+              ]
+            },
+            "text_V9JtYU": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>Lorem ipsum dolor sit amet consectetur. Non egestas dignissim velit id sed nunc sollicitudin praesent. Lorem nulla elit ornare viverra vulputate varius augue. Nisl pellentesque neque libero mi.</p>",
+                "text": "<p>How We Help</p>",
                 "width": "fit-content",
-                "max_width": "none",
+                "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
                 "font_color": "#090838",
                 "font_opacity": 100,
                 "font_weight": "600",
-                "font_size": "1.25rem",
+                "font_size": "2rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -1200,10 +1276,10 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 20,
-                "padding-block-end": 0,
-                "padding-inline-start": 80,
-                "padding-inline-end": 80
+                "padding-block-start": 40,
+                "padding-block-end": 40,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -1243,7 +1319,7 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "padding-block-start": 20,
+                "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 80,
                 "padding-inline-end": 0
@@ -2070,7 +2146,8 @@
             "text_kHQGd3",
             "text_GbHxY3",
             "image_3UHGi3",
-            "text_mtxBMW",
+            "group_JNWxUH",
+            "text_V9JtYU",
             "group_xQEnrV"
           ]
         }
