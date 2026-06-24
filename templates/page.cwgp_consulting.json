@@ -242,8 +242,17 @@
               },
               "blocks": {}
             },
+            "custom_liquid_yJLeqV": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<!-- Calendly link widget begin -->\n<link href=\"https://assets.calendly.com/assets/external/widget.css\" rel=\"stylesheet\">\n<script src=\"https://assets.calendly.com/assets/external/widget.js\" type=\"text/javascript\" async></script>\n<a href=\"\" onclick=\"Calendly.initPopupWidget({url: 'https://calendly.com/kimson-pomento-cwglobalpeople/30min?hide_gdpr_banner=1'});return false;\" id=\"booking-cta-2\">Let's Talk</a>\n<!-- Calendly link widget end -->\n\n<style>\n#booking-cta-2 {\n\tborder: 2px solid #c7963d;\n    padding: .7rem .9rem;\n    font-size: .9rem;\n    text-decoration: none!important;\n    border-radius: 5rem;\n    color: #c7963d;\n    background-color: Transparent;\n    font-weight: 800;\n}\n</style>"
+              },
+              "blocks": {}
+            },
             "button_E4Ah43": {
               "type": "button",
+              "disabled": true,
               "settings": {
                 "label": "Let's Talk",
                 "link": "#",
@@ -274,6 +283,7 @@
           "block_order": [
             "text_XUU9hB",
             "text_qGJ9kC",
+            "custom_liquid_yJLeqV",
             "button_E4Ah43",
             "spacer_taHgpt"
           ]
