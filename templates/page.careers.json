@@ -951,22 +951,12 @@
       "blocks": {
         "card_RqR8ij": {
           "type": "card",
+          "source": "{{ metaobjects.job[\"logistics-support-specialist\"] }}",
           "settings": {
-            "text-alignment": "center",
-            "title": "Job Title",
-            "card-title-font-size": 24,
-            "card-title-font-weight": "600",
-            "card-title-color": "#0a2647",
-            "text": "CW Global People | Onsite - Makati",
-            "card-text-font-size": 16,
-            "card-text-font-weight": "400",
-            "card-text-color": "#0a2647",
-            "border_color": "#0a2647",
-            "blob_color": "#0a2647",
-            "link_text": "",
-            "link_url": "",
-            "button_text": "Apply now",
-            "button_url": "shopify://pages/application-team-lead"
+            "title": "{{ metaobjects.job[\"logistics-support-specialist\"].job_title.value }}",
+            "text": "{{ metaobjects.job[\"logistics-support-specialist\"].job_type.value }}",
+            "link_text": "{{ metaobjects.job[\"logistics-support-specialist\"].location.value }}",
+            "button_text": "{{ metaobjects.job[\"logistics-support-specialist\"].company.value }}"
           }
         },
         "card_ftWNyQ": {
