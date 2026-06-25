@@ -1158,7 +1158,130 @@
         "card_LmYQAh",
         "card_JLDKK3"
       ],
-      "name": "CWGP - Image Card",
+      "name": "CWGP - Image Card (Desktop)",
+      "settings": {
+        "cards_direction": "row",
+        "section_bg_color": "#ffffff",
+        "section_max_width": 1440,
+        "padding-block-start": 0,
+        "padding-block-end": 20,
+        "padding-block-left": 20,
+        "padding-block-right": 20,
+        "show_mobile": false,
+        "show_desktop": true
+      }
+    },
+    "cwgp_image_card_49rJeC": {
+      "type": "cwgp-image-card",
+      "blocks": {
+        "card_WtTVhw": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "card_icon": "shopify://shop_images/people_16.png",
+            "card_width": 25,
+            "card_width_mobile": 50,
+            "text_alignment": "center",
+            "card_bg_color": "#090838",
+            "card_border_color": "#c6973d",
+            "card_heading": "",
+            "heading_size": 30,
+            "card_heading_font_weight": "700",
+            "heading_color": "#000000",
+            "card_description": "Direct Employment Model",
+            "description_size": 14,
+            "card_description_font_weight": "600",
+            "description_color": "#ffffff",
+            "card_subdescription": "",
+            "subdescription_size": 16,
+            "card_subdescription_font_weight": "400",
+            "subdescription_color": "#090838",
+            "card_link": ""
+          }
+        },
+        "card_UJjwRy": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "card_icon": "shopify://shop_images/people_17.png",
+            "card_width": 25,
+            "card_width_mobile": 50,
+            "text_alignment": "center",
+            "card_bg_color": "#090838",
+            "card_border_color": "#c6973d",
+            "card_heading": "",
+            "heading_size": 30,
+            "card_heading_font_weight": "700",
+            "heading_color": "#000000",
+            "card_description": "Competitive Compensation",
+            "description_size": 14,
+            "card_description_font_weight": "600",
+            "description_color": "#ffffff",
+            "card_subdescription": "",
+            "subdescription_size": 16,
+            "card_subdescription_font_weight": "400",
+            "subdescription_color": "#090838",
+            "card_link": ""
+          }
+        },
+        "card_6MPFRJ": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "card_icon": "shopify://shop_images/people_14.png",
+            "card_width": 25,
+            "card_width_mobile": 50,
+            "text_alignment": "center",
+            "card_bg_color": "#090838",
+            "card_border_color": "#c6973d",
+            "card_heading": "",
+            "heading_size": 30,
+            "card_heading_font_weight": "700",
+            "heading_color": "#000000",
+            "card_description": "Employee Wellbeing",
+            "description_size": 16,
+            "card_description_font_weight": "600",
+            "description_color": "#ffffff",
+            "card_subdescription": "",
+            "subdescription_size": 16,
+            "card_subdescription_font_weight": "400",
+            "subdescription_color": "#090838",
+            "card_link": ""
+          }
+        },
+        "card_tN43eE": {
+          "type": "card",
+          "settings": {
+            "card_direction": "column",
+            "card_icon": "shopify://shop_images/people_13.png",
+            "card_width": 25,
+            "card_width_mobile": 50,
+            "text_alignment": "center",
+            "card_bg_color": "#090838",
+            "card_border_color": "#c6973d",
+            "card_heading": "",
+            "heading_size": 30,
+            "card_heading_font_weight": "700",
+            "heading_color": "#000000",
+            "card_description": "Connected Workplace",
+            "description_size": 16,
+            "card_description_font_weight": "600",
+            "description_color": "#ffffff",
+            "card_subdescription": "",
+            "subdescription_size": 16,
+            "card_subdescription_font_weight": "400",
+            "subdescription_color": "#090838",
+            "card_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_WtTVhw",
+        "card_UJjwRy",
+        "card_6MPFRJ",
+        "card_tN43eE"
+      ],
+      "name": "CWGP - Image Card (Mobile)",
       "settings": {
         "cards_direction": "row",
         "section_bg_color": "#ffffff",
@@ -1168,7 +1291,7 @@
         "padding-block-left": 20,
         "padding-block-right": 20,
         "show_mobile": true,
-        "show_desktop": true
+        "show_desktop": false
       }
     },
     "section_qXhcG3": {
@@ -1429,6 +1552,7 @@
     "section_9gF8xV",
     "cwgp_animated_card_E6mewL",
     "cwgp_image_card_rPtrrB",
+    "cwgp_image_card_49rJeC",
     "section_qXhcG3",
     "cwgp_animated_card_WxqWPg"
   ]
