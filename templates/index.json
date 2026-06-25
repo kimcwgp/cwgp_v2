@@ -5558,6 +5558,7 @@
         "text_HTiaLr",
         "accordion_chURmV"
       ],
+      "disabled": true,
       "name": "FAQ (Desktop)",
       "settings": {
         "content_direction": "column",
@@ -5876,6 +5877,7 @@
         "text_Ph334X",
         "accordion_M4d3wp"
       ],
+      "disabled": true,
       "name": "FAQ (Mobile)",
       "settings": {
         "content_direction": "column",
