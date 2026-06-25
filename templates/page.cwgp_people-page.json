@@ -234,7 +234,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Our People</h2>",
+                "text": "<h1>Specialized Talent for Growing Businesses</h1>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -291,7 +291,7 @@
               "type": "custom-liquid",
               "name": "t:names.custom_liquid",
               "settings": {
-                "custom_liquid": "<!-- Calendly link widget begin -->\n<link href=\"https://assets.calendly.com/assets/external/widget.css\" rel=\"stylesheet\">\n<script src=\"https://assets.calendly.com/assets/external/widget.js\" type=\"text/javascript\" async></script>\n<a href=\"\" onclick=\"Calendly.initPopupWidget({url: 'https://calendly.com/kimson-pomento-cwglobalpeople/30min?hide_gdpr_banner=1'});return false;\" id=\"booking-cta\">Schedule Consultation</a>\n<!-- Calendly link widget end -->\n\n<style>\n#booking-cta {\n\tborder: 2px solid #c7963d;\n    padding: 1rem 1.4rem;\n    text-decoration: none!important;\n    border-radius: 5rem;\n    color: white;\n    background-color: #c7963d;\n    font-weight: 800;\n}\n</style>"
+                "custom_liquid": "<!-- Calendly link widget begin -->\n<link href=\"https://assets.calendly.com/assets/external/widget.css\" rel=\"stylesheet\">\n<script src=\"https://assets.calendly.com/assets/external/widget.js\" type=\"text/javascript\" async></script>\n<a href=\"\" onclick=\"Calendly.initPopupWidget({url: 'https://calendly.com/kimson-pomento-cwglobalpeople/30min?hide_gdpr_banner=1'});return false;\" id=\"booking-cta\">Connect with an Expert</a>\n<!-- Calendly link widget end -->\n\n<style>\n#booking-cta {\n\tborder: 2px solid #c7963d;\n    padding: 1rem 1.4rem;\n    text-decoration: none!important;\n    border-radius: 5rem;\n    color: white;\n    background-color: #c7963d;\n    font-weight: 800;\n}\n</style>"
               },
               "blocks": {}
             },
