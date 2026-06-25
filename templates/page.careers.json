@@ -959,7 +959,7 @@
             "card-title-font-weight": "600",
             "card-title-color": "#000000",
             "text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].company_location.value }}",
-            "card-text-font-size": 20,
+            "card-text-font-size": 16,
             "card-text-font-weight": "400",
             "card-text-color": "#000000",
             "border_color": "#090838",
@@ -970,156 +970,163 @@
             "button_url": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_url.value }}"
           }
         },
-        "card_ftWNyQ": {
+        "card_yjCLHE": {
           "type": "card",
+          "source": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"] }}",
           "settings": {
             "text-alignment": "center",
-            "title": "Job Title",
-            "card-title-font-size": 24,
+            "title": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].job_title.value }}",
+            "card-title-font-size": 20,
             "card-title-font-weight": "600",
-            "card-title-color": "#0a2647",
-            "text": "CW Global People | Onsite - Makati",
+            "card-title-color": "#000000",
+            "text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].company_location.value }}",
             "card-text-font-size": 16,
             "card-text-font-weight": "400",
-            "card-text-color": "#0a2647",
-            "border_color": "#0a2647",
-            "blob_color": "#0a2647",
-            "link_text": "",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
             "link_url": "",
-            "button_text": "Apply now",
-            "button_url": "shopify://pages/application-team-lead"
+            "button_text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_text.value }}",
+            "button_url": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_url.value }}"
           }
         },
-        "card_nJMxcb": {
+        "card_UjzPCJ": {
           "type": "card",
+          "source": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"] }}",
           "settings": {
             "text-alignment": "center",
-            "title": "Job Title",
-            "card-title-font-size": 24,
+            "title": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].job_title.value }}",
+            "card-title-font-size": 20,
             "card-title-font-weight": "600",
-            "card-title-color": "#0a2647",
-            "text": "CW Global People | Onsite - Makati",
+            "card-title-color": "#000000",
+            "text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].company_location.value }}",
             "card-text-font-size": 16,
             "card-text-font-weight": "400",
-            "card-text-color": "#0a2647",
-            "border_color": "#0a2647",
-            "blob_color": "#0a2647",
-            "link_text": "",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
             "link_url": "",
-            "button_text": "Apply now",
-            "button_url": "shopify://pages/application-team-lead"
+            "button_text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_text.value }}",
+            "button_url": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_url.value }}"
           }
         },
-        "card_ccMG6e": {
+        "card_CrNMiy": {
           "type": "card",
+          "source": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"] }}",
           "settings": {
             "text-alignment": "center",
-            "title": "Job Title",
-            "card-title-font-size": 24,
+            "title": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].job_title.value }}",
+            "card-title-font-size": 20,
             "card-title-font-weight": "600",
-            "card-title-color": "#0a2647",
-            "text": "CW Global People | Onsite - Makati",
+            "card-title-color": "#000000",
+            "text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].company_location.value }}",
             "card-text-font-size": 16,
             "card-text-font-weight": "400",
-            "card-text-color": "#0a2647",
-            "border_color": "#0a2647",
-            "blob_color": "#0a2647",
-            "link_text": "",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
             "link_url": "",
-            "button_text": "Apply now",
-            "button_url": "shopify://pages/application-team-lead"
+            "button_text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_text.value }}",
+            "button_url": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_url.value }}"
           }
         },
-        "card_mnWVi4": {
+        "card_ApTCTW": {
           "type": "card",
+          "source": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"] }}",
           "settings": {
             "text-alignment": "center",
-            "title": "Job Title",
-            "card-title-font-size": 24,
+            "title": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].job_title.value }}",
+            "card-title-font-size": 20,
             "card-title-font-weight": "600",
-            "card-title-color": "#0a2647",
-            "text": "CW Global People | Onsite - Makati",
+            "card-title-color": "#000000",
+            "text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].company_location.value }}",
             "card-text-font-size": 16,
             "card-text-font-weight": "400",
-            "card-text-color": "#0a2647",
-            "border_color": "#0a2647",
-            "blob_color": "#0a2647",
-            "link_text": "",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
             "link_url": "",
-            "button_text": "Apply now",
-            "button_url": "shopify://pages/application-team-lead"
+            "button_text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_text.value }}",
+            "button_url": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_url.value }}"
           }
         },
-        "card_tt9ntP": {
+        "card_jBDryQ": {
           "type": "card",
+          "source": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"] }}",
           "settings": {
             "text-alignment": "center",
-            "title": "Job Title",
-            "card-title-font-size": 24,
+            "title": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].job_title.value }}",
+            "card-title-font-size": 20,
             "card-title-font-weight": "600",
-            "card-title-color": "#0a2647",
-            "text": "CW Global People | Onsite - Makati",
+            "card-title-color": "#000000",
+            "text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].company_location.value }}",
             "card-text-font-size": 16,
             "card-text-font-weight": "400",
-            "card-text-color": "#0a2647",
-            "border_color": "#0a2647",
-            "blob_color": "#0a2647",
-            "link_text": "",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
             "link_url": "",
-            "button_text": "Apply now",
-            "button_url": "shopify://pages/application-team-lead"
+            "button_text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_text.value }}",
+            "button_url": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_url.value }}"
           }
         },
-        "card_64tbtc": {
+        "card_YQNm9N": {
           "type": "card",
+          "source": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"] }}",
           "settings": {
             "text-alignment": "center",
-            "title": "Job Title",
-            "card-title-font-size": 24,
+            "title": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].job_title.value }}",
+            "card-title-font-size": 20,
             "card-title-font-weight": "600",
-            "card-title-color": "#0a2647",
-            "text": "CW Global People | Onsite - Makati",
+            "card-title-color": "#000000",
+            "text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].company_location.value }}",
             "card-text-font-size": 16,
             "card-text-font-weight": "400",
-            "card-text-color": "#0a2647",
-            "border_color": "#0a2647",
-            "blob_color": "#0a2647",
-            "link_text": "",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
             "link_url": "",
-            "button_text": "Apply now",
-            "button_url": "shopify://pages/application-team-lead"
+            "button_text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_text.value }}",
+            "button_url": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_url.value }}"
           }
         },
-        "card_XtfHKC": {
+        "card_gtB9cL": {
           "type": "card",
+          "source": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"] }}",
           "settings": {
             "text-alignment": "center",
-            "title": "Job Title",
-            "card-title-font-size": 24,
+            "title": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].job_title.value }}",
+            "card-title-font-size": 20,
             "card-title-font-weight": "600",
-            "card-title-color": "#0a2647",
-            "text": "CW Global People | Onsite - Makati",
+            "card-title-color": "#000000",
+            "text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].company_location.value }}",
             "card-text-font-size": 16,
             "card-text-font-weight": "400",
-            "card-text-color": "#0a2647",
-            "border_color": "#0a2647",
-            "blob_color": "#0a2647",
-            "link_text": "",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
             "link_url": "",
-            "button_text": "Apply now",
-            "button_url": "shopify://pages/application-team-lead"
+            "button_text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_text.value }}",
+            "button_url": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_url.value }}"
           }
         }
       },
       "block_order": [
         "card_RqR8ij",
-        "card_ftWNyQ",
-        "card_nJMxcb",
-        "card_ccMG6e",
-        "card_mnWVi4",
-        "card_tt9ntP",
-        "card_64tbtc",
-        "card_XtfHKC"
+        "card_yjCLHE",
+        "card_UjzPCJ",
+        "card_CrNMiy",
+        "card_ApTCTW",
+        "card_jBDryQ",
+        "card_YQNm9N",
+        "card_gtB9cL"
       ],
       "name": "CWGP Career Cards",
       "settings": {
