@@ -814,7 +814,7 @@
             "video_autoplay": false,
             "video_loop": true,
             "alt": "",
-            "custom_width": 60,
+            "custom_width": 100,
             "custom_width_mobile": 100,
             "aspect_ratio": "16/9",
             "border": "none",
@@ -823,8 +823,8 @@
             "border_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-start": 32,
+            "padding-inline-end": 32
           },
           "blocks": {}
         },
