@@ -22,6 +22,9 @@
             "alignment": "left",
             "type_preset": "h2",
             "font": "var(--font-primary--family)",
+            "font_color": "#000000",
+            "font_opacity": 100,
+            "font_weight": "400",
             "font_size": "",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -63,21 +66,21 @@
         "other_K7Rwcb": {
           "type": "other",
           "settings": {
-            "job_other": "<p>{{ page.metafields.custom.job_duties | metafield_tag }}</p>",
+            "job_other": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].duties | metafield_tag }}</p>",
             "job_other_heading": "Duties and Responsibilities"
           }
         },
         "other_CbYVG3": {
           "type": "other",
           "settings": {
-            "job_other": "<p>{{ page.metafields.custom.job_benefits | metafield_tag }}</p>",
+            "job_other": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].benefits | metafield_tag }}</p>",
             "job_other_heading": "Benefits"
           }
         },
         "other_KEVa8M": {
           "type": "other",
           "settings": {
-            "job_other": "<p>{{ page.metafields.custom.job_company.value }}</p>",
+            "job_other": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].company.value }}</p>",
             "job_other_heading": "Company"
           }
         },
@@ -91,14 +94,14 @@
         "other_mgMPtg": {
           "type": "other",
           "settings": {
-            "job_other": "<p>{{ page.metafields.custom.job_type.value }}</p>",
+            "job_other": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].job_type.value }}</p>",
             "job_other_heading": "Job Type"
           }
         },
         "other_kKcN36": {
           "type": "other",
           "settings": {
-            "job_other": "<p>{{ page.metafields.custom.job_location.value }}</p>",
+            "job_other": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].location.value }}</p>",
             "job_other_heading": "Location"
           }
         }
@@ -113,11 +116,11 @@
       ],
       "name": "Job Post",
       "settings": {
-        "job_name": "<p>{{ page.title }}</p>",
+        "job_name": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].job_title.value }}</p>",
         "job_heading": "Description",
-        "job_description": "<p>{{ page.metafields.custom.job_description | metafield_tag }}</p>",
+        "job_description": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].description | metafield_tag }}</p>",
         "job_heading_2": "Job Requirements",
-        "job_requirements": "<p>{{ page.metafields.custom.job_requirements | metafield_tag }}</p>"
+        "job_requirements": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].requirements | metafield_tag }}</p>"
       }
     },
     "17694169449f28f67c": {
@@ -132,6 +135,7 @@
             "image_ratio": "adapt",
             "width": "custom",
             "custom_width": 100,
+            "custom_width_px": 500,
             "width_mobile": "fit-content",
             "custom_width_mobile": 100,
             "height": "fit",
@@ -153,6 +157,7 @@
             "link": "",
             "open_in_new_tab": false,
             "content_direction": "column",
+            "enable_overflow": false,
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
@@ -173,6 +178,7 @@
             "background_image_position": "cover",
             "border": "none",
             "border_width": 1,
+            "border_color": "#090838",
             "border_opacity": 100,
             "border_radius": 0,
             "placeholder": "",
@@ -227,7 +233,7 @@
         "group_9RperP"
       ],
       "custom_css": [
-        "h3 {color: white!important;}"
+        "h3 {color: white !important;}"
       ],
       "settings": {
         "content_direction": "row",
