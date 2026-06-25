@@ -324,7 +324,7 @@
         "border_opacity": 100,
         "border_radius": 0,
         "toggle_overlay": true,
-        "overlay_color": "#FFFFFF",
+        "overlay_color": "#ffffff",
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "padding-block-start": 40,
@@ -701,7 +701,7 @@
         "card_pPNHVz",
         "card_m8g8CE"
       ],
-      "name": "CWGP Career Cards",
+      "name": "CWGP Career Cards (Desktop)",
       "settings": {
         "section_heading": "Employee Benefits",
         "heading-font-size": 32,
@@ -709,7 +709,196 @@
         "heading-color": "#090838",
         "section_bg_color": "#f5f5f5",
         "padding-block-start": 60,
-        "padding-block-end": 60
+        "padding-block-end": 60,
+        "show_mobile": false,
+        "show_desktop": true
+      }
+    },
+    "cwgp_animated_card_Kgi9q7": {
+      "type": "cwgp-animated-card",
+      "blocks": {
+        "card_Lj34rX": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Competitive Salary Package",
+            "card-title-font-size": 18,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "We offer a competitive salary and benefits package aligned with your expertise and performance.",
+            "card-text-font-size": 14,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_rqt6id": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Additional Leave Credits",
+            "card-title-font-size": 18,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Enjoy additional leave benefits to support work-life balance and personal priorities.",
+            "card-text-font-size": 14,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_VFQNrg": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Health Coverage",
+            "card-title-font-size": 18,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Comprehensive health insurance coverage for your peace of mind.",
+            "card-text-font-size": 14,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_MzVFza": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Learning & Development",
+            "card-title-font-size": 18,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "We invest in your skills through sponsored training programs and certifications.",
+            "card-text-font-size": 14,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_hB8Awd": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Performance-Based Pay Raise",
+            "card-title-font-size": 18,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Your contributions are recognized with structured performance-based increases.",
+            "card-text-font-size": 14,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_TqWkyd": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Promotion Opportunities",
+            "card-title-font-size": 18,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Clear pathways for career progression and leadership roles.",
+            "card-text-font-size": 14,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_pwxHh9": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Promotion to Permanent Employment",
+            "card-title-font-size": 18,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "Opportunities to transition into permanent positions based on performance and business needs.",
+            "card-text-font-size": 14,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "card_gEw6AY": {
+          "type": "card",
+          "settings": {
+            "text-alignment": "left",
+            "title": "Company Events & Christmas Gifts",
+            "card-title-font-size": 18,
+            "card-title-font-weight": "600",
+            "card-title-color": "#000000",
+            "text": "We celebrate milestones, achievements, and holidays together as a team.",
+            "card-text-font-size": 14,
+            "card-text-font-weight": "400",
+            "card-text-color": "#000000",
+            "border_color": "#090838",
+            "blob_color": "#090838",
+            "link_text": "Find out more",
+            "link_url": "",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_Lj34rX",
+        "card_rqt6id",
+        "card_VFQNrg",
+        "card_MzVFza",
+        "card_hB8Awd",
+        "card_TqWkyd",
+        "card_pwxHh9",
+        "card_gEw6AY"
+      ],
+      "name": "CWGP Career Cards (Mobile)",
+      "settings": {
+        "section_heading": "Employee Benefits",
+        "heading-font-size": 20,
+        "heading-font-weight": "600",
+        "heading-color": "#090838",
+        "section_bg_color": "#f5f5f5",
+        "padding-block-start": 60,
+        "padding-block-end": 60,
+        "show_mobile": true,
+        "show_desktop": false
       }
     },
     "cwgp_technical_expertise_cards_XAdj9w": {
@@ -1338,6 +1527,7 @@
     "section_egXpbL",
     "section_YbjCMC",
     "cwgp_animated_card_grPfwT",
+    "cwgp_animated_card_Kgi9q7",
     "cwgp_technical_expertise_cards_XAdj9w",
     "cwgp_technical_expertise_cards_riXk3q",
     "section_U7Qddk",
