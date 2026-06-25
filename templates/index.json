@@ -685,9 +685,9 @@
         "video_97BGCL": {
           "type": "video",
           "name": "t:names.video",
-          "disabled": true,
           "settings": {
             "source": "uploaded",
+            "video": "shopify://files/videos/CW Global People.mp4",
             "video_url": "",
             "video_autoplay": false,
             "video_loop": true,
@@ -807,9 +807,9 @@
         "video_TjADR7": {
           "type": "video",
           "name": "t:names.video",
-          "disabled": true,
           "settings": {
             "source": "uploaded",
+            "video": "shopify://files/videos/CW Global People.mp4",
             "video_url": "",
             "video_autoplay": false,
             "video_loop": true,
