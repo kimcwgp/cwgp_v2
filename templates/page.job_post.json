@@ -66,21 +66,21 @@
         "other_K7Rwcb": {
           "type": "other",
           "settings": {
-            "job_other": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].duties | metafield_tag }}</p>",
+            "job_other": "<p>{{ page.metafields.custom.job_duties | metafield_tag }}</p>",
             "job_other_heading": "Duties and Responsibilities"
           }
         },
         "other_CbYVG3": {
           "type": "other",
           "settings": {
-            "job_other": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].benefits | metafield_tag }}</p>",
+            "job_other": "<p>{{ page.metafields.custom.job_benefits | metafield_tag }}</p>",
             "job_other_heading": "Benefits"
           }
         },
         "other_KEVa8M": {
           "type": "other",
           "settings": {
-            "job_other": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].company.value }}</p>",
+            "job_other": "<p>{{ page.metafields.custom.job_company.value }}</p>",
             "job_other_heading": "Company"
           }
         },
@@ -94,14 +94,14 @@
         "other_mgMPtg": {
           "type": "other",
           "settings": {
-            "job_other": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].job_type.value }}</p>",
+            "job_other": "<p>{{ page.metafields.custom.job_type.value }}</p>",
             "job_other_heading": "Job Type"
           }
         },
         "other_kKcN36": {
           "type": "other",
           "settings": {
-            "job_other": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].location.value }}</p>",
+            "job_other": "<p>{{ page.metafields.custom.job_location.value }}</p>",
             "job_other_heading": "Location"
           }
         }
@@ -116,11 +116,11 @@
       ],
       "name": "Job Post",
       "settings": {
-        "job_name": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].job_title.value }}</p>",
+        "job_name": "<p>{{ page.title }}</p>",
         "job_heading": "Description",
-        "job_description": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].description | metafield_tag }}</p>",
+        "job_description": "<p>{{ page.metafields.custom.job_description | metafield_tag }}</p>",
         "job_heading_2": "Job Requirements",
-        "job_requirements": "<p>{{ metaobjects.job[\"shopify-e-commerce-manager\"].requirements | metafield_tag }}</p>"
+        "job_requirements": "<p>{{ page.metafields.custom.job_requirements | metafield_tag }}</p>"
       }
     },
     "17694169449f28f67c": {
