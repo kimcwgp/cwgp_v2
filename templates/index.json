@@ -814,7 +814,7 @@
             "video_autoplay": false,
             "video_loop": true,
             "alt": "",
-            "custom_width": 100,
+            "custom_width": 60,
             "custom_width_mobile": 100,
             "aspect_ratio": "16/9",
             "border": "none",
