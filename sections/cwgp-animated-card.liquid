@@ -3,7 +3,10 @@
   Description: Cards with blurred glass background and animated blob effect, now with optional button.
 {% endcomment %}
 
-<section class="animated-cards" id="cwgp_career_cards" style="background: {{ section.settings.section_bg_color }};">
+<section class="animated-cards
+   {% unless section.settings.show_mobile %} hide-mobile{% endunless %}
+  {% unless section.settings.show_desktop %} hide-desktop{% endunless %}" 
+   id="cwgp_career_cards" style="background: {{ section.settings.section_bg_color }};">
   <h3
     style="
       font-size: {{ section.settings.heading-font-size }}px; 
@@ -343,6 +346,22 @@
       "unit": "px",
       "default": 0
     },
+    {
+    "type": "header",
+    "content": "Device Visibility"
+  },
+  {
+    "type": "checkbox",
+    "id": "show_mobile",
+    "label": "Show Mobile",
+    "default": true
+  },
+  {
+    "type": "checkbox",
+    "id": "show_desktop",
+    "label": "Show Desktop",
+    "default": true
+  }
   ],
   "blocks": [
     {
