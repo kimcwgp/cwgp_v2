@@ -195,18 +195,19 @@
                     margin: 0;
                   ">{{ block.settings.social_text }}</h6>
                 <div class="icons-list">
-                  <!-- {% if block.settings.linkedIn_url %} -->
+
+                  {% comment %} {% if block.settings.linkedIn_url %} {% endcomment %}
                     <a href="https://linkedin.com&#47;sharer&#47;sharer.php&#63;u={% if canonical_url %}{{ canonical_url | split: '?' | first | url_encode }}{% else %}{{ shop.url | url_encode }}{% endif %}" target="_blank" rel="noopener">
                       <svg fill="#ffffff" width="18px" height="18px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M478.234 600.75V1920H.036V600.75h478.198Zm720.853-2.438v77.737c69.807-45.056 150.308-71.249 272.38-71.249 397.577 0 448.521 308.666 448.521 577.562v737.602h-480.6v-700.836c0-117.867-42.173-140.215-120.15-140.215-74.134 0-120.151 23.55-120.151 140.215v700.836h-480.6V598.312h480.6ZM239.099 0c131.925 0 239.099 107.294 239.099 239.099s-107.174 239.099-239.1 239.099C107.295 478.198 0 370.904 0 239.098 0 107.295 107.294 0 239.099 0Z" fill-rule="evenodd"></path> </g></svg>                    
                     </a>
-                  <!-- {% endif %} -->
+                  {% comment %} {% endif %} {% endcomment %}
 
-                  {% comment %}{% if block.settings.facebook_url %} {% endcomment %}
+                  {% comment %} {% if block.settings.facebook_url %} {% endcomment %}
                     <a href="https://facebook.com&#47;sharer&#47;sharer.php&#63;u={% if canonical_url %}{{ canonical_url | split: '?' | first | url_encode }}{% else %}{{ shop.url | url_encode }}{% endif %}" target="_blank" rel="noopener">
                       <svg width="20px" height="20px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>facebook [#176]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill="#fff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" id="facebook-[#176]"> </path> </g> </g> </g> </g></svg>
                     </a>
                   {% comment %} {% endif %} {% endcomment %}
-                   
+
                   {% if block.settings.twitter_url %}
                     <a href="{{ block.settings.twitter_url }}">
                       <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 30 30">
