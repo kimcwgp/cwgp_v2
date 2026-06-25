@@ -951,12 +951,10 @@
       "blocks": {
         "card_RqR8ij": {
           "type": "card",
-          "source": "{{ metaobjects.job[\"logistics-support-specialist\"] }}",
+          "source": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"] }}",
           "settings": {
-            "title": "{{ metaobjects.job[\"logistics-support-specialist\"].job_title.value }}",
-            "text": "{{ metaobjects.job[\"logistics-support-specialist\"].job_type.value }}",
-            "link_text": "{{ metaobjects.job[\"logistics-support-specialist\"].location.value }}",
-            "button_text": "{{ metaobjects.job[\"logistics-support-specialist\"].company.value }}"
+            "title": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].job_title.value }}",
+            "text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].company_location.value }}"
           }
         },
         "card_ftWNyQ": {
