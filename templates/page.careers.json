@@ -972,23 +972,14 @@
         },
         "card_yjCLHE": {
           "type": "card",
-          "source": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"] }}",
+          "source": "{{ metaobjects.job_preview[\"job-test\"] }}",
           "settings": {
-            "text-alignment": "center",
-            "title": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].job_title.value }}",
-            "card-title-font-size": 20,
-            "card-title-font-weight": "600",
-            "card-title-color": "#000000",
-            "text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].company_location.value }}",
-            "card-text-font-size": 16,
-            "card-text-font-weight": "400",
-            "card-text-color": "#000000",
-            "border_color": "#090838",
-            "blob_color": "#090838",
-            "link_text": "Find out more",
-            "link_url": "",
-            "button_text": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_text.value }}",
-            "button_url": "{{ metaobjects.job_preview[\"shopify-e-commerce-manager\"].button_url.value }}"
+            "title": "{{ metaobjects.job_preview[\"job-test\"].job_title.value }}",
+            "text": "{{ metaobjects.job_preview[\"job-test\"].button_text.value }}",
+            "link_text": "{{ metaobjects.job_preview[\"job-test\"].company_location.value }}",
+            "link_url": "{{ metaobjects.job_preview[\"job-test\"].url.value }}",
+            "button_text": "{{ metaobjects.job_preview[\"job-test\"].apply_now.value }}",
+            "button_url": "{{ metaobjects.job_preview[\"job-test\"].button_url.value }}"
           }
         },
         "card_UjzPCJ": {
