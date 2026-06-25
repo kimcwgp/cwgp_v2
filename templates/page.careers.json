@@ -234,7 +234,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>Our People</h2>",
+                "text": "<h1>Empowering Careers for Our People</h1>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -262,14 +262,14 @@
             "text_MtFUyq": {
               "type": "text",
               "settings": {
-                "text": "<p>Access skilled professionals across customer support, operations, technology, creative services, and business functions—tailored to your organization's unique needs.</p>",
+                "text": "<p>Be part of a workplace that values collaboration, continuous learning, and professional growth. Discover opportunities to develop your skills, advance your career, and make meaningful contributions to businesses around the world.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "custom",
                 "font": "var(--font-body--family)",
                 "font_color": "#090838",
-                "font_opacity": 100,
+                "font_opacity": 80,
                 "font_weight": "600",
                 "font_size": "1.25rem",
                 "line_height": "normal",
@@ -290,7 +290,7 @@
             "button_KVLrq4": {
               "type": "button",
               "settings": {
-                "label": "Book a Schedule",
+                "label": "See Job Openings",
                 "link": "#",
                 "open_in_new_tab": false,
                 "style_class": "uiverse-btn-wht",
