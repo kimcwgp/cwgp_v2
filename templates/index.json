@@ -903,7 +903,7 @@
           "name": "t:names.video",
           "settings": {
             "source": "uploaded",
-            "video": "shopify://files/videos/CW Global People.mp4",
+            "video": "shopify://files/videos/CW Global People - Final.mp4",
             "video_url": "",
             "video_autoplay": false,
             "video_loop": true,
@@ -1025,7 +1025,7 @@
           "name": "t:names.video",
           "settings": {
             "source": "uploaded",
-            "video": "shopify://files/videos/CW Global People.mp4",
+            "video": "shopify://files/videos/CW Global People - Final.mp4",
             "video_url": "",
             "video_autoplay": false,
             "video_loop": true,
