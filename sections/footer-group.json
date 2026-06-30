@@ -965,7 +965,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Manila, PH</p>",
+                        "text": "<p>Florida, USA</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1042,7 +1042,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Florida, USA</p>",
+                        "text": "<p>Manila, PH</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
