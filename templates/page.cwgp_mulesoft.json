@@ -4242,7 +4242,7 @@
       "name": "CWGP - Image Card (Desktop)",
       "settings": {
         "cards_direction": "row",
-        "section_bg_color": "#FFFFFF",
+        "section_bg_color": "#ffffff",
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 60,
@@ -4365,7 +4365,7 @@
       "name": "CWGP - Image Card (Mobile)",
       "settings": {
         "cards_direction": "row",
-        "section_bg_color": "#FFFFFF",
+        "section_bg_color": "#ffffff",
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 60,
@@ -5331,18 +5331,18 @@
         "show_desktop": false
       }
     },
-    "cwgp_card_partners_Ryezjg": {
+    "cwgp_card_partners_cViG76": {
       "type": "cwgp-card-partners",
       "blocks": {
-        "card_9rdQpb": {
+        "card_ytFgMt": {
           "type": "card",
           "settings": {
             "image_upload": "shopify://shop_images/shopify_whitelogo_1.png",
             "cwgp_expertise_card_title": "Shopify",
             "cwgp_card_title_alignment": "left",
             "cwgp_card_title_color": "#ffffff",
-            "partner_link": "#",
-            "cwgp_expertise_card_text": "<p>A leading eCommerce platform that enables businesses to build, manage, and scale online stores through customizable storefronts, integrations, automation, and commerce solutions.</p>",
+            "partner_link": "",
+            "cwgp_expertise_card_text": "<p>A leading eCommerce platform that enables businesses to build, manage, and scale online stores through customizable storefronts, integrations, automation, and commerce solutions.<br/><br/><em>✓ CW Global People is an official Shopify Partner.</em></p>",
             "cwgp_card_description_alignment": "left",
             "cwgp_card_description_color": "#ffffff",
             "cwgp_card_bg_color": "#090838",
@@ -5359,14 +5359,14 @@
             "card_content_padding": 24
           }
         },
-        "card_xJUCxd": {
+        "card_DzM4JV": {
           "type": "card",
           "settings": {
             "image_upload": "shopify://shop_images/mulesoftlogo_whitebg.png",
             "cwgp_expertise_card_title": "MuleSoft",
             "cwgp_card_title_alignment": "left",
             "cwgp_card_title_color": "#ffffff",
-            "partner_link": "#",
+            "partner_link": "",
             "cwgp_expertise_card_text": "<p>A leading integration platform that connects applications, data, and systems through API-led connectivity, enabling seamless information flow across the enterprise.</p>",
             "cwgp_card_description_alignment": "left",
             "cwgp_card_description_color": "#ffffff",
@@ -5384,14 +5384,14 @@
             "card_content_padding": 24
           }
         },
-        "card_eNYXEi": {
+        "card_A9BWQ8": {
           "type": "card",
           "settings": {
             "image_upload": "shopify://shop_images/adaptive_planning_logo_whitebg.png",
             "cwgp_expertise_card_title": "Adaptive Planning",
             "cwgp_card_title_alignment": "left",
             "cwgp_card_title_color": "#ffffff",
-            "partner_link": "#",
+            "partner_link": "",
             "cwgp_expertise_card_text": "<p>A cloud-based planning platform that helps organizations streamline budgeting, forecasting, workforce planning, reporting, and financial analysis.</p>",
             "cwgp_card_description_alignment": "left",
             "cwgp_card_description_color": "#ffffff",
@@ -5409,14 +5409,14 @@
             "card_content_padding": 24
           }
         },
-        "card_N3Df9e": {
+        "card_qV4U3R": {
           "type": "card",
           "settings": {
             "image_upload": "shopify://shop_images/n8n_logo_whitebg.png",
             "cwgp_expertise_card_title": "AI  (n8n Workflow Automation)",
             "cwgp_card_title_alignment": "left",
             "cwgp_card_title_color": "#ffffff",
-            "partner_link": "#",
+            "partner_link": "",
             "cwgp_expertise_card_text": "<p>A workflow automation platform that enables businesses to connect applications, automate processes, and build AI-powered workflows with flexibility and scalability.</p>",
             "cwgp_card_description_alignment": "left",
             "cwgp_card_description_color": "#ffffff",
@@ -5436,10 +5436,10 @@
         }
       },
       "block_order": [
-        "card_9rdQpb",
-        "card_xJUCxd",
-        "card_eNYXEi",
-        "card_N3Df9e"
+        "card_ytFgMt",
+        "card_DzM4JV",
+        "card_A9BWQ8",
+        "card_qV4U3R"
       ],
       "name": "CWGP - Partners Card",
       "settings": {
@@ -5449,9 +5449,9 @@
         "cwgp_topheading_font_size": 16,
         "cwgp_topheading_font_weight": "400",
         "cwgp_topheading_margin_bottom": 10,
-        "cwgp_expertise_heading": "Check out our other services",
+        "cwgp_expertise_heading": "",
         "cwgp_heading_alignment": "center",
-        "cwgp_heading_color": "#090838",
+        "cwgp_heading_color": "#000000",
         "cwgp_heading_font_size": 36,
         "cwgp_heading_font_weight": "600",
         "cwgp_heading_margin_bottom": 40,
@@ -5486,6 +5486,6 @@
     "section_DrtAUA",
     "section_tkVy9E",
     "section_cktJgi",
-    "cwgp_card_partners_Ryezjg"
+    "cwgp_card_partners_cViG76"
   ]
 }
