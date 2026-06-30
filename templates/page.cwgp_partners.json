@@ -217,11 +217,11 @@
           "type": "text_column",
           "settings": {
             "column_width": 50,
-            "heading": "<p>Creating strong, lasting and profitable partnerships to strengthen our clients’ businesses</p>",
+            "heading": "<p>Maximizing Platform Potential</p>",
             "text_column_heading_font_weight": "700",
             "heading_size": 28,
             "heading_color": "#090838",
-            "description": "<p>We collaborate with an ecosystem of partners to provide our clients with cutting-edge products and services in many of the largest industries in the world.</p>",
+            "description": "<p>Leading platforms provide powerful capabilities, but achieving meaningful results requires the right strategy and expertise. We help organizations unlock greater value from their technology investments through implementation, optimization, integration, and ongoing support.</p>",
             "text_column_description_font_weight": "500",
             "description_size": 16,
             "description_color": "#090838"
@@ -286,11 +286,11 @@
           "type": "text_column",
           "settings": {
             "column_width": 50,
-            "heading": "<p>Creating strong, lasting and profitable partnerships to strengthen our clients’ businesses</p>",
+            "heading": "<p>Maximizing Platform Potential</p>",
             "text_column_heading_font_weight": "700",
             "heading_size": 20,
             "heading_color": "#090838",
-            "description": "<p>We collaborate with an ecosystem of partners to provide our clients with cutting-edge products and services in many of the largest industries in the world.</p>",
+            "description": "<p>Leading platforms provide powerful capabilities, but achieving meaningful results requires the right strategy and expertise. We help organizations unlock greater value from their technology investments through implementation, optimization, integration, and ongoing support.</p>",
             "text_column_description_font_weight": "500",
             "description_size": 14,
             "description_color": "#090838"
