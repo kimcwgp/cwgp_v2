@@ -3,7 +3,8 @@
     <p style="
       color: {{ block.settings.font_color }};
       font-weight: {{ block.settings.font_weight }};
-      font-size: {{ block.settings.font_size}};
+      font-size: {{ block.settings.font_size }};
+      letter-spacing: {{ block.settings.letter_spacing }};
       ">
     {{ block.settings.text }}
     </p>
@@ -149,26 +150,6 @@
         }
       ],
       "default": "1rem"
-    },
-    {
-      "type": "select",
-      "id": "line_height",
-      "label": "t:settings.line_height",
-      "options": [
-        {
-          "value": "tight",
-          "label": "t:options.tight"
-        },
-        {
-          "value": "normal",
-          "label": "t:options.normal"
-        },
-        {
-          "value": "loose",
-          "label": "t:options.loose"
-        }
-      ],
-      "default": "normal"
     },
     {
       "type": "select",
