@@ -22,6 +22,10 @@
   padding-bottom: {{ block.settings.padding-block-end }}px;
   padding-left: {{ block.settings.padding-inline-start }}px;
   padding-right: {{ block.settings.padding-inline-end }}px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
   ">
   {% if block.settings.icon != blank %}
     <img
@@ -33,7 +37,7 @@
       loading="lazy"
     >
   {% endif %}
-  
+
     <p style="
       color: {{ block.settings.font_color }};
       font-weight: {{ block.settings.font_weight }};

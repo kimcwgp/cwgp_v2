@@ -617,6 +617,8 @@
           "type": "icon_with_text",
           "name": "Icon with Text",
           "settings": {
+            "icon": "shopify://shop_images/check-circle.png",
+            "icon_width": 16,
             "text": "AP Specialist",
             "font_color": "#ffffff",
             "font_weight": "600",
@@ -643,6 +645,7 @@
           "type": "icon_with_text",
           "name": "Icon with Text",
           "settings": {
+            "icon_width": 32,
             "text": "Shopify Admin",
             "font_color": "#ffffff",
             "font_weight": "600",
@@ -669,6 +672,7 @@
           "type": "icon_with_text",
           "name": "Icon with Text",
           "settings": {
+            "icon_width": 32,
             "text": "SQL Developer",
             "font_color": "#ffffff",
             "font_weight": "600",
@@ -695,6 +699,7 @@
           "type": "icon_with_text",
           "name": "Icon with Text",
           "settings": {
+            "icon_width": 32,
             "text": "Customer Support",
             "font_color": "#ffffff",
             "font_weight": "600",
@@ -721,6 +726,7 @@
           "type": "icon_with_text",
           "name": "Icon with Text",
           "settings": {
+            "icon_width": 32,
             "text": "Salesforce Admin",
             "font_color": "#ffffff",
             "font_weight": "600",
@@ -747,6 +753,7 @@
           "type": "icon_with_text",
           "name": "Icon with Text",
           "settings": {
+            "icon_width": 32,
             "text": "Logistics Support",
             "font_color": "#ffffff",
             "font_weight": "600",
@@ -773,6 +780,7 @@
           "type": "icon_with_text",
           "name": "Icon with Text",
           "settings": {
+            "icon_width": 32,
             "text": "Sales Analyst",
             "font_color": "#ffffff",
             "font_weight": "600",
