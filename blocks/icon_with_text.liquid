@@ -201,7 +201,8 @@
       "type": "color",
       "id": "bg_base_color",
       "label": "Background Base Color",
-      "default": "#37365D"
+      "default": "#37365D",
+      "visible_if": "{{ block.settings.background }}"
     },
     {
       "type": "range",
@@ -211,13 +212,15 @@
       "max": 100,
       "step": 1,
       "unit": "°",
-      "default": 59
+      "default": 59,
+      "visible_if": "{{ block.settings.background }}"
     },
     {
       "type": "color",
       "id": "gradient_color_1",
       "label": "Gradient Color 1",
-      "default": "#FFFFFF"
+      "default": "#FFFFFF",
+      "visible_if": "{{ block.settings.background }}"
     },
     {
       "type": "range",
@@ -227,13 +230,15 @@
       "max": 100,
       "step": 1,
       "unit": "%",
-      "default": 0
+      "default": 0,
+      "visible_if": "{{ block.settings.background }}"
     },
     {
       "type": "color",
       "id": "gradient_color_2",
       "label": "Gradient Color 2",
-      "default": "#FFFFFF"
+      "default": "#FFFFFF",
+      "visible_if": "{{ block.settings.background }}"
     },
     {
       "type": "range",
@@ -243,13 +248,15 @@
       "max": 100,
       "step": 1,
       "unit": "%",
-      "default": 25
+      "default": 25,
+      "visible_if": "{{ block.settings.background }}"
     },
     {
       "type": "color",
       "id": "gradient_color_3",
       "label": "Gradient Color 3",
-      "default": "#C6973D"
+      "default": "#C6973D",
+      "visible_if": "{{ block.settings.background }}"
     },
     {
       "type": "range",
@@ -259,7 +266,8 @@
       "max": 100,
       "step": 1,
       "unit": "%",
-      "default": 100
+      "default": 100,
+      "visible_if": "{{ block.settings.background }}"
     },
     {
       "type": "range",
