@@ -2,6 +2,8 @@
 <div>
     <p style="
       color: {{ block.settings.font_color }};
+      font-weight: {{ block.settings.font_weight }};
+      font-size: {{ block.settings.font_size}};
       ">
     {{ block.settings.text }}
     </p>
@@ -27,16 +29,6 @@
       "id": "font_color",
       "label": "Font Color",
       "default": "#000000"
-    },
-    {
-      "type": "range",
-      "id": "font_opacity",
-      "label": "Font Opacity",
-      "min": 0,
-      "max": 100,
-      "step": 5,
-      "unit": "%",
-      "default": 100
     },
     {
       "type": "select",
