@@ -4032,14 +4032,14 @@
         "show_desktop": false
       }
     },
-    "section_JeLYwJ": {
+    "section_mwQiAr": {
       "type": "section",
       "blocks": {
-        "text_EVLtXg": {
+        "text_LqUgA6": {
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>How we Support Your Business?</p>",
+            "text": "<h3>How it works?</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -4047,7 +4047,7 @@
             "font": "var(--font-body--family)",
             "font_color": "#090838",
             "font_opacity": 100,
-            "font_weight": "700",
+            "font_weight": "600",
             "font_size": "2rem",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -4066,9 +4066,9 @@
         }
       },
       "block_order": [
-        "text_EVLtXg"
+        "text_LqUgA6"
       ],
-      "name": "How we Support Your Business? (Desktop)",
+      "name": "How it works? (Desktop)",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -4099,14 +4099,14 @@
         "show_desktop": true
       }
     },
-    "section_eeXNey": {
+    "section_qjidrU": {
       "type": "section",
       "blocks": {
-        "text_aPDk7r": {
+        "text_Czb4ef": {
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>How we Support Your Business?</p>",
+            "text": "<h3>How it works?</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -4114,7 +4114,7 @@
             "font": "var(--font-body--family)",
             "font_color": "#090838",
             "font_opacity": 100,
-            "font_weight": "700",
+            "font_weight": "600",
             "font_size": "1.25rem",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -4133,9 +4133,9 @@
         }
       },
       "block_order": [
-        "text_aPDk7r"
+        "text_Czb4ef"
       ],
-      "name": "How we Support Your Business? (Desktop)",
+      "name": "How it works? (Mobile)",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -4166,14 +4166,14 @@
         "show_desktop": false
       }
     },
-    "cwgp_image_card_rHHmCW": {
+    "cwgp_image_card_atMEwg": {
       "type": "cwgp-image-card",
       "blocks": {
-        "card_gF7ybX": {
+        "card_zFfAfM": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_35.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -4183,22 +4183,22 @@
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Discovery",
+            "card_description": "Schedule a Call",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Understand your products, customers, and business goals.",
+            "card_subdescription": "Connect with our team to discuss your business needs and explore how we can help.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_y6wNyH": {
+        "card_KFkfc7": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_34_9.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -4208,22 +4208,22 @@
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Strategy",
+            "card_description": "Discovery Call",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Define the best Shopify approach for growth and performance.",
+            "card_subdescription": "We'll assess your needs and identify the best approach.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_WnmVfD": {
+        "card_zhRMYP": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/contract_signing.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -4233,22 +4233,22 @@
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Development",
+            "card_description": "Contract Signing",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Build, customize, and optimize your online store.",
+            "card_subdescription": "Once the scope is aligned, we'll finalize the engagement and transition into execution.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_mzUgJY": {
+        "card_LhJinV": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_34_10.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -4258,11 +4258,11 @@
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Growth Support",
+            "card_description": "Onboarding",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Provide ongoing improvements, support, and optimization.",
+            "card_subdescription": "We'll ensure a smooth onboarding process and get to work delivering results.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
@@ -4271,15 +4271,15 @@
         }
       },
       "block_order": [
-        "card_gF7ybX",
-        "card_y6wNyH",
-        "card_WnmVfD",
-        "card_mzUgJY"
+        "card_zFfAfM",
+        "card_KFkfc7",
+        "card_zhRMYP",
+        "card_LhJinV"
       ],
       "name": "CWGP - Image Card (Desktop)",
       "settings": {
         "cards_direction": "row",
-        "section_bg_color": "#ffffff",
+        "section_bg_color": "#FFFFFF",
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 60,
@@ -4289,14 +4289,14 @@
         "show_desktop": true
       }
     },
-    "cwgp_image_card_j7fTJa": {
+    "cwgp_image_card_YxrieQ": {
       "type": "cwgp-image-card",
       "blocks": {
-        "card_kA7VaC": {
+        "card_pMVAbQ": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_35.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -4306,22 +4306,22 @@
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Discovery",
+            "card_description": "Schedule a Call",
             "description_size": 16,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Understand your products, customers, and business goals.",
+            "card_subdescription": "Connect with our team to discuss your business needs and explore how we can help.",
             "subdescription_size": 14,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_MhrYEd": {
+        "card_V88t9L": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_34_9.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -4331,22 +4331,22 @@
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Strategy",
+            "card_description": "Discovery Call",
             "description_size": 16,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Define the best Shopify approach for growth and performance.",
+            "card_subdescription": "We'll assess your needs and identify the best approach.",
             "subdescription_size": 14,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_ghFifj": {
+        "card_QzzYqN": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/contract_signing.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -4356,22 +4356,22 @@
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Development",
+            "card_description": "Contract Signing",
             "description_size": 16,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Build, customize, and optimize your online store.",
+            "card_subdescription": "Once the scope is aligned, we'll finalize the engagement and transition into execution.",
             "subdescription_size": 14,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_wkbd9i": {
+        "card_t8qa8z": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_34_10.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -4381,11 +4381,11 @@
             "heading_size": 30,
             "card_heading_font_weight": "700",
             "heading_color": "#000000",
-            "card_description": "Growth Support",
+            "card_description": "Onboarding",
             "description_size": 16,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Provide ongoing improvements, support, and optimization.",
+            "card_subdescription": "We'll ensure a smooth onboarding process and get to work delivering results.",
             "subdescription_size": 14,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
@@ -4394,15 +4394,15 @@
         }
       },
       "block_order": [
-        "card_kA7VaC",
-        "card_MhrYEd",
-        "card_ghFifj",
-        "card_wkbd9i"
+        "card_pMVAbQ",
+        "card_V88t9L",
+        "card_QzzYqN",
+        "card_t8qa8z"
       ],
       "name": "CWGP - Image Card (Mobile)",
       "settings": {
         "cards_direction": "row",
-        "section_bg_color": "#ffffff",
+        "section_bg_color": "#f5f5f5",
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 60,
@@ -5516,10 +5516,10 @@
     "section_c4gRhB",
     "section_MELAyb",
     "section_aXpHnh",
-    "section_JeLYwJ",
-    "section_eeXNey",
-    "cwgp_image_card_rHHmCW",
-    "cwgp_image_card_j7fTJa",
+    "section_mwQiAr",
+    "section_qjidrU",
+    "cwgp_image_card_atMEwg",
+    "cwgp_image_card_YxrieQ",
     "section_Uqktce",
     "section_j6jxf7",
     "section_KhdGta",
