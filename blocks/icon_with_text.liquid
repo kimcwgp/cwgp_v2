@@ -4,17 +4,18 @@
     border: 1px solid transparent;
     border-radius: {{ block.settings.corner_radius }}px;
 
-    background-image:
-    linear-gradient(
-      {{ block.settings.bg_base_color }},
-      {{ block.settings.bg_base_color }}
-    ),
-    linear-gradient(
-      {{ block.settings.gradient_angle }}deg,
-      {{ block.settings.gradient_color_1 }} {{ block.settings.gradient_stop_1 }}%,
-      {{ block.settings.gradient_color_2 }} {{ block.settings.gradient_stop_2 }}%,
-      {{ block.settings.gradient_color_3 }} {{ block.settings.gradient_stop_3 }}%
-    );
+    background:
+      linear-gradient(
+        {{ block.settings.bg_base_color }},
+        {{ block.settings.bg_base_color }}
+      ) padding-box,
+
+      linear-gradient(
+        {{ block.settings.gradient_angle }}deg,
+        {{ block.settings.gradient_color_1 }} {{ block.settings.gradient_stop_1 }}%,
+        {{ block.settings.gradient_color_2 }} {{ block.settings.gradient_stop_2 }}%,
+        {{ block.settings.gradient_color_3 }} {{ block.settings.gradient_stop_3 }}%
+      ) border-box;
   {% endif %}
 
   padding-top: {{ block.settings.padding-block-start }}px;
