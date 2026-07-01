@@ -14,7 +14,7 @@
             #C6973D 100%);
     background-origin:border-box;
     background-clip:padding-box,border-box;
-    
+
   padding-top: {{ block.settings.padding-block-start }}px;
   padding-bottom: {{ block.settings.padding-block-end }}px;
   padding-left: {{ block.settings.padding-inline-start }}px;
@@ -199,11 +199,67 @@
     },
     {
       "type": "color",
-      "id": "background_color",
-      "label": "t:settings.background_color",
-      "alpha": true,
-      "default": "#00000026",
-      "visible_if": "{{ block.settings.background }}"
+      "id": "bg_base_color",
+      "label": "Background Base Color",
+      "default": "#37365D"
+    },
+    {
+      "type": "range",
+      "id": "gradient_angle",
+      "label": "Gradient Angle",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "°",
+      "default": 59
+    },
+    {
+      "type": "color",
+      "id": "gradient_color_1",
+      "label": "Gradient Color 1",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "gradient_stop_1",
+      "label": "Gradient Stop 1",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "gradient_color_2",
+      "label": "Gradient Color 2",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "gradient_stop_2",
+      "label": "Gradient Stop 2",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 25
+    },
+    {
+      "type": "color",
+      "id": "gradient_color_3",
+      "label": "Gradient Color 3",
+      "default": "#C6973D"
+    },
+    {
+      "type": "range",
+      "id": "gradient_stop_3",
+      "label": "Gradient Stop 3",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 100
     },
     {
       "type": "range",
