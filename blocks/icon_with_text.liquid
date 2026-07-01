@@ -4,16 +4,19 @@
   {% if block.settings.background and block.settings.corner_radius %}
     border: 1px solid transparent;
     border-radius: {{ block.settings.corner_radius }}px;
-  {% endif %}
 
-  background-image:
-        linear-gradient(#37365D,#37365D),
-        linear-gradient(-59deg,
-            #FFFFFF 0%,
-            #FFFFFF 25%,
-            #C6973D 100%);
-    background-origin:border-box;
-    background-clip:padding-box,border-box;
+    background-image:
+    linear-gradient(
+      {{ section.settings.bg_base_color }},
+      {{ section.settings.bg_base_color }}
+    ),
+    linear-gradient(
+      {{ section.settings.gradient_angle }}deg,
+      {{ section.settings.gradient_color_1 }} {{ section.settings.gradient_stop_1 }}%,
+      {{ section.settings.gradient_color_2 }} {{ section.settings.gradient_stop_2 }}%,
+      {{ section.settings.gradient_color_3 }} {{ section.settings.gradient_stop_3 }}%
+    );
+  {% endif %}
 
   padding-top: {{ block.settings.padding-block-start }}px;
   padding-bottom: {{ block.settings.padding-block-end }}px;
@@ -36,14 +39,14 @@
   "tag": null,
   "settings": [
     {
+      "type": "header",
+      "content": "t:content.typography"
+    },
+    {
       "type": "text",
       "id": "text",
       "label": "t:settings.text",
       "default": "t:html_defaults.share_information_about_your"
-    },
-    {
-      "type": "header",
-      "content": "t:content.typography"
     },
     {
       "type": "color",
