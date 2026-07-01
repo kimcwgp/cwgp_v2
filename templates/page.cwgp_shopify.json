@@ -3375,7 +3375,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
-                "image": "shopify://shop_images/shopify_1.png",
+                "image": "shopify://shop_images/Frame_40_2.png",
                 "link": "",
                 "image_ratio": "adapt",
                 "width": "fill",
@@ -3399,7 +3399,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
-                "image": "shopify://shop_images/shopify_2.png",
+                "image": "shopify://shop_images/Frame_41_2.png",
                 "link": "",
                 "image_ratio": "adapt",
                 "width": "fill",
@@ -3728,6 +3728,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
+                "image": "shopify://shop_images/Frame_40_2.png",
                 "link": "",
                 "image_ratio": "adapt",
                 "width": "fill",
@@ -3751,6 +3752,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
+                "image": "shopify://shop_images/Frame_41_2.png",
                 "link": "",
                 "image_ratio": "adapt",
                 "width": "fill",
