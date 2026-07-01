@@ -5909,8 +5909,8 @@
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 20,
-        "padding-block-left": 20,
-        "padding-block-right": 20,
+        "padding-block-left": 0,
+        "padding-block-right": 0,
         "show_mobile": true,
         "show_desktop": false
       }
