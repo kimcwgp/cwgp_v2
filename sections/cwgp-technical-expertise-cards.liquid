@@ -56,7 +56,7 @@
         {%- assign desc_opacity = block.settings.description_opacity | default: 100 | divided_by: 100.0 -%}
         {%- assign title_opacity = block.settings.title_opacity | default: 100 | divided_by: 100.0 -%}
 
-        <div class="cwgp-card"
+        <div class="cwgp-card-expertise"
           style="
             background-color: {{ block.settings.cwgp_card_bg_color }};
             
@@ -89,7 +89,7 @@
 
             {% if block.settings.cwgp_expertise_card_text != blank %}
               <div 
-                class="cwgp-card-description"
+                class="cwgp-card-expertise-description"
                 style="
                   color: {{ block.settings.cwgp_card_description_color | color_modify: 'alpha', desc_opacity }} !important;
                   text-align: {{ block.settings.cwgp_card_description_alignment }} !important;
@@ -196,7 +196,7 @@
         }
 
         /* CARD */
-        .cwgp-card {
+        .cwgp-card-expertise {
         background: #ffffff;
         padding: 30px 14px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -207,12 +207,12 @@
         justify-content: space-between;
         }
 
-        .cwgp-card:hover {
+        .cwgp-card-expertise:hover {
         transform: translateY(-6px);
         box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         }
 
-        .cwgp-card h3 {
+        .cwgp-card-expertise h3 {
             font-size: 1.5rem;
             margin-bottom: 12px;
             font-weight: 600;
@@ -220,22 +220,22 @@
             min-height: 2.8rem; /* 2 lines × 1.8rem */
         }
 
-        .cwgp-card p {
+        .cwgp-card-expertise p {
           font-size: 1.2rem;
           line-height: 1.2;
           font-weight: 400;
         }
 
-        .cwgp-card-description p,
-        .cwgp-card-description span,
-        .cwgp-card-description h1,
-        .cwgp-card-description h2,
-        .cwgp-card-description h3,
-        .cwgp-card-description h4,
-        .cwgp-card-description h5,
-        .cwgp-card-description h6,
-        .cwgp-card-description h1,
-        .cwgp-card-description strong {
+        .cwgp-card-expertise-description p,
+        .cwgp-card-expertise-description span,
+        .cwgp-card-expertise-description h1,
+        .cwgp-card-expertise-description h2,
+        .cwgp-card-expertise-description h3,
+        .cwgp-card-expertise-description h4,
+        .cwgp-card-expertise-description h5,
+        .cwgp-card-expertise-description h6,
+        .cwgp-card-expertise-description h1,
+        .cwgp-card-expertise-description strong {
           font-size: inherit !important;
         }
 
