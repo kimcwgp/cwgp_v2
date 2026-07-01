@@ -3638,42 +3638,12 @@
             "text_AzgUP7",
             "group_UcU89V"
           ]
-        },
-        "text_YRVhJX": {
-          "type": "text",
-          "name": "t:names.text",
-          "settings": {
-            "text": "<p>How we Support Your Business?</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "custom",
-            "font": "var(--font-body--family)",
-            "font_color": "#090838",
-            "font_opacity": 100,
-            "font_weight": "700",
-            "font_size": "2rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 80,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
         }
       },
       "block_order": [
         "group_aDNkDy",
         "text_pE9yN4",
-        "group_b7HWFi",
-        "text_YRVhJX"
+        "group_b7HWFi"
       ],
       "custom_css": [
         ".btn-elegant {margin: 0;}"
@@ -4062,14 +4032,14 @@
         "show_desktop": false
       }
     },
-    "section_R9wTMN": {
+    "section_GXpz8W": {
       "type": "section",
       "blocks": {
-        "text_peJm4H": {
+        "text_mHRDTN": {
           "type": "text",
-          "name": "t:names.heading",
+          "name": "t:names.text",
           "settings": {
-            "text": "<h2>How it Works</h2>",
+            "text": "<h3>How it works?</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -4096,9 +4066,9 @@
         }
       },
       "block_order": [
-        "text_peJm4H"
+        "text_mHRDTN"
       ],
-      "name": "How it Works",
+      "name": "How it works? (Desktop)",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -4106,7 +4076,7 @@
         "vertical_alignment": "center",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "page-width",
         "section_height": "",
@@ -4123,109 +4093,176 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 20,
-        "padding-block-end": 60,
-        "show_mobile": true,
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": false,
         "show_desktop": true
       }
     },
-    "cwgp_image_card_frQGTC": {
+    "section_HhqJRF": {
+      "type": "section",
+      "blocks": {
+        "text_RXPmKp": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<h3>How it works?</h3>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_color": "#090838",
+            "font_opacity": 100,
+            "font_weight": "600",
+            "font_size": "1.25rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_RXPmKp"
+      ],
+      "name": "How it works? (Mobile)",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 40,
+        "show_mobile": true,
+        "show_desktop": false
+      }
+    },
+    "cwgp_image_card_mftYQm": {
       "type": "cwgp-image-card",
       "blocks": {
-        "card_fLVekG": {
+        "card_bji43Y": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_35.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 1",
+            "card_heading": "",
             "heading_size": 30,
             "card_heading_font_weight": "700",
-            "heading_color": "#090838",
+            "heading_color": "#000000",
             "card_description": "Schedule a Call",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Tortor aliquet congue.",
+            "card_subdescription": "Connect with our team to discuss your business needs and explore how we can help.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_LPF8hC": {
+        "card_CNgGmm": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_34_9.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 2",
+            "card_heading": "",
             "heading_size": 30,
             "card_heading_font_weight": "700",
-            "heading_color": "#090838",
+            "heading_color": "#000000",
             "card_description": "Discovery Call",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Pellentesque.",
+            "card_subdescription": "We'll assess your needs and identify the best approach.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_YrBBgi": {
+        "card_3xTjDH": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/contract_signing.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 3",
+            "card_heading": "",
             "heading_size": 30,
             "card_heading_font_weight": "700",
-            "heading_color": "#090838",
+            "heading_color": "#000000",
             "card_description": "Contract Signing",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Lectus hac aliquam.",
+            "card_subdescription": "Once the scope is aligned, we'll finalize the engagement and transition into execution.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_hrT6qy": {
+        "card_KLK8Yj": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_34_10.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 4",
+            "card_heading": "",
             "heading_size": 30,
             "card_heading_font_weight": "700",
-            "heading_color": "#090838",
+            "heading_color": "#000000",
             "card_description": "Onboarding",
             "description_size": 20,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Morbi nec lectus nibh tristique et pellentesque. Posuere.",
+            "card_subdescription": "We'll ensure a smooth onboarding process and get to work delivering results.",
             "subdescription_size": 16,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
@@ -4234,15 +4271,15 @@
         }
       },
       "block_order": [
-        "card_fLVekG",
-        "card_LPF8hC",
-        "card_YrBBgi",
-        "card_hrT6qy"
+        "card_bji43Y",
+        "card_CNgGmm",
+        "card_3xTjDH",
+        "card_KLK8Yj"
       ],
       "name": "CWGP - Image Card (Desktop)",
       "settings": {
         "cards_direction": "row",
-        "section_bg_color": "#ffffff",
+        "section_bg_color": "#FFFFFF",
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 60,
@@ -4252,103 +4289,103 @@
         "show_desktop": true
       }
     },
-    "cwgp_image_card_bcjXyN": {
+    "cwgp_image_card_CHgeGQ": {
       "type": "cwgp-image-card",
       "blocks": {
-        "card_AC7ipf": {
+        "card_ndUVj7": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_35.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 1",
-            "heading_size": 24,
+            "card_heading": "",
+            "heading_size": 30,
             "card_heading_font_weight": "700",
-            "heading_color": "#090838",
+            "heading_color": "#000000",
             "card_description": "Schedule a Call",
             "description_size": 16,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Tortor aliquet congue.",
+            "card_subdescription": "Connect with our team to discuss your business needs and explore how we can help.",
             "subdescription_size": 14,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_wpQwgJ": {
+        "card_CNHBDe": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_34_9.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 2",
-            "heading_size": 24,
+            "card_heading": "",
+            "heading_size": 30,
             "card_heading_font_weight": "700",
-            "heading_color": "#090838",
+            "heading_color": "#000000",
             "card_description": "Discovery Call",
             "description_size": 16,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Pellentesque.",
+            "card_subdescription": "We'll assess your needs and identify the best approach.",
             "subdescription_size": 14,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_bEmNkW": {
+        "card_Brpcnm": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/contract_signing.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 3",
-            "heading_size": 24,
+            "card_heading": "",
+            "heading_size": 30,
             "card_heading_font_weight": "700",
-            "heading_color": "#090838",
+            "heading_color": "#000000",
             "card_description": "Contract Signing",
             "description_size": 16,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur. Lectus hac aliquam.",
+            "card_subdescription": "Once the scope is aligned, we'll finalize the engagement and transition into execution.",
             "subdescription_size": 14,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
             "card_link": ""
           }
         },
-        "card_TR9bE3": {
+        "card_itT7De": {
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/Rectangle_34_10.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
             "card_bg_color": "#090838",
             "card_border_color": "#090838",
-            "card_heading": "Step 4",
-            "heading_size": 24,
+            "card_heading": "",
+            "heading_size": 30,
             "card_heading_font_weight": "700",
-            "heading_color": "#090838",
+            "heading_color": "#000000",
             "card_description": "Onboarding",
             "description_size": 16,
             "card_description_font_weight": "600",
             "description_color": "#ffffff",
-            "card_subdescription": "Lorem ipsum dolor sit amet consectetur.",
+            "card_subdescription": "We'll ensure a smooth onboarding process and get to work delivering results.",
             "subdescription_size": 14,
             "card_subdescription_font_weight": "400",
             "subdescription_color": "#090838",
@@ -4357,15 +4394,15 @@
         }
       },
       "block_order": [
-        "card_AC7ipf",
-        "card_wpQwgJ",
-        "card_bEmNkW",
-        "card_TR9bE3"
+        "card_ndUVj7",
+        "card_CNHBDe",
+        "card_Brpcnm",
+        "card_itT7De"
       ],
       "name": "CWGP - Image Card (Mobile)",
       "settings": {
         "cards_direction": "row",
-        "section_bg_color": "#ffffff",
+        "section_bg_color": "#f5f5f5",
         "section_max_width": 1440,
         "padding-block-start": 0,
         "padding-block-end": 60,
@@ -4388,7 +4425,7 @@
             "alignment": "left",
             "type_preset": "custom",
             "font": "var(--font-body--family)",
-            "font_color": "#090838",
+            "font_color": "#FFFFFF",
             "font_opacity": 100,
             "font_weight": "700",
             "font_size": "2rem",
@@ -4417,7 +4454,7 @@
             "alignment": "center",
             "type_preset": "custom",
             "font": "var(--font-body--family)",
-            "font_color": "#090838",
+            "font_color": "#FFFFFF",
             "font_opacity": 80,
             "font_weight": "500",
             "font_size": "1.25rem",
@@ -4525,7 +4562,7 @@
         "border_width": 1,
         "border_opacity": 100,
         "border_radius": 0,
-        "toggle_overlay": false,
+        "toggle_overlay": true,
         "overlay_color": "#090838",
         "overlay_style": "solid",
         "gradient_direction": "to top",
@@ -4548,7 +4585,7 @@
             "alignment": "left",
             "type_preset": "custom",
             "font": "var(--font-body--family)",
-            "font_color": "#090838",
+            "font_color": "#FFFFFF",
             "font_opacity": 100,
             "font_weight": "700",
             "font_size": "1.25rem",
@@ -4577,7 +4614,7 @@
             "alignment": "center",
             "type_preset": "custom",
             "font": "var(--font-body--family)",
-            "font_color": "#090838",
+            "font_color": "#FFFFFF",
             "font_opacity": 80,
             "font_weight": "500",
             "font_size": "1rem",
@@ -4685,7 +4722,7 @@
         "border_width": 1,
         "border_opacity": 100,
         "border_radius": 0,
-        "toggle_overlay": false,
+        "toggle_overlay": true,
         "overlay_color": "#090838",
         "overlay_style": "solid",
         "gradient_direction": "to top",
@@ -5479,9 +5516,10 @@
     "section_DhGL4i",
     "section_R7CaAH",
     "section_NaqGFr",
-    "section_R9wTMN",
-    "cwgp_image_card_frQGTC",
-    "cwgp_image_card_bcjXyN",
+    "section_GXpz8W",
+    "section_HhqJRF",
+    "cwgp_image_card_mftYQm",
+    "cwgp_image_card_CHgeGQ",
     "section_9zaXfU",
     "section_DrtAUA",
     "section_tkVy9E",
