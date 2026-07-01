@@ -7,14 +7,14 @@
 
     background-image:
     linear-gradient(
-      {{ section.settings.bg_base_color }},
-      {{ section.settings.bg_base_color }}
+      {{ block.settings.bg_base_color }},
+      {{ block.settings.bg_base_color }}
     ),
     linear-gradient(
-      {{ section.settings.gradient_angle }}deg,
-      {{ section.settings.gradient_color_1 }} {{ section.settings.gradient_stop_1 }}%,
-      {{ section.settings.gradient_color_2 }} {{ section.settings.gradient_stop_2 }}%,
-      {{ section.settings.gradient_color_3 }} {{ section.settings.gradient_stop_3 }}%
+      {{ block.settings.gradient_angle }}deg,
+      {{ block.settings.gradient_color_1 }} {{ block.settings.gradient_stop_1 }}%,
+      {{ block.settings.gradient_color_2 }} {{ block.settings.gradient_stop_2 }}%,
+      {{ block.settings.gradient_color_3 }} {{ block.settings.gradient_stop_3 }}%
     );
   {% endif %}
 
