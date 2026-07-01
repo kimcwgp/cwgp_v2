@@ -23,6 +23,17 @@
   padding-left: {{ block.settings.padding-inline-start }}px;
   padding-right: {{ block.settings.padding-inline-end }}px;
   ">
+  {% if block.settings.icon != blank %}
+    <img
+      src="{{ block.settings.icon | image_url: width: block.settings.icon_width }}"
+      alt="{{ block.settings.icon.alt | escape }}"
+      width="{{ block.settings.icon_width }}"
+      height="auto"
+      style="width: {{ block.settings.icon_width }}px; height: auto;"
+      loading="lazy"
+    >
+  {% endif %}
+  
     <p style="
       color: {{ block.settings.font_color }};
       font-weight: {{ block.settings.font_weight }};
