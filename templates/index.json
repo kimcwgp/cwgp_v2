@@ -832,17 +832,6 @@
         "gap_between_elements": 58
       }
     },
-    "marquee_WdQgCY": {
-      "type": "marquee",
-      "name": "t:names.marquee_section",
-      "settings": {
-        "movement_direction": "normal",
-        "color_scheme": "",
-        "padding-block-start": 24,
-        "padding-block-end": 24,
-        "gap_between_elements": 24
-      }
-    },
     "section_mPHTG7": {
       "type": "section",
       "blocks": {
@@ -5945,7 +5934,6 @@
     "section_V4iaDV",
     "section_WrRUFF",
     "marquee_yMDTNA",
-    "marquee_WdQgCY",
     "section_mPHTG7",
     "section_XBcdWD",
     "section_yjMxpM",
