@@ -3375,6 +3375,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
+                "image": "shopify://shop_images/shopify_1.png",
                 "link": "",
                 "image_ratio": "adapt",
                 "width": "fill",
@@ -3398,6 +3399,7 @@
               "type": "image",
               "name": "t:names.image",
               "settings": {
+                "image": "shopify://shop_images/shopify_2.png",
                 "link": "",
                 "image_ratio": "adapt",
                 "width": "fill",
