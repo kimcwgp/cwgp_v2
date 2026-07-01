@@ -3,12 +3,12 @@
   background-color: {{ block.settings.background_color }};
   {% if block.settings.corner_radius %}
     border: 1px solid transparent;
-    border-radius: {{ block.settings.corner_radius }};
+    border-radius: {{ block.settings.corner_radius }}px;
   {% endif %}
-  padding-top: {{ block.settings.padding-block-start }};
-  padding-bottom: {{ block.settings.padding-block-end }};
-  padding-left: {{ block.settings.padding-inline-start }};
-  padding-right: {{ block.settings.padding-inline-end }};
+  padding-top: {{ block.settings.padding-block-start }}px;
+  padding-bottom: {{ block.settings.padding-block-end }}px;
+  padding-left: {{ block.settings.padding-inline-start }}px;
+  padding-right: {{ block.settings.padding-inline-end }}px;
   ">
     <p style="
       color: {{ block.settings.font_color }};
