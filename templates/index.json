@@ -957,6 +957,7 @@
         "video_97BGCL",
         "text_WcziEE"
       ],
+      "disabled": true,
       "name": "Video (Desktop)",
       "settings": {
         "content_direction": "column",
@@ -1079,6 +1080,7 @@
         "video_TjADR7",
         "text_hhmcxf"
       ],
+      "disabled": true,
       "name": "Video (Mobile)",
       "settings": {
         "content_direction": "column",
@@ -6134,10 +6136,10 @@
     "marquee_yMDTNA",
     "section_mPHTG7",
     "section_XBcdWD",
-    "section_VDVG4g",
-    "section_JgtUxy",
     "section_yjMxpM",
     "section_gx6X4J",
+    "section_VDVG4g",
+    "section_JgtUxy",
     "cwgp_technical_expertise_cards_yjccaB",
     "cwgp_technical_expertise_cards_37RXrk",
     "section_KGhEpJ",
