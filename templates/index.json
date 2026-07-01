@@ -3276,6 +3276,52 @@
         "show_desktop": false
       }
     },
+    "section_iTehLW": {
+      "type": "section",
+      "blocks": {
+        "custom_liquid_NLTJYx": {
+          "type": "custom-liquid",
+          "name": "t:names.custom_liquid",
+          "settings": {
+            "custom_liquid": "<!-- Calendly link widget begin -->\n<link href=\"https://assets.calendly.com/assets/external/widget.css\" rel=\"stylesheet\">\n<script src=\"https://assets.calendly.com/assets/external/widget.js\" type=\"text/javascript\" async></script>\n<a href=\"\" onclick=\"Calendly.initPopupWidget({url: 'https://calendly.com/kimson-pomento-cwglobalpeople/30min?hide_gdpr_banner=1'});return false;\" id=\"booking-cta\">Get Started</a>\n<!-- Calendly link widget end -->\n\n<style>\n#booking-cta {\n\tborder: 2px solid #c7963d;\n    padding: 1rem 1.9rem;\n    text-decoration: none!important;\n    border-radius: 5rem;\n    color: white;\n    background-color: #c7963d;\n    font-weight: 800;\n}\n</style>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "custom_liquid_NLTJYx"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "custom",
+        "section_height_custom": 10,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": true,
+        "overlay_color": "#F5F5F5",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 40,
+        "show_mobile": true,
+        "show_desktop": true
+      }
+    },
     "section_KGhEpJ": {
       "type": "section",
       "blocks": {
@@ -5930,6 +5976,7 @@
     "section_JgtUxy",
     "cwgp_technical_expertise_cards_yjccaB",
     "cwgp_technical_expertise_cards_37RXrk",
+    "section_iTehLW",
     "section_KGhEpJ",
     "section_HAV3pb",
     "section_mWicjB",
