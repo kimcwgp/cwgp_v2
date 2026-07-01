@@ -1,7 +1,7 @@
 
 <div style="
   background-color: {{ block.settings.background_color }};
-  {% if block.settings.corner_radius %}
+  {% if block.settings.background and block.settings.corner_radius %}
     border: 1px solid transparent;
     border-radius: {{ block.settings.corner_radius }}px;
   {% endif %}
