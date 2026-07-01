@@ -623,12 +623,12 @@
             "font_size": "1.25rem",
             "case": "none",
             "background": true,
-            "background_color": "#C6973D",
+            "background_color": "#c6973d",
             "corner_radius": 20,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-block-start": 12,
+            "padding-block-end": 12,
+            "padding-inline-start": 12,
+            "padding-inline-end": 12
           },
           "blocks": {}
         },
