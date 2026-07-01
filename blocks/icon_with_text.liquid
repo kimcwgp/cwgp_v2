@@ -1,7 +1,10 @@
 
 <div style="
   background-color: {{ block.settings.background_color }};
-  border-radius: {{ block.settings.corner_radius }};
+  {% if block.settings.corner_radius %}
+    border: 1px solid transparent;
+    border-radius: {{ block.settings.corner_radius }};
+  {% endif %}
   padding-top: {{ block.settings.padding-block-start }};
   padding-bottom: {{ block.settings.padding-block-end }};
   padding-left: {{ block.settings.padding-inline-start }};
