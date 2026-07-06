@@ -4585,7 +4585,7 @@ text-component {
   position: relative;
   overflow: visible;
   z-index: 1;
-  
+
   background-color: #c7963d;
   color: #ffffff;
   border: 2px solid #c7963d;
@@ -4596,23 +4596,17 @@ text-component {
 
 .btn.uiverse-btn-wht::after {
   content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  border-radius: 100px;
+  background: #c7963d;
   z-index: -1;
-  transition: all 0.4s;
-  background-color: #c7963d;
+  transition: transform .4s, opacity .4s;
 }
 
-.btn.uiverse-btn-wht:hover {
-  background-color: #040F2B;
-  color: white;
-  border: 2px solid #040F2B;
-  transition: all 0.3s ease;
+.btn.uiverse-btn-wht:hover::after {
+  transform: scale(1.4);
+  opacity: 0;
 }
 
 /* Centers only Uiverse buttons */
