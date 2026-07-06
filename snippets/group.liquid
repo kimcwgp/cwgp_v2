@@ -69,7 +69,7 @@
       {% if settings.vertical_on_mobile %} mobile-column{% endif %}
     "
     style="{% render 'layout-panel-style', settings: settings %}
-    overflow: {% if settings.enable_overflow %}visible; width: max-content;{% else %}hidden{% endif %};
+    overflow: visible;
     "
   >
     {{- children -}}
