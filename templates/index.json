@@ -820,7 +820,6 @@
         "icon_with_text_nLx3Hr"
       ],
       "custom_css": [
-        "p {color: white;}",
         ".section-background.color-scheme-bca1b833-f1b6-4294-9bd7-d6242fd1b849 {z-index: 0 !important;}"
       ],
       "name": "MARQUEE (ROLES)",
