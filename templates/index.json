@@ -225,7 +225,7 @@
             "link": "",
             "open_in_new_tab": false,
             "content_direction": "column",
-            "enable_overflow": true,
+            "enable_overflow": false,
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
             "vertical_alignment": "center",
