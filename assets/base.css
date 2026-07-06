@@ -4582,10 +4582,6 @@ text-component {
 
 /* Uiverse Button - White Variant */
 .btn.uiverse-btn-wht {
-  position: relative;
-  overflow: visible;
-  z-index: 1;
-
   background-color: #c7963d;
   color: #ffffff;
   border: 2px solid #c7963d;
@@ -4596,17 +4592,23 @@ text-component {
 
 .btn.uiverse-btn-wht::after {
   content: "";
-  position: absolute;
-  inset: 0;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
   border-radius: 100px;
-  background: #c7963d;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -1;
-  transition: transform .4s, opacity .4s;
+  transition: all 0.4s;
+  background-color: #c7963d;
 }
 
-.btn.uiverse-btn-wht:hover::after {
-  transform: scale(1.4);
-  opacity: 0;
+.btn.uiverse-btn-wht:hover {
+  background-color: #040F2B;
+  color: white;
+  border: 2px solid #040F2B;
+  transition: all 0.3s ease;
 }
 
 /* Centers only Uiverse buttons */
