@@ -4582,6 +4582,10 @@ text-component {
 
 /* Uiverse Button - White Variant */
 .btn.uiverse-btn-wht {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  
   background-color: #c7963d;
   color: #ffffff;
   border: 2px solid #c7963d;
