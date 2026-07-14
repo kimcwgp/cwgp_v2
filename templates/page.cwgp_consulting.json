@@ -1166,6 +1166,9 @@
       "block_order": [
         "group_aYc8jf"
       ],
+      "custom_css": [
+        ".layout-panel-flex {padding-bottom: 50px;}"
+      ],
       "name": "Info Section (Desktop)",
       "settings": {
         "media_type_1": "image",
@@ -1192,7 +1195,7 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 40,
-        "padding-block-end": 40,
+        "padding-block-end": 0,
         "show_mobile": false,
         "show_desktop": true
       }
