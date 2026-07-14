@@ -4859,6 +4859,7 @@ li:nth-child(4) .menu-list__link-title::after {
       border-radius: 99rem;
       width: 95%;
       margin: 1.5% auto;
+      border: 1px solid #fff;
   }
 
   .menu-list__link {
