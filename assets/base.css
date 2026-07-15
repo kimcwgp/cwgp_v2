@@ -4830,7 +4830,7 @@ text-component {
 
 .menu-list__item:nth-child(4) .menu-list__link-title::after,
 li:nth-child(4) .menu-list__link-title::after {
-  content: "Comming Soon";
+  content: "Coming Soon";
   font-size: 0.45em;          /* Matches a small TM style */
   vertical-align: super;      /* Lifts text up */
   position: relative;         
@@ -4842,7 +4842,7 @@ li:nth-child(4) .menu-list__link-title::after {
 }
 
 #HeaderDrawer-technologies .menu-drawer__menu-item-text::after {
-  content: "Comming Soon";
+  content: "Coming Soon";
   font-size: 0.45em;          /* Matches a small TM style */
   vertical-align: super;      /* Lifts text up */
   position: relative;         
