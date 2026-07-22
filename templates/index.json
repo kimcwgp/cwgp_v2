@@ -819,6 +819,7 @@
         "icon_with_text_6FJi9G",
         "icon_with_text_nLx3Hr"
       ],
+      "disabled": true,
       "custom_css": [
         ".section-background.color-scheme-bca1b833-f1b6-4294-9bd7-d6242fd1b849 {z-index: 0 !important;}"
       ],
