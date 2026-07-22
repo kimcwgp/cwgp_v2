@@ -3239,7 +3239,7 @@
         "card_i74J76": {
           "type": "card",
           "settings": {
-            "cwgp_expertise_card_title": "Dedicated Embedded Talent",
+            "cwgp_expertise_card_title": "Professional Staffing",
             "cwgp_card_title_alignment": "left",
             "title_size": 24,
             "cwgp_card_title_color": "#090838",
@@ -4859,6 +4859,7 @@
       "block_order": [
         "group_VARTWW"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Top People No Hassle (Desktop)",
       "settings": {
@@ -5656,6 +5657,7 @@
       "block_order": [
         "group_cGrnYD"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "Top People No Hassle (Mobile)",
       "settings": {
