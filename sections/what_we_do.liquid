@@ -9,7 +9,7 @@
   "
 >
 
-    <div class="container">
+    <div class="cwgp-container" style="max-width: {{ section.settings.section_max_width }}px;">
 
         <!-- Workforce -->
 
@@ -294,25 +294,10 @@
     SECTION
     ========================================== */
 
-    .services-section{
-
-        padding:90px 30px;
-
-    }
-
-    .container{
-
-        max-width:1500px;
-
-        margin:auto;
-
-        display:grid;
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-        gap:28px;
-
+    .cwgp-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
 
     /* ==========================================
