@@ -4163,6 +4163,7 @@
       "block_order": [
         "text_QBnPiR"
       ],
+      "disabled": true,
       "name": "How to get started? (Desktop)",
       "settings": {
         "content_direction": "column",
@@ -4230,6 +4231,7 @@
       "block_order": [
         "text_VejazY"
       ],
+      "disabled": true,
       "name": "How to get started? (Mobile)",
       "settings": {
         "content_direction": "column",
@@ -4371,6 +4373,7 @@
         "card_dtDUVD",
         "card_wgqBfL"
       ],
+      "disabled": true,
       "name": "CWGP - Image Card (Desktop)",
       "settings": {
         "cards_direction": "row",
@@ -4494,6 +4497,7 @@
         "card_Pp3d7q",
         "card_VecE8W"
       ],
+      "disabled": true,
       "name": "CWGP - Image Card (Mobile)",
       "settings": {
         "cards_direction": "row",
@@ -4522,6 +4526,7 @@
       "block_order": [
         "custom_liquid_KDncBd"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -4629,11 +4634,11 @@
     "section_iTehLW",
     "section_KGhEpJ",
     "section_HAV3pb",
+    "steps_Mb7UMb",
     "section_PJnwVD",
     "section_DbABRg",
     "cwgp_image_card_aq34Fj",
     "cwgp_image_card_jc8j9H",
-    "section_zQx3Hk",
-    "steps_Mb7UMb"
+    "section_zQx3Hk"
   ]
 }
