@@ -25,6 +25,7 @@
                         color: {{ block.settings.cwgp_card_title_color | color_modify: 'alpha', title_opacity }} !important;
                         text-align: {{ block.settings.cwgp_card_title_alignment }};
                         font-size: {{ block.settings.title_size }}px;
+                        font-weight: {{ block.settings.title_font_weight }} !important;
                         line-height: normal;
                         ">{{ block.settings.card_title }}</h3>
 
@@ -1302,6 +1303,19 @@
                     "step": 1,
                     "unit": "px",
                     "default": 24,
+                },
+                {
+                    "type": "select",
+                    "id": "title_font_weight",
+                    "label": "Title font weight",
+                    "default": "400",
+                    "options": [
+                        { "value": "400", "label": "Normal (400)" },
+                        { "value": "500", "label": "Medium (500)" },
+                        { "value": "600", "label": "Semi Bold (600)" },
+                        { "value": "700", "label": "Bold (700)" },
+                        { "value": "800", "label": "Extra Bold (800)" }
+                    ]
                 },
                 {
                     "type": "color",
