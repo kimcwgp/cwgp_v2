@@ -17,10 +17,7 @@
 
                 <div class="card-content">
 
-                    <h2>
-                        Workforce<br>
-                        Solutions
-                    </h2>
+                    <h2>{{ block.settings.card_title }}</h2>
 
                     <span class="gold-line"></span>
 
@@ -1257,6 +1254,20 @@
         "unit": "px",
         "default": 0
         },
+    ],
+    "blocks": [
+        {
+            "name": "Card",
+            "type": "card",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "card_title",
+                    "label": "Title",
+                    "default": "Title here"
+                },
+            ]
+        }
     ],
     "presets": [
         {
