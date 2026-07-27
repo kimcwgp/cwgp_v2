@@ -616,6 +616,7 @@
         "card_z7PLVR": {
           "type": "card",
           "settings": {
+            "card_image": "shopify://shop_images/Frame_454.png",
             "card_title": "Workforce Solutions",
             "cwgp_card_title_alignment": "left",
             "title_size": 48,
