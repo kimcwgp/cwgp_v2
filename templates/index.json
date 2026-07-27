@@ -4584,7 +4584,7 @@
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/Rectangle_34_4.png",
-            "icon": "phone",
+            "icon": "users",
             "title": "Consultation",
             "description": "Describe this step."
           }
