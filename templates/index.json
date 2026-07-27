@@ -4164,6 +4164,7 @@
       "block_order": [
         "text_QBnPiR"
       ],
+      "disabled": true,
       "name": "How to get started? (Desktop)",
       "settings": {
         "content_direction": "column",
@@ -4231,6 +4232,7 @@
       "block_order": [
         "text_VejazY"
       ],
+      "disabled": true,
       "name": "How to get started? (Mobile)",
       "settings": {
         "content_direction": "column",
@@ -4372,6 +4374,7 @@
         "card_dtDUVD",
         "card_wgqBfL"
       ],
+      "disabled": true,
       "name": "CWGP - Image Card (Desktop)",
       "settings": {
         "cards_direction": "row",
@@ -4495,6 +4498,7 @@
         "card_Pp3d7q",
         "card_VecE8W"
       ],
+      "disabled": true,
       "name": "CWGP - Image Card (Mobile)",
       "settings": {
         "cards_direction": "row",
@@ -4523,6 +4527,7 @@
       "block_order": [
         "custom_liquid_KDncBd"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -4600,9 +4605,10 @@
         "step_dyh9hU",
         "step_4mKJd8"
       ],
+      "disabled": true,
       "name": "How It Works",
       "settings": {
-        "heading": "How to Get Started",
+        "heading": "Take a Look at CW Global People?",
         "description": "A simple, streamlined process to help you build your team and achieve your goals.",
         "cta_text": "Ready to get started?",
         "button_label": "Schedule a Call",
