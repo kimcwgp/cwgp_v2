@@ -624,7 +624,7 @@
             "title_opacity": 100,
             "cwgp_expertise_card_text": "<p>Skilled professionals and specialized support to strengthen your team and accelerate your success.</p>",
             "cwgp_card_description_alignment": "left",
-            "cwgp_card_description_color": "#8D181E",
+            "cwgp_card_description_color": "#8d181e",
             "description_opacity": 100,
             "cwgp_card_description_size": 18
           }
@@ -4551,6 +4551,57 @@
         "show_mobile": true,
         "show_desktop": true
       }
+    },
+    "steps_Mb7UMb": {
+      "type": "steps",
+      "blocks": {
+        "step_6K8qfd": {
+          "type": "step",
+          "settings": {
+            "icon": "phone",
+            "title": "Consultation",
+            "description": "Describe this step."
+          }
+        },
+        "step_q8XtJx": {
+          "type": "step",
+          "settings": {
+            "icon": "phone",
+            "title": "Consultation",
+            "description": "Describe this step."
+          }
+        },
+        "step_dyh9hU": {
+          "type": "step",
+          "settings": {
+            "icon": "phone",
+            "title": "Consultation",
+            "description": "Describe this step."
+          }
+        },
+        "step_4mKJd8": {
+          "type": "step",
+          "settings": {
+            "icon": "phone",
+            "title": "Consultation",
+            "description": "Describe this step."
+          }
+        }
+      },
+      "block_order": [
+        "step_6K8qfd",
+        "step_q8XtJx",
+        "step_dyh9hU",
+        "step_4mKJd8"
+      ],
+      "name": "How It Works",
+      "settings": {
+        "heading": "How to Get Started",
+        "description": "A simple, streamlined process to help you build your team and achieve your goals.",
+        "cta_text": "Ready to get started?",
+        "button_label": "Schedule a Call",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -4577,6 +4628,7 @@
     "section_DbABRg",
     "cwgp_image_card_aq34Fj",
     "cwgp_image_card_jc8j9H",
-    "section_zQx3Hk"
+    "section_zQx3Hk",
+    "steps_Mb7UMb"
   ]
 }
