@@ -3,7 +3,7 @@
     <div class="container-step">
 
         <!-- Header -->
-        <div class="section-header">
+        <div class="section-header-step">
 
             <h2>{{ section.settings.heading }}</h2>
 
@@ -268,7 +268,7 @@ CONTAINER
 HEADER
 ==================================================*/
 
-.section-header{
+.section-header-step{
 
     text-align:center;
 
@@ -276,7 +276,7 @@ HEADER
 
 }
 
-.section-header h2{
+.section-header-step h2{
 
     font-size:2rem;
 
@@ -292,7 +292,7 @@ HEADER
 
 }
 
-.section-header p{
+.section-header-step p{
 
     max-width:720px;
 
@@ -984,13 +984,13 @@ RESPONSIVE
 
     }
 
-    .section-header h2{
+    .section-header-step h2{
 
         font-size:60px;
 
     }
 
-    .section-header p{
+    .section-header-step p{
 
         font-size:24px;
 
@@ -1026,13 +1026,13 @@ RESPONSIVE
 
     }
 
-    .section-header h2{
+    .section-header-step h2{
 
         font-size:48px;
 
     }
 
-    .section-header p{
+    .section-header-step p{
 
         font-size:20px;
 
@@ -1116,19 +1116,19 @@ RESPONSIVE
 
     }
 
-    .section-header{
+    .-section-header-step-{
 
         margin-bottom:45px;
 
     }
 
-    .section-header h2{
+    .section-header-step h2{
 
         font-size:38px;
 
     }
 
-    .section-header p{
+    .section-header-step p{
 
         font-size:17px;
 
@@ -1181,7 +1181,7 @@ PREMIUM ANIMATIONS
 .process-card,
 .process-progress,
 .process-cta,
-.section-header{
+.section-header-step{
 
     opacity:0;
 
@@ -1380,7 +1380,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* Fade-in Animation */
 
     const elements = document.querySelectorAll(
-        ".section-header, .process-progress, .process-card, .process-cta"
+        ".section-header-step, .process-progress, .process-card, .process-cta"
     );
 
     const observer = new IntersectionObserver((entries) => {
