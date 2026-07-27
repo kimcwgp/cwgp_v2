@@ -629,6 +629,7 @@
             "description_font_weight": "400",
             "description_opacity": 80,
             "cwgp_card_description_size": 16,
+            "service_1_image": "shopify://shop_images/3886569-middle.png",
             "service_1_title": "AP Specialists",
             "service_1_description": "<p>Reliable accounts payable support and processing.</p>",
             "service_2_title": "Copywriting",
