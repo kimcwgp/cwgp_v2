@@ -4605,11 +4605,10 @@
         "step_dyh9hU",
         "step_4mKJd8"
       ],
-      "disabled": true,
       "name": "How It Works",
       "settings": {
         "heading": "Take a Look at CW Global People?",
-        "description": "A simple, streamlined process to help you build your team and achieve your goals.",
+        "description": "",
         "cta_text": "Ready to get started?",
         "button_label": "Schedule a Call",
         "button_link": ""
