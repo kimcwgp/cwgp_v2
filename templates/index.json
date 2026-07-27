@@ -614,6 +614,8 @@
       "type": "what_we_do",
       "name": "CWGP What We Do",
       "settings": {
+        "section_bg_color": "#F7F7F7",
+        "section_max_width": 1200,
         "padding-block-start": 60,
         "padding-block-end": 60
       }
