@@ -612,9 +612,29 @@
     },
     "what_we_do_q6gCYA": {
       "type": "what_we_do",
+      "blocks": {
+        "card_z7PLVR": {
+          "type": "card",
+          "settings": {
+            "card_title": "Workforce Solutions",
+            "cwgp_card_title_alignment": "left",
+            "title_size": 24,
+            "cwgp_card_title_color": "#000000",
+            "title_opacity": 100,
+            "cwgp_expertise_card_text": "<p>Skilled professionals and specialized support to strengthen your team and accelerate your success.</p>",
+            "cwgp_card_description_alignment": "left",
+            "cwgp_card_description_color": "#000000",
+            "description_opacity": 100,
+            "cwgp_card_description_size": 16
+          }
+        }
+      },
+      "block_order": [
+        "card_z7PLVR"
+      ],
       "name": "CWGP What We Do",
       "settings": {
-        "section_bg_color": "#F7F7F7",
+        "section_bg_color": "#f7f7f7",
         "section_max_width": 1200,
         "padding-block-start": 60,
         "padding-block-end": 60
