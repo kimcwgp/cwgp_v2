@@ -38,6 +38,7 @@
                                 color: {{ block.settings.cwgp_card_description_color | color_modify: 'alpha', desc_opacity }} !important;
                                 text-align: {{ block.settings.cwgp_card_description_alignment }} !important;
                                 font-size: {{ block.settings.cwgp_card_description_size }}px !important;
+                                font-weight: {{ block.settings.description_font_weight }} !important;
                                 ">
                                 {{ block.settings.cwgp_expertise_card_text }}
                             </div>
@@ -1355,6 +1356,19 @@
                     "id": "cwgp_card_description_color",
                     "label": "Description color",
                     "default": "#000000"
+                },
+                {
+                    "type": "select",
+                    "id": "description_font_weight",
+                    "label": "Description font weight",
+                    "default": "400",
+                    "options": [
+                        { "value": "400", "label": "Normal (400)" },
+                        { "value": "500", "label": "Medium (500)" },
+                        { "value": "600", "label": "Semi Bold (600)" },
+                        { "value": "700", "label": "Bold (700)" },
+                        { "value": "800", "label": "Extra Bold (800)" }
+                    ]
                 },
                 {
                     "type": "range",
