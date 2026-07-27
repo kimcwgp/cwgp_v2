@@ -35,7 +35,7 @@
 
         <article class="process-card" {{ block.shopify_attributes }}>
 
-            <div class="card-image">
+            <div class="card-image-step">
 
                 {% if block.settings.image %}
 
@@ -548,7 +548,7 @@ CARD
 IMAGE
 ==================================================*/
 
-.card-image{
+.card-image-step{
 
     height:285px;
 
@@ -559,7 +559,7 @@ IMAGE
 
 }
 
-.card-image::after{
+.-card-image-step::after{
 
     content:"";
 
@@ -581,7 +581,7 @@ IMAGE
 
 }
 
-.card-image img{
+.card-image-step img{
 
     width:100%;
 
@@ -596,7 +596,7 @@ IMAGE
 }
 
 .process-card:hover
-.card-image img{
+.card-image-step img{
 
     transform:scale(1.08);
 
@@ -802,7 +802,7 @@ SMOOTH ANIMATION
 ==================================================*/
 
 .process-card,
-.card-image img,
+.card-image-step img,
 .icon-circle,
 .gold-line,
 .card-title h3{
@@ -1066,7 +1066,7 @@ RESPONSIVE
 
     }
 
-    .card-image{
+    .card-image-step{
 
         height:240px;
 
@@ -1245,7 +1245,7 @@ PREMIUM ANIMATIONS
 
 /* Floating Image */
 
-.process-card:hover .card-image img{
+.process-card:hover .card-image-step img{
 
     transform:
 
@@ -1321,13 +1321,13 @@ PREMIUM ANIMATIONS
 
 /* Card Overlay */
 
-.card-image{
+.card-image-step{
 
     position:relative;
 
 }
 
-.card-image::before{
+.card-image-step::before{
 
     content:"";
 
@@ -1351,7 +1351,7 @@ PREMIUM ANIMATIONS
 
 }
 
-.process-card:hover .card-image::before{
+.process-card:hover .card-image-step::before{
 
     opacity:1;
 
