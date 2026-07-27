@@ -116,57 +116,50 @@
         </div>
 
         <!-- CTA -->
-        <div class="process-cta">
+        <div
+            class="process-cta"
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kimson-pomento-cwglobalpeople/30min?hide_gdpr_banner=1'}); return false;"
+            role="button"
+            tabindex="0">
 
             <div class="cta-icon">
 
                 <svg width="28"
-                     height="28"
-                     viewBox="0 0 24 24"
-                     fill="none"
-                     stroke="currentColor"
-                     stroke-width="1.8"
-                     stroke-linecap="round"
-                     stroke-linejoin="round">
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
 
-                    <rect x="3"
-                          y="4"
-                          width="18"
-                          height="18"
-                          rx="2"/>
+                    <rect x="3" y="4" width="18" height="18" rx="2"/>
 
-                    <line x1="16"
-                          y1="2"
-                          x2="16"
-                          y2="6"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
 
-                    <line x1="8"
-                          y1="2"
-                          x2="8"
-                          y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
 
-                    <line x1="3"
-                          y1="10"
-                          x2="21"
-                          y2="10"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
 
                 </svg>
 
             </div>
 
             <span class="cta-text">
+
                 Ready to get started?
+
             </span>
 
             <span class="divider"></span>
 
-            <a href="#" class="cta-link">
+            <span class="cta-link">
 
                 Schedule a Call
 
                 <span class="arrow">→</span>
 
-            </a>
+            </span>
 
         </div>
 
@@ -837,6 +830,10 @@ CALL TO ACTION
 ==================================================*/
 
 .process-cta{
+    cursor:pointer;
+}
+
+.process-cta{
 
     max-width:720px;
 
@@ -1435,6 +1432,24 @@ document.addEventListener("DOMContentLoaded", () => {
             steps[0].classList.add("active");
 
         });
+
+    });
+
+});
+
+document.querySelectorAll('.process-cta').forEach(cta => {
+
+    cta.addEventListener('keydown', function(e){
+
+        if(e.key === 'Enter' || e.key === ' '){
+
+            e.preventDefault();
+
+            Calendly.initPopupWidget({
+                url: 'https://calendly.com/kimson-pomento-cwglobalpeople/30min?hide_gdpr_banner=1'
+            });
+
+        }
 
     });
 
