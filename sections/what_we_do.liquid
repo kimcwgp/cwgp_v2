@@ -48,7 +48,9 @@
 
                     <div class="card-image">
 
-                        <img src="{{ block.settings.card_image | image_url: width: 1000 }}"
+                        <img 
+                            class="card-bg-image"
+                            src="{{ block.settings.card_image | image_url: width: 1000 }}"
                             alt="{{ block.settings.card_title }}">
 
                     </div>
@@ -386,21 +388,11 @@
     TOP AREA
     ========================================== */
 
-    .card-top{
-
-        display:flex;
-
-        align-items:flex-end;
-
-        justify-content:space-between;
-
-        min-height:365px;
-
-        position:relative;
-
-        overflow:hidden;
-
-        padding:55px 40px 0;
+    .card-top {
+        position: relative;
+        min-height: 365px;
+        overflow: hidden;
+        padding: 55px 40px 0;
     }
 
     /* subtle background glow */
@@ -428,12 +420,10 @@
     CONTENT
     ========================================== */
 
-    .card-content{
-
-        position:relative;
-        width:30%;
-        z-index:5;
-
+    .card-content {
+        position: relative;
+        z-index: 2;
+        width: 30%;
     }
 
     .card-content h2{
@@ -464,10 +454,19 @@
     IMAGE
     ========================================== */
 
-    .card-image{
-        width:70%;
+    .card-bg-image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 70%;
+        max-width: 560px;
+        height: auto;
+        object-fit: contain;
+        pointer-events: none;
+        user-select: none;
+        z-index: 1;
     }
-
+    
     .card-image img{
 
         width:100%;
