@@ -48,8 +48,8 @@
 
                     <div class="card-image">
 
-                        <img src="images/workforce.png"
-                            alt="Workforce Solutions">
+                        <img src="{{ block.settings.card_image }}"
+                            alt="{{ block.settings.card_title }}">
 
                     </div>
 
@@ -1231,6 +1231,11 @@
             "name": "Card",
             "type": "card",
             "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "card_image",
+                    "label": "Image"
+                },
                 {
                     "type": "text",
                     "id": "card_title",

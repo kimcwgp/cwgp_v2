@@ -4569,9 +4569,9 @@
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/Rectangle_34_3.png",
-            "icon": "phone",
-            "title": "Consultation",
-            "description": "Describe this step."
+            "icon": "search",
+            "title": "Sourcing",
+            "description": "We get to work, finding good candidates"
           }
         },
         "step_dyh9hU": {
