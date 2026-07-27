@@ -4578,9 +4578,9 @@
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/Rectangle_34_4.png",
-            "icon": "phone",
-            "title": "Consultation",
-            "description": "Describe this step."
+            "icon": "users",
+            "title": "Vetting",
+            "description": "Speak with our candidates, so you can decide."
           }
         },
         "step_4mKJd8": {
