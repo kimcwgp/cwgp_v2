@@ -29,7 +29,7 @@
         </div>
 
         <!-- Cards -->
-        <div class="process-grid">
+        <div class="process-grid-step">
 
         {% for block in section.blocks %}
 
@@ -483,7 +483,7 @@ UTILITY
 PROCESS GRID
 ==================================================*/
 
-.process-grid{
+.process-grid-step{
 
     display:grid;
 
@@ -978,7 +978,7 @@ RESPONSIVE
 
 @media (max-width:1400px){
 
-    .process-grid{
+    .process-grid-step{
 
         gap:24px;
 
@@ -1002,7 +1002,7 @@ RESPONSIVE
 
 @media (max-width:1200px){
 
-    .process-grid{
+    .process-grid-step{
 
         grid-template-columns:repeat(2,1fr);
 
@@ -1060,7 +1060,7 @@ RESPONSIVE
 
 @media (max-width:768px){
 
-    .process-grid{
+    .process-grid-step{
 
         grid-template-columns:1fr;
 
