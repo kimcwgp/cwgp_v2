@@ -4568,6 +4568,7 @@
         "step_q8XtJx": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/Rectangle_34_3.png",
             "icon": "phone",
             "title": "Consultation",
             "description": "Describe this step."
@@ -4576,6 +4577,7 @@
         "step_dyh9hU": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/Rectangle_34_4.png",
             "icon": "phone",
             "title": "Consultation",
             "description": "Describe this step."
