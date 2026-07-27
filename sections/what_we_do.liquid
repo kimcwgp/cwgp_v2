@@ -10,133 +10,149 @@
     <div class="cwgp-container" style="max-width: {{ section.settings.section_max_width }}px;">
 
         <!-- Workforce -->
+      {% for block in section.blocks %}
+        {%- assign desc_opacity = block.settings.description_opacity | default: 100 | divided_by: 100.0 -%}
+        {%- assign title_opacity = block.settings.title_opacity | default: 100 | divided_by: 100.0 -%}
 
-        <div class="service-card">
+            <div class="service-card">
 
-            <div class="card-top">
+                <div class="card-top">
 
-                <div class="card-content">
+                    <div class="card-content">
 
-                    <h2>{{ block.settings.card_title }}</h2>
+                        <h3
+                        style="
+                        color: {{ block.settings.cwgp_card_title_color | color_modify: 'alpha', title_opacity }} !important;
+                        text-align: {{ block.settings.cwgp_card_title_alignment }};
+                        font-size: {{ block.settings.title_size }}px;
+                        line-height: normal;
+                        ">{{ block.settings.card_title }}</h3>
 
-                    <span class="gold-line"></span>
+                        <span class="gold-line"></span>
 
-                    <p>
-                        Skilled professionals and specialized support to strengthen
-                        your team and accelerate your success.
-                    </p>
+                        {% if block.settings.cwgp_expertise_card_text != blank %}
+                            <div 
+                                class="cwgp-card-expertise-description"
+                                style="
+                                color: {{ block.settings.cwgp_card_description_color | color_modify: 'alpha', desc_opacity }} !important;
+                                text-align: {{ block.settings.cwgp_card_description_alignment }} !important;
+                                font-size: {{ block.settings.cwgp_card_description_size }}px !important;
+                                ">
+                                {{ block.settings.cwgp_expertise_card_text }}
+                            </div>
+                        {% endif %}
+
+                    </div>
+
+                    <div class="card-image">
+
+                        <img src="images/workforce.png"
+                            alt="Workforce Solutions">
+
+                    </div>
 
                 </div>
 
-                <div class="card-image">
+                <div class="service-grid">
 
-                    <img src="images/workforce.png"
-                        alt="Workforce Solutions">
+                    <div class="service-item">
+                        <div class="icon-circle">
+                            👤
+                        </div>
+
+                        <div class="service-info">
+                            <h3>AP Specialists</h3>
+                            <p>
+                                Reliable accounts payable support and processing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="icon-circle">
+                            ✏️
+                        </div>
+
+                        <div class="service-info">
+                            <h3>Copywriting</h3>
+                            <p>
+                                Clear, compelling content that connects and converts.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="icon-circle">
+                            ✨
+                        </div>
+
+                        <div class="service-info">
+                            <h3>AI</h3>
+                            <p>
+                                AI-powered solutions to automate and optimize business
+                                processes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="icon-circle">
+                            📣
+                        </div>
+
+                        <div class="service-info">
+                            <h3>Marketing</h3>
+                            <p>
+                                Digital marketing strategies that build brand and drive
+                                growth.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="icon-circle">
+                            📊
+                        </div>
+
+                        <div class="service-info">
+                            <h3>Finance</h3>
+                            <p>
+                                Financial analysis, reporting and strategic support.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="icon-circle">
+                            👥
+                        </div>
+
+                        <div class="service-info">
+                            <h3>HR Support</h3>
+                            <p>
+                                People operations and HR support to help your team thrive.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="icon-circle">
+                            🖌️
+                        </div>
+
+                        <div class="service-info">
+                            <h3>UI/UX</h3>
+                            <p>
+                                User-centered designs that deliver exceptional
+                                experiences.
+                            </p>
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
-
-            <div class="service-grid">
-
-                <div class="service-item">
-                    <div class="icon-circle">
-                        👤
-                    </div>
-
-                    <div class="service-info">
-                        <h3>AP Specialists</h3>
-                        <p>
-                            Reliable accounts payable support and processing.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="icon-circle">
-                        ✏️
-                    </div>
-
-                    <div class="service-info">
-                        <h3>Copywriting</h3>
-                        <p>
-                            Clear, compelling content that connects and converts.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="icon-circle">
-                        ✨
-                    </div>
-
-                    <div class="service-info">
-                        <h3>AI</h3>
-                        <p>
-                            AI-powered solutions to automate and optimize business
-                            processes.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="icon-circle">
-                        📣
-                    </div>
-
-                    <div class="service-info">
-                        <h3>Marketing</h3>
-                        <p>
-                            Digital marketing strategies that build brand and drive
-                            growth.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="icon-circle">
-                        📊
-                    </div>
-
-                    <div class="service-info">
-                        <h3>Finance</h3>
-                        <p>
-                            Financial analysis, reporting and strategic support.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="icon-circle">
-                        👥
-                    </div>
-
-                    <div class="service-info">
-                        <h3>HR Support</h3>
-                        <p>
-                            People operations and HR support to help your team thrive.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="service-item">
-                    <div class="icon-circle">
-                        🖌️
-                    </div>
-
-                    <div class="service-info">
-                        <h3>UI/UX</h3>
-                        <p>
-                            User-centered designs that deliver exceptional
-                            experiences.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
+        {% endfor %}
 
 
         <!-- Consulting -->
@@ -1265,6 +1281,86 @@
                     "id": "card_title",
                     "label": "Title",
                     "default": "Title here"
+                },
+                {
+                    "type": "select",
+                    "id": "cwgp_card_title_alignment",
+                    "label": "Title alignment",
+                    "default": "left",
+                    "options": [
+                        { "value": "left", "label": "Left" },
+                        { "value": "center", "label": "Center" },
+                        { "value": "right", "label": "Right" }
+                    ]
+                },
+                {
+                    "type": "range",
+                    "id": "title_size",
+                    "label": "Title Size",
+                    "min": 1,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 24,
+                },
+                {
+                    "type": "color",
+                    "id": "cwgp_card_title_color",
+                    "label": "Title color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "range",
+                    "id": "title_opacity",
+                    "label": "Title Font Opacity",
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%",
+                    "default": 100
+                },
+                {
+                    "type": "richtext",
+                    "id": "cwgp_expertise_card_text",
+                    "label": "Description",
+                    "default": "<p>Description here</p>"
+                },
+                {
+                    "type": "select",
+                    "id": "cwgp_card_description_alignment",
+                    "label": "Description alignment",
+                    "default": "left",
+                    "options": [
+                        { "value": "left", "label": "Left" },
+                        { "value": "center", "label": "Center" },
+                        { "value": "right", "label": "Right" }
+                    ]
+                },
+                {
+                    "type": "color",
+                    "id": "cwgp_card_description_color",
+                    "label": "Description color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "range",
+                    "id": "description_opacity",
+                    "label": "Description Font Opacity",
+                    "min": 0,
+                    "max": 100,
+                    "step": 5,
+                    "unit": "%",
+                    "default": 100
+                },
+                {
+                    "type": "range",
+                    "id": "cwgp_card_description_size",
+                    "label": "Description Size",
+                    "min": 1,
+                    "max": 100,
+                    "step": 1,
+                    "unit": "px",
+                    "default": 16,
                 },
             ]
         }
