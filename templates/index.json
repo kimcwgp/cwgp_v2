@@ -618,8 +618,8 @@
           "settings": {
             "card_title": "Workforce Solutions",
             "cwgp_card_title_alignment": "left",
-            "title_size": 24,
-            "cwgp_card_title_color": "#000000",
+            "title_size": 32,
+            "cwgp_card_title_color": "#090838",
             "title_opacity": 100,
             "cwgp_expertise_card_text": "<p>Skilled professionals and specialized support to strengthen your team and accelerate your success.</p>",
             "cwgp_card_description_alignment": "left",
