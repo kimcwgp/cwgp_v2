@@ -628,7 +628,27 @@
             "cwgp_card_description_color": "#090838",
             "description_font_weight": "400",
             "description_opacity": 80,
-            "cwgp_card_description_size": 18
+            "cwgp_card_description_size": 18,
+            "service_1_title": "Title here",
+            "service_1_description": "",
+            "service_2_title": "Title here",
+            "service_2_description": "",
+            "service_3_title": "Title here",
+            "service_3_description": "",
+            "service_4_title": "Title here",
+            "service_4_description": "",
+            "service_5_title": "Title here",
+            "service_5_description": "",
+            "service_6_title": "Title here",
+            "service_6_description": "",
+            "service_7_title": "Title here",
+            "service_7_description": "",
+            "service_8_title": "Title here",
+            "service_8_description": "",
+            "service_9_title": "Title here",
+            "service_9_description": "",
+            "service_10_title": "Title here",
+            "service_10_description": ""
           }
         }
       },
@@ -638,7 +658,7 @@
       "name": "CWGP What We Do",
       "settings": {
         "section_bg_color": "#f7f7f7",
-        "section_max_width": 1200,
+        "section_max_width": 1440,
         "padding-block-start": 60,
         "padding-block-end": 60
       }
