@@ -391,7 +391,10 @@
         min-height: 365px;
         overflow: hidden;
         padding: 55px 40px 0;
+        display: flex;
+        align-items: flex-end;
     }
+
 
     /* subtle background glow */
 
@@ -421,6 +424,7 @@
     .card-content {
         position: relative;
         z-index: 2;
+        width: 40%;
     }
 
     .card-content h2{
@@ -455,12 +459,16 @@
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 70%;
-        max-width: 560px;
+        width: 60%;
+        max-width: 560px; /* Optional: remove this if you want it to always be 60% */
         height: auto;
         object-fit: contain;
-        pointer-events: none;
+        object-position: right bottom;
+
         user-select: none;
+        pointer-events: none;
+        transition: var(--transition);
+
         z-index: 1;
     }
 
