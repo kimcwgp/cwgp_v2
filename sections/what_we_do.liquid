@@ -46,14 +46,12 @@
 
                     </div>
 
-                    <div class="card-image">
-
-                        <img 
+                    {% if block.settings.card_image %}
+                        <img
                             class="card-bg-image"
                             src="{{ block.settings.card_image | image_url: width: 1000 }}"
                             alt="{{ block.settings.card_title }}">
-
-                    </div>
+                    {% endif %}
 
                 </div>
 
