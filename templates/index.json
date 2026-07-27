@@ -4601,8 +4601,8 @@
       ],
       "name": "How It Works",
       "settings": {
-        "heading": "How to Get Started",
-        "description": "A simple, streamlined process to help you build your team and achieve your goals.",
+        "heading": "",
+        "description": "",
         "cta_text": "Ready to get started?",
         "button_label": "Schedule a Call",
         "button_link": ""
