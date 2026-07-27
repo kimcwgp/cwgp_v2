@@ -57,101 +57,44 @@
 
                 <div class="service-grid">
 
-                    <div class="service-item">
-                        <div class="icon-circle">
-                            👤
-                        </div>
+                    {% for i in (1..10) %}
 
-                        <div class="service-info">
-                            <h3>AP Specialists</h3>
-                            <p>
-                                Reliable accounts payable support and processing.
-                            </p>
-                        </div>
-                    </div>
+                        {% capture image_key %}service_{{ i }}_image{% endcapture %}
+                        {% capture title_key %}service_{{ i }}_title{% endcapture %}
+                        {% capture desc_key %}service_{{ i }}_description{% endcapture %}
 
-                    <div class="service-item">
-                        <div class="icon-circle">
-                            ✏️
-                        </div>
+                        {% assign service_title = block.settings[title_key] %}
+                        {% assign service_image = block.settings[image_key] %}
+                        {% assign service_description = block.settings[desc_key] %}
 
-                        <div class="service-info">
-                            <h3>Copywriting</h3>
-                            <p>
-                                Clear, compelling content that connects and converts.
-                            </p>
-                        </div>
-                    </div>
+                        {% if service_title != blank %}
 
-                    <div class="service-item">
-                        <div class="icon-circle">
-                            ✨
-                        </div>
+                            <div class="service-item">
 
-                        <div class="service-info">
-                            <h3>AI</h3>
-                            <p>
-                                AI-powered solutions to automate and optimize business
-                                processes.
-                            </p>
-                        </div>
-                    </div>
+                                <div class="icon-circle">
+                                    {% if service_image %}
+                                        <img
+                                            src="{{ service_image | image_url: width: 100 }}"
+                                            alt="{{ service_title }}">
+                                    {% endif %}
+                                </div>
 
-                    <div class="service-item">
-                        <div class="icon-circle">
-                            📣
-                        </div>
+                                <div class="service-info">
+                                    <h3>{{ service_title }}</h3>
 
-                        <div class="service-info">
-                            <h3>Marketing</h3>
-                            <p>
-                                Digital marketing strategies that build brand and drive
-                                growth.
-                            </p>
-                        </div>
-                    </div>
+                                    {% if service_description != blank %}
+                                        {{ service_description }}
+                                    {% endif %}
+                                </div>
 
-                    <div class="service-item">
-                        <div class="icon-circle">
-                            📊
-                        </div>
+                            </div>
 
-                        <div class="service-info">
-                            <h3>Finance</h3>
-                            <p>
-                                Financial analysis, reporting and strategic support.
-                            </p>
-                        </div>
-                    </div>
+                        {% endif %}
 
-                    <div class="service-item">
-                        <div class="icon-circle">
-                            👥
-                        </div>
-
-                        <div class="service-info">
-                            <h3>HR Support</h3>
-                            <p>
-                                People operations and HR support to help your team thrive.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="service-item">
-                        <div class="icon-circle">
-                            🖌️
-                        </div>
-
-                        <div class="service-info">
-                            <h3>UI/UX</h3>
-                            <p>
-                                User-centered designs that deliver exceptional
-                                experiences.
-                            </p>
-                        </div>
-                    </div>
+                    {% endfor %}
 
                 </div>
+
 
             </div>
         {% endfor %}
