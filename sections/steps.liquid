@@ -33,7 +33,7 @@
 
         {% for block in section.blocks %}
 
-        <article class="process-card" {{ block.shopify_attributes }}>
+        <article class="process-card-step" {{ block.shopify_attributes }}>
 
             <div class="card-image-step">
 
@@ -501,7 +501,7 @@ PROCESS GRID
 CARD
 ==================================================*/
 
-.process-card{
+.process-card-step{
 
     background:linear-gradient(
         180deg,
@@ -531,7 +531,7 @@ CARD
 
 }
 
-.process-card:hover{
+.process-card-step:hover{
 
     transform:
         translateY(-10px);
@@ -595,7 +595,7 @@ IMAGE
 
 }
 
-.process-card:hover
+.process-card-step:hover
 .card-image-step img{
 
     transform:scale(1.08);
@@ -670,7 +670,7 @@ ICON
 
 }
 
-.process-card:hover
+.process-card-step:hover
 .icon-circle{
 
     background:var(--gold);
@@ -705,7 +705,7 @@ TITLE
 
 }
 
-.process-card:hover
+.process-card-step:hover
 .card-title h3{
 
     color:var(--gold);
@@ -732,7 +732,7 @@ DESCRIPTION
 CARD DECORATION
 ==================================================*/
 
-.process-card::before{
+.process-card-step::before{
 
     content:"";
 
@@ -764,7 +764,7 @@ CARD DECORATION
 
 }
 
-.process-card::after{
+.process-card-step::after{
 
     content:"";
 
@@ -790,7 +790,7 @@ CARD DECORATION
 HOVER GOLD LINE
 ==================================================*/
 
-.process-card:hover
+.process-card-step:hover
 .gold-line{
 
     width:75px;
@@ -801,7 +801,7 @@ HOVER GOLD LINE
 SMOOTH ANIMATION
 ==================================================*/
 
-.process-card,
+.process-card-step,
 .card-image-step img,
 .icon-circle,
 .gold-line,
@@ -815,19 +815,19 @@ SMOOTH ANIMATION
 OPTIONAL STAGGER
 ==================================================*/
 
-.process-card:nth-child(2){
+.process-card-step:nth-child(2){
 
     transition-delay:.05s;
 
 }
 
-.process-card:nth-child(3){
+.process-card-step:nth-child(3){
 
     transition-delay:.1s;
 
 }
 
-.process-card:nth-child(4){
+.process-card-step:nth-child(4){
 
     transition-delay:.15s;
 
@@ -1207,25 +1207,25 @@ PREMIUM ANIMATIONS
 
 /* Stagger Animation */
 
-.process-card:nth-child(1){
+.process-card-step:nth-child(1){
 
     transition-delay:.10s;
 
 }
 
-.process-card:nth-child(2){
+.process-card-step:nth-child(2){
 
     transition-delay:.20s;
 
 }
 
-.process-card:nth-child(3){
+.process-card-step:nth-child(3){
 
     transition-delay:.30s;
 
 }
 
-.process-card:nth-child(4){
+.process-card-step:nth-child(4){
 
     transition-delay:.40s;
 
@@ -1233,7 +1233,7 @@ PREMIUM ANIMATIONS
 
 /* Card Glow */
 
-.process-card:hover{
+.process-card-step:hover{
 
     box-shadow:
 
@@ -1245,7 +1245,7 @@ PREMIUM ANIMATIONS
 
 /* Floating Image */
 
-.process-card:hover .card-image-step img{
+.process-card-step:hover .card-image-step img{
 
     transform:
 
@@ -1257,7 +1257,7 @@ PREMIUM ANIMATIONS
 
 /* Icon Animation */
 
-.process-card:hover .icon-circle{
+.process-card-step:hover .icon-circle{
 
     transform:
 
@@ -1269,7 +1269,7 @@ PREMIUM ANIMATIONS
 
 /* Gold Line */
 
-.process-card:hover .gold-line{
+.process-card-step:hover .gold-line{
 
     width:80px;
 
@@ -1351,7 +1351,7 @@ PREMIUM ANIMATIONS
 
 }
 
-.process-card:hover .card-image-step::before{
+.process-card-step:hover .card-image-step::before{
 
     opacity:1;
 
@@ -1380,7 +1380,7 @@ document.addEventListener("DOMContentLoaded", () => {
     /* Fade-in Animation */
 
     const elements = document.querySelectorAll(
-        ".section-header-step, .process-progress, .process-card, .process-cta"
+        ".section-header-step, .process-progress, .process-card-step, .process-cta"
     );
 
     const observer = new IntersectionObserver((entries) => {
@@ -1407,7 +1407,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* Timeline Hover */
 
-    const cards = document.querySelectorAll(".process-card");
+    const cards = document.querySelectorAll(".process-card-step");
     const steps = document.querySelectorAll(".step");
 
     cards.forEach((card, index) => {
