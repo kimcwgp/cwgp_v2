@@ -613,7 +613,10 @@
     "what_we_do_q6gCYA": {
       "type": "what_we_do",
       "name": "CWGP What We Do",
-      "settings": {}
+      "settings": {
+        "padding-block-start": 60,
+        "padding-block-end": 60
+      }
     },
     "marquee_yMDTNA": {
       "type": "marquee",
