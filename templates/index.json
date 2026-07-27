@@ -4587,9 +4587,9 @@
           "type": "step",
           "settings": {
             "image": "shopify://shop_images/Rectangle_34_10.png",
-            "icon": "phone",
-            "title": "Consultation",
-            "description": "Describe this step."
+            "icon": "check",
+            "title": "Onboarding",
+            "description": "We handle onboarding , while you can focus on integrating them to your organization."
           }
         }
       },
