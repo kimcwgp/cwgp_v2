@@ -626,7 +626,7 @@
             "cwgp_card_description_alignment": "left",
             "cwgp_card_description_color": "#8D181E",
             "description_opacity": 100,
-            "cwgp_card_description_size": 16
+            "cwgp_card_description_size": 40
           }
         }
       },
