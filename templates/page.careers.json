@@ -1269,7 +1269,7 @@
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_16.png",
+            "card_icon": "shopify://shop_images/people_16_1.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -1294,7 +1294,7 @@
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_17.png",
+            "card_icon": "shopify://shop_images/people_17_1.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -1319,7 +1319,7 @@
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_14.png",
+            "card_icon": "shopify://shop_images/people_14_1.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
@@ -1344,7 +1344,7 @@
           "type": "card",
           "settings": {
             "card_direction": "column",
-            "card_icon": "shopify://shop_images/people_13.png",
+            "card_icon": "shopify://shop_images/people_13_2.png",
             "card_width": 25,
             "card_width_mobile": 50,
             "text_alignment": "center",
